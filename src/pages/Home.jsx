@@ -18,9 +18,7 @@ export default function Home() {
                             <button className="bg-orange-500 hover:bg-orange-600 px-6 py-3 rounded-xl font-semibold">
                                 Our Services
                             </button>
-                            <button className="border border-white/40 px-6 py-3 rounded-xl">
-                                Get a Quote
-                            </button>
+
                         </div>
                     </div>
                     <div className="hidden md:block">
@@ -134,13 +132,6 @@ export default function Home() {
                     </button>
                 </div>
             </section>
-
-            {/* FOOTER */}
-            <footer className="bg-[#0b1c3d] text-blue-200 py-10">
-                <div className="max-w-7xl mx-auto px-6 text-center">
-                    <p>© {new Date().getFullYear()} WorldWeblogic. All rights reserved.</p>
-                </div>
-            </footer>
         </div>
     );
 }

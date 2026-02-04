@@ -1,35 +1,45 @@
+import React from "react";
+import logo from "../assets/logo.png";
+
 const Header = () => {
     return (
-        <header className="sticky top-0 z-50 bg-black border-b border-gray-800">
-            <div className="max-w-7xl mx-auto px-4">
+        <header className="sticky top-0 z-50 bg-white border-b border-gray-200 shadow-sm">
+            <div className="max-w-8xl mx-auto px-10">
                 <div className="h-16 flex items-center justify-between">
 
-                    {/* Text Logo */}
-                    <div className="leading-tight">
-                        <h1 className="text-3xl font-extrabold tracking-wide">
-                            <span className="text-blue-600">WORLD</span>
-                            <span className="text-orange-500 ml-1">WEBLOGIC</span>
-                        </h1>
-                        <p className="text-xs ml-22 text-orange-400 tracking-wider">
-                            give digital wings to your brands
-                        </p>
+                    {/* Logo */}
+                    <div className="flex items-center gap-1">
+                        <img
+                            src={logo}
+                            alt="World WebLogic"
+                            className="h-17 w-auto object-cover"
+                        />
                     </div>
 
                     {/* Navigation */}
-                    <nav className="hidden md:flex space-x-6">
-                        <a className="text-gray-300 hover:text-orange-400 transition" href="#">
+                    <nav className="hidden md:flex space-x-8">
+                        <a
+                            href="#"
+                            className="text-gray-700 hover:text-orange-500 font-medium transition"
+                        >
                             Home
                         </a>
-                        <a className="text-gray-300 hover:text-orange-400 transition" href="#">
+                        <a
+                            href="#"
+                            className="text-gray-700 hover:text-orange-500 font-medium transition"
+                        >
                             About
                         </a>
-                        <a className="text-gray-300 hover:text-orange-400 transition" href="#">
+                        <a
+                            href="#"
+                            className="text-gray-700 hover:text-orange-500 font-medium transition"
+                        >
                             Contact
                         </a>
                     </nav>
 
-                    {/* Button */}
-                    <button className="px-4 py-2 bg-orange-500 text-black rounded-lg font-medium hover:bg-orange-400 transition">
+                    {/* CTA Button */}
+                    <button className="px-5 py-2 bg-orange-500 text-white rounded-lg font-semibold hover:bg-orange-600 transition">
                         Login
                     </button>
 
