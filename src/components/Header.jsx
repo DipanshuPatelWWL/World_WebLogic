@@ -21,12 +21,12 @@ const Header = () => {
 
                     {/* Navigation */}
                     <nav className="hidden md:flex space-x-6">
-                        <a
+                        <NavLink
                             className="text-gray-300 hover:text-orange-400 transition"
-                            href="#"
+                            to="/"
                         >
                             Home
-                        </a>
+                        </NavLink>
                         {/* ABOUT DROPDOWN */}
                         <div className="relative group">
 
