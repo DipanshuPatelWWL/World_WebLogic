@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const Header = () => {
     return (
         <header className="sticky top-0 z-50 bg-black border-b border-gray-800">
@@ -17,15 +19,9 @@ const Header = () => {
 
                     {/* Navigation */}
                     <nav className="hidden md:flex space-x-6">
-                        <a className="text-gray-300 hover:text-orange-400 transition" href="#">
-                            Home
-                        </a>
-                        <a className="text-gray-300 hover:text-orange-400 transition" href="#">
-                            About
-                        </a>
-                        <a className="text-gray-300 hover:text-orange-400 transition" href="#">
-                            Contact
-                        </a>
+                        <Link to="/" className="text-gray-300 hover:text-orange-400 transition">Home</Link>
+                        <Link to="/" className="text-gray-300 hover:text-orange-400 transition">About</Link>
+                        <Link to="/contact" className="text-gray-300 hover:text-orange-400 transition">Contact</Link>
                     </nav>
 
                     {/* Button */}
