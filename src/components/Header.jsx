@@ -29,14 +29,14 @@ const Header = () => {
                         </a>
                         {/* ABOUT DROPDOWN */}
                         <div className="relative group">
-                            <span className="cursor-pointer text-gray-300 hover:text-orange-400 transition">
-                                About
-                            </span>
+
 
                             {/* Navigation */}
                             <nav className="hidden md:flex space-x-6">
-                                <NavLink to="/" className="text-gray-300 hover:text-orange-400 transition">Home</NavLink>
-                                <NavLink to="/about" className="text-gray-300 hover:text-orange-400 transition">About</NavLink>
+
+                                <span className="cursor-pointer text-gray-300 hover:text-orange-400 transition">
+                                    About
+                                </span>
                             </nav>
                             {/* DROPDOWN */}
                             <div className="absolute left-0 top-full mt-3 w-48 rounded-xl bg-slate-900 shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 translate-y-2 group-hover:translate-y-0">
