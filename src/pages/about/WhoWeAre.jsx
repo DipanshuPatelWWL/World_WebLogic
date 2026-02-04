@@ -1,4 +1,5 @@
 import React, { useLayoutEffect, useRef } from "react";
+import { Link } from "react-router-dom";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import {
@@ -12,6 +13,7 @@ import {
   FiMonitor,
   FiSmile,
 } from "react-icons/fi";
+
 import AboutBg from "../../assets/about/about-who-we-are.jpg";
 import About1 from "../../assets/about/about1.jpg";
 import About2 from "../../assets/about/about2.jpg";
@@ -45,6 +47,7 @@ const WhoWeAre = () => {
         y: 60,
         stagger: 0.25,
         duration: 1,
+        ease: "power3.out",
       });
 
       // CARDS
@@ -56,9 +59,9 @@ const WhoWeAre = () => {
             start: "top 85%",
           },
           opacity: 0,
-          scale: 0.9,
+          scale: 0.92,
           y: 40,
-          duration: 0.6,
+          duration: 0.7,
           ease: "power3.out",
         });
       });
@@ -67,12 +70,13 @@ const WhoWeAre = () => {
       gsap.from(ctaRef.current.children, {
         scrollTrigger: {
           trigger: ctaRef.current,
-          start: "top 80%",
+          start: "top 85%",
         },
         opacity: 0,
-        x: 80,
-        stagger: 0.3,
-        duration: 1,
+        y: 60,
+        stagger: 0.25,
+        duration: 1.1,
+        ease: "power4.out",
       });
 
       ScrollTrigger.refresh();
@@ -82,7 +86,7 @@ const WhoWeAre = () => {
   }, []);
 
   return (
-    <div ref={rootRef} className="bg-white text-black-900">
+    <div ref={rootRef} className="bg-white text-gray-900">
       {/* ================= HERO ================= */}
       <section
         className="relative h-[58vh] flex items-center justify-center"
@@ -99,119 +103,69 @@ const WhoWeAre = () => {
           className="relative z-10 text-center px-6 text-white"
         >
           <h1 className="text-5xl md:text-6xl font-extrabold">About Us</h1>
-          <p className="mt-6 text-lg text-black-300">Home - Who We Are</p>
+          <p className="mt-6 text-lg text-gray-300">Home · Who We Are</p>
         </div>
       </section>
 
-      {/* ================= WHO WE ARE (WHITE BG) ================= */}
+      {/* ================= WHO WE ARE ================= */}
       <section
         ref={whoRef}
-        className="container mx-auto px-6 py-24 grid md:grid-cols-2 gap-16 items-center ml-12"
+        className="container mx-auto px-6 py-24 grid md:grid-cols-2 gap-16 items-center"
       >
         <div>
-          <h2 className="text-4xl font-bold mb-6 text-[#0d3253]">Who We Are</h2>
-          <p className="text-black leading-relaxed">
-            World WebLogic is an online marketing solutions company that
-            provides all the necessary services that an online company needs
-            like website design and development, social media marketing, SEO,
-            SEM, PPC, mobile application development and finally, the most
-            important, online reputation management services.
+          <h2 className="text-4xl font-bold mb-6 text-[#0d3253]">
+            Who We Are
+          </h2>
+          <p className="text-gray-700 leading-relaxed mb-4">
+            World WebLogic is an online marketing solutions company that provides
+            website design and development, social media marketing, SEO, SEM,
+            PPC, mobile application development, and online reputation
+            management services.
           </p>
-          <p className="text-black leading-relaxed">
-            We have a team that has all the knowledge, skills and expertise that
-            is needed for these kinds of services, so all you have to do is
-            trust us and relax. It is for this reason that we have been favoured
-            by a large number of clients, not just in India but in countries
-            like the US and Australia too.
+          <p className="text-gray-700 leading-relaxed">
+            Our expert team is trusted by clients not only in India but also in
+            countries like the US and Australia. You can rely on us to build,
+            scale, and protect your digital presence.
           </p>
         </div>
-        <div className=" rounded-2xl group">
+
+        <div className="rounded-2xl overflow-hidden group">
           <img
             src={About1}
             alt="Who We Are"
-            className="
-      rounded-2xl
-      shadow-2xl
-      transition-transform
-      duration-500
-      ease-out
-      group-hover:scale-110
-    "
+            className="rounded-2xl shadow-2xl transition-transform duration-500 ease-out group-hover:scale-105"
           />
         </div>
       </section>
 
-      {/* ================= REASONS SECTION ================= */}
+      {/* ================= REASONS ================= */}
       <section className="bg-white py-24">
-        <h2 className="text-center text-4xl font-bold text-slate-900 mb-16">
-          These are the Reasons Why You Should Choose Us
+        <h2 className="text-center text-4xl font-bold text-gray-900 mb-16">
+          Why You Should Choose Us
         </h2>
 
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
-              {
-                icon: FiEdit,
-                text: "We strictly adhere to the guidelines of SEO and white hat SEO practices.",
-              },
-              {
-                icon: FiSettings,
-                text: "Our branding solutions are holistic and result driven.",
-              },
-              {
-                icon: FiTarget,
-                text: "Our on page and off page search engine optimization is followed in the best way.",
-              },
-              {
-                icon: FiZap,
-                text: "We focus on manual submission and organic content.",
-              },
-              {
-                icon: FiShield,
-                text: "Our packages are comprehensive and reasonable.",
-              },
-              {
-                icon: FiLayers,
-                text: "Our websites and all other services are creative, which is very important today.",
-              },
-              {
-                icon: FiTrendingUp,
-                text: "Our services are goal oriented.",
-              },
-              {
-                icon: FiMonitor,
-                text: "We help you become as good as your competition sites.",
-              },
-              {
-                icon: FiSmile,
-                text: "We provide your business with all the online exposure that it needs.",
-              },
+              { icon: FiEdit, text: "Strict adherence to white-hat SEO practices." },
+              { icon: FiSettings, text: "Result-driven branding solutions." },
+              { icon: FiTarget, text: "Best on-page and off-page SEO strategies." },
+              { icon: FiZap, text: "Organic growth with manual submissions." },
+              { icon: FiShield, text: "Affordable and transparent pricing." },
+              { icon: FiLayers, text: "Creative and modern web solutions." },
+              { icon: FiTrendingUp, text: "Goal-oriented digital strategies." },
+              { icon: FiMonitor, text: "Competitive industry-level execution." },
+              { icon: FiSmile, text: "Maximum online exposure for your brand." },
             ].map((item, index) => {
               const Icon = item.icon;
               return (
                 <div
                   key={index}
                   ref={(el) => (cardsRef.current[index] = el)}
-                  className="
-              group
-              bg-orange-50
-              border border-orange-200
-              rounded-2xl
-              p-10
-              flex
-              flex-col
-              items-center
-              text-center
-              transition-all
-              duration-300
-              hover:bg-orange-400
-              hover:-translate-y-3
-              hover:shadow-2xl
-            "
+                  className="group bg-orange-50 border border-orange-200 rounded-2xl p-10 flex flex-col items-center text-center transition-all duration-300 hover:bg-orange-500 hover:-translate-y-3 hover:shadow-2xl"
                 >
-                  <Icon className="text-4xl text-orange-400 mb-6 transition-colors duration-300 group-hover:text-white" />
-
-                  <p className="text-slate-700 text-sm leading-relaxed transition-colors duration-300 group-hover:text-white">
+                  <Icon className="text-4xl text-orange-400 mb-6 group-hover:text-white transition-colors duration-300" />
+                  <p className="text-gray-700 text-sm leading-relaxed group-hover:text-white transition-colors duration-300">
                     {item.text}
                   </p>
                 </div>
@@ -221,55 +175,35 @@ const WhoWeAre = () => {
         </div>
       </section>
 
-      {/* ================= CTA (WHITE BG) ================= */}
+      {/* ================= CTA ================= */}
       <section
         ref={ctaRef}
         className="container mx-auto px-6 py-28 grid md:grid-cols-2 gap-16 items-center"
       >
         <div>
-          <h3 className="text-yellow-600 font-bold mb-4 text-2xl">
-            Like What We Offer
+          <h3 className="text-orange-500 font-bold mb-4 text-2xl">
+            Like What We Offer?
           </h3>
           <h2 className="text-4xl font-bold mb-6">
-            Looking to improve your online business? Approach us.
+            Looking to grow your online business?
           </h2>
-          <p className="text-black-700 ">
-            We are a team of tried, tested and trusted experts who have been
-            providing big as well as small companies all the branding solutions
-            that they need in order to win more customers.
+          <p className="text-gray-700 mb-6">
+            Our team of experts uses modern tools, smart strategies, and strict
+            timelines to help your business reach new heights.
           </p>
-          <p className="text-black-700">
-            Our squad of experts follows a unique approach that is oriented
-            towards the goal of helping you get all the traffic that you need to
-            empower your business. We use all the latest tools and techniques
-            for this.
-          </p>
-          <p className="text-black-700">
-            Yes, we work under strict timelines so that we don’t cause you any
-            inconvenience. In this way we work towards building good long term
-            relationships with our clients as well as our solution partners.
-          </p>
-          <p className="text-black-700 mb-8">
-            All you have to do is stay in touch with us and we will let your
-            business reach heights.
-          </p>
-          <button className="px-8 py-4 rounded-full bg-[#ff6900] text-black font-semibold hover:scale-105 transition">
-            Contact Us
-          </button>
+
+          <Link to="/contact">
+            <button className="px-8 py-4 rounded-full bg-[#ff6900] text-white font-semibold shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl active:scale-95">
+              Contact Us
+            </button>
+          </Link>
         </div>
 
-        <div className=" rounded-2xl group">
+        <div className="rounded-2xl overflow-hidden group">
           <img
             src={About2}
             alt="CTA"
-            className="
-      rounded-2xl
-      shadow-2xl
-      transition-transform
-      duration-500
-      ease-out
-      group-hover:scale-110
-    "
+            className="rounded-2xl shadow-2xl transition-transform duration-500 ease-out group-hover:scale-105"
           />
         </div>
       </section>

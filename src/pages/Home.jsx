@@ -1,4 +1,5 @@
 import React from "react";
+import { Link, NavLink } from "react-router-dom";
 
 export default function Home() {
     return (
@@ -18,9 +19,7 @@ export default function Home() {
                             <button className="bg-orange-500 hover:bg-orange-600 px-6 py-3 rounded-xl font-semibold">
                                 Our Services
                             </button>
-                            <button className="border border-white/40 px-6 py-3 rounded-xl">
-                                Get a Quote
-                            </button>
+
                         </div>
                     </div>
                     <div className="hidden md:block">
@@ -49,7 +48,7 @@ export default function Home() {
                         ].map((service) => (
                             <div
                                 key={service}
-                                className="bg-white rounded-2xl p-6 shadow hover:shadow-lg transition"
+                                className="bg-white rounded-2xl p-6 shadow hover:shadow-lg transition hover:border border-orange-500"
                             >
                                 <h3 className="text-xl font-semibold mb-2">{service}</h3>
                                 <p className="text-gray-600 text-sm">
@@ -76,9 +75,9 @@ export default function Home() {
                             solutions powered by modern technologies.
                         </p>
                         <ul className="mt-6 space-y-3">
-                            <li>✔ Expert Development Team</li>
-                            <li>✔ ROI-focused Approach</li>
-                            <li>✔ Long-term Support</li>
+                            <li>• Expert Development Team</li>
+                            <li>• ROI-focused Approach</li>
+                            <li>• Long-term Support</li>
                         </ul>
                     </div>
                 </div>
@@ -109,19 +108,45 @@ export default function Home() {
             {/* PROJECTS */}
             <section className="py-20 bg-gray-50">
                 <div className="max-w-7xl mx-auto px-6">
-                    <h2 className="text-3xl font-bold text-center">Our Latest Projects</h2>
+                    <h2 className="text-3xl font-bold text-center">
+                        Our Latest Projects
+                    </h2>
+
                     <div className="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
                         {[1, 2, 3].map((i) => (
-                            <div key={i} className="rounded-2xl overflow-hidden shadow">
+                            <div
+                                key={i}
+                                className="group relative rounded-2xl overflow-hidden shadow-lg cursor-pointer"
+                            >
+                                {/* Image */}
                                 <img
-                                    src={`https://source.unsplash.com/random/800x60${i}`}
+                                    src="https://plus.unsplash.com/premium_photo-1678565879444-f87c8bd9f241?w=800"
                                     alt="Project"
+                                    className="h-64 w-full object-cover transform transition duration-700 group-hover:scale-110"
                                 />
+
+                                {/* Overlay */}
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition duration-500" />
+
+                                {/* Content */}
+                                <div className="absolute inset-0 flex flex-col justify-end p-6 translate-y-6 group-hover:translate-y-0 transition duration-500">
+                                    <h3 className="text-white text-xl font-semibold">
+                                        Web Development Project
+                                    </h3>
+                                    <p className="text-sm text-gray-200 mt-1">
+                                        Modern & scalable solution
+                                    </p>
+
+                                    <button className="mt-4 w-max bg-orange-500 hover:bg-orange-600 text-white px-5 py-2 mb-3 rounded-lg text-sm font-semibold transition">
+                                        View Project
+                                    </button>
+                                </div>
                             </div>
                         ))}
                     </div>
                 </div>
             </section>
+
 
             {/* CTA */}
             <section className="bg-orange-500 text-white py-16">
@@ -130,17 +155,12 @@ export default function Home() {
                         Let’s Build Your Digital Success Story
                     </h2>
                     <button className="bg-white text-orange-600 px-8 py-3 rounded-xl font-semibold">
-                        Contact Us
+                        <Link to={"/contact"}>
+                            Contact Us
+                        </Link>
                     </button>
                 </div>
             </section>
-
-            {/* FOOTER */}
-            <footer className="bg-[#0b1c3d] text-blue-200 py-10">
-                <div className="max-w-7xl mx-auto px-6 text-center">
-                    <p>© {new Date().getFullYear()} WorldWeblogic. All rights reserved.</p>
-                </div>
-            </footer>
         </div>
     );
 }

@@ -88,7 +88,7 @@ export default function ContactUs() {
                     {/* Building Image */}
                     <div className="h-[500px] w-full">
                         <img
-                            src={image}  // Replace with your building image
+                            src={image}
                             alt="Office"
                             className="w-full h-full object-cover"
                         />
@@ -102,35 +102,91 @@ export default function ContactUs() {
 
                     <div className="space-y-4 text-sm">
 
+                        {/* ADDRESS */}
                         <div className="flex items-start gap-3">
-                            <span className="text-orange-500 text-lg"><FaLocationDot /></span>
-                            <p>
+                            <span className="text-orange-500 text-lg mt-1">
+                                <FaLocationDot />
+                            </span>
+                            <a
+                                href="https://www.google.com/maps?q=B+108+Sector+63+Noida+201301"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="hover:text-orange-400 transition leading-relaxed"
+                            >
                                 B 108, 1st Floor, Office No. 2nd,<br />
-                                Sector 63, Noida - 201301
-                            </p>
+                                Sector 63, Noida – 201301
+                            </a>
                         </div>
 
-                        <div className="flex items-center gap-3">
-                            <span className="text-orange-500 text-lg"><FaPhoneAlt /></span>
-                            <p>
-                                +91 1204545733 <br />
-                                +91 85058 37801
-                            </p>
+                        {/* PHONE */}
+                        <div className="flex items-start gap-3">
+                            <span className="text-orange-500 text-lg mt-1">
+                                <FaPhoneAlt />
+                            </span>
+                            <div className="leading-relaxed">
+                                <a
+                                    href="tel:+911204545733"
+                                    className="hover:text-orange-400 transition block"
+                                >
+                                    +91 120 454 5733
+                                </a>
+                                <a
+                                    href="tel:+918505837801"
+                                    className="hover:text-orange-400 transition block"
+                                >
+                                    +91 85058 37801
+                                </a>
+                            </div>
                         </div>
 
-                        <div className="flex items-center gap-3">
-                            <span className="text-orange-500 text-lg"><FaEnvelope /></span>
-                            <p>info@worldweblogic.com</p>
+                        {/* EMAIL */}
+                        <div className="flex items-start gap-3">
+                            <span className="text-orange-500 text-lg mt-1">
+                                <FaEnvelope />
+                            </span>
+                            <a
+                                href="mailto:info@worldweblogic.com"
+                                className="hover:text-orange-400 transition"
+                            >
+                                info@worldweblogic.com
+                            </a>
                         </div>
-
                     </div>
+
 
                     {/* Social Icons */}
-                    <div className="flex gap-4 mt-3 text-xl">
-                        <a href="#" className="hover:text-red-500 transition"><FaFacebookF /></a>
-                        <a href="#" className="hover:text-red-500 transition"><FaInstagram /></a>
-                        <a href="#" className="hover:text-red-500 transition"><FaLinkedinIn /></a>
+                    <div className="flex gap-5 mt-6 text-xl">
+                        <a
+                            href="https://www.facebook.com/WorldWebLogic"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="hover:text-orange-500 hover:scale-110 transition"
+                            aria-label="World WebLogic Facebook"
+                        >
+                            <FaFacebookF />
+                        </a>
+
+                        <a
+                            href="https://www.instagram.com/worldweblogic"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="hover:text-orange-500 hover:scale-110 transition"
+                            aria-label="World WebLogic Instagram"
+                        >
+                            <FaInstagram />
+                        </a>
+
+                        <a
+                            href="https://www.linkedin.com/company/world-weblogic-pvt-ltd"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="hover:text-orange-500 hover:scale-110 transition"
+                            aria-label="World WebLogic LinkedIn"
+                        >
+                            <FaLinkedinIn />
+                        </a>
                     </div>
+
 
                 </div>
             </section>
