@@ -8,26 +8,17 @@ export default function Footer() {
 
                 {/* BRAND / LOGO */}
                 <div>
-                    <img
-                        src={logo}
-                        alt="World WebLogic"
-                        className="h-14 w-auto mb-4 bg-white"
-                    />
+                    <div className="bg-white px-1">
+                        <img
+                            src={logo}
+                            alt="World WebLogic"
+                            className="h-18 w-auto mb-5"
+                        />
+                    </div>
                     <p className="text-sm leading-relaxed">
                         World WebLogic delivers end-to-end digital solutions including Web
                         Development, Mobile Apps, SEO, PPC, SMO, and ORM.
                     </p>
-
-                    {/* Social Icons */}
-                    <div className="flex gap-4 mt-6 text-xl">
-                        <a href="#" className="hover:text-orange-400 transition">🌐</a>
-                        <a href="#" className="hover:text-orange-400 transition">💼</a>
-                        <a href="#" className="hover:text-orange-400 transition">📸</a>
-                    </div>
-
-                    <button className="mt-6 bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded-lg text-sm font-semibold">
-                        Pay Now
-                    </button>
                 </div>
 
                 {/* IMPORTANT LINKS */}
@@ -75,7 +66,7 @@ export default function Footer() {
                     <input
                         type="email"
                         placeholder="Your Email Address"
-                        className="w-full px-4 py-3 rounded-lg text-gray-800"
+                        className="w-full px-4 py-3 rounded-lg text-white border border-white"
                     />
                     <button className="mt-3 w-full bg-orange-500 hover:bg-orange-600 text-white py-3 rounded-lg font-semibold">
                         Subscribe
