@@ -55,7 +55,7 @@ const Header = () => {
                                     to="/about/why-choose-us"
                                     className="block px-5 py-3 text-gray-700 hover:text-orange-500 hover:bg-gray-50 transition"
                                 >
-                                    Why Choose Us
+                                 Why World WebLogic
                                 </NavLink>
                             </div>
                         </div>
