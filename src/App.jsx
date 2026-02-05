@@ -5,6 +5,7 @@ import Footer from "./components/Footer";
 import WhoWeAre from "./pages/about/whoWeAre";
 import ContactUs from "./pages/ContactUs";
 import ScrollToTop from "./components/ScrollToTop";
+import SearchEngineOptimization from "./pages/Services/SEO";
 import WhyWwl from "./pages/about/WhyWwl";
 import CannabisSeoServices from "./pages/market/CannabisSeoServices";
 import TopInfoBar from "./components/TopInfoBar";
@@ -19,6 +20,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about/who-we-are" element={<WhoWeAre />} />
+        <Route path="/services/seo" element={<SearchEngineOptimization />} />
         <Route path="/about/why-choose-us" element={<WhyWwl />} />
         <Route path="/market/cannabis-seo-services" element={<CannabisSeoServices />} />
         <Route path="/contact" element={<ContactUs />} />
