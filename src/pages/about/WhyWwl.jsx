@@ -135,7 +135,7 @@ const WhyWwl = () => {
                 key={index}
                 className="bg-white border border-gray-200 rounded-2xl px-8 py-6 flex items-center gap-4
                      transition-all duration-300
-                     hover:-translate-y-2 hover:shadow-2xl hover:border-orange-400"
+                     hover:-translate-y-2 hover:shadow-2xl hover:border-orange-600"
               >
                 <span className="text-orange-500 text-2xl font-bold">»</span>
                 <p className="text-black text-lg leading-relaxed">{text}</p>
