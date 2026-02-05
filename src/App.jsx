@@ -16,7 +16,7 @@ function App() {
   return (
     <Router>
       <ScrollToTop />
-      <TopInfoBar/>
+      <TopInfoBar />
       <Header />
 
       <Routes>
