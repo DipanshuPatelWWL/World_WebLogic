@@ -1,5 +1,6 @@
 import { useLayoutEffect, useRef } from "react";
-import { useState } from "react";
+import { FiFileText} from "react-icons/fi";
+import { FiLink, FiUserCheck, FiShield } from "react-icons/fi";
 
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -202,6 +203,266 @@ const Seo = () => {
           >
             Contact Now
           </button>
+        </div>
+      </section>
+
+      {/* ================= WHY SEO SECTION ================= */}
+      <section ref={addSectionRef} className="bg-gray-50 py-28 px-6">
+        <div className="max-w-6xl mx-auto">
+          {/* Heading */}
+          <div className="text-center mb-16">
+            <p className="uppercase tracking-widest text-sm font-semibold text-gray-500 mb-3">
+              Why SEO?
+            </p>
+
+            <h2 className="gsap-item text-3xl md:text-4xl font-extrabold text-[#0b3253]">
+              The following are some of the things that you can expect from our{" "}
+              <span className="text-orange-500">SEO services</span>
+            </h2>
+          </div>
+
+          {/* Cards */}
+          <div className="grid md:grid-cols-2 gap-10">
+            {/* Card 1 */}
+            <div
+              className="gsap-item group bg-white rounded-2xl p-8 shadow-lg border border-transparent
+        hover:border-orange-500 hover:shadow-orange-200/50 hover:-translate-y-3
+        transition-all duration-500"
+            >
+              <div className="text-4xl mb-6 text-orange-500 group-hover:scale-110 transition-transform">
+                <FiFileText />
+              </div>
+
+              <h3 className="text-xl font-bold text-[#0b3253] mb-4">
+                On-page Optimisation
+              </h3>
+
+              <p className="text-gray-600 leading-relaxed">
+                We guide you with the usage of your keywords, tags and content
+                so that you can use them to increase the visibility of your
+                site.
+              </p>
+            </div>
+
+            {/* Card 2 */}
+            <div
+              className="gsap-item group bg-white rounded-2xl p-8 shadow-lg border border-transparent
+        hover:border-orange-500 hover:shadow-orange-200/50 hover:-translate-y-3
+        transition-all duration-500"
+            >
+              <div className="text-4xl mb-6 text-orange-500 group-hover:scale-110 transition-transform">
+                <FiLink />
+              </div>
+
+              <h3 className="text-xl font-bold text-[#0b3253] mb-4">
+                Off-page Optimisation
+              </h3>
+
+              <p className="text-gray-600 leading-relaxed">
+                Apart from the above, we also help you with blogs and articles
+                which are very important for the promotion of your online
+                business.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ================= SEO SERVICE ACCORDION ================= */}
+      <section ref={addSectionRef} className="bg-white py-24 px-6">
+        <div className="max-w-6xl mx-auto space-y-6">
+          {/* ================= CARD 1 ================= */}
+          <details
+            className="gsap-item group rounded-2xl border border-gray-200
+      shadow-md hover:shadow-orange-200/50
+      hover:border-orange-500
+      transition-all duration-500
+      open:border-orange-500
+      open:shadow-orange-300/40"
+          >
+            <summary
+              className="cursor-pointer list-none flex items-center justify-between
+        px-8 py-6 font-bold text-lg text-[#0b3253]"
+            >
+              <span className="flex items-center gap-3">
+                <FiLink className="text-orange-500 text-xl" />
+                Link Building Services
+              </span>
+              <span className="text-gray-400 group-open:rotate-45 transition-transform">
+                +
+              </span>
+            </summary>
+
+            <div className="px-8 pb-8 text-gray-700 leading-relaxed space-y-4">
+              <p>
+                You want your page to be one of the first on search engines,
+                wouldn’t you? While this does not come easy, with us by your
+                side, you won’t have to worry. We will provide all the SEO and
+                digital marketing you need in order to achieve this.
+              </p>
+
+              <p>
+                We have proven methods to provide you with back links of high
+                quality, and we get this done without consuming a lot of your
+                time. We choose all the best websites for you, with the
+                knowledge that we have. This way, we are confident about giving
+                you a good ranking.
+              </p>
+
+              <p>
+                So, how do you get a high ranking within a few days? Confused?
+                We help you improve your ranking and no, not by creating a lot
+                of relevant links that spam people. We are more dedicated in our
+                approach. We do not create instant results just to have a lot of
+                worry and stress later.
+              </p>
+
+              <p>
+                We know how keyword rankings can soon disappear from a search
+                engine. And we do not tempt you with these kinds of false
+                promises.
+              </p>
+
+              <p>Instead the following are what we do:</p>
+
+              <ul className="list-disc ml-6 space-y-2">
+                <li>We help with links that are sure to be bookmarked.</li>
+                <li>We provide links that can be classified.</li>
+                <li>We help with blog links that can be commented on.</li>
+                <li>Our blogs are professional and based on the product.</li>
+                <li>Our links are approved by directories.</li>
+                <li>We also provide links to articles.</li>
+                <li>We create interesting articles.</li>
+                <li>We create a forum for posting.</li>
+                <li>And we perform social media marketing.</li>
+              </ul>
+
+              <p>
+                So, in this way, you can be assured of your site’s ranking on
+                search engines. Our experts are professionals with lots of
+                experience. They know how to target the right audience. This is
+                why our dedication has spread overseas to clients in countries
+                like the US, Australia and so on.
+              </p>
+
+              <p>Instead the following are what we do:</p>
+
+              <ul className="list-disc ml-6 space-y-2">
+                <li>We help with links that are sure to be bookmarked.</li>
+                <li>We provide links that can be classified.</li>
+                <li>We help with blog links that can be commented on.</li>
+                <li>Our blogs are professional and based on the product.</li>
+                <li>Our links are approved by directories.</li>
+                <li>We also provide links to articles.</li>
+                <li>We create interesting articles.</li>
+                <li>We create a forum for posting.</li>
+                <li>And we perform social media marketing.</li>
+              </ul>
+            </div>
+          </details>
+
+          {/* ================= CARD 2 ================= */}
+          <details
+            className="gsap-item group rounded-2xl border border-gray-200
+      shadow-md hover:shadow-orange-200/50
+      hover:border-orange-500
+      transition-all duration-500"
+          >
+            <summary
+              className="cursor-pointer list-none flex items-center justify-between
+        px-8 py-6 font-bold text-lg text-[#0b3253]"
+            >
+              <span className="flex items-center gap-3">
+                <FiUserCheck className="text-orange-500 text-xl" />
+                Hire Full Time SEO Expert
+              </span>
+              <span className="text-gray-400 group-open:rotate-45 transition-transform">
+                +
+              </span>
+            </summary>
+
+            <div className="px-8 pb-8 text-gray-700 space-y-4">
+              <p>
+                Believe it, it’s very important. And by now, you don’t need to
+                be advised on the importance of this. This is why we offer you a
+                range of services that pertain to different clients. Apart from
+                SEO professionals, we have content writers, PPC experts,
+                professionals who are well versed with SMO and so many others
+                who will all work in collaboration in order to ensure that all
+                your goals are met.
+              </p>
+
+              <p>
+                So, what is your current ranking? What are your keywords like?
+                No matter what it is, we are sure to get everything improved for
+                you. We will do our best to give you a place on the Google page.
+                This way, your expectations will be met.
+              </p>
+
+              <p className="font-bold">Our Sources:</p>
+
+              <ul className="list-disc ml-6 space-y-2">
+                <li>Our staff are skilled and highly reliable.</li>
+                <li>We provide constant customer support.</li>
+                <li>We keep your data secure and confidential.</li>
+              </ul>
+              <p>
+                We manage your resources in a hassle free way.
+                <br /> We are cost effective. <br /> Our team has all the
+                strategy you need, so you have no reason to worry.
+              </p>
+            </div>
+          </details>
+
+          {/* ================= CARD 3 ================= */}
+          <details
+            className="gsap-item group rounded-2xl border border-gray-200
+      shadow-md hover:shadow-orange-200/50
+      hover:border-orange-500
+      transition-all duration-500"
+          >
+            <summary
+              className="cursor-pointer list-none flex items-center justify-between
+        px-8 py-6 font-bold text-lg text-[#0b3253]"
+            >
+              <span className="flex items-center gap-3">
+                <FiShield className="text-orange-500 text-xl" />
+                Guaranteed Money Back SEO
+              </span>
+              <span className="text-gray-400 group-open:rotate-45 transition-transform">
+                +
+              </span>
+            </summary>
+
+            <div className="px-8 pb-8 text-gray-700 space-y-4">
+              <p>
+                We understand how everyone hates promises. And this is what we
+                assure you to ensure that this won’t happen with us. Your money
+                and your time will not be wasted. We work with strict timelines,
+                respect your needs and ensure that you get what you are
+                expecting from what you pay us. Rest assured, if otherwise, you
+                can demand your money back. We will pay 50 percent of the fee
+                back to you. This includes the fee of all the months.
+              </p>
+
+              <p className="font-bold">How Does this Work</p>
+              <p className="font-bold">Let us see how this works:</p>
+
+              <p>
+                Our keywords are simple. However, they are designed to attract a
+                large number of the targeted audience. In this way, you can get
+                the visibility and traffic your website needs.
+              </p>
+              <p>
+                And all this, you can get in a cost effective way. Our marketing
+                strategies are designed to provide the right traffic from the
+                right location. We follow strict guidelines when it comes to
+                handing over your money back in case you are not happy with the
+                services that we have offered you. So, do not forget to write to
+                us in case of any queries.
+              </p>
+            </div>
+          </details>
         </div>
       </section>
     </div>

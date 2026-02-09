@@ -11,13 +11,13 @@ import {
 import { FiMapPin, FiPhoneCall, FiMail } from "react-icons/fi";
 import DevelopmentProcess from "./DevelopmentProcess";
 import OurPartners from "../components/OurPartners";
-import webDesign from "../assets/services/webDesign.jpg"
-import webApp from "../assets/services/webApp2.jpg"
-import Digitalmarketing from "../assets/services/Digitalmarketing2.jpg"
-import SEO from "../assets/services/SEO2.jpg"
 import FAQ from "./Faq";
 import WebAppDevelopment from "./WebAppDevelopment";
 import OurServices from "./OurServices";
+import Banner1 from "../assets/banner1.jfif"
+import Banner2 from "../assets/banner2.jfif"
+import Banner3 from "../assets/banner3.jfif"
+import About from "../assets/about1.jfif"
 
 
 const heroSlides = [
@@ -26,21 +26,21 @@ const heroSlides = [
         description:
             "We design and develop beautiful, conversion-focused websites and applications that scale with your business.",
         image:
-            "https://images.unsplash.com/photo-1521737604893-d14cc237f11d",
+            Banner3,
     },
     {
         title: "Scalable MERN Stack Solutions",
         description:
             "High-performance applications built using React, Node.js, and MongoDB.",
         image:
-            "https://images.unsplash.com/photo-1519389950473-47ba0277781c",
+            Banner1,
     },
     {
         title: "Grow Your Business Digitally",
         description:
             "From idea to launch, we help brands build digital products that convert.",
         image:
-            "https://images.unsplash.com/photo-1556761175-4b46a572b786",
+            Banner2,
     },
 ];
 
@@ -130,7 +130,7 @@ export default function Home() {
                     <div className="relative">
                         <div className="absolute -top-6 -left-6 w-40 h-40 bg-orange-100 rounded-full blur-2xl"></div>
                         <img
-                            src="https://images.unsplash.com/photo-1529333166437-7750a6dd5a70"
+                            src={About}
                             alt="About WorldWeblogic"
                             className="relative z-10 rounded-3xl shadow-xl"
                         />
