@@ -9,6 +9,12 @@ import {
     FaSmile,
 } from "react-icons/fa";
 import { FiMapPin, FiPhoneCall, FiMail } from "react-icons/fi";
+import DevelopmentProcess from "./DevelopmentProcess";
+import OurPartners from "../components/OurPartners";
+import webDesign from "../assets/services/webDesign.jpg"
+import webApp from "../assets/services/webApp2.jpg"
+import Digitalmarketing from "../assets/services/Digitalmarketing2.jpg"
+import SEO from "../assets/services/SEO2.jpg"
 
 
 const heroSlides = [
@@ -55,14 +61,20 @@ export default function Home() {
                     {heroSlides.map((slide, index) => (
                         <div
                             key={index}
-                            className={`absolute inset-0 transition-all duration-800 ease-in
-                ${activeSlide === index
-                                    ? "opacity-100 translate-x-0"
-                                    : "opacity-0 translate-x-10 pointer-events-none"}
-              `}
+                            className={`absolute inset-0 transition-opacity duration-700 ease-in-out
+    ${activeSlide === index
+                                    ? "opacity-100 z-10"
+                                    : "opacity-0 z-0 pointer-events-none"}
+  `}
                         >
-                            <div className="grid md:grid-cols-2 gap-10 items-center h-full">
-                                <div>
+                            <div className="grid md:grid-cols-2 gap-10 items-center h-full text-center md:text-left">
+                                <div
+                                    className={`transition-all duration-700 delay-150
+    ${activeSlide === index
+                                            ? "opacity-100 translate-y-0"
+                                            : "opacity-0 translate-y-10"}
+  `}
+                                >
                                     <h1 className="text-4xl md:text-5xl font-bold leading-tight">
                                         {slide.title}
                                     </h1>
@@ -81,12 +93,16 @@ export default function Home() {
                                     </div>
                                 </div>
 
+
                                 <div className="hidden md:block">
                                     <img
                                         src={slide.image}
                                         alt={slide.title}
-                                        className="rounded-2xl shadow-lg"
+                                        className={`rounded-2xl shadow-lg transition-transform duration-700
+    ${activeSlide === index ? "scale-100" : "scale-95"}
+  `}
                                     />
+
                                 </div>
                             </div>
                         </div>
@@ -109,19 +125,19 @@ export default function Home() {
                         {[
                             {
                                 title: "Web Design",
-                                image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f",
+                                image: webDesign,
                             },
                             {
                                 title: "Web & App Development",
-                                image: "https://images.unsplash.com/photo-1518770660439-4636190af475",
+                                image: webApp,
                             },
                             {
                                 title: "Digital Marketing",
-                                image: "https://images.unsplash.com/photo-1557804506-669a67965ba0",
+                                image: Digitalmarketing,
                             },
                             {
                                 title: "SEO Optimization",
-                                image: "https://images.unsplash.com/photo-1562577309-2592ab84b1bc",
+                                image: SEO,
                             },
                         ].map((service) => (
                             <div
@@ -140,7 +156,7 @@ export default function Home() {
                                         src={service.image}
                                         alt={service.title}
                                         className="
-                h-44 w-full object-cover
+                h-60 w-full object-fit
                 transition-transform duration-700 ease-out
                 group-hover:scale-110
               "
@@ -373,6 +389,7 @@ export default function Home() {
                 </div>
             </section>
 
+            <DevelopmentProcess />
 
             <section className="py-24 bg-white">
                 <div className="max-w-7xl mx-auto px-6">
@@ -469,12 +486,12 @@ export default function Home() {
                             </form>
                         </div>
 
+
                     </div>
                 </div>
             </section>
 
-
-
+            <OurPartners />
 
 
             {/* CTA */}

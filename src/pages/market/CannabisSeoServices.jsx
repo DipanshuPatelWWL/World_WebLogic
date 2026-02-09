@@ -1,4 +1,4 @@
-import React, { useLayoutEffect, useRef } from "react";
+import { useLayoutEffect, useRef } from "react";
 import { useState } from "react";
 
 import { gsap } from "gsap";
@@ -528,7 +528,7 @@ const CannabisSeoServices = () => {
             Frequently Asked Questions
           </h2>
 
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid md:grid-cols-2 gap-6 items-start">
             {faqs.map((item, index) => (
               <div
                 key={index}
