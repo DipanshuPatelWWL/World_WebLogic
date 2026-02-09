@@ -11,10 +11,9 @@ import {
 import { FiMapPin, FiPhoneCall, FiMail } from "react-icons/fi";
 import DevelopmentProcess from "./DevelopmentProcess";
 import OurPartners from "../components/OurPartners";
-import webDesign from "../assets/services/webDesign.jpg"
-import webApp from "../assets/services/webApp2.jpg"
-import Digitalmarketing from "../assets/services/Digitalmarketing2.jpg"
-import SEO from "../assets/services/SEO2.jpg"
+import FAQ from "./Faq";
+import WebAppDevelopment from "./WebAppDevelopment";
+import OurServices from "./OurServices";
 import Banner1 from "../assets/banner1.jfif"
 import Banner2 from "../assets/banner2.jfif"
 import Banner3 from "../assets/banner3.jfif"
@@ -115,73 +114,10 @@ export default function Home() {
             </header>
 
             {/* SERVICES */}
-            <section className="py-20 bg-gray-50">
-                <div className="max-w-7xl mx-auto px-6">
-                    <h2 className="text-3xl font-bold text-center">
-                        Our Core Services
-                    </h2>
+            <OurServices />
 
-                    <p className="text-center mt-4 text-gray-600">
-                        Everything you need to build, grow, and scale digitally
-                    </p>
 
-                    <div className="mt-12 grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
-                        {[
-                            {
-                                title: "Web Design",
-                                image: webDesign,
-                            },
-                            {
-                                title: "Web & App Development",
-                                image: webApp,
-                            },
-                            {
-                                title: "Digital Marketing",
-                                image: Digitalmarketing,
-                            },
-                            {
-                                title: "SEO Optimization",
-                                image: SEO,
-                            },
-                        ].map((service) => (
-                            <div
-                                key={service.title}
-                                className="
-            group bg-white rounded-2xl overflow-hidden
-            shadow-md border border-transparent
-            transition-all duration-500 ease-out
-            hover:-translate-y-3 hover:shadow-2xl
-            hover:border-orange-500
-          "
-                            >
-                                {/* Image */}
-                                <div className="overflow-hidden">
-                                    <img
-                                        src={service.image}
-                                        alt={service.title}
-                                        className="
-                h-60 w-full object-fit
-                transition-transform duration-700 ease-out
-                group-hover:scale-110
-              "
-                                    />
-                                </div>
-
-                                {/* Content */}
-                                <div className="p-6">
-                                    <h3 className="text-xl font-semibold mb-2">
-                                        {service.title}
-                                    </h3>
-
-                                    <p className="text-gray-600 text-sm leading-relaxed">
-                                        High-quality solutions tailored to your business goals.
-                                    </p>
-                                </div>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </section>
+            <WebAppDevelopment />
 
 
 
@@ -496,6 +432,9 @@ export default function Home() {
             </section>
 
             <OurPartners />
+
+
+            <FAQ />
 
 
             {/* CTA */}
