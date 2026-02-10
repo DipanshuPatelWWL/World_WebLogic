@@ -14,6 +14,11 @@ import SeoFurnitureStores from "./pages/market/SeoFurnitureStores";
 import Seo from "./pages/services/Seo";
 import SEO_Packages from "./pages/plans-pricinng/SEO_Packages";
 import SEO_Starter_Pack from "./pages/plans-pricinng/SEO_Starter_Pack";
+import WebDesign from "./pages/services/WebDesign";
+import WebDevelopment from "./pages/services/WebDevelopment";
+import AppDevelopment from "./pages/services/AppDevelopment";
+import SocialMediaMarketing from "./pages/services/SocialMediaMarketing";
+import OnlineReputationManagement from "./pages/services/OnlineReputationManagement";
 
 function App() {
   return (
@@ -28,7 +33,6 @@ function App() {
         <Route path="/about/why-choose-us" element={<WhyWwl />} />
         <Route path="/market/cannabis-seo-services" element={<CannabisSeoServices />} />
         <Route path="/market/seo-for-furniture-stores" element={<SeoFurnitureStores />} />
-        <Route path="/services/seo" element={<Seo />} />
         <Route path="/services/seo" element={<Seo />} />
         <Route path="/contact" element={<ContactUs />} />
         <Route path="/services/web-design" element={<WebDesign />} />
