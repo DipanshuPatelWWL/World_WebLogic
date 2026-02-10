@@ -15,6 +15,8 @@ import Seo from "./pages/services/SEO";
 import WebDesign from "./pages/services/WebDesign";
 import WebDevelopment from "./pages/services/WebDevelopment";
 import AppDevelopment from "./pages/services/AppDevelopment";
+import SocialMediaMarketing from "./pages/services/SocialMediaMarketing";
+import OnlineReputationManagement from "./pages/services/OnlineReputationManagement";
 
 function App() {
   return (
@@ -34,6 +36,8 @@ function App() {
         <Route path="/services/web-design" element={<WebDesign />} />
         <Route path="/services/web-development" element={<WebDevelopment />} />
         <Route path="/services/mobile-application-development" element={<AppDevelopment />} />
+        <Route path="/services/social-media-marketing" element={<SocialMediaMarketing />} />
+        <Route path="/services/online-reputation-management" element={<OnlineReputationManagement />} />
         <Route path="/projects" element={<Projects />} />
         <Route path="/projects/:slug" element={<ProjectDetails />} />
       </Routes>

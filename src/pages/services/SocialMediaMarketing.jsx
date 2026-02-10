@@ -4,12 +4,12 @@ import { FiPlus, FiMinus } from "react-icons/fi";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-import Banner from "../../assets/services/web-dev-banner.jpg";
-import WebDesign1 from "../../assets/services/web-development.jpg";
+import Banner from "../../assets/services/SMM-banner.jpg";
+import WebDesign1 from "../../assets/services/SMM.jpg";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const WebDevelopment = () => {
+const SocialMediaMarketing = () => {
   const rootRef = useRef(null);
   const heroRef = useRef(null);
   const sectionRefs = useRef([]);
@@ -68,30 +68,32 @@ const WebDevelopment = () => {
 
   const faqs = [
     {
-      question: "What web development services does World Web Logic offer?",
+      question:
+        "What social media marketing services does World Web Logic offer?",
       answer:
-        "We offer comprehensive web development services including PHP development, WordPress development, and JavaScript development. Our services also extend to custom web application development, e-commerce solutions, API integrations, and performance optimization.",
+        "We offer a wide range of social media marketing services, including social media strategy development, content creation and curation, social media management, paid advertising campaigns, influencer marketing, and performance analytics. We tailor our services to meet the unique needs and goals of your business.",
     },
     {
       question: "What technologies and frameworks do you specialize in?",
       answer:
-        "Our team specializes in a variety of technologies and frameworks, including PHP, WordPress, JavaScript, HTML5, CSS3, Laravel, React and Node.js. We stay updated with the latest industry trends to provide cutting-edge solutions for our clients.",
-    },
-    {
-      question: "How do you ensure the quality and security of the web applications you develop?",
-      answer:
-        "Quality and security are our top priorities. We follow best practices in coding, conduct thorough testing, and implement robust security measures to protect your website and user data. Our development process includes code reviews, automated testing, and regular updates to address any security vulnerabilities.",
-    },
-    {
-      question: "Can you help with the migration and upgrade of existing websites?",
-      answer:
-        "Yes, we can assist with migrating and upgrading existing websites. Whether you need to move your website to a new platform, update its design, enhance functionality, or improve performance, our team has the expertise to handle the process smoothly and efficiently.",
+        "We specialize in marketing on all major social media platforms, including Facebook, Instagram, Twitter, LinkedIn, Pinterest, and TikTok. Our team stays updated with the latest trends and best practices on each platform to ensure effective and engaging marketing campaigns.",
     },
     {
       question:
-        "Do you provide ongoing maintenance and support after the development is complete?",
+        "How do you develop a social media marketing strategy for a business?",
       answer:
-        "Absolutely! We offer ongoing maintenance and support services to ensure your website remains up-to-date, secure, and running smoothly. Our support packages include regular updates, security monitoring, bug fixes, performance optimization, and technical assistance as needed.",
+        "Our strategy development process starts with understanding your business goals, target audience, and current social media presence. We conduct a competitive analysis, identify key performance indicators (KPIs), and create a comprehensive strategy that includes content plans, posting schedules, and advertising tactics to achieve your objectives.",
+    },
+    {
+      question: "Can you manage our social media accounts on our behalf?",
+      answer:
+        "Yes, we offer full social media management services. This includes creating and scheduling posts, engaging with your audience, responding to comments and messages, monitoring social media trends, and providing regular performance reports. Our goal is to ensure your social media presence is active, engaging, and aligned with your brand.",
+    },
+    {
+      question:
+        "How do you measure the success of a social media marketing campaign?",
+      answer:
+        "We measure the success of our social media marketing campaigns using various metrics and KPIs, such as engagement rates, follower growth, website traffic, conversion rates, and return on investment (ROI). We provide detailed analytics and reports to help you understand the impact of our efforts and make data-driven decisions for future campaigns.",
     },
   ];
 
@@ -106,14 +108,16 @@ const WebDevelopment = () => {
           backgroundPosition: "center",
         }}
       >
-        <div className="absolute inset-0 bg-black/70" />
+        <div className="absolute inset-0 bg-[#020202]/80" />
 
         <div
           ref={heroRef}
           className="relative z-10 text-center px-6 text-white"
         >
           <h1 className="text-5xl md:text-6xl font-extrabold">Services</h1>
-          <p className="mt-6 text-lg text-gray-300">Home - Web Development</p>
+          <p className="mt-6 text-lg text-gray-300">
+            Home - Social Media Marketing
+          </p>
         </div>
       </section>
 
@@ -121,10 +125,8 @@ const WebDevelopment = () => {
       <section className="bg-white py-24 px-6">
         <div className="max-w-5xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-extrabold text-[#020202] mb-6">
-
-            Our Web
-            <span className="text-[#25baff]"> Development Solutions</span>
-
+            Social Media
+            <span className="text-[#25baff]"> Marketing</span>
           </h2>
 
           <p className="text-gray-600 max-w-3xl mx-auto text-lg">
@@ -150,71 +152,43 @@ const WebDevelopment = () => {
 
         <div className="gsap-item ">
           <p className="text-gray-700 mb-6">
-            here are a lot of things that you need to keep in mind when it comes
-            to working on your website. If you thought it was all about colors
-            and images, then you are wrong. Understanding the minds of your
-            visitors, for one, is an important thing that you need to keep in
-            mind here.
+            Word of mouth travels faster today by way of stories and statuses,
+            so how well does your business do when it comes to securing a place
+            in these activities? It is for this reason that our SMO experts are
+            there for you. We know exactly what you need to enhance your brand
+            image and increase its presence on sites like these.
           </p>
           <p className="text-gray-700 mb-6">
-            Here, we will help you create a website that stands out from the
-            rest and at the same time, catches the attention of a first time
-            user.
+            We have all the expertise needed to help you with what works and
+            what doesn’t in the world of social media. This can go a long way in
+            increasing the visibility of your business. And it is not just this.
+            You also enjoy a better engagement with your customers, and this in
+            turn will help you create a positive brand image. You can get all
+            the feedback that you can work on to please your clients better.
           </p>
           <p className="text-gray-700">
-            And did you know that there is more to a website than being catching
-            and standing out? Hence, we also provide importance to ensuring that
-            your website is easy to use with a good user experience. This way,
-            customers won’t have a hard time navigating and your web page will
-            be a pleasant experience. Be it web development service or PHP
-            development service that you want, we are here to help you. We
-            provide all the solutions that you need not just for a jaw dropping
-            website but everything else that you would want in a good website.
+            Apart from this, we also detect the latest trends in social media
+            and help you go with the flow. In this way, you are not lagging
+            behind. You can enjoy just the kind of exposure you need on sites
+            like Facebook, Twitter and YouTube.
           </p>
-          <p className="text-gray-700 mb-6 ml-5"></p>
         </div>
-        <p className="text-gray-700 ml-5">
-          Approach us for a more responsive website and see how your customers
-          are going to increase by the day. We will keep your website trendy and
-          use all the right shades and colors to make the right impression.
+
+        <p className="text-gray-700 -mt-18">
+          Yes, we are committed to providing you with success as well as
+          satisfaction when it comes to making your presence in the world of
+          digital media.
         </p>
+
         <p className="text-gray-700">
-          This way, your website won’t just be different from that of your
-          competitors but will perform better too. This way, you can create a
-          striking online presence to grow your business.
+          And no, we do not just create an automated strategy for you. We first
+          work towards understanding your business and it needs so that we can
+          come up with a custom approach that would work best for you. We know
+          how social media can play a crucial role when it comes to the
+          promotion of your business and so work closely in this area to ensure
+          that this is all done to perfection. And we have all the latest tools
+          and techniques that are required to help you out in this process.
         </p>
-      </section>
-
-      {/* ================= list ================= */}
-      <section className="bg-gray-50 py-24">
-        <div className="container mx-auto px-6">
-         <h2 className="text-4xl font-bold text-[#020202] mb-14">
-
-            That being said, the following are some of the services that we can
-            offer:
-          </h2>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {[
-              "Web application development",
-              "Custom application development",
-              "PHP development",
-              "MERN development",
-            ].map((text, index) => (
-              <div
-                key={index}
-                className="bg-white border border-gray-200 rounded-2xl px-8 py-6 flex items-center gap-4
-                     transition-all duration-300
-                     hover:-translate-y-2 hover:shadow-2xl hover:border-[#25baff]
-"
-              >
-                <span className="text-[#a8d97c] text-2xl font-bold">»</span>
-
-                <p className="text-black text-lg leading-relaxed">{text}</p>
-              </div>
-            ))}
-          </div>
-        </div>
       </section>
 
       {/* =================  CTA ================= */}
@@ -222,12 +196,11 @@ const WebDevelopment = () => {
         ref={addSectionRef}
         className="relative overflow-hidden py-24 px-6"
         style={{ backgroundColor: "#020202" }}
-
       >
         {/* Animated Gradient Glow */}
         <div
           className="absolute inset-0 
-    bg-[radial-gradient(circle_at_20%_20%,rgba(37,186,255,0.25),transparent_45%),
+   bg-[radial-gradient(circle_at_20%_20%,rgba(37,186,255,0.25),transparent_45%),
 radial-gradient(circle_at_80%_80%,rgba(168,217,124,0.2),transparent_45%)]
 
     animate-pulseSlow"
@@ -239,7 +212,6 @@ radial-gradient(circle_at_80%_80%,rgba(168,217,124,0.2),transparent_45%)]
             <span
               key={i}
               className="absolute w-1.5 h-1.5 bg-[#25baff] rounded-full opacity-40 animate-float"
-
               style={{
                 top: `${Math.random() * 100}%`,
                 left: `${Math.random() * 100}%`,
@@ -267,7 +239,6 @@ hover:bg-[#a8d97c]
     font-semibold
     rounded-full
     shadow-md
-   
     hover: cursor-pointer
     hover:shadow-lg
     transition-all duration-300
@@ -280,7 +251,7 @@ hover:bg-[#a8d97c]
 
       <section ref={addSectionRef} className="bg-white py-28 px-6">
         <div className="max-w-5xl mx-auto">
-          <h2 className="gsap-item text-4xl font-extrabold text-[#25baff] mb-12">
+         <h2 className="gsap-item text-4xl font-extrabold text-[#25baff] mb-12">
 
             FAQs
           </h2>
@@ -291,7 +262,7 @@ hover:bg-[#a8d97c]
                 key={index}
                 ref={(el) => (faqRefs.current[index] = el)}
                 className="gsap-item border border-gray-200 rounded-xl
-      hover:border-[#25baff]
+          hover:border-[#25baff]
  transition-colors"
               >
                 {/* Question */}
@@ -333,18 +304,17 @@ hover:bg-[#a8d97c]
                     }
                   }}
                   className="w-full flex items-center justify-between
-            px-6 py-5 text-left font-semibold text-[#020202]
-"
+            px-6 py-5 text-left font-semibold text-[#0b3253]"
                 >
                   <span
-                  className={activeFaq === index ? "text-[#25baff]" : ""}
+                    className={activeFaq === index ? "text-[#25baff]" : ""}
 
                   >
                     {faq.question}
                   </span>
 
                   {activeFaq === index ? (
-                    <FiMinus className="text-[#25baff] text-xl" />
+                   <FiMinus className="text-[#25baff] text-xl" />
 
                   ) : (
                     <FiPlus className="text-gray-600 text-xl" />
@@ -366,4 +336,4 @@ hover:bg-[#a8d97c]
   );
 };
 
-export default WebDevelopment;
+export default SocialMediaMarketing;

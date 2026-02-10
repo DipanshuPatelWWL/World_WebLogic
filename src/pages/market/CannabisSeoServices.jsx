@@ -166,8 +166,12 @@ const CannabisSeoServices = () => {
 
         {/* form  */}
 
-        <div className="gsap-item rounded-2xl p-[2px] bg-gradient-to-br from-orange-400 to-orange-600 shadow-2xl w-120 ml-15">
-          <div className=" rounded-2xl bg-white p-6 md:p-8 transition-all duration-300 hover:shadow-orange-200">
+        <div
+          className="gsap-item rounded-2xl p-[2px] bg-gradient-to-br from-[#25baff] to-[#a8d97c]
+ shadow-2xl w-120 ml-15"
+        >
+          <div className=" rounded-2xl bg-white p-6 md:p-8 transition-all duration-300 hover:shadow-[#25baff]/30
+">
             <h3 className="text-2xl font-bold text-center mb-6 text-gray-800">
               Get A Quote
             </h3>
@@ -179,7 +183,8 @@ const CannabisSeoServices = () => {
                   type="text"
                   placeholder="Full Name"
                   className="w-full rounded-xl border border-gray-300 px-4 py-3 
-          focus:border-orange-500 focus:ring-2 focus:ring-orange-200 
+          focus:border-[#25baff] focus:ring-2 focus:ring-[#25baff]/30
+ 
           outline-none transition"
                 />
               </div>
@@ -190,14 +195,16 @@ const CannabisSeoServices = () => {
                   type="email"
                   placeholder="Email Address"
                   className="w-full rounded-xl border border-gray-300 px-4 py-3 
-          focus:border-orange-500 focus:ring-2 focus:ring-orange-200 
+          focus:border-[#25baff] focus:ring-2 focus:ring-[#25baff]/30
+ 
           outline-none transition"
                 />
                 <input
                   type="tel"
                   placeholder="Mobile Number"
                   className="w-full rounded-xl border border-gray-300 px-4 py-3 
-          focus:border-orange-500 focus:ring-2 focus:ring-orange-200 
+          focus:border-[#25baff] focus:ring-2 focus:ring-[#25baff]/30
+ 
           outline-none transition"
                 />
               </div>
@@ -207,7 +214,8 @@ const CannabisSeoServices = () => {
                 type="text"
                 placeholder="Website URL (if you have)"
                 className="w-full rounded-xl border border-gray-300 px-4 py-3 
-        focus:border-orange-500 focus:ring-2 focus:ring-orange-200 
+        focus:border-[#25baff] focus:ring-2 focus:ring-[#25baff]/30
+ 
         outline-none transition"
               />
 
@@ -216,15 +224,16 @@ const CannabisSeoServices = () => {
                 rows="4"
                 placeholder="Tell us what you need & best time to call you"
                 className="w-full rounded-xl border border-gray-300 px-4 py-3 
-        focus:border-orange-500 focus:ring-2 focus:ring-orange-200 
+        focus:border-[#25baff] focus:ring-2 focus:ring-[#25baff]/30
+ 
         outline-none transition resize-none"
               />
 
               {/* Button */}
               <button
                 type="submit"
-                className="w-full rounded-xl bg-orange-500 py-3 font-semibold text-white
-        hover:bg-orange-600 hover:shadow-lg hover:shadow-orange-300
+                className="w-full rounded-xl bg-[#25baff] py-3 font-semibold text-white
+        hover:bg-[#1aa7e6] hover:shadow-lg hover:shadow-[#25baff]/40
         active:scale-95 transition-all duration-300"
               >
                 Call Me Now
@@ -278,7 +287,8 @@ const CannabisSeoServices = () => {
         className="container mx-auto px-6 py-28 grid md:grid-cols-2 gap-16 items-center"
       >
         <div className="gsap-item ">
-          <h2 className="text-orange-500 font-bold mb-4 text-3xl">
+          <h2 className="text-[#25baff] font-bold mb-4 text-3xl">
+
             How CBD SEO Approach Ranks Your Cannabis Business
           </h2>
           <h3 className="text-2xl font-bold mb-6 text-[#0d3253]">
@@ -473,8 +483,9 @@ const CannabisSeoServices = () => {
         {/* Animated Gradient Glow */}
         <div
           className="absolute inset-0 
-    bg-[radial-gradient(circle_at_20%_20%,rgba(255,165,0,0.25),transparent_45%),
-        radial-gradient(circle_at_80%_80%,rgba(255,140,0,0.2),transparent_45%)]
+    bg-[radial-gradient(circle_at_20%_20%,rgba(37,186,255,0.25),transparent_45%),
+radial-gradient(circle_at_80%_80%,rgba(168,217,124,0.25),transparent_45%)]
+
     animate-pulseSlow"
         />
 
@@ -483,7 +494,8 @@ const CannabisSeoServices = () => {
           {[...Array(18)].map((_, i) => (
             <span
               key={i}
-              className="absolute w-1.5 h-1.5 bg-orange-400 rounded-full opacity-40 animate-float"
+            className="absolute w-1.5 h-1.5 bg-[#25baff] rounded-full opacity-40 animate-float"
+
               style={{
                 top: `${Math.random() * 100}%`,
                 left: `${Math.random() * 100}%`,
@@ -498,20 +510,20 @@ const CannabisSeoServices = () => {
           <h2 className="gsap-item text-white text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight max-w-4xl">
             Boost your cannabis business visibility and drive organic traffic
             with our expert{" "}
-            <span className="text-orange-400">Cannabis SEO services</span>
+            <span className="text-[#a8d97c]">Cannabis SEO services</span>
           </h2>
 
           {/* BUTTON */}
           <button
             className="
-    bg-orange-500 text-white
+    bg-[#25baff] text-white
     px-6 py-3
     text-sm md:text-base
     font-semibold
     rounded-full
     shadow-md
-    hover:bg-orange-600
-    hover: cursor-pointer
+    hover:bg-[#1aa7e6]
+    cursor-pointer
     hover:shadow-lg
     transition-all duration-300
     whitespace-nowrap"
@@ -524,7 +536,8 @@ const CannabisSeoServices = () => {
       {/* ================= FAQ SECTION ================= */}
       <section ref={addSectionRef} className="bg-gray-50 py-20 px-6">
         <div className="max-w-6xl mx-auto">
-          <h2 className="gsap-item text-2xl md:text-3xl font-bold text-center text-[#0b3253] mb-12">
+          <h2 className="gsap-item text-2xl md:text-3xl font-bold text-center text-[#25baff]
+ mb-12">
             Frequently Asked Questions
           </h2>
 
@@ -535,7 +548,7 @@ const CannabisSeoServices = () => {
                 className={`bg-white border rounded-lg transition-all duration-300
             ${
               activeFaq === index
-                ? "border-orange-500 shadow-md"
+                ? "border-[#25baff] shadow-md"
                 : "border-gray-200"
             }`}
               >
@@ -548,7 +561,8 @@ const CannabisSeoServices = () => {
                 >
                   <span
                     className={`text-sm font-semibold transition-colors
-                ${activeFaq === index ? "text-orange-500" : "text-[#0b3253]"}`}
+                ${activeFaq === index ? "text-[#25baff]" : "text-[#0b3253]"}
+`}
                   >
                     {item.q}
                   </span>
@@ -557,7 +571,7 @@ const CannabisSeoServices = () => {
                     className={`text-xl font-bold transition-transform duration-300
                 ${
                   activeFaq === index
-                    ? "rotate-45 text-orange-500"
+                    ? "rotate-45 text-[#25baff]"
                     : "text-[#0b3253]"
                 }`}
                   >
