@@ -3,11 +3,10 @@ import { FiPlus, FiMinus } from "react-icons/fi";
 import { FiSmartphone, FiTablet } from "react-icons/fi";
 import { FaAndroid } from "react-icons/fa";
 
-
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-import Banner from "../../assets/services/web-dev-banner.jpg";
+import Banner from "../../assets/services/mobile-app-banner.jpg";
 import WebDesign1 from "../../assets/services/mobile-app-dev.jpg";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -71,7 +70,8 @@ const AppDevelopment = () => {
 
   const faqs = [
     {
-      question: "What mobile app development services does World Web Logic offer?",
+      question:
+        "What mobile app development services does World Web Logic offer?",
       answer:
         "We offer comprehensive mobile app development services for iOS (iPhone and iPad) and Android platforms. Our services include custom app development, UI/UX design, app testing, deployment, and ongoing maintenance and support.",
     },
@@ -87,8 +87,7 @@ const AppDevelopment = () => {
         "Yes, we offer both native and cross-platform app development. For native development, we use Swift and Objective-C for iOS apps, and Java and Kotlin for Android apps. For cross-platform development, we use frameworks like React Native and Flutter to create apps that work seamlessly on both iOS and Android devices.",
     },
     {
-      question:
-        "Can you help with app store submission and optimization?",
+      question: "Can you help with app store submission and optimization?",
       answer:
         "Absolutely! We assist with the entire app store submission process, including preparing the necessary documentation, creating app store listings, and ensuring compliance with Apple’s App Store and Google Play Store guidelines. We also offer app store optimization (ASO) services to enhance your app’s visibility and increase downloads.",
     },
@@ -99,8 +98,6 @@ const AppDevelopment = () => {
         "Yes, we provide ongoing maintenance and updates to ensure your app remains up-to-date with the latest OS versions and technologies. Our maintenance services include bug fixes, performance improvements, feature enhancements, and regular updates to keep your app running smoothly and securely.",
     },
   ];
-
-
 
   return (
     <div ref={rootRef} className="bg-white text-gray-900">
@@ -113,7 +110,7 @@ const AppDevelopment = () => {
           backgroundPosition: "center",
         }}
       >
-        <div className="absolute inset-0 bg-black/70" />
+        <div className="absolute inset-0 bg-[#020202]/80" />
 
         <div
           ref={heroRef}
@@ -129,9 +126,9 @@ const AppDevelopment = () => {
       {/* ================= STATIC WHITE SECTION ================= */}
       <section className="bg-white py-24 px-6">
         <div className="max-w-5xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-extrabold text-[#0b3253] mb-6">
+          <h2 className="text-3xl md:text-4xl font-extrabold text-[#020202] mb-6">
             Mobile Application
-            <span className="text-orange-500"> Development</span>
+            <span className="text-[#25baff]"> Development</span>
           </h2>
 
           <p className="text-gray-600 max-w-3xl mx-auto text-lg">
@@ -175,7 +172,7 @@ const AppDevelopment = () => {
             know where your search ends.
           </p>
         </div>
-       
+
         <p className="text-gray-700">
           Be it web development service or PHP development service that you
           want, we are here to help you. We provide all the solutions that you
@@ -185,7 +182,7 @@ const AppDevelopment = () => {
           We will keep your website trendy and use all the right shades and
           colors to make the right impression.
         </p>
-         <p className="text-gray-700 -mt-18">
+        <p className="text-gray-700 -mt-18">
           This way, your website won’t just be different from that of your
           competitors but will perform better too. This way, you can create a
           striking online presence to grow your business.
@@ -195,7 +192,7 @@ const AppDevelopment = () => {
       {/* ================= list ================= */}
       <section className="bg-gray-50 py-24">
         <div className="container mx-auto px-6">
-          <h2 className="text-4xl font-bold text-[#0d3253] mb-14">
+          <h2 className="text-4xl font-bold text-[#020202] mb-14">
             Why Choose World Weblogic
           </h2>
 
@@ -211,9 +208,10 @@ const AppDevelopment = () => {
                 key={index}
                 className="bg-white border border-gray-200 rounded-2xl px-8 py-6 flex items-center gap-4
                      transition-all duration-300
-                     hover:-translate-y-2 hover:shadow-2xl hover:border-orange-600"
+                     hover:-translate-y-2 hover:shadow-2xl hover:border-[#25baff]"
               >
-                <span className="text-orange-500 text-2xl font-bold">»</span>
+                <span className="text-[#a8d97c] text-2xl font-bold">»</span>
+
                 <p className="text-black text-lg leading-relaxed">{text}</p>
               </div>
             ))}
@@ -221,96 +219,152 @@ const AppDevelopment = () => {
         </div>
       </section>
 
-
-
-
-
       {/* =================  CTA ================= */}
 
-    <section className="bg-white py-28 px-6">
-  <div className="max-w-6xl mx-auto">
-    <h2 className="text-4xl font-extrabold text-center text-[#0b3253] mb-16">
-      Our Services
-    </h2>
+      <section className="bg-white py-28 px-6">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-4xl font-extrabold text-center text-[#020202] mb-16">
+            Our Services
+          </h2>
 
-    <div className="grid md:grid-cols-3 gap-12">
-      {/* Card 1 */}
-      <div
-        className="bg-white rounded-2xl p-8 text-center
+          <div className="grid md:grid-cols-3 gap-12">
+            {/* Card 1 */}
+            <div
+              className="bg-white rounded-2xl p-8 text-center
         border border-gray-200 shadow-md
-        hover:border-orange-500 hover:shadow-orange-200/50
+        hover:border-[#25baff] hover:shadow-[#25baff]/30
+
         hover:-translate-y-2 transition-all duration-300"
-      >
-        <FiSmartphone className="text-5xl text-orange-500 mx-auto mb-6" />
+            >
+              <FiSmartphone className="text-5xl text-[#25baff] mx-auto mb-6" />
 
-        <h3 className="text-xl font-bold text-[#0b3253] mb-6">
-          iPhone App
-        </h3>
+              <h3 className="text-xl font-bold text-[#020202] mb-6">
+                iPhone App
+              </h3>
 
-        <p className="text-gray-600 leading-relaxed">
-          You wouldn’t want all those iPhone users to think less of your app,
-          would you? Having created iPhone apps for so many industries, we
-          promise to do our best for you. Our approach is market centric, so
-          whether it is a gaming, shopping, education or any other online
-          business that you have, we will handle it for you.
-        </p>
-      </div>
+              <p className="text-gray-600 leading-relaxed">
+                You wouldn’t want all those iPhone users to think less of your
+                app, would you? Having created iPhone apps for so many
+                industries, we promise to do our best for you. Our approach is
+                market centric, so whether it is a gaming, shopping, education
+                or any other online business that you have, we will handle it
+                for you.
+              </p>
+            </div>
 
-      {/* Card 2 */}
-      <div
-        className="bg-white rounded-2xl p-8 text-center
+            {/* Card 2 */}
+            <div
+              className="bg-white rounded-2xl p-8 text-center
         border border-gray-200 shadow-md
-        hover:border-orange-500 hover:shadow-orange-200/50
+        hover:border-[#25baff]
+ hover:shadow-orange-200/50
         hover:-translate-y-2 transition-all duration-300"
-      >
-        <FiTablet className="text-5xl text-orange-500 mx-auto mb-6" />
+            >
+              <FiTablet className="text-5xl text-[#25baff] mx-auto mb-6" />
 
-        <h3 className="text-xl font-bold text-[#0b3253] mb-6">
-          iPad App
-        </h3>
+              <h3 className="text-xl font-bold text-[#020202] mb-6">
+                iPad App
+              </h3>
 
-        <p className="text-gray-600 leading-relaxed">
-          Customized app development services can make a big difference by way
-          of pleasing all those Apple users who like to check out things on a
-          big screen. We understand this really well and know how to please
-          them too. Again, be it educational services, retail or even
-          entertainment, we know how it goes and what is needed in all these
-          cases.
-        </p>
-      </div>
+              <p className="text-gray-600 leading-relaxed">
+                Customized app development services can make a big difference by
+                way of pleasing all those Apple users who like to check out
+                things on a big screen. We understand this really well and know
+                how to please them too. Again, be it educational services,
+                retail or even entertainment, we know how it goes and what is
+                needed in all these cases.
+              </p>
+            </div>
 
-      {/* Card 3 */}
-      <div
-        className="bg-white rounded-2xl p-8 text-center
+            {/* Card 3 */}
+            <div
+              className="bg-white rounded-2xl p-8 text-center
         border border-gray-200 shadow-md
-        hover:border-orange-500 hover:shadow-orange-200/50
+        hover:border-[#25baff]
+ hover:shadow-orange-200/50
         hover:-translate-y-2 transition-all duration-300"
+            >
+              <FaAndroid className="text-5xl text-[#25baff] mx-auto mb-6" />
+
+              <h3 className="text-xl font-bold text-[#020202] mb-6">
+                Android App
+              </h3>
+
+              <p className="text-gray-600 leading-relaxed">
+                And then there is that majority out there that we cannot miss.
+                You can have our trust here too. We know exactly what to give
+                them. With our advanced technologies, we will ensure that we
+                create a lasting impression for you on these users. Our
+                expertise includes all types of apps here, be it for a
+                restaurant, social media site or anything else.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* =================  CTA ================= */}
+      <section
+        ref={addSectionRef}
+        className="relative overflow-hidden py-24 px-6"
+        style={{ backgroundColor: "#020202" }}
       >
-        <FaAndroid className="text-5xl text-orange-500 mx-auto mb-6" />
+        {/* Animated Gradient Glow */}
+        <div
+          className="absolute inset-0 
+   bg-[radial-gradient(circle_at_20%_20%,rgba(37,186,255,0.25),transparent_45%),
+radial-gradient(circle_at_80%_80%,rgba(168,217,124,0.2),transparent_45%)]
 
+    animate-pulseSlow"
+        />
 
-        <h3 className="text-xl font-bold text-[#0b3253] mb-6">
-          Android App
-        </h3>
+        {/* Floating Particles */}
+        <div className="absolute inset-0 pointer-events-none">
+          {[...Array(18)].map((_, i) => (
+            <span
+              key={i}
+              className="absolute w-1.5 h-1.5 bg-[#25baff]
+ rounded-full opacity-40 animate-float"
+              style={{
+                top: `${Math.random() * 100}%`,
+                left: `${Math.random() * 100}%`,
+                animationDelay: `${i * 0.25}s`,
+              }}
+            />
+          ))}
+        </div>
 
-        <p className="text-gray-600 leading-relaxed">
-          And then there is that majority out there that we cannot miss. You
-          can have our trust here too. We know exactly what to give them. With
-          our advanced technologies, we will ensure that we create a lasting
-          impression for you on these users. Our expertise includes all types
-          of apps here, be it for a restaurant, social media site or anything
-          else.
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
+        {/* CONTENT */}
+        <div className="relative z-10 max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-10">
+          <h2 className="gsap-item text-white text-3xl md:text-4xl lg:text-3xl font-extrabold leading-tight max-w-4xl">
+            If you want an effective website, approach us and you won’t be
+            disappointed.
+          </h2>
 
+          {/* BUTTON */}
+          <button
+            className="
+    bg-[#25baff] text-[#020202]
+hover:bg-[#a8d97c]
 
+    px-6 py-3
+    text-sm md:text-base
+    font-semibold
+    rounded-full
+    shadow-md
+    hover: cursor-pointer
+    hover:shadow-lg
+    transition-all duration-300
+    whitespace-nowrap"
+          >
+            Contact Now
+          </button>
+        </div>
+      </section>
 
       <section ref={addSectionRef} className="bg-white py-28 px-6">
         <div className="max-w-5xl mx-auto">
-          <h2 className="gsap-item text-4xl font-extrabold text-[#0b3253] mb-12">
+          <h2 className="gsap-item text-4xl font-extrabold text-[#25baff] mb-12">
             FAQs
           </h2>
 
@@ -320,7 +374,8 @@ const AppDevelopment = () => {
                 key={index}
                 ref={(el) => (faqRefs.current[index] = el)}
                 className="gsap-item border border-gray-200 rounded-xl
-          hover:border-orange-500 transition-colors"
+          hover:border-[#25baff]
+ transition-colors"
               >
                 {/* Question */}
                 <button
@@ -361,16 +416,15 @@ const AppDevelopment = () => {
                     }
                   }}
                   className="w-full flex items-center justify-between
-            px-6 py-5 text-left font-semibold text-[#0b3253]"
+            px-6 py-5 text-left font-semibold  text-[#020202]
+"
                 >
-                  <span
-                    className={activeFaq === index ? "text-orange-500" : ""}
-                  >
+                  <span className={activeFaq === index ? "text-[#25baff]" : ""}>
                     {faq.question}
                   </span>
 
                   {activeFaq === index ? (
-                    <FiMinus className="text-orange-500 text-xl" />
+                    <FiMinus className="text-[#25baff] text-xl" />
                   ) : (
                     <FiPlus className="text-gray-600 text-xl" />
                   )}

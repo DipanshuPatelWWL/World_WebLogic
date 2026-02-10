@@ -71,14 +71,14 @@ const WhyWwl = () => {
           backgroundPosition: "center",
         }}
       >
-        <div className="absolute inset-0 bg-black/70" />
+        <div className="absolute inset-0 bg-[#020202]/80" />
 
         <div
           ref={heroRef}
           className="relative z-10 text-center px-6 text-white"
         >
           <h1 className="text-5xl md:text-6xl font-extrabold">About Us</h1>
-          <p className="mt-6 text-lg text-black-300">
+          <p className="mt-6 text-lg text-gray-300">
             Home · Why World WebLogic
           </p>
         </div>
@@ -90,16 +90,16 @@ const WhyWwl = () => {
         className="container mx-auto px-6 py-24 grid md:grid-cols-2 gap-16 items-center"
       >
         <div>
-          <h2 className="text-4xl font-bold mb-6 text-[#0d3253]">
+          <h2 className="text-4xl font-bold mb-6 text-[#020202]">
             We are very careful in following the guidelines of search engines
             and white hat SEO practices.
           </h2>
-          <p className="text-black-700 leading-relaxed mb-4">
+          <p className="text-gray-700 leading-relaxed mb-4">
             PPC can be a very effective way to go out and market your business.
             A kind of internet marketing, this can be a form of campaign that
             mainly depends on the right research and keywords.
           </p>
-          <p className="text-black-700 leading-relaxed">
+          <p className="text-gray-700 leading-relaxed">
             So, if you don’t know where to start, we have some of the most
             dedicated professionals with years of experience to help you out in
             this area. We employ all the right strategies that are needed when
@@ -119,7 +119,7 @@ const WhyWwl = () => {
       {/* ================= WHY CHOOSE US ================= */}
       <section className="bg-gray-50 py-24">
         <div className="container mx-auto px-6">
-          <h2 className="text-4xl font-bold text-[#0d3253] mb-14">
+          <h2 className="text-4xl font-bold text-[#020202] mb-14">
             Why Choose Us for This
           </h2>
 
@@ -135,9 +135,11 @@ const WhyWwl = () => {
                 key={index}
                 className="bg-white border border-gray-200 rounded-2xl px-8 py-6 flex items-center gap-4
                      transition-all duration-300
-                     hover:-translate-y-2 hover:shadow-2xl hover:border-orange-600"
+                    hover:-translate-y-2 hover:shadow-2xl hover:border-[#25baff]
+ "
               >
-                <span className="text-orange-500 text-2xl font-bold">»</span>
+                <span className="text-[#a8d97c] text-2xl font-bold">»</span>
+
                 <p className="text-black text-lg leading-relaxed">{text}</p>
               </div>
             ))}
@@ -147,7 +149,7 @@ const WhyWwl = () => {
 
       {/* ================= REASONS ================= */}
       <section className="bg-white py-24">
-        <h2 className="ml-16 mr-2 text-4xl font-bold  text-[#0d3253] mb-16">
+        <h2 className="ml-16 mr-2 text-4xl font-bold text-[#020202] mb-16">
           We provide a thorough analysis of keywords with some of the most
           modern tools. Our experts help you bid the most effective keywords.
         </h2>
@@ -176,11 +178,16 @@ const WhyWwl = () => {
                 <div
                   key={index}
                   ref={(el) => (cardsRef.current[index] = el)}
-                  className="group bg-orange-50 border border-orange-200 rounded-2xl p-10 flex flex-col items-center text-center transition-all duration-300 hover:bg-orange-500 hover:-translate-y-3 hover:shadow-2xl"
+                  className="group bg-[#25baff]/10 border border-[#25baff]/30 rounded-2xl p-10
+flex flex-col items-center text-center transition-all duration-300
+hover:bg-[#25baff] hover:-translate-y-3 hover:shadow-2xl"
                 >
-                  <Icon className="text-4xl text-orange-400 mb-6 group-hover:text-white transition-colors duration-300" />
+                  <Icon
+                    className="text-4xl text-[#25baff] mb-6 group-hover:text-white
+ transition-colors duration-300"
+                  />
                   <h2 className="font-extrabold text-xl mb-2">{item.head}</h2>
-                  <p className="text-black-700 text-sm leading-relaxed group-hover:text-white transition-colors duration-300">
+                  <p className="text-gray-700 text-sm leading-relaxed group-hover:text-white">
                     {item.text}
                   </p>
                 </div>
@@ -196,7 +203,8 @@ const WhyWwl = () => {
           {/* LEFT CONTENT */}
           <div>
             <div className="flex items-start gap-6 mb-8">
-              <span className="w-1 h-24 bg-cyan-400 rounded-full" />
+              <span className="w-1 h-24 bg-[#25baff] rounded-full" />
+
               <div>
                 <h2 className="text-4xl md:text-5xl font-extrabold text-white leading-tight">
                   We focus on organic content and manual submission.
@@ -244,8 +252,12 @@ const WhyWwl = () => {
           {/* HEADER */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-20">
             <div className="flex gap-6">
-              <span className="w-1 bg-orange-500 rounded-full" />
-              <h2 className="text-4xl md:text-4xl font-extrabold text-[#0d3253] leading-tight">
+              <span className="w-1 bg-[#25baff] rounded-full" />
+
+              <h2
+                className="text-4xl md:text-4xl font-extrabold text-[#020202]
+leading-tight"
+              >
                 It’s always a joy to hear that the work we do, has positively
                 reviews.
               </h2>
@@ -279,20 +291,24 @@ const WhyWwl = () => {
               <div
                 key={index}
                 className="group bg-white border border-gray-200 rounded-2xl p-10 text-center
-                     transition-all duration-300
-                     hover:scale-105 hover:border-orange-500 hover:shadow-2xl"
+transition-all duration-300
+hover:scale-105 hover:border-[#25baff] hover:shadow-2xl"
               >
                 {/* Quote */}
                 <div
                   className="flex justify-center items-center
              text-5xl mb-6 text-gray-600
-             group-hover:text-orange-500 transition-colors duration-300"
+             group-hover:text-[#25baff]
+transition-colors duration-300"
                 >
                   <RiDoubleQuotesL />
                 </div>
 
                 {/* Text */}
-                <p className="text-black-600 text-sm leading-relaxed mb-8">
+                <p
+                  className="text-gray-600
+ text-sm leading-relaxed mb-8"
+                >
                   {item.text}
                 </p>
 

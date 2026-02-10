@@ -1,6 +1,4 @@
 import { useLayoutEffect, useRef, useState } from "react";
-import { FiFileText } from "react-icons/fi";
-import { FiLink, FiUserCheck, FiShield } from "react-icons/fi";
 import { FiPlus, FiMinus } from "react-icons/fi";
 
 import { gsap } from "gsap";
@@ -108,7 +106,7 @@ const WebDesign = () => {
           backgroundPosition: "center",
         }}
       >
-        <div className="absolute inset-0 bg-black/70" />
+       <div className="absolute inset-0 bg-[#020202]/80" />
 
         <div
           ref={heroRef}
@@ -122,9 +120,11 @@ const WebDesign = () => {
       {/* ================= STATIC WHITE SECTION ================= */}
       <section className="bg-white py-24 px-6">
         <div className="max-w-5xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-extrabold text-[#0b3253] mb-6">
+          <h2 className="text-3xl md:text-4xl font-extrabold text-[#020202] mb-6">
+
             Our Web
-            <span className="text-orange-500"> Design Services</span>
+            <span className="text-[#25baff]"> Design Services</span>
+
           </h2>
 
           <p className="text-gray-600 max-w-3xl mx-auto text-lg">
@@ -190,7 +190,8 @@ const WebDesign = () => {
       {/* ================= list ================= */}
       <section className="bg-gray-50 py-24">
         <div className="container mx-auto px-6">
-          <h2 className="text-4xl font-bold text-[#0d3253] mb-14">
+          <h2 className="text-4xl font-bold text-[#020202] mb-14">
+
             What Our Web Designing Solutions Help You With
           </h2>
 
@@ -205,9 +206,11 @@ const WebDesign = () => {
                 key={index}
                 className="bg-white border border-gray-200 rounded-2xl px-8 py-6 flex items-center gap-4
                      transition-all duration-300
-                     hover:-translate-y-2 hover:shadow-2xl hover:border-orange-600"
+                     hover:-translate-y-2 hover:shadow-2xl hover:border-[#25baff]
+"
               >
-                <span className="text-orange-500 text-2xl font-bold">»</span>
+               <span className="text-[#a8d97c] text-2xl font-bold">»</span>
+
                 <p className="text-black text-lg leading-relaxed">{text}</p>
               </div>
             ))}
@@ -219,13 +222,15 @@ const WebDesign = () => {
       <section
         ref={addSectionRef}
         className="relative overflow-hidden py-24 px-6"
-        style={{ backgroundColor: "#0b3253" }}
+        style={{ backgroundColor: "#020202" }}
+
       >
         {/* Animated Gradient Glow */}
         <div
           className="absolute inset-0 
-    bg-[radial-gradient(circle_at_20%_20%,rgba(255,165,0,0.25),transparent_45%),
-        radial-gradient(circle_at_80%_80%,rgba(255,140,0,0.2),transparent_45%)]
+    bg-[radial-gradient(circle_at_20%_20%,rgba(37,186,255,0.25),transparent_45%),
+radial-gradient(circle_at_80%_80%,rgba(168,217,124,0.2),transparent_45%)]
+
     animate-pulseSlow"
         />
 
@@ -234,7 +239,8 @@ const WebDesign = () => {
           {[...Array(18)].map((_, i) => (
             <span
               key={i}
-              className="absolute w-1.5 h-1.5 bg-orange-400 rounded-full opacity-40 animate-float"
+              className="absolute w-1.5 h-1.5 bg-[#25baff] rounded-full opacity-40 animate-float"
+
               style={{
                 top: `${Math.random() * 100}%`,
                 left: `${Math.random() * 100}%`,
@@ -254,13 +260,15 @@ const WebDesign = () => {
           {/* BUTTON */}
           <button
             className="
-    bg-orange-500 text-white
+    bg-[#25baff] text-[#020202]
+hover:bg-[#a8d97c]
+
     px-6 py-3
     text-sm md:text-base
     font-semibold
     rounded-full
     shadow-md
-    hover:bg-orange-600
+   
     hover: cursor-pointer
     hover:shadow-lg
     transition-all duration-300
@@ -273,7 +281,8 @@ const WebDesign = () => {
 
       <section ref={addSectionRef} className="bg-white py-28 px-6">
         <div className="max-w-5xl mx-auto">
-          <h2 className="gsap-item text-4xl font-extrabold text-[#0b3253] mb-12">
+         <h2 className="gsap-item text-4xl font-extrabold text-[#25baff] mb-12">
+
             FAQs
           </h2>
 
@@ -283,7 +292,8 @@ const WebDesign = () => {
                 key={index}
                 ref={(el) => (faqRefs.current[index] = el)}
                 className="gsap-item border border-gray-200 rounded-xl
-          hover:border-orange-500 transition-colors"
+        hover:border-[#25baff]
+ transition-colors"
               >
                 {/* Question */}
                 <button
@@ -324,16 +334,19 @@ const WebDesign = () => {
                     }
                   }}
                   className="w-full flex items-center justify-between
-            px-6 py-5 text-left font-semibold text-[#0b3253]"
+            px-6 py-5 text-left font-semibold text-[#020202]
+"
                 >
                   <span
-                    className={activeFaq === index ? "text-orange-500" : ""}
+                    className={activeFaq === index ? "text-[#25baff]" : ""}
+
                   >
                     {faq.question}
                   </span>
 
                   {activeFaq === index ? (
-                    <FiMinus className="text-orange-500 text-xl" />
+                    <FiMinus className="text-[#25baff] text-xl" />
+
                   ) : (
                     <FiPlus className="text-gray-600 text-xl" />
                   )}

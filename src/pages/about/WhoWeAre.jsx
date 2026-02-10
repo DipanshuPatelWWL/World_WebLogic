@@ -96,7 +96,7 @@ const WhoWeAre = () => {
           backgroundPosition: "center",
         }}
       >
-        <div className="absolute inset-0 bg-black/70" />
+        <div className="absolute inset-0 bg-[#020202]/80" />
 
         <div
           ref={heroRef}
@@ -113,13 +113,11 @@ const WhoWeAre = () => {
         className="container mx-auto px-6 py-24 grid md:grid-cols-2 gap-16 items-center"
       >
         <div>
-          <h2 className="text-4xl font-bold mb-6 text-[#0d3253]">
-            Who We Are
-          </h2>
+          <h2 className="text-4xl font-bold mb-6 text-[#020202]">Who We Are</h2>
           <p className="text-gray-700 leading-relaxed mb-4">
-            World WebLogic is an online marketing solutions company that provides
-            website design and development, social media marketing, SEO, SEM,
-            PPC, mobile application development, and online reputation
+            World WebLogic is an online marketing solutions company that
+            provides website design and development, social media marketing,
+            SEO, SEM, PPC, mobile application development, and online reputation
             management services.
           </p>
           <p className="text-gray-700 leading-relaxed">
@@ -140,31 +138,48 @@ const WhoWeAre = () => {
 
       {/* ================= REASONS ================= */}
       <section className="bg-white py-24">
-        <h2 className="text-center text-4xl font-bold text-gray-900 mb-16">
+        <h2 className="text-center text-4xl font-bold text-[#020202] mb-16">
           Why You Should Choose Us
         </h2>
 
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
-              { icon: FiEdit, text: "Strict adherence to white-hat SEO practices." },
+              {
+                icon: FiEdit,
+                text: "Strict adherence to white-hat SEO practices.",
+              },
               { icon: FiSettings, text: "Result-driven branding solutions." },
-              { icon: FiTarget, text: "Best on-page and off-page SEO strategies." },
+              {
+                icon: FiTarget,
+                text: "Best on-page and off-page SEO strategies.",
+              },
               { icon: FiZap, text: "Organic growth with manual submissions." },
               { icon: FiShield, text: "Affordable and transparent pricing." },
               { icon: FiLayers, text: "Creative and modern web solutions." },
               { icon: FiTrendingUp, text: "Goal-oriented digital strategies." },
-              { icon: FiMonitor, text: "Competitive industry-level execution." },
-              { icon: FiSmile, text: "Maximum online exposure for your brand." },
+              {
+                icon: FiMonitor,
+                text: "Competitive industry-level execution.",
+              },
+              {
+                icon: FiSmile,
+                text: "Maximum online exposure for your brand.",
+              },
             ].map((item, index) => {
               const Icon = item.icon;
               return (
                 <div
                   key={index}
                   ref={(el) => (cardsRef.current[index] = el)}
-                  className="group bg-orange-50 border border-orange-200 rounded-2xl p-10 flex flex-col items-center text-center transition-all duration-300 hover:bg-orange-500 hover:-translate-y-3 hover:shadow-2xl"
+                  className="group bg-[#25baff]/10 border border-[#25baff]/30 rounded-2xl p-10
+ flex flex-col items-center text-center transition-all duration-300
+ hover:bg-[#25baff] hover:-translate-y-3 hover:shadow-2xl"
                 >
-                  <Icon className="text-4xl text-orange-400 mb-6 group-hover:text-white transition-colors duration-300" />
+                  <Icon
+                    className="text-4xl text-[#25baff] mb-6 group-hover:text-white
+ transition-colors duration-300"
+                  />
                   <p className="text-gray-700 text-sm leading-relaxed group-hover:text-white transition-colors duration-300">
                     {item.text}
                   </p>
@@ -181,10 +196,10 @@ const WhoWeAre = () => {
         className="container mx-auto px-6 py-28 grid md:grid-cols-2 gap-16 items-center"
       >
         <div>
-          <h3 className="text-orange-500 font-bold mb-4 text-2xl">
+          <h3 className="text-[#25baff] font-bold mb-4 text-2xl">
             Like What We Offer?
           </h3>
-          <h2 className="text-4xl font-bold mb-6">
+          <h2 className="text-4xl font-bold mb-6 text-[#020202]">
             Looking to grow your online business?
           </h2>
           <p className="text-gray-700 mb-6">
@@ -193,7 +208,11 @@ const WhoWeAre = () => {
           </p>
 
           <Link to="/contact">
-            <button className="px-8 py-4 rounded-full bg-[#ff6900] text-white font-semibold shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl active:scale-95">
+            <button
+              className="px-8 py-4 rounded-full bg-[#25baff] text-[#020202]
+ font-semibold shadow-lg transition-all duration-300 hover:bg-[#a8d97c] hover:scale-105 hover:shadow-2xl
+ active:scale-95"
+            >
               Contact Us
             </button>
           </Link>
