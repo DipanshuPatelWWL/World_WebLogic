@@ -5,43 +5,56 @@ const services = [
         title: "Best Global Portal Development Company",
         desc:
             "We work with startups, SMEs, enterprises, and established brands across continents with tested delivery across North America, Europe, Asia, and more.",
-        icon: <FaGlobe />
+        icon: <FaGlobe />,
     },
     {
         title: "Cross-Platform Portal Development",
         desc:
             "Provide unified access and high performance on desktop, tablet, and mobile using responsive portal solutions.",
-        icon: <FaMobileAlt />
+        icon: <FaMobileAlt />,
     },
     {
         title: "Future-Proof, Scalable Solutions",
         desc:
             "Our portals are designed for security, heavy user traffic, simple updates, and the ability to change as your business changes.",
-        icon: <FaRocket />
+        icon: <FaRocket />,
     },
     {
         title: "Custom Web Portal Development",
         desc:
             "Each solution is designed to your business objectives, industry, and specific requirements including customer and partner portals.",
-        icon: <FaCode />
+        icon: <FaCode />,
     },
     {
         title: "Full-Stack Expertise",
         desc:
             "Our developers are experts in React, Angular, Node.js, Python, and more for robust portal app development.",
-        icon: <FaLayerGroup />
-    }
+        icon: <FaLayerGroup />,
+    },
 ];
 
 const WebAppDevelopment = () => {
     return (
-        <section className="relative py-20 bg-gradient-to-br from-blue-900 via-black to-blue-950">
+        <section
+            className="
+        relative py-20
+        bg-gradient-to-br
+        from-[#020202]
+        via-[#020202]
+        to-[#25baff]/40
+      "
+        >
             {/* Title */}
             <div className="text-center mb-14">
-                <h2 className="text-4xl font-semibold text-white bg-clip-text text-transparent">
+                <h2 className="text-4xl font-semibold text-white">
                     Web & App Development
                 </h2>
-                <div className="mt-3 mx-auto h-1 w-110 bg-orange-500 rounded-full"></div>
+
+                {/* 3-color underline */}
+                <div
+                    className="mt-4 mx-auto h-1 w-110 rounded-full
+          bg-gradient-to-r from-[#25baff] via-[#a8d97c] to-[#25baff]"
+                />
             </div>
 
             {/* Cards */}
@@ -49,22 +62,52 @@ const WebAppDevelopment = () => {
                 {services.map((item, index) => (
                     <div
                         key={index}
-                        className="group relative rounded-2xl bg-black/70 border border-blue-800 p-8 transition-all duration-500 hover:bg-orange-500 hover:border-orange-400 cursor-pointer"
+                        className="
+              group relative rounded-2xl
+              bg-[#020202]/80
+              border border-[#25baff]/30
+              p-8 cursor-pointer
+              transition-all duration-500
+              hover:bg-[#020202]
+              hover:border-[#a8d97c]
+              hover:shadow-[0_15px_60px_rgba(37,186,255,0.35)]
+            "
                     >
                         {/* Icon */}
                         <div className="mb-6">
-                            <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-gradient-to-br from-blue-500 to-orange-500 text-white text-2xl 
-                              transition-transform duration-700 group-hover:rotate-[360deg]">
+                            <div
+                                className="
+                  flex h-14 w-14 items-center justify-center rounded-xl
+                  bg-gradient-to-br from-[#25baff] via-[#a8d97c] to-[#25baff]
+                  text-white text-2xl
+                  transition-all duration-700
+                  group-hover:rotate-[360deg]
+                "
+                            >
                                 {item.icon}
                             </div>
                         </div>
 
                         {/* Text */}
-                        <h3 className="text-lg font-semibold text-white mb-3 transition-colors duration-300 group-hover:text-white">
+                        <h3
+                            className="
+                text-lg font-semibold mb-3
+                text-white
+                group-hover:text-[#25baff]
+                transition-colors duration-300
+              "
+                        >
                             {item.title}
                         </h3>
 
-                        <p className="text-sm text-gray-300 leading-relaxed transition-colors duration-300 group-hover:text-white">
+                        <p
+                            className="
+                text-sm leading-relaxed
+                text-gray-300
+                group-hover:text-[#a8d97c]
+                transition-colors duration-300
+              "
+                        >
                             {item.desc}
                         </p>
                     </div>
