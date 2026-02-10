@@ -13,6 +13,8 @@ import TopInfoBar from "./components/TopInfoBar";
 import SeoFurnitureStores from "./pages/market/SeoFurnitureStores";
 import Seo from "./pages/services/SEO";
 import WebDesign from "./pages/services/WebDesign";
+import WebDevelopment from "./pages/services/WebDevelopment";
+import AppDevelopment from "./pages/services/AppDevelopment";
 
 function App() {
   return (
@@ -30,6 +32,8 @@ function App() {
         <Route path="/services/seo" element={<Seo />} />
         <Route path="/contact" element={<ContactUs />} />
         <Route path="/services/web-design" element={<WebDesign />} />
+        <Route path="/services/web-development" element={<WebDevelopment />} />
+        <Route path="/services/mobile-application-development" element={<AppDevelopment />} />
         <Route path="/projects" element={<Projects />} />
         <Route path="/projects/:slug" element={<ProjectDetails />} />
       </Routes>
