@@ -29,7 +29,13 @@ function App() {
         <Route path="/market/cannabis-seo-services" element={<CannabisSeoServices />} />
         <Route path="/market/seo-for-furniture-stores" element={<SeoFurnitureStores />} />
         <Route path="/services/seo" element={<Seo />} />
+        <Route path="/services/seo" element={<Seo />} />
         <Route path="/contact" element={<ContactUs />} />
+        <Route path="/services/web-design" element={<WebDesign />} />
+        <Route path="/services/web-development" element={<WebDevelopment />} />
+        <Route path="/services/mobile-application-development" element={<AppDevelopment />} />
+        <Route path="/services/social-media-marketing" element={<SocialMediaMarketing />} />
+        <Route path="/services/online-reputation-management" element={<OnlineReputationManagement />} />
         <Route path="/projects" element={<Projects />} />
         <Route path="/projects/:slug" element={<ProjectDetails />} />
         <Route path="/pricing/seo-packages" element={<SEO_Packages />} />

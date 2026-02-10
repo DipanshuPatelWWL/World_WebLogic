@@ -170,8 +170,14 @@ const SeoFurnitureStores = () => {
 
         {/* form  */}
 
-        <div className="gsap-item rounded-2xl p-[2px] bg-gradient-to-br from-orange-400 to-orange-600 shadow-2xl w-120 ml-15">
-          <div className=" rounded-2xl bg-white p-6 md:p-8 transition-all duration-300 hover:shadow-orange-200">
+        <div
+          className="gsap-item rounded-2xl p-[2px] bg-gradient-to-br from-[#25baff] to-[#a8d97c]
+ shadow-2xl w-120 ml-15"
+        >
+          <div
+            className=" rounded-2xl bg-white p-6 md:p-8 transition-all duration-300 hover:shadow-[#25baff]/30
+"
+          >
             <h3 className="text-2xl font-bold text-center mb-6 text-gray-800">
               Get A Quote
             </h3>
@@ -183,7 +189,8 @@ const SeoFurnitureStores = () => {
                   type="text"
                   placeholder="Full Name"
                   className="w-full rounded-xl border border-gray-300 px-4 py-3 
-          focus:border-orange-500 focus:ring-2 focus:ring-orange-200 
+          focus:border-[#25baff] focus:ring-2 focus:ring-[#25baff]/30
+ 
           outline-none transition"
                 />
               </div>
@@ -194,14 +201,16 @@ const SeoFurnitureStores = () => {
                   type="email"
                   placeholder="Email Address"
                   className="w-full rounded-xl border border-gray-300 px-4 py-3 
-          focus:border-orange-500 focus:ring-2 focus:ring-orange-200 
+          focus:border-[#25baff] focus:ring-2 focus:ring-[#25baff]/30
+ 
           outline-none transition"
                 />
                 <input
                   type="tel"
                   placeholder="Mobile Number"
                   className="w-full rounded-xl border border-gray-300 px-4 py-3 
-          focus:border-orange-500 focus:ring-2 focus:ring-orange-200 
+          focus:border-[#25baff] focus:ring-2 focus:ring-[#25baff]/30
+ 
           outline-none transition"
                 />
               </div>
@@ -211,7 +220,8 @@ const SeoFurnitureStores = () => {
                 type="text"
                 placeholder="Website URL (if you have)"
                 className="w-full rounded-xl border border-gray-300 px-4 py-3 
-        focus:border-orange-500 focus:ring-2 focus:ring-orange-200 
+        focus:border-[#25baff] focus:ring-2 focus:ring-[#25baff]/30
+ 
         outline-none transition"
               />
 
@@ -220,15 +230,18 @@ const SeoFurnitureStores = () => {
                 rows="4"
                 placeholder="Tell us what you need & best time to call you"
                 className="w-full rounded-xl border border-gray-300 px-4 py-3 
-        focus:border-orange-500 focus:ring-2 focus:ring-orange-200 
+        focus:border-[#25baff] focus:ring-2 focus:ring-[#25baff]/30
+ 
         outline-none transition resize-none"
               />
 
               {/* Button */}
               <button
                 type="submit"
-                className="w-full rounded-xl bg-orange-500 py-3 font-semibold text-white
-        hover:bg-orange-600 hover:shadow-lg hover:shadow-orange-300
+                className="w-full rounded-xl bg-[#25baff] py-3 font-semibold text-white
+        bg-[#25baff]
+hover:bg-[#1aa7e6] hover:shadow-lg hover:shadow-[#25baff]/40
+
         active:scale-95 transition-all duration-300"
               >
                 Call Me Now
@@ -327,7 +340,7 @@ const SeoFurnitureStores = () => {
           <div className="text-center mb-20">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-[#0b3253]">
               Best Strategies for
-              <span className="text-orange-500"> Furniture Marketing</span>
+              <span className="text-[#25baff]">Furniture Marketing</span>
             </h2>
             <p className="mt-6 max-w-3xl mx-auto text-gray-600 text-base">
               Executing a successful furniture advertisement campaign requires
@@ -500,15 +513,15 @@ const SeoFurnitureStores = () => {
             p-10 shadow-xl
             transition-all duration-300
             hover:-translate-y-3 hover:scale-[1.03]
-            hover:border-orange-500
-            hover:shadow-[0_25px_50px_rgba(255,165,0,0.3)]
+            hover:border-[#25baff]
+           hover:shadow-[0_25px_50px_rgba(37,186,255,0.35)]
           "
               >
                 {/* Step Badge */}
                 <span
                   className="
               absolute -top-6 -left-6 w-16 h-16 rounded-full
-              bg-orange-500 text-white text-lg font-bold
+              bg-[#25baff] text-white text-lg font-bold
               flex items-center justify-center
               shadow-lg
               transition-transform duration-300
@@ -536,7 +549,7 @@ const SeoFurnitureStores = () => {
         <div className="max-w-5xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-extrabold text-[#0b3253] mb-6">
             Generate More Sales with
-            <span className="text-orange-500"> SEO for Furniture Stores!</span>
+            <span className="text-[#25baff]">SEO for Furniture Stores!</span>
           </h2>
 
           <p className="text-gray-600 max-w-3xl mx-auto text-lg">
@@ -556,8 +569,9 @@ const SeoFurnitureStores = () => {
         {/* Animated Gradient Glow */}
         <div
           className="absolute inset-0 
-    bg-[radial-gradient(circle_at_20%_20%,rgba(255,165,0,0.25),transparent_45%),
-        radial-gradient(circle_at_80%_80%,rgba(255,140,0,0.2),transparent_45%)]
+    bg-[radial-gradient(circle_at_20%_20%,rgba(37,186,255,0.25),transparent_45%),
+radial-gradient(circle_at_80%_80%,rgba(168,217,124,0.25),transparent_45%)]
+
     animate-pulseSlow"
         />
 
@@ -566,7 +580,8 @@ const SeoFurnitureStores = () => {
           {[...Array(18)].map((_, i) => (
             <span
               key={i}
-              className="absolute w-1.5 h-1.5 bg-orange-400 rounded-full opacity-40 animate-float"
+              className="absolute w-1.5 h-1.5 bg-[#25baff]
+ rounded-full opacity-40 animate-float"
               style={{
                 top: `${Math.random() * 100}%`,
                 left: `${Math.random() * 100}%`,
@@ -580,20 +595,22 @@ const SeoFurnitureStores = () => {
         <div className="relative z-10 max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-10">
           <h2 className="gsap-item text-white text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight max-w-4xl">
             Generate More Sales with SEO for
-            <span className="text-orange-400"> Furniture Stores!</span>
+            <span className="text-[#a8d97c]">Furniture Stores!</span>
           </h2>
 
           {/* BUTTON */}
           <button
             className="
-    bg-orange-500 text-white
+    bg-[#25baff] text-white
     px-6 py-3
     text-sm md:text-base
     font-semibold
     rounded-full
     shadow-md
-    hover:bg-orange-600
-    hover: cursor-pointer
+  
+hover:bg-[#1aa7e6]
+cursor-pointer
+
     hover:shadow-lg
     transition-all duration-300
     whitespace-nowrap"
@@ -606,7 +623,7 @@ const SeoFurnitureStores = () => {
       {/* ================= FAQ SECTION ================= */}
       <section ref={addSectionRef} className="bg-gray-50 py-20 px-6">
         <div className="max-w-6xl mx-auto">
-          <h2 className="gsap-item text-2xl md:text-3xl font-bold text-center text-[#0b3253] mb-12">
+          <h2 className="gsap-item text-2xl md:text-3xl font-bold text-center text-[#25baff] mb-12">
             Frequently Asked Questions
           </h2>
 
@@ -617,7 +634,7 @@ const SeoFurnitureStores = () => {
                 className={`bg-white border rounded-lg transition-all duration-300
             ${
               activeFaq === index
-                ? "border-orange-500 shadow-md"
+                ? "border-[#25baff] shadow-md"
                 : "border-gray-200"
             }`}
               >
@@ -630,7 +647,8 @@ const SeoFurnitureStores = () => {
                 >
                   <span
                     className={`text-sm font-semibold transition-colors
-                ${activeFaq === index ? "text-orange-500" : "text-[#0b3253]"}`}
+                ${activeFaq === index ? "text-[#25baff]" : "text-[#0b3253]"}
+`}
                   >
                     {item.q}
                   </span>
@@ -639,7 +657,7 @@ const SeoFurnitureStores = () => {
                     className={`text-xl font-bold transition-transform duration-300
                 ${
                   activeFaq === index
-                    ? "rotate-45 text-orange-500"
+                    ? "rotate-45 text-[#25baff]"
                     : "text-[#0b3253]"
                 }`}
                   >
