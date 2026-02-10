@@ -19,6 +19,8 @@ import WebDevelopment from "./pages/services/WebDevelopment";
 import AppDevelopment from "./pages/services/AppDevelopment";
 import SocialMediaMarketing from "./pages/services/SocialMediaMarketing";
 import OnlineReputationManagement from "./pages/services/OnlineReputationManagement";
+import SmoPackages from "./pages/plans-pricinng/SmoPackages";
+import PpcPackages from "./pages/plans-pricinng/PpcPackages";
 
 function App() {
   return (
@@ -44,6 +46,8 @@ function App() {
         <Route path="/projects/:slug" element={<ProjectDetails />} />
         <Route path="/pricing/seo-packages" element={<SEO_Packages />} />
         <Route path="/pricing/seo-starter-pack" element={<SEO_Starter_Pack />} />
+        <Route path="/pricing/smo-packages" element={<SmoPackages />} />
+        <Route path="/pricing/ppc-packages" element={<PpcPackages />} />
       </Routes>
       <Footer />
     </Router>
