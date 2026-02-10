@@ -62,14 +62,14 @@ const FAQ = () => {
                         return (
                             <div
                                 key={index}
-                                className={`rounded-full bg-white overflow-hidden border transition-all duration-300 cursor-pointer ${isActive
+                                className={`rounded-full p-4 bg-white overflow-hidden border transition-all duration-300 cursor-pointer ${isActive
                                     ? "border-orange-400 shadow-[0_0_12px_rgba(251,146,60,0.4)]"
                                     : "border-blue-100"
                                     }`}
                                 onClick={() => toggleFAQ(index)}
                             >
                                 {/* Question */}
-                                <div className="flex items-center justify-between px-6 py-4 text-left text-blue-900 text-sm md:text-base hover:bg-orange-50 transition">
+                                <div className="flex items-center justify-between px-6 py-4 text-left text-black text-sm md:text-base transition">
                                     <span>{item.question}</span>
 
                                     {/* Plus Icon */}
