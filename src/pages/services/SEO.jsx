@@ -1,5 +1,5 @@
 import { useLayoutEffect, useRef } from "react";
-import { FiFileText} from "react-icons/fi";
+import { FiFileText } from "react-icons/fi";
 import { FiLink, FiUserCheck, FiShield } from "react-icons/fi";
 
 import { gsap } from "gsap";
@@ -76,7 +76,7 @@ const Seo = () => {
           backgroundPosition: "center",
         }}
       >
-        <div className="absolute inset-0 bg-black/70" />
+        <div className="absolute inset-0 bg-[#020202]/80" />
 
         <div
           ref={heroRef}
@@ -92,11 +92,9 @@ const Seo = () => {
       {/* ================= STATIC WHITE SECTION ================= */}
       <section className="bg-white py-24 px-6">
         <div className="max-w-5xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-extrabold text-[#0b3253] mb-6">
+          <h2 className="text-3xl md:text-4xl font-extrabold text-[#020202] mb-6">
             Want 100 Percent Results? Then Our Search Engine <br />
-            <span className="text-orange-500">
-              Optimisation Gives You That!
-            </span>
+            <span className="text-[#25baff]">Optimisation Gives You That!</span>
           </h2>
 
           <p className="text-gray-600 max-w-3xl mx-auto text-lg">
@@ -136,7 +134,7 @@ const Seo = () => {
             build links, submit articles, provide blogs, SEO content and so much
             more that is crucial to the success of your online business.
           </p>
-          <h3 className="text-3xl font-bold mb-6 text-[#0d3253]">
+          <h3 className="text-3xl font-bold mb-6 text-[#020202]">
             Any doubts? Let’s clear them. Read on for the answers:
           </h3>
           <p className="text-gray-700 mb-6 ml-5">
@@ -153,13 +151,14 @@ const Seo = () => {
       <section
         ref={addSectionRef}
         className="relative overflow-hidden py-24 px-6"
-        style={{ backgroundColor: "#0b3253" }}
+        style={{ backgroundColor: "#020202" }}
       >
         {/* Animated Gradient Glow */}
         <div
           className="absolute inset-0 
-    bg-[radial-gradient(circle_at_20%_20%,rgba(255,165,0,0.25),transparent_45%),
-        radial-gradient(circle_at_80%_80%,rgba(255,140,0,0.2),transparent_45%)]
+    bg-[radial-gradient(circle_at_20%_20%,rgba(37,186,255,0.25),transparent_45%),
+radial-gradient(circle_at_80%_80%,rgba(168,217,124,0.2),transparent_45%)]
+
     animate-pulseSlow"
         />
 
@@ -168,7 +167,7 @@ const Seo = () => {
           {[...Array(18)].map((_, i) => (
             <span
               key={i}
-              className="absolute w-1.5 h-1.5 bg-orange-400 rounded-full opacity-40 animate-float"
+              className="absolute w-1.5 h-1.5 bg-[#25baff] rounded-full opacity-40 animate-float"
               style={{
                 top: `${Math.random() * 100}%`,
                 left: `${Math.random() * 100}%`,
@@ -189,13 +188,15 @@ const Seo = () => {
           {/* BUTTON */}
           <button
             className="
-    bg-orange-500 text-white
+    bg-[#25baff] text-[#020202]
+hover:bg-[#a8d97c]
+
     px-6 py-3
     text-sm md:text-base
     font-semibold
     rounded-full
     shadow-md
-    hover:bg-orange-600
+   
     hover: cursor-pointer
     hover:shadow-lg
     transition-all duration-300
@@ -215,9 +216,9 @@ const Seo = () => {
               Why SEO?
             </p>
 
-            <h2 className="gsap-item text-3xl md:text-4xl font-extrabold text-[#0b3253]">
+            <h2 className="gsap-item text-3xl md:text-4xl font-extrabold text-[#020202]">
               The following are some of the things that you can expect from our{" "}
-              <span className="text-orange-500">SEO services</span>
+              <span className="text-[#25baff]">SEO services</span>
             </h2>
           </div>
 
@@ -226,14 +227,22 @@ const Seo = () => {
             {/* Card 1 */}
             <div
               className="gsap-item group bg-white rounded-2xl p-8 shadow-lg border border-transparent
-        hover:border-orange-500 hover:shadow-orange-200/50 hover:-translate-y-3
+        hover:border-[#25baff] hover:shadow-[#25baff]/30
+ hover:-translate-y-3
         transition-all duration-500"
             >
-              <div className="text-4xl mb-6 text-orange-500 group-hover:scale-110 transition-transform">
+              <div
+                className="text-4xl mb-6 text-[#25baff]
+
+ group-hover:scale-110 transition-transform"
+              >
                 <FiFileText />
               </div>
 
-              <h3 className="text-xl font-bold text-[#0b3253] mb-4">
+              <h3
+                className="text-xl font-bold text-[#020202]
+ mb-4"
+              >
                 On-page Optimisation
               </h3>
 
@@ -247,14 +256,25 @@ const Seo = () => {
             {/* Card 2 */}
             <div
               className="gsap-item group bg-white rounded-2xl p-8 shadow-lg border border-transparent
-        hover:border-orange-500 hover:shadow-orange-200/50 hover:-translate-y-3
+        hover:border-[#25baff]
+hover:shadow-[#25baff]/30
+open:border-[#25baff]
+open:shadow-[#25baff]/40
+ hover:-translate-y-3
         transition-all duration-500"
             >
-              <div className="text-4xl mb-6 text-orange-500 group-hover:scale-110 transition-transform">
+              <div
+                className="text-4xl mb-6 text-[#25baff]
+
+ group-hover:scale-110 transition-transform"
+              >
                 <FiLink />
               </div>
 
-              <h3 className="text-xl font-bold text-[#0b3253] mb-4">
+              <h3
+                className="text-xl font-bold text-[#020202]
+ mb-4"
+              >
                 Off-page Optimisation
               </h3>
 
@@ -274,18 +294,22 @@ const Seo = () => {
           {/* ================= CARD 1 ================= */}
           <details
             className="gsap-item group rounded-2xl border border-gray-200
-      shadow-md hover:shadow-orange-200/50
-      hover:border-orange-500
-      transition-all duration-500
-      open:border-orange-500
-      open:shadow-orange-300/40"
+      hover:border-[#25baff]
+hover:shadow-[#25baff]/30
+open:border-[#25baff]
+open:shadow-[#25baff]/40
+"
           >
             <summary
               className="cursor-pointer list-none flex items-center justify-between
         px-8 py-6 font-bold text-lg text-[#0b3253]"
             >
               <span className="flex items-center gap-3">
-                <FiLink className="text-orange-500 text-xl" />
+                <FiLink
+                  className="text-[#25baff]
+
+ text-xl"
+                />
                 Link Building Services
               </span>
               <span className="text-gray-400 group-open:rotate-45 transition-transform">
@@ -364,8 +388,11 @@ const Seo = () => {
           {/* ================= CARD 2 ================= */}
           <details
             className="gsap-item group rounded-2xl border border-gray-200
-      shadow-md hover:shadow-orange-200/50
-      hover:border-orange-500
+     hover:border-[#25baff]
+hover:shadow-[#25baff]/30
+open:border-[#25baff]
+open:shadow-[#25baff]/40
+
       transition-all duration-500"
           >
             <summary
@@ -373,7 +400,11 @@ const Seo = () => {
         px-8 py-6 font-bold text-lg text-[#0b3253]"
             >
               <span className="flex items-center gap-3">
-                <FiUserCheck className="text-orange-500 text-xl" />
+                <FiUserCheck
+                  className="text-[#25baff]
+
+ text-xl"
+                />
                 Hire Full Time SEO Expert
               </span>
               <span className="text-gray-400 group-open:rotate-45 transition-transform">
@@ -417,8 +448,11 @@ const Seo = () => {
           {/* ================= CARD 3 ================= */}
           <details
             className="gsap-item group rounded-2xl border border-gray-200
-      shadow-md hover:shadow-orange-200/50
-      hover:border-orange-500
+      hover:border-[#25baff]
+hover:shadow-[#25baff]/30
+open:border-[#25baff]
+open:shadow-[#25baff]/40
+
       transition-all duration-500"
           >
             <summary
@@ -426,7 +460,11 @@ const Seo = () => {
         px-8 py-6 font-bold text-lg text-[#0b3253]"
             >
               <span className="flex items-center gap-3">
-                <FiShield className="text-orange-500 text-xl" />
+                <FiShield
+                  className="text-[#25baff]
+
+ text-xl"
+                />
                 Guaranteed Money Back SEO
               </span>
               <span className="text-gray-400 group-open:rotate-45 transition-transform">
