@@ -110,6 +110,73 @@ const servicesData = {
     ],
 };
 
+// const OurServices = () => {
+//     const categories = Object.keys(servicesData);
+//     const [activeCategory, setActiveCategory] = useState(categories[0]);
+
+//     return (
+//         <section className="py-20 bg-white text-black">
+//             {/* Heading */}
+//             <div className="text-center mb-14">
+//                 <p className="text-orange-500 uppercase text-lg tracking-widest">
+//                     Our Services
+//                 </p>
+//                 <h2 className="text-4xl font-semibold">
+//                     What We Provide
+//                 </h2>
+//             </div>
+
+//             <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-4 gap-8">
+
+//                 {/* Left Sidebar */}
+//                 <div className="space-y-3">
+//                     {categories.map((cat, index) => (
+//                         <button
+//                             key={index}
+//                             onClick={() => setActiveCategory(cat)}
+//                             className={`w-full text-left px-5 py-4 rounded-md font-medium transition-all duration-300 border-l-4 hover:cursor-pointer
+//                                 ${activeCategory === cat
+//                                     ? "bg-orange-500 text-white border-orange-500"
+//                                     : "bg-white text-gray-700 border-gray-200 hover:bg-orange-50"
+//                                 }`}
+//                         >
+//                             {cat}
+//                         </button>
+//                     ))}
+//                 </div>
+
+//                 {/* Right Content */}
+//                 <div className="lg:col-span-3 grid grid-cols-1 md:grid-cols-2 gap-6">
+//                     {servicesData[activeCategory].map((item, index) => (
+//                         <div
+//                             key={index}
+//                             className="group rounded-xl bg-white border border-gray-200 p-6 transition-all duration-500 cursor-pointer hover:bg-orange-500 hover:border-orange-500"
+//                         >
+//                             {/* Icon */}
+//                             <div className="mb-4">
+//                                 <div
+//                                     className="h-12 w-12 flex items-center justify-center rounded-lg bg-orange-100 text-orange-500 text-2xl
+//                                     transition-all duration-700 group-hover:rotate-[360deg] group-hover:bg-white group-hover:text-orange-500"
+//                                 >
+//                                     {item.icon}
+//                                 </div>
+//                             </div>
+
+//                             {/* Text */}
+//                             <h3 className="text-lg font-semibold mb-2 text-gray-800 group-hover:text-white">
+//                                 {item.title}
+//                             </h3>
+//                             <p className="text-sm text-gray-600 leading-relaxed group-hover:text-white">
+//                                 {item.desc}
+//                             </p>
+//                         </div>
+//                     ))}
+//                 </div>
+//             </div>
+//         </section>
+//     );
+// };
+
 const OurServices = () => {
     const categories = Object.keys(servicesData);
     const [activeCategory, setActiveCategory] = useState(categories[0]);
@@ -118,10 +185,10 @@ const OurServices = () => {
         <section className="py-20 bg-white text-black">
             {/* Heading */}
             <div className="text-center mb-14">
-                <p className="text-orange-500 uppercase text-lg tracking-widest">
+                <p className="text-[#25baff] font-bold uppercase text-lg tracking-widest">
                     Our Services
                 </p>
-                <h2 className="text-4xl font-semibold">
+                <h2 className="text-4xl font-semibold text-gray-900">
                     What We Provide
                 </h2>
             </div>
@@ -134,10 +201,10 @@ const OurServices = () => {
                         <button
                             key={index}
                             onClick={() => setActiveCategory(cat)}
-                            className={`w-full text-left px-5 py-4 rounded-md font-medium transition-all duration-300 border-l-4 hover:cursor-pointer
-                                ${activeCategory === cat
-                                    ? "bg-orange-500 text-white border-orange-500"
-                                    : "bg-white text-gray-700 border-gray-200 hover:bg-orange-50"
+                            className={`w-full text-left px-5 py-4 rounded-md font-medium transition-all duration-300 border-l-4
+                ${activeCategory === cat
+                                    ? "bg-[#25baff] text-white border-[#a8d97c]"
+                                    : "bg-white text-gray-700 border-gray-200 hover:bg-[#25baff]/10"
                                 }`}
                         >
                             {cat}
@@ -150,23 +217,28 @@ const OurServices = () => {
                     {servicesData[activeCategory].map((item, index) => (
                         <div
                             key={index}
-                            className="group rounded-xl bg-white border border-gray-200 p-6 transition-all duration-500 cursor-pointer hover:bg-orange-500 hover:border-orange-500"
+                            className="group rounded-xl bg-white border border-gray-200 p-6 transition-all duration-500 cursor-pointer
+              hover:border-[#25baff] hover:shadow-lg hover:bg-[#25baff]/10"
                         >
                             {/* Icon */}
                             <div className="mb-4">
                                 <div
-                                    className="h-12 w-12 flex items-center justify-center rounded-lg bg-orange-100 text-orange-500 text-2xl
-                                    transition-all duration-700 group-hover:rotate-[360deg] group-hover:bg-white group-hover:text-orange-500"
+                                    className="h-12 w-12 flex items-center justify-center rounded-lg
+                  bg-[#25baff]/15 text-[#25baff] text-2xl
+                  transition-all duration-700
+                  group-hover:rotate-[360deg]
+                  group-hover:bg-[#a8d97c]/30
+                  group-hover:text-[#25baff]"
                                 >
                                     {item.icon}
                                 </div>
                             </div>
 
                             {/* Text */}
-                            <h3 className="text-lg font-semibold mb-2 text-gray-800 group-hover:text-white">
+                            <h3 className="text-lg font-semibold mb-2 text-gray-800 group-hover:text-[#25baff]">
                                 {item.title}
                             </h3>
-                            <p className="text-sm text-gray-600 leading-relaxed group-hover:text-white">
+                            <p className="text-sm text-gray-600 leading-relaxed">
                                 {item.desc}
                             </p>
                         </div>

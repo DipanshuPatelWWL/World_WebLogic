@@ -59,59 +59,58 @@ export default function Home() {
         <div className="font-sans text-gray-800">
 
             {/* ================= HERO SLIDER ================= */}
-            <header className="bg-gradient-to-r from-[#0b1c3d] to-[#123a78] text-white overflow-hidden">
+            <header className="bg-gradient-to-r from-[#020202] via-[#020202] to-[#25baff] text-white overflow-hidden">
                 <div className="max-w-7xl mx-auto px-6 py-20 relative min-h-[520px]">
                     {heroSlides.map((slide, index) => (
                         <div
                             key={index}
                             className={`absolute inset-0 transition-opacity duration-700 ease-in-out
-    ${activeSlide === index
+          ${activeSlide === index
                                     ? "opacity-100 z-10"
                                     : "opacity-0 z-0 pointer-events-none"}
-  `}
+        `}
                         >
-                            <div className="grid md:grid-cols-2 gap-10 items-center h-full text-center md:text-left">
+                            <div className="grid md:grid-cols-2 gap-10 items-center h-full text-center md:text-left px-4">
                                 <div
                                     className={`transition-all duration-700 delay-150
-    ${activeSlide === index
+              ${activeSlide === index
                                             ? "opacity-100 translate-y-0"
                                             : "opacity-0 translate-y-10"}
-  `}
+            `}
                                 >
-                                    <h1 className="text-4xl md:text-5xl font-bold leading-tight">
+                                    <h1 className="text-4xl md:text-5xl font-bold leading-tight text-[#25baff]">
                                         {slide.title}
                                     </h1>
 
-                                    <p className="mt-6 text-lg text-blue-100">
+                                    <p className="mt-6 text-lg text-[#a8d97c]">
                                         {slide.description}
                                     </p>
 
                                     <div className="mt-8">
                                         <Link
                                             to="/services"
-                                            className="inline-block bg-orange-500 hover:bg-orange-600 px-6 py-3 rounded-xl font-semibold transition"
+                                            className="inline-block bg-[#a8d97c] text-[#020202] hover:bg-[#25baff] hover:text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300"
                                         >
                                             Our Services
                                         </Link>
                                     </div>
                                 </div>
 
-
                                 <div className="hidden md:block">
                                     <img
                                         src={slide.image}
                                         alt={slide.title}
                                         className={`rounded-2xl shadow-lg transition-transform duration-700
-    ${activeSlide === index ? "scale-100" : "scale-95"}
-  `}
+                ${activeSlide === index ? "scale-100" : "scale-95"}
+              `}
                                     />
-
                                 </div>
                             </div>
                         </div>
                     ))}
                 </div>
             </header>
+
 
             {/* SERVICES */}
             <OurServices />
@@ -123,12 +122,17 @@ export default function Home() {
 
 
             {/* ABOUT */}
-            <section className="py-24 bg-gray-50 relative overflow-hidden">
+            <section
+                className="
+    py-24 relative overflow-hidden
+    bg-gradient-to-br from-[#a8d97c]/50 via-[#25baff]/10 to-[#a8d97c]/15
+  "
+            >
                 <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
 
                     {/* Image Side */}
                     <div className="relative">
-                        <div className="absolute -top-6 -left-6 w-40 h-40 bg-orange-100 rounded-full blur-2xl"></div>
+                        <div className="absolute -top-6 -left-6 w-40 h-40 bg-[#25baff]/20 rounded-full blur-2xl"></div>
                         <img
                             src={About}
                             alt="About WorldWeblogic"
@@ -138,13 +142,13 @@ export default function Home() {
 
                     {/* Content Side */}
                     <div>
-                        <span className="inline-block mb-4 text-xl font-bold tracking-widest text-orange-500 uppercase">
+                        <span className="inline-block mb-4 text-xl font-bold tracking-widest text-[#25baff] uppercase">
                             About Us
                         </span>
 
-                        <h2 className="text-4xl font-bold leading-tight text-gray-900">
+                        <h2 className="text-4xl font-bold leading-tight text-[#020202]">
                             Building Digital Experiences That
-                            <span className="text-orange-500"> Drive Growth</span>
+                            <span className="text-[#25baff]"> Drive Growth</span>
                         </h2>
 
                         <p className="mt-6 text-gray-600 leading-relaxed">
@@ -156,12 +160,15 @@ export default function Home() {
 
                         {/* Feature Grid */}
                         <div className="mt-10 grid sm:grid-cols-2 gap-6">
+
+                            {/* Item 1 */}
                             <div className="flex items-start gap-4">
-                                <div className="w-20 h-12 flex items-center justify-center rounded-xl bg-orange-200 text-orange-600 font-bold">
+                                <div className="w-20 h-12 flex items-center justify-center rounded-xl
+            bg-[#25baff]/15 text-[#25baff] font-bold">
                                     01
                                 </div>
                                 <div>
-                                    <h4 className="font-semibold text-gray-900">
+                                    <h4 className="font-semibold text-[#020202]">
                                         Expert Team
                                     </h4>
                                     <p className="text-sm text-gray-600 mt-1">
@@ -170,12 +177,14 @@ export default function Home() {
                                 </div>
                             </div>
 
+                            {/* Item 2 */}
                             <div className="flex items-start gap-4">
-                                <div className="w-20 h-12 flex items-center justify-center rounded-xl bg-orange-200 text-orange-600 font-bold">
+                                <div className="w-20 h-12 flex items-center justify-center rounded-xl
+            bg-[#a8d97c]/25 text-[#020202] font-bold">
                                     02
                                 </div>
                                 <div>
-                                    <h4 className="font-semibold text-gray-900">
+                                    <h4 className="font-semibold text-[#020202]">
                                         Result-Focused Approach
                                     </h4>
                                     <p className="text-sm text-gray-600 mt-1">
@@ -184,12 +193,14 @@ export default function Home() {
                                 </div>
                             </div>
 
+                            {/* Item 3 */}
                             <div className="flex items-start gap-4">
-                                <div className="w-20 h-12 flex items-center justify-center rounded-xl bg-orange-200 text-orange-600 font-bold">
+                                <div className="w-20 h-12 flex items-center justify-center rounded-xl
+            bg-[#25baff]/15 text-[#25baff] font-bold">
                                     03
                                 </div>
                                 <div>
-                                    <h4 className="font-semibold text-gray-900">
+                                    <h4 className="font-semibold text-[#020202]">
                                         Modern Technologies
                                     </h4>
                                     <p className="text-sm text-gray-600 mt-1">
@@ -198,12 +209,14 @@ export default function Home() {
                                 </div>
                             </div>
 
+                            {/* Item 4 */}
                             <div className="flex items-start gap-4">
-                                <div className="w-20 h-12 flex items-center justify-center rounded-xl bg-orange-200 text-orange-600 font-bold">
+                                <div className="w-20 h-12 flex items-center justify-center rounded-xl
+            bg-[#a8d97c]/25 text-[#020202] font-bold">
                                     04
                                 </div>
                                 <div>
-                                    <h4 className="font-semibold text-gray-900">
+                                    <h4 className="font-semibold text-[#020202]">
                                         Long-Term Support
                                     </h4>
                                     <p className="text-sm text-gray-600 mt-1">
@@ -211,6 +224,7 @@ export default function Home() {
                                     </p>
                                 </div>
                             </div>
+
                         </div>
                     </div>
                 </div>
@@ -218,61 +232,74 @@ export default function Home() {
 
 
             {/* STATS (UPDATED WITH ICONS + COUNT UP) */}
-            <section className="bg-[#0b1c3d] py-16 text-white">
+
+            <section
+                className="
+    py-16 text-white bg-black
+  "
+            >
                 <div className="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-12 text-center">
 
+                    {/* Team Members */}
                     <div className="flex flex-col items-center gap-3">
-                        <FaUsers className="text-orange-500 text-4xl mr-4" />
-                        <h3 className="text-4xl font-bold">
+                        <FaUsers className="text-[#25baff] text-4xl" />
+                        <h3 className="text-4xl font-bold text-white">
                             <CountUp end={300} duration={2.5} enableScrollSpy />+
                         </h3>
-                        <p className="text-blue-200">Team Members</p>
+                        <p className="text-[#a8d97c]">Team Members</p>
                     </div>
 
+                    {/* Experience */}
                     <div className="flex flex-col items-center gap-3">
-                        <FaAward className="text-orange-500 text-4xl mr-5" />
-                        <h3 className="text-4xl font-bold">
+                        <FaAward className="text-[#25baff] text-4xl" />
+                        <h3 className="text-4xl font-bold text-white">
                             <CountUp end={10} duration={2.5} enableScrollSpy />+
                         </h3>
-                        <p className="text-blue-200">Years of Experience</p>
+                        <p className="text-[#a8d97c]">Years of Experience</p>
                     </div>
 
+                    {/* Projects */}
                     <div className="flex flex-col items-center gap-3">
-                        <FaHandshake className="text-orange-500 text-4xl mr-6" />
-                        <h3 className="text-4xl font-bold">
+                        <FaHandshake className="text-[#25baff] text-4xl" />
+                        <h3 className="text-4xl font-bold text-white">
                             <CountUp end={2042} duration={2.5} enableScrollSpy />+
                         </h3>
-                        <p className="text-blue-200">Projects Completed</p>
+                        <p className="text-[#a8d97c]">Projects Completed</p>
                     </div>
 
+                    {/* Clients */}
                     <div className="flex flex-col items-center gap-3">
-                        <FaSmile className="text-orange-500 text-4xl mr-5" />
-                        <h3 className="text-4xl font-bold">
+                        <FaSmile className="text-[#25baff] text-4xl" />
+                        <h3 className="text-4xl font-bold text-white">
                             <CountUp end={1820} duration={2.5} enableScrollSpy />+
                         </h3>
-                        <p className="text-blue-200">Happy Clients</p>
+                        <p className="text-[#a8d97c]">Happy Clients</p>
                     </div>
 
                 </div>
             </section>
 
 
+
             {/* Projects */}
-            <section className="py-20 bg-gray-50">
+            <section className="py-20">
                 <div className="max-w-7xl mx-auto px-6">
+
+                    {/* Header */}
                     <div className="flex justify-between items-center mb-10">
-                        <h2 className="text-3xl font-bold">
+                        <h2 className="text-3xl font-bold text-[#020202]">
                             Our Latest Projects
                         </h2>
 
                         <Link
                             to="/projects"
-                            className="text-orange-500 font-semibold hover:underline"
+                            className="text-[#25baff] font-semibold hover:underline"
                         >
                             View All →
                         </Link>
                     </div>
 
+                    {/* Projects Grid */}
                     <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
                         {projects
                             .filter((p) => p.featured)
@@ -281,24 +308,24 @@ export default function Home() {
                                 <Link
                                     key={project.id}
                                     to={`/projects/${project.slug}`}
-                                    className="group relative rounded-2xl overflow-hidden shadow-lg
-                       transform transition-all duration-500
-                       hover:-translate-y-3 hover:shadow-2xl"
+                                    className="group relative rounded-2xl overflow-hidden
+              shadow-lg transform transition-all duration-500
+              hover:-translate-y-3 hover:shadow-2xl"
                                 >
                                     {/* Image */}
                                     <img
                                         src="https://plus.unsplash.com/premium_photo-1678565879444-f87c8bd9f241?w=800"
                                         alt={project.title}
-                                        className="h-64 w-full object-cover transition-transform duration-[1200ms]
-                         group-hover:scale-110"
+                                        className="h-64 w-full object-cover
+                transition-transform duration-[1200ms]
+                group-hover:scale-110"
                                     />
 
                                     {/* Overlay */}
-                                    <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent" />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-[#020202]/90 via-[#020202]/60 to-transparent" />
 
                                     {/* Bottom Content */}
                                     <div className="absolute inset-0 flex flex-col justify-end p-6">
-                                        {/* Title & Description (ALWAYS visible) */}
                                         <h3 className="text-white text-xl font-semibold">
                                             {project.title}
                                         </h3>
@@ -307,17 +334,19 @@ export default function Home() {
                                             {project.shortDesc}
                                         </p>
 
-                                        {/* View Project Button */}
+                                        {/* Button */}
                                         <button
                                             className="
-                  mt-4 w-max bg-orange-500 text-white
+                  mt-4 w-max
+                  bg-[#25baff] text-white
                   px-5 py-2 rounded-lg text-sm font-semibold
 
                   opacity-100 translate-y-0
                   md:opacity-0 md:translate-y-3
                   md:group-hover:opacity-100 md:group-hover:translate-y-0
 
-                  transition-all duration-400 hover:cursor-pointer hover:bg-orange-600
+                  transition-all duration-400
+                  hover:bg-[#a8d97c] hover:text-[#020202]
                 "
                                         >
                                             View Project
@@ -326,17 +355,24 @@ export default function Home() {
                                 </Link>
                             ))}
                     </div>
+
                 </div>
             </section>
 
+
             <DevelopmentProcess />
 
-            <section className="py-24 bg-white">
+            <section
+                className="
+    py-24 relative
+    bg-gradient-to-br from-[#25baff]/10 via-white to-[#a8d97c]/10
+  "
+            >
                 <div className="max-w-7xl mx-auto px-6">
 
                     {/* Header */}
                     <div className="text-center max-w-4xl mx-auto mb-16">
-                        <h2 className="text-4xl font-bold text-gray-900">
+                        <h2 className="text-4xl font-bold text-[#020202]">
                             Let’s Start a Conversation
                         </h2>
                         <p className="mt-4 text-gray-600">
@@ -350,12 +386,14 @@ export default function Home() {
                         {/* Contact Info */}
                         <div className="space-y-8 mt-10">
 
+                            {/* Address */}
                             <div className="flex gap-5">
-                                <div className="w-12 h-12 flex items-center justify-center rounded-xl bg-orange-100 text-orange-500">
+                                <div className="w-12 h-12 flex items-center justify-center rounded-xl
+            bg-[#25baff]/15 text-[#25baff]">
                                     <FiMapPin size={22} />
                                 </div>
                                 <div>
-                                    <h4 className="font-semibold text-gray-900">Office Address</h4>
+                                    <h4 className="font-semibold text-[#020202]">Office Address</h4>
                                     <p className="text-gray-600 text-sm mt-1 leading-relaxed">
                                         B 108, 1st Floor, Office No. 2nd, Sector 63,<br />
                                         Noida - 201301
@@ -363,12 +401,14 @@ export default function Home() {
                                 </div>
                             </div>
 
+                            {/* Phone */}
                             <div className="flex gap-5">
-                                <div className="w-12 h-12 flex items-center justify-center rounded-xl bg-orange-100 text-orange-500">
+                                <div className="w-12 h-12 flex items-center justify-center rounded-xl
+            bg-[#a8d97c]/30 text-[#020202]">
                                     <FiPhoneCall size={22} />
                                 </div>
                                 <div>
-                                    <h4 className="font-semibold text-gray-900">Call Us</h4>
+                                    <h4 className="font-semibold text-[#020202]">Call Us</h4>
                                     <p className="text-gray-600 text-sm mt-1 leading-relaxed">
                                         +91 85058 37801<br />
                                         +91 01204545733<br />
@@ -377,12 +417,14 @@ export default function Home() {
                                 </div>
                             </div>
 
+                            {/* Email */}
                             <div className="flex gap-5">
-                                <div className="w-12 h-12 flex items-center justify-center rounded-xl bg-orange-100 text-orange-500">
+                                <div className="w-12 h-12 flex items-center justify-center rounded-xl
+            bg-[#25baff]/15 text-[#25baff]">
                                     <FiMail size={22} />
                                 </div>
                                 <div>
-                                    <h4 className="font-semibold text-gray-900">Email & Website</h4>
+                                    <h4 className="font-semibold text-[#020202]">Email & Website</h4>
                                     <p className="text-gray-600 text-sm mt-1 leading-relaxed">
                                         info@worldweblogic.com<br />
                                         www.worldweblogic.com
@@ -393,8 +435,8 @@ export default function Home() {
                         </div>
 
                         {/* Contact Form */}
-                        <div className="lg:col-span-2 bg-gray-50 rounded-3xl p-10 shadow-sm">
-                            <h3 className="text-2xl font-semibold text-gray-900 mb-8">
+                        <div className="lg:col-span-2 bg-white rounded-3xl p-10 shadow-lg">
+                            <h3 className="text-2xl font-semibold text-[#020202] mb-8">
                                 Send Us a Message
                             </h3>
 
@@ -402,34 +444,49 @@ export default function Home() {
                                 <input
                                     type="text"
                                     placeholder="Your Name"
-                                    className="w-full px-5 py-4 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-orange-400"
+                                    className="
+              w-full px-5 py-4 rounded-xl border border-gray-200
+              focus:outline-none focus:ring-2 focus:ring-[#25baff]
+            "
                                 />
 
                                 <input
                                     type="email"
                                     placeholder="Your Email"
-                                    className="w-full px-5 py-4 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-orange-400"
+                                    className="
+              w-full px-5 py-4 rounded-xl border border-gray-200
+              focus:outline-none focus:ring-2 focus:ring-[#25baff]
+            "
                                 />
 
                                 <textarea
                                     rows="5"
                                     placeholder="Write your message..."
-                                    className="md:col-span-2 w-full px-5 py-4 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-orange-400"
+                                    className="
+              md:col-span-2 w-full px-5 py-4 rounded-xl border border-gray-200
+              focus:outline-none focus:ring-2 focus:ring-[#a8d97c]
+            "
                                 />
 
                                 <button
                                     type="submit"
-                                    className="md:col-span-2 mt-4 inline-flex items-center justify-center px-8 py-4 rounded-xl bg-orange-500 text-white font-semibold hover:bg-orange-600 transition hover:cursor-pointer"
+                                    className="
+              md:col-span-2 mt-4 inline-flex items-center justify-center
+              px-8 py-4 rounded-xl
+              bg-[#25baff] text-white font-semibold
+              hover:bg-[#020202]
+              transition hover:cursor-pointer
+            "
                                 >
                                     Send Message
                                 </button>
                             </form>
                         </div>
 
-
                     </div>
                 </div>
             </section>
+
 
             <OurPartners />
 
@@ -440,9 +497,9 @@ export default function Home() {
             {/* CTA */}
             <section
                 className="
-    bg-orange-500 text-white py-16
+    py-16 text-white
+    bg-black
     transition-all duration-500
-    hover:bg-orange-600
   "
             >
                 <div
@@ -456,7 +513,8 @@ export default function Home() {
                     <h2
                         className="
         text-2xl md:text-3xl font-bold
-        transform transition-transform duration-500
+        text-white
+        transition-transform duration-500
       "
                     >
                         Let’s Build Your Digital Success Story
@@ -466,14 +524,16 @@ export default function Home() {
                     <Link
                         to="/contact"
                         className="
-        group bg-white text-orange-600
+        group
+        bg-[#a8d97c] text-[#020202]
         px-8 py-3 rounded-xl font-semibold
 
         flex items-center gap-2
         transform transition-all duration-300
 
-        hover:bg-gray-100 hover:-translate-y-1
-        hover:shadow-xl
+        hover:bg-[#25baff] hover:text-white
+        hover:-translate-y-1
+        hover:shadow-[0_12px_30px_rgba(37,186,255,0.4)]
         active:scale-95
       "
                     >
@@ -481,6 +541,7 @@ export default function Home() {
                     </Link>
                 </div>
             </section>
+
 
 
         </div>

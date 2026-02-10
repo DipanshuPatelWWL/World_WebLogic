@@ -6,44 +6,55 @@ export default function ProjectDetails() {
     const project = projects.find((p) => p.slug === slug);
 
     if (!project) {
-        return <div className="p-20 text-center">Project not found</div>;
+        return <div className="p-20 text-center text-[#020202]">Project not found</div>;
     }
 
     return (
-        <div className="font-sans text-gray-800">
+        <div className="font-sans text-gray-700">
 
             {/* Header */}
-            <section className="bg-[#0b1c3d] text-white py-20">
+            <section
+                className="
+          py-20 text-white
+          bg-black
+        "
+            >
                 <div className="max-w-7xl mx-auto px-6">
                     <h1 className="text-4xl font-bold">
                         {project.title}
                     </h1>
-                    <p className="mt-4 text-blue-200 max-w-3xl">
+                    <p className="mt-4 text-gray-200 max-w-3xl">
                         {project.description}
                     </p>
                 </div>
             </section>
 
             {/* Content */}
-            <section className="py-20">
+            <section className="py-20 bg-white">
                 <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12">
 
                     {/* Left */}
                     <div className="space-y-6">
-                        <p>
+
+                        <p className="text-[#020202]">
                             <span className="font-semibold">Client:</span>{" "}
                             {project.client}
                         </p>
 
+                        {/* Technologies */}
                         <div>
-                            <h3 className="text-xl font-semibold mb-2">
+                            <h3 className="text-xl font-semibold text-[#020202] mb-3">
                                 Technologies Used
                             </h3>
+
                             <div className="flex flex-wrap gap-2">
                                 {project.technologies.map((tech) => (
                                     <span
                                         key={tech}
-                                        className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm"
+                                        className="
+                      bg-[#25baff]/15 text-[#25baff]
+                      px-3 py-1 rounded-full text-sm font-medium
+                    "
                                     >
                                         {tech}
                                     </span>
@@ -51,13 +62,18 @@ export default function ProjectDetails() {
                             </div>
                         </div>
 
-                        <div className="flex gap-4">
+                        {/* Actions */}
+                        <div className="flex gap-4 flex-wrap">
                             {project.liveLink && (
                                 <a
                                     href={project.liveLink}
                                     target="_blank"
                                     rel="noreferrer"
-                                    className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded-lg font-semibold"
+                                    className="
+                    bg-[#25baff] text-white
+                    px-6 py-2 rounded-lg font-semibold
+                    transition hover:bg-[#020202]
+                  "
                                 >
                                     Live Project
                                 </a>
@@ -66,7 +82,7 @@ export default function ProjectDetails() {
 
                         <Link
                             to="/projects"
-                            className="inline-block text-orange-500 font-semibold"
+                            className="inline-block text-[#25baff] font-semibold hover:underline"
                         >
                             ← Back to Projects
                         </Link>
@@ -75,8 +91,9 @@ export default function ProjectDetails() {
                     {/* Right */}
                     <div className="space-y-8">
 
+                        {/* Why Tech */}
                         <div>
-                            <h3 className="text-xl font-semibold mb-2">
+                            <h3 className="text-xl font-semibold text-[#020202] mb-3">
                                 Why These Technologies?
                             </h3>
                             <ul className="list-disc list-inside text-gray-600 space-y-1">
@@ -86,8 +103,9 @@ export default function ProjectDetails() {
                             </ul>
                         </div>
 
+                        {/* Specifications */}
                         <div>
-                            <h3 className="text-xl font-semibold mb-2">
+                            <h3 className="text-xl font-semibold text-[#020202] mb-3">
                                 Project Specifications
                             </h3>
                             <ul className="list-disc list-inside text-gray-600 space-y-1">
