@@ -1,4 +1,11 @@
-import { FaGlobe, FaMobileAlt, FaRocket, FaCode, FaLayerGroup } from "react-icons/fa";
+import { motion } from "framer-motion";
+import {
+    FaGlobe,
+    FaMobileAlt,
+    FaRocket,
+    FaCode,
+    FaLayerGroup,
+} from "react-icons/fa";
 
 const services = [
     {
@@ -35,83 +42,71 @@ const services = [
 
 const WebAppDevelopment = () => {
     return (
-        <section
-            className="
-        relative py-20
-        bg-gradient-to-br
-        from-[#020202]
-        via-[#020202]
-        to-[#25baff]/40
+        <section className="relative py-32 bg-gradient-to-br from-[#020202] via-[#020202] to-[#25baff]/40">
+            <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16">
+
+                {/* LEFT SIDE (STICKY) */}
+                <div className="lg:sticky lg:top-32 h-fit">
+                    <h2 className="text-4xl font-semibold text-white mb-6">
+                        Web & App Development
+                    </h2>
+
+                    <div className="h-1 w-40 rounded-full bg-gradient-to-r from-[#25baff] via-[#a8d97c] to-[#25baff] mb-6" />
+
+                    <p className="text-gray-300 text-lg leading-relaxed">
+                        We build scalable, secure, and future-ready web & mobile
+                        applications designed to grow with your business.
+                    </p>
+                </div>
+
+                {/* RIGHT SIDE (SCROLLING CARDS) */}
+
+                <div className="relative flex flex-col gap-24">
+                    {services.map((item, index) => (
+                        <motion.div
+                            key={index}
+                            initial={{ opacity: 0, y: 80 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true, amount: 0.3 }}
+                            transition={{ duration: 0.6 }}
+                            style={{
+                                top: `${120 + index * 40}px`,
+                                zIndex: index + 1,
+                            }}
+                            className="
+        sticky
+        rounded-2xl
+        bg-[#020202]/90
+        border border-[#25baff]/30
+        p-8
+        transition-all duration-500
+        hover:border-[#a8d97c]
+        hover:shadow-[0_15px_60px_rgba(37,186,255,0.35)]
       "
-        >
-            {/* Title */}
-            <div className="text-center mb-14">
-                <h2 className="text-4xl font-semibold text-white">
-                    Web & App Development
-                </h2>
-
-                {/* 3-color underline */}
-                <div
-                    className="mt-4 mx-auto h-1 w-110 rounded-full
-          bg-gradient-to-r from-[#25baff] via-[#a8d97c] to-[#25baff]"
-                />
-            </div>
-
-            {/* Cards */}
-            <div className="max-w-7xl mx-auto px-6 grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
-                {services.map((item, index) => (
-                    <div
-                        key={index}
-                        className="
-              group relative rounded-2xl
-              bg-[#020202]/80
-              border border-[#25baff]/30
-              p-8 cursor-pointer
-              transition-all duration-500
-              hover:bg-[#020202]
-              hover:border-[#a8d97c]
-              hover:shadow-[0_15px_60px_rgba(37,186,255,0.35)]
-            "
-                    >
-                        {/* Icon */}
-                        <div className="mb-6">
-                            <div
-                                className="
-                  flex h-14 w-14 items-center justify-center rounded-xl
-                  bg-gradient-to-br from-[#25baff] via-[#a8d97c] to-[#25baff]
-                  text-white text-2xl
-                  transition-all duration-700
-                  group-hover:rotate-[360deg]
-                "
-                            >
-                                {item.icon}
+                        >
+                            {/* Icon */}
+                            <div className="mb-6">
+                                <div className="
+          flex h-14 w-14 items-center justify-center rounded-xl
+          bg-gradient-to-br from-[#25baff] via-[#a8d97c] to-[#25baff]
+          text-white text-2xl
+        ">
+                                    {item.icon}
+                                </div>
                             </div>
-                        </div>
 
-                        {/* Text */}
-                        <h3
-                            className="
-                text-lg font-semibold mb-3
-                text-white
-                group-hover:text-[#25baff]
-                transition-colors duration-300
-              "
-                        >
-                            {item.title}
-                        </h3>
+                            <h3 className="text-lg font-semibold mb-3 text-white">
+                                {item.title}
+                            </h3>
 
-                        <p
-                            className="
-                text-sm leading-relaxed
-                text-gray-300
-                group-hover:text-[#a8d97c]
-                transition-colors duration-300
-              "
-                        >
-                            {item.desc}
-                        </p>
-                    </div>
-                ))}
+                            <p className="text-sm leading-relaxed text-gray-300">
+                                {item.desc}
+                            </p>
+                        </motion.div>
+                    ))}
+                </div>
+
+
             </div>
         </section>
     );

@@ -8,6 +8,32 @@ import {
     FaCloud,
 } from "react-icons/fa";
 
+/* ================= ICON MAP ================= */
+const iconMap = {
+    "Flutter Apps": FaMobileAlt,
+    "React Native": FaMobileAlt,
+    "Android Apps": FaMobileAlt,
+    "iOS / iPhone Apps": FaMobileAlt,
+
+    "Artificial Intelligence": FaRobot,
+    "Data Science": FaRobot,
+    "AWS AI/ML": FaCloud,
+    "Google Cloud AI/ML": FaCloud,
+
+    "Custom Development": FaCode,
+    "API Design & REST Services": FaCode,
+    "Hire Dedicated Team": FaCode,
+
+    "SEO Services": FaBullhorn,
+    "Social Media Marketing": FaBullhorn,
+    "Pay Per Click Services": FaBullhorn,
+
+    "Automation Testing": FaBug,
+    "Web Application Testing": FaBug,
+    "Mobile App Testing": FaBug,
+};
+
+/* ================= SERVICES DATA ================= */
 const servicesData = {
     "Mobility Solution": [
         {
@@ -110,73 +136,7 @@ const servicesData = {
     ],
 };
 
-// const OurServices = () => {
-//     const categories = Object.keys(servicesData);
-//     const [activeCategory, setActiveCategory] = useState(categories[0]);
-
-//     return (
-//         <section className="py-20 bg-white text-black">
-//             {/* Heading */}
-//             <div className="text-center mb-14">
-//                 <p className="text-orange-500 uppercase text-lg tracking-widest">
-//                     Our Services
-//                 </p>
-//                 <h2 className="text-4xl font-semibold">
-//                     What We Provide
-//                 </h2>
-//             </div>
-
-//             <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-4 gap-8">
-
-//                 {/* Left Sidebar */}
-//                 <div className="space-y-3">
-//                     {categories.map((cat, index) => (
-//                         <button
-//                             key={index}
-//                             onClick={() => setActiveCategory(cat)}
-//                             className={`w-full text-left px-5 py-4 rounded-md font-medium transition-all duration-300 border-l-4 hover:cursor-pointer
-//                                 ${activeCategory === cat
-//                                     ? "bg-orange-500 text-white border-orange-500"
-//                                     : "bg-white text-gray-700 border-gray-200 hover:bg-orange-50"
-//                                 }`}
-//                         >
-//                             {cat}
-//                         </button>
-//                     ))}
-//                 </div>
-
-//                 {/* Right Content */}
-//                 <div className="lg:col-span-3 grid grid-cols-1 md:grid-cols-2 gap-6">
-//                     {servicesData[activeCategory].map((item, index) => (
-//                         <div
-//                             key={index}
-//                             className="group rounded-xl bg-white border border-gray-200 p-6 transition-all duration-500 cursor-pointer hover:bg-orange-500 hover:border-orange-500"
-//                         >
-//                             {/* Icon */}
-//                             <div className="mb-4">
-//                                 <div
-//                                     className="h-12 w-12 flex items-center justify-center rounded-lg bg-orange-100 text-orange-500 text-2xl
-//                                     transition-all duration-700 group-hover:rotate-[360deg] group-hover:bg-white group-hover:text-orange-500"
-//                                 >
-//                                     {item.icon}
-//                                 </div>
-//                             </div>
-
-//                             {/* Text */}
-//                             <h3 className="text-lg font-semibold mb-2 text-gray-800 group-hover:text-white">
-//                                 {item.title}
-//                             </h3>
-//                             <p className="text-sm text-gray-600 leading-relaxed group-hover:text-white">
-//                                 {item.desc}
-//                             </p>
-//                         </div>
-//                     ))}
-//                 </div>
-//             </div>
-//         </section>
-//     );
-// };
-
+/* ================= COMPONENT ================= */
 const OurServices = () => {
     const categories = Object.keys(servicesData);
     const [activeCategory, setActiveCategory] = useState(categories[0]);
@@ -194,15 +154,14 @@ const OurServices = () => {
             </div>
 
             <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-4 gap-8">
-
-                {/* Left Sidebar */}
+                {/* Sidebar */}
                 <div className="space-y-3">
                     {categories.map((cat, index) => (
                         <button
                             key={index}
                             onClick={() => setActiveCategory(cat)}
                             className={`w-full text-left px-5 py-4 rounded-md font-medium transition-all duration-300 border-l-4
-                ${activeCategory === cat
+              ${activeCategory === cat
                                     ? "bg-[#25baff] text-white border-[#a8d97c]"
                                     : "bg-white text-gray-700 border-gray-200 hover:bg-[#25baff]/10"
                                 }`}
@@ -212,37 +171,59 @@ const OurServices = () => {
                     ))}
                 </div>
 
-                {/* Right Content */}
+                {/* Cards */}
                 <div className="lg:col-span-3 grid grid-cols-1 md:grid-cols-2 gap-6">
-                    {servicesData[activeCategory].map((item, index) => (
-                        <div
-                            key={index}
-                            className="group rounded-xl bg-white border border-gray-200 p-6 transition-all duration-500 cursor-pointer
-              hover:border-[#25baff] hover:shadow-lg hover:bg-[#25baff]/10"
-                        >
-                            {/* Icon */}
-                            <div className="mb-4">
+                    {servicesData[activeCategory].map((item, index) => {
+                        const BgIcon = iconMap[item.title];
+
+                        return (
+                            <div
+                                key={index}
+                                className="relative overflow-hidden group rounded-xl bg-white border border-gray-200 p-6
+                transition-all duration-500 cursor-pointer
+                hover:border-[#25baff] hover:shadow-lg"
+                            >
+                                {/* Animated Background */}
                                 <div
-                                    className="h-12 w-12 flex items-center justify-center rounded-lg
-                  bg-[#25baff]/15 text-[#25baff] text-2xl
-                  transition-all duration-700
-                  group-hover:rotate-[360deg]
-                  group-hover:bg-[#a8d97c]/30
-                  group-hover:text-[#25baff]"
+                                    className="absolute inset-0 bg-[#25baff]/10
+                  scale-y-0 origin-bottom
+                  transition-transform duration-500 ease-out
+                  group-hover:scale-y-100"
+                                />
+
+                                {/* Background Icon */}
+                                <div
+                                    className="absolute right-4 bottom-4 text-[120px] text-[#25baff]/10
+                  transition-all duration-500
+                  group-hover:scale-110 group-hover:text-[#25baff]/20"
                                 >
-                                    {item.icon}
+                                    {BgIcon && <BgIcon />}
+                                </div>
+
+                                {/* Content */}
+                                <div className="relative z-10">
+                                    <div className="mb-4">
+                                        <div
+                                            className="h-12 w-12 flex items-center justify-center rounded-lg
+                      bg-[#25baff]/15 text-[#25baff] text-2xl
+                      transition-all duration-700 ease-out
+                      group-hover:rotate-[360deg]
+                      group-hover:bg-[#a8d97c]/30"
+                                        >
+                                            {item.icon}
+                                        </div>
+                                    </div>
+
+                                    <h3 className="text-lg font-semibold mb-2 text-gray-800 group-hover:text-[#25baff]">
+                                        {item.title}
+                                    </h3>
+                                    <p className="text-sm text-gray-600 leading-relaxed">
+                                        {item.desc}
+                                    </p>
                                 </div>
                             </div>
-
-                            {/* Text */}
-                            <h3 className="text-lg font-semibold mb-2 text-gray-800 group-hover:text-[#25baff]">
-                                {item.title}
-                            </h3>
-                            <p className="text-sm text-gray-600 leading-relaxed">
-                                {item.desc}
-                            </p>
-                        </div>
-                    ))}
+                        );
+                    })}
                 </div>
             </div>
         </section>
