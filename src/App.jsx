@@ -11,12 +11,9 @@ import Projects from "./pages/Project";
 import CannabisSeoServices from "./pages/market/CannabisSeoServices";
 import TopInfoBar from "./components/TopInfoBar";
 import SeoFurnitureStores from "./pages/market/SeoFurnitureStores";
-import Seo from "./pages/services/SEO";
-import WebDesign from "./pages/services/WebDesign";
-import WebDevelopment from "./pages/services/WebDevelopment";
-import AppDevelopment from "./pages/services/AppDevelopment";
-import SocialMediaMarketing from "./pages/services/SocialMediaMarketing";
-import OnlineReputationManagement from "./pages/services/OnlineReputationManagement";
+import Seo from "./pages/services/Seo";
+import SEO_Packages from "./pages/plans-pricinng/SEO_Packages";
+import SEO_Starter_Pack from "./pages/plans-pricinng/SEO_Starter_Pack";
 
 function App() {
   return (
@@ -32,6 +29,7 @@ function App() {
         <Route path="/market/cannabis-seo-services" element={<CannabisSeoServices />} />
         <Route path="/market/seo-for-furniture-stores" element={<SeoFurnitureStores />} />
         <Route path="/services/seo" element={<Seo />} />
+        <Route path="/services/seo" element={<Seo />} />
         <Route path="/contact" element={<ContactUs />} />
         <Route path="/services/web-design" element={<WebDesign />} />
         <Route path="/services/web-development" element={<WebDevelopment />} />
@@ -40,6 +38,8 @@ function App() {
         <Route path="/services/online-reputation-management" element={<OnlineReputationManagement />} />
         <Route path="/projects" element={<Projects />} />
         <Route path="/projects/:slug" element={<ProjectDetails />} />
+        <Route path="/pricing/seo-packages" element={<SEO_Packages />} />
+        <Route path="/pricing/seo-starter-pack" element={<SEO_Starter_Pack />} />
       </Routes>
       <Footer />
     </Router>
