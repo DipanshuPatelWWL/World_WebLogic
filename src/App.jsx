@@ -5,7 +5,6 @@ import Footer from "./components/Footer";
 import WhoWeAre from "./pages/about/whoWeAre";
 import ContactUs from "./pages/ContactUs";
 import ScrollToTop from "./components/ScrollToTop";
-import SearchEngineOptimization from "./pages/services/Seo";
 import WhyWwl from "./pages/about/WhyWwl";
 import ProjectDetails from "./pages/ProjectDetails";
 import Projects from "./pages/Project";
@@ -13,6 +12,8 @@ import CannabisSeoServices from "./pages/market/CannabisSeoServices";
 import TopInfoBar from "./components/TopInfoBar";
 import SeoFurnitureStores from "./pages/market/SeoFurnitureStores";
 import Seo from "./pages/services/Seo";
+import SEO_Packages from "./pages/plans-pricinng/SEO_Packages";
+import SEO_Starter_Pack from "./pages/plans-pricinng/SEO_Starter_Pack";
 
 function App() {
   return (
@@ -24,14 +25,15 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about/who-we-are" element={<WhoWeAre />} />
-        <Route path="/services/seo" element={<SearchEngineOptimization />} />
         <Route path="/about/why-choose-us" element={<WhyWwl />} />
         <Route path="/market/cannabis-seo-services" element={<CannabisSeoServices />} />
         <Route path="/market/seo-for-furniture-stores" element={<SeoFurnitureStores />} />
-        <Route path="//services/seo" element={<Seo />} />
+        <Route path="/services/seo" element={<Seo />} />
         <Route path="/contact" element={<ContactUs />} />
         <Route path="/projects" element={<Projects />} />
         <Route path="/projects/:slug" element={<ProjectDetails />} />
+        <Route path="/pricing/seo-packages" element={<SEO_Packages />} />
+        <Route path="/pricing/seo-starter-pack" element={<SEO_Starter_Pack />} />
       </Routes>
       <Footer />
     </Router>
