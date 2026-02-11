@@ -156,7 +156,7 @@ const PricingCard = ({ title, price, features, enabled, popular }) => {
 
         {/* BUTTON */}
         <button
-          className={`mt-6 px-6 py-2 rounded-full border border-[#25baff] ${
+          className={`mt-6 px-6 py-2 rounded-full border border-[#25baff] cursor-pointer ${
             title === "GOLD"
               ? "bg-[#25baff] text-white"
               : "hover:bg-[#25baff] hover:text-white"
@@ -232,7 +232,7 @@ const PlanDetails = ({ creative, postings, paid, remarketing }) => (
 
     <Section title="CUSTOMER SUPPORT" items={["Email", "Phone", "Chat"]} />
 
-    <button className="bg-[#25baff] text-white px-6 py-2 rounded-full">
+    <button className="bg-[#25baff] text-white px-6 py-2 rounded-full cursor-pointer">
       Start Today
     </button>
   </div>
