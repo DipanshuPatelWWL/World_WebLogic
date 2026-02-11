@@ -5,41 +5,57 @@ const FAQ = () => {
 
     const faqData = [
         {
-            question: "Who is World WebLogic?",
+            question: "Who is World WebLogic and what do you do?",
             answer:
-                "World WebLogic is an online marketing solutions company providing services such as website design and development, social media marketing, SEO, SEM, PPC, mobile application development, and online reputation management."
+                "World WebLogic is a full-service IT and digital solutions company that helps startups and growing businesses design, develop, and scale digital products including websites, web apps, mobile apps, and digital marketing solutions."
         },
         {
-            question: "What services does World WebLogic offer?",
+            question: "What services does World WebLogic specialize in?",
             answer:
-                "We offer complete digital marketing and development services including SEO, SEM, PPC, social media marketing, website development, mobile app development, and online reputation management."
+                "We specialize in web design and development, custom web applications, mobile app development, SEO, performance marketing, UI/UX design, and long-term digital growth solutions."
         },
         {
-            question: "Why should you choose World WebLogic?",
+            question: "What types of businesses do you work with?",
             answer:
-                "We follow strict white-hat SEO practices, deliver result-driven branding solutions, focus on organic growth, offer creative services, and provide affordable and comprehensive packages."
+                "We work with startups, small and mid-sized businesses, and enterprises across industries such as SaaS, e-commerce, healthcare, education, fintech, and service-based businesses."
         },
         {
-            question: "Do you follow white-hat SEO practices?",
+            question: "Why should I choose World WebLogic over other agencies?",
             answer:
-                "Yes, we strictly adhere to search engine guidelines and use only white-hat SEO techniques for sustainable and long-term results."
+                "We focus on business outcomes, not just delivery. Our approach includes transparent communication, result-driven strategies, modern technologies, flexible pricing, and dedicated support throughout the project lifecycle."
         },
         {
-            question: "Does World WebLogic work with international clients?",
+            question: "Do you offer customized solutions or fixed packages?",
             answer:
-                "Yes, we work with clients in India as well as internationally, including the United States and Australia."
+                "Every project is unique. We provide fully customized solutions based on your business goals, timeline, and budget instead of one-size-fits-all packages."
         },
         {
-            question: "What makes your team reliable?",
+            question: "How long does a typical project take?",
             answer:
-                "Our consultants are experts in SEO, PPC, and social media marketing. We are proud of our high client retention rate due to consistent and proven results."
+                "Project timelines vary depending on scope and complexity. A standard website usually takes 2–4 weeks, while complex web or mobile applications may take 6–12 weeks."
         },
         {
-            question: "Do you offer long-term contracts?",
+            question: "Do you provide post-launch support and maintenance?",
             answer:
-                "No, we do not bind clients with long-term contracts. We believe in earning trust through performance and results."
+                "Yes. We offer ongoing support, maintenance, performance optimization, and feature enhancements to ensure your product remains secure, scalable, and up to date."
+        },
+        {
+            question: "Do you follow secure and industry-standard development practices?",
+            answer:
+                "Absolutely. We follow industry best practices including clean code standards, secure development guidelines, and white-hat SEO techniques for long-term and sustainable growth."
+        },
+        {
+            question: "Do you work with international clients?",
+            answer:
+                "Yes, we work with clients globally including India, the United States, Australia, and other regions, with flexible communication across time zones."
+        },
+        {
+            question: "Is there a long-term contract or commitment?",
+            answer:
+                "No long-term lock-ins. We believe in building long-term partnerships through quality work, transparency, and consistent results—not contracts."
         }
     ];
+
 
     const toggleFAQ = (index) => {
         setActiveIndex(activeIndex === index ? null : index);

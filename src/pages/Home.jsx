@@ -18,6 +18,7 @@ import Banner1 from "../assets/banner1.jfif"
 import Banner2 from "../assets/banner2.jfif"
 import Banner3 from "../assets/banner3.jfif"
 import About from "../assets/about1.jfif"
+import Testimonials from "./Testimonials";
 
 
 const heroSlides = [
@@ -264,7 +265,7 @@ export default function Home() {
                         <h3 className="text-4xl font-bold text-white">
                             <CountUp end={2042} duration={2.5} enableScrollSpy />+
                         </h3>
-                        <p className="text-[#a8d97c]">Projects Completed</p>
+                        <p className="text-[#a8d97c]">Projects Delivered Successfully</p>
                     </div>
 
                     {/* Clients */}
@@ -490,8 +491,10 @@ export default function Home() {
 
             <OurPartners />
 
+            <Testimonials />
 
             <FAQ />
+
 
 
             {/* CTA */}
