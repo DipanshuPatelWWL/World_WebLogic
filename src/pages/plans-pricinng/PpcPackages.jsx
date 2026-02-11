@@ -50,7 +50,7 @@ const PpcPackages = () => {
                 <p>Ad Groups – Up To 5</p>
               </div>
 
-              <button className="mt-8 mb-8 px-8 py-2 rounded-full border border-[#25baff] text-[#25baff] hover:bg-[#25baff] hover:text-white">
+              <button className="mt-8 mb-8 px-8 py-2 cursor-pointer rounded-full border border-[#25baff] text-[#25baff] hover:bg-[#25baff] hover:text-white">
                 Start Today
               </button>
             </div>
@@ -71,7 +71,7 @@ const PpcPackages = () => {
                 <p>Ad Groups – Up To 10</p>
               </div>
 
-              <button className="mt-8 mb-8 px-8 py-2 rounded-full border border-[#25baff] text-[#25baff] hover:bg-[#25baff] hover:text-white">
+              <button className="mt-8 mb-8 px-8 py-2 cursor-pointer rounded-full border border-[#25baff] text-[#25baff] hover:bg-[#25baff] hover:text-white">
                 Start Today
               </button>
             </div>
@@ -105,7 +105,7 @@ const PpcPackages = () => {
               </div>
 
               {/* BUTTON */}
-              <button className="mt-8 mb-8 px-8 py-2 rounded-full bg-[#25baff] text-white">
+              <button className="mt-8 mb-8 px-8 py-2 rounded-full bg-[#25baff] text-white cursor-pointer">
                 Start Today
               </button>
             </div>
@@ -126,7 +126,7 @@ const PpcPackages = () => {
                 <p>Ad Groups – Up To 40</p>
               </div>
 
-              <button className="mt-8 mb-8 px-8 py-2 rounded-full border border-[#25baff] text-[#25baff] hover:bg-[#25baff] hover:text-white">
+              <button className="mt-8 mb-8 px-8 py-2 rounded-full border cursor-pointer border-[#25baff] text-[#25baff] hover:bg-[#25baff] hover:text-white">
                 Start Today
               </button>
             </div>
@@ -219,7 +219,7 @@ const PpcPackages = () => {
                     <span>{label}</span>
                   </div>
                 ))}
-                <button className="mt-6 bg-[#25baff] text-white px-6 py-2 rounded-full">
+                <button className="mt-6 bg-[#25baff] text-white px-6 py-2 rounded-full cursor-pointer ">
                   Start Today
                 </button>
               </div>

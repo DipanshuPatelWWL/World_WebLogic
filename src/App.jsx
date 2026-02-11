@@ -21,6 +21,7 @@ import SocialMediaMarketing from "./pages/services/SocialMediaMarketing";
 import OnlineReputationManagement from "./pages/services/OnlineReputationManagement";
 import SmoPackages from "./pages/plans-pricinng/SmoPackages";
 import PpcPackages from "./pages/plans-pricinng/PpcPackages";
+import WebDesigningPackages from "./pages/plans-pricinng/WebDesigningPackages";
 
 function App() {
   return (
@@ -48,6 +49,7 @@ function App() {
         <Route path="/pricing/seo-starter-pack" element={<SEO_Starter_Pack />} />
         <Route path="/pricing/smo-packages" element={<SmoPackages />} />
         <Route path="/pricing/ppc-packages" element={<PpcPackages />} />
+        <Route path="/pricing/web-design-packages" element={<WebDesigningPackages />} />
       </Routes>
       <Footer />
     </Router>
