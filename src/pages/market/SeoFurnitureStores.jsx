@@ -110,7 +110,7 @@ const SeoFurnitureStores = () => {
     <div ref={rootRef} className="bg-white text-gray-900">
       {/* ================= HERO ================= */}
       <section
-        className="relative h-[58vh] flex items-center justify-center"
+        className="relative min-h-[45vh] md:h-[58vh] flex items-center justify-center px-4"
         style={{
           backgroundImage: `url(${Banner})`,
           backgroundSize: "cover",
@@ -123,7 +123,8 @@ const SeoFurnitureStores = () => {
           ref={heroRef}
           className="relative z-10 text-center px-6 text-white"
         >
-          <h1 className="text-5xl md:text-6xl font-extrabold">
+         <h1 className="text-3xl sm:text-4xl md:text-6xl font-extrabold leading-tight">
+
             SEO for Furniture Stores
           </h1>
           {/* <p className="mt-6 text-lg text-gray-300">Home · Who We Are</p> */}
@@ -133,7 +134,8 @@ const SeoFurnitureStores = () => {
       {/* ================= WHO WE ARE ================= */}
       <section
         ref={addSectionRef}
-        className="gsap container mx-auto px-6 py-24 grid md:grid-cols-2 gap-16 items-center"
+        className="gsap container mx-auto px-6 py-24 grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center
+"
       >
         <div className="gsap-item">
           <h2 className=" text-4xl font-bold mb-6 text-[#0d3253]">
@@ -170,10 +172,8 @@ const SeoFurnitureStores = () => {
 
         {/* form  */}
 
-        <div
-          className="gsap-item rounded-2xl p-[2px] bg-gradient-to-br from-[#25baff] to-[#a8d97c]
- shadow-2xl w-120 ml-15"
-        >
+        <div className="gsap-item w-full max-w-lg mx-auto rounded-2xl p-[2px] bg-gradient-to-br from-[#25baff] to-[#a8d97c] shadow-2xl">
+
           <div
             className=" rounded-2xl bg-white p-6 md:p-8 transition-all duration-300 hover:shadow-[#25baff]/30
 "
@@ -324,7 +324,8 @@ hover:bg-[#1aa7e6] hover:shadow-lg hover:shadow-[#25baff]/40
           </p>
         </div>
 
-        <div className=" gsap-item  rounded-2xl overflow-hidden group w-126 ml-8">
+        <div className="gsap-item w-full rounded-2xl overflow-hidden group">
+
           <img
             src={Market8}
             alt="CTA"

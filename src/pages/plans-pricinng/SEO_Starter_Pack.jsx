@@ -5,7 +5,7 @@ import Banner from "../../assets/seo_packages/seo_starter_pack.jpg";
 const SEO_Starter_Pack = () => {
   return (
     <div className="bg-white text-gray-900">
-      {/* ================= HERO ================= */}
+      {/* ================= HERO ================== */}
       <section
         className="relative h-[58vh] flex items-center justify-center"
         style={{
