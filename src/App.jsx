@@ -1,57 +1,124 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Home from "./pages/Home";
+
+/* ========= GLOBAL COMPONENTS ========= */
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import WhoWeAre from "./pages/about/whoWeAre";
-import ContactUs from "./pages/ContactUs";
-import ScrollToTop from "./components/ScrollToTop";
-import WhyWwl from "./pages/about/WhyWwl";
-import ProjectDetails from "./pages/ProjectDetails";
-import Projects from "./pages/Project";
-import CannabisSeoServices from "./pages/market/CannabisSeoServices";
 import TopInfoBar from "./components/TopInfoBar";
+import ScrollToTop from "./components/ScrollToTop";
+
+/* ========= PAGES ========= */
+import Home from "./pages/Home";
+import WhoWeAre from "./pages/about/whoWeAre";
+import WhyWwl from "./pages/about/WhyWwl";
+import ContactUs from "./pages/ContactUs";
+import Projects from "./pages/Project";
+import ProjectDetails from "./pages/ProjectDetails";
+
+/* ========= MARKET ========= */
+import CannabisSeoServices from "./pages/market/CannabisSeoServices";
 import SeoFurnitureStores from "./pages/market/SeoFurnitureStores";
+
+/* ========= SERVICES ========= */
 import Seo from "./pages/services/Seo";
-import SEO_Packages from "./pages/plans-pricinng/SEO_Packages";
-import SEO_Starter_Pack from "./pages/plans-pricinng/SEO_Starter_Pack";
 import WebDesign from "./pages/services/WebDesign";
 import WebDevelopment from "./pages/services/WebDevelopment";
 import AppDevelopment from "./pages/services/AppDevelopment";
 import SocialMediaMarketing from "./pages/services/SocialMediaMarketing";
 import OnlineReputationManagement from "./pages/services/OnlineReputationManagement";
+
+/* ========= PRICING ========= */
+import SEO_Packages from "./pages/plans-pricinng/SEO_Packages";
+import SEO_Starter_Pack from "./pages/plans-pricinng/SEO_Starter_Pack";
 import SmoPackages from "./pages/plans-pricinng/SmoPackages";
 import PpcPackages from "./pages/plans-pricinng/PpcPackages";
 import WebDesigningPackages from "./pages/plans-pricinng/WebDesigningPackages";
+
+/* ========= VIDEO ========= */
+import heroVideo from "./assets/video/heroVideo.mp4";
 
 function App() {
   return (
     <Router>
       <ScrollToTop />
-      <TopInfoBar />
-      <Header />
 
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about/who-we-are" element={<WhoWeAre />} />
-        <Route path="/about/why-choose-us" element={<WhyWwl />} />
-        <Route path="/market/cannabis-seo-services" element={<CannabisSeoServices />} />
-        <Route path="/market/seo-for-furniture-stores" element={<SeoFurnitureStores />} />
-        <Route path="/services/seo" element={<Seo />} />
-        <Route path="/contact" element={<ContactUs />} />
-        <Route path="/services/web-design" element={<WebDesign />} />
-        <Route path="/services/web-development" element={<WebDevelopment />} />
-        <Route path="/services/mobile-application-development" element={<AppDevelopment />} />
-        <Route path="/services/social-media-marketing" element={<SocialMediaMarketing />} />
-        <Route path="/services/online-reputation-management" element={<OnlineReputationManagement />} />
-        <Route path="/projects" element={<Projects />} />
-        <Route path="/projects/:slug" element={<ProjectDetails />} />
-        <Route path="/pricing/seo-packages" element={<SEO_Packages />} />
-        <Route path="/pricing/seo-starter-pack" element={<SEO_Starter_Pack />} />
-        <Route path="/pricing/smo-packages" element={<SmoPackages />} />
-        <Route path="/pricing/ppc-packages" element={<PpcPackages />} />
-        <Route path="/pricing/web-design-packages" element={<WebDesigningPackages />} />
-      </Routes>
-      <Footer />
+      {/* ================= BACKGROUND VIDEO LAYER ================= */}
+      <div className="fixed inset-0 -z-10">
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="w-full h-full object-cover"
+        >
+          <source src={heroVideo} type="video/mp4" />
+        </video>
+
+        {/* DARK OVERLAY FOR READABILITY */}
+        <div className="absolute inset-0 bg-black/70"></div>
+      </div>
+
+      {/* ================= SITE CONTENT ================= */}
+      <div className="relative z-10">
+        <TopInfoBar />
+        <Header />
+
+        <Routes>
+          <Route path="/" element={<Home />} />
+
+          {/* ABOUT */}
+          <Route path="/about/who-we-are" element={<WhoWeAre />} />
+          <Route path="/about/why-choose-us" element={<WhyWwl />} />
+
+          {/* MARKET */}
+          <Route
+            path="/market/cannabis-seo-services"
+            element={<CannabisSeoServices />}
+          />
+          <Route
+            path="/market/seo-for-furniture-stores"
+            element={<SeoFurnitureStores />}
+          />
+
+          {/* SERVICES */}
+          <Route path="/services/seo" element={<Seo />} />
+          <Route path="/services/web-design" element={<WebDesign />} />
+          <Route path="/services/web-development" element={<WebDevelopment />} />
+          <Route
+            path="/services/mobile-application-development"
+            element={<AppDevelopment />}
+          />
+          <Route
+            path="/services/social-media-marketing"
+            element={<SocialMediaMarketing />}
+          />
+          <Route
+            path="/services/online-reputation-management"
+            element={<OnlineReputationManagement />}
+          />
+
+          {/* PROJECTS */}
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/projects/:slug" element={<ProjectDetails />} />
+
+          {/* PRICING */}
+          <Route path="/pricing/seo-packages" element={<SEO_Packages />} />
+          <Route
+            path="/pricing/seo-starter-pack"
+            element={<SEO_Starter_Pack />}
+          />
+          <Route path="/pricing/smo-packages" element={<SmoPackages />} />
+          <Route path="/pricing/ppc-packages" element={<PpcPackages />} />
+          <Route
+            path="/pricing/web-design-packages"
+            element={<WebDesigningPackages />}
+          />
+
+          {/* CONTACT */}
+          <Route path="/contact" element={<ContactUs />} />
+        </Routes>
+
+        <Footer />
+      </div>
     </Router>
   );
 }

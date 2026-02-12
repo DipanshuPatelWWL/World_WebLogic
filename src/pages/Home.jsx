@@ -19,6 +19,7 @@ import Banner2 from "../assets/banner2.jfif"
 import Banner3 from "../assets/banner3.jfif"
 import About from "../assets/about1.jfif"
 import Testimonials from "./Testimonials";
+import CTA from "../assets/video/video.mp4"
 
 
 const heroSlides = [
@@ -126,110 +127,92 @@ export default function Home() {
             <section
                 className="
     py-24 relative overflow-hidden
-    bg-gradient-to-br from-[#a8d97c]/50 via-[#25baff]/10 to-[#a8d97c]/15
+    bg-gradient-to-br from-[#a8d97c]/20 via-[#25baff]/10 to-[#a8d97c]/10
   "
             >
-                <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
+                {/* DARK OVERLAY FOR VISIBILITY */}
+                <div className="absolute inset-0 bg-black/50"></div>
 
-                    {/* Image Side */}
+                <div className="relative max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
+
+                    {/* IMAGE SIDE */}
                     <div className="relative">
-                        <div className="absolute -top-6 -left-6 w-40 h-40 bg-[#25baff]/20 rounded-full blur-2xl"></div>
+                        <div className="absolute -top-6 -left-6 w-40 h-40 bg-[#25baff]/30 rounded-full blur-3xl"></div>
+
                         <img
                             src={About}
                             alt="About WorldWeblogic"
-                            className="relative z-10 rounded-3xl shadow-xl"
+                            className="relative z-10 rounded-3xl shadow-2xl"
                         />
                     </div>
 
-                    {/* Content Side */}
-                    <div>
-                        <span className="inline-block mb-4 text-xl font-bold tracking-widest text-[#25baff] uppercase">
+                    {/* CONTENT SIDE */}
+                    <div className="backdrop-blur-md bg-white/5 p-8 rounded-3xl border border-white/10">
+
+                        <span className="inline-block mb-4 text-lg font-bold tracking-widest text-[#25baff] uppercase">
                             About Us
                         </span>
 
-                        <h2 className="text-4xl font-bold leading-tight text-[#020202]">
+                        <h2 className="text-4xl font-bold leading-tight text-white">
                             Building Digital Experiences That
                             <span className="text-[#25baff]"> Drive Growth</span>
                         </h2>
 
-                        <p className="mt-6 text-gray-600 leading-relaxed">
-                            WorldWeblogic empowers businesses with scalable, secure, and
-                            future-ready digital solutions. Our team blends strategy, design,
-                            and technology to create products that perform, adapt, and scale
-                            with your vision.
+                        <p className="mt-6 text-gray-200 leading-relaxed text-lg">
+                            WorldWeblogic empowers businesses with scalable, secure, and future-ready
+                            digital solutions. We blend strategy, design, and cutting-edge technology
+                            to create products that perform, adapt, and grow with your vision.
                         </p>
 
-                        {/* Feature Grid */}
+                        {/* FEATURES */}
                         <div className="mt-10 grid sm:grid-cols-2 gap-6">
 
-                            {/* Item 1 */}
-                            <div className="flex items-start gap-4">
-                                <div className="w-20 h-12 flex items-center justify-center rounded-xl
-            bg-[#25baff]/15 text-[#25baff] font-bold">
-                                    01
-                                </div>
-                                <div>
-                                    <h4 className="font-semibold text-[#020202]">
-                                        Expert Team
-                                    </h4>
-                                    <p className="text-sm text-gray-600 mt-1">
-                                        Skilled developers, designers, and strategists working as one.
-                                    </p>
-                                </div>
-                            </div>
+                            {/* ITEM */}
+                            {[
+                                {
+                                    num: "01",
+                                    title: "Expert Team",
+                                    desc: "Skilled developers, designers, and strategists working together.",
+                                },
+                                {
+                                    num: "02",
+                                    title: "Result-Focused Approach",
+                                    desc: "Every solution is aligned with measurable ROI outcomes.",
+                                },
+                                {
+                                    num: "03",
+                                    title: "Modern Technologies",
+                                    desc: "MERN stack, cloud architecture, and scalable systems.",
+                                },
+                                {
+                                    num: "04",
+                                    title: "Long-Term Support",
+                                    desc: "Continuous improvement and growth assistance.",
+                                },
+                            ].map((item, i) => (
+                                <div key={i} className="flex items-start gap-4">
+                                    <div className="w-14 h-9 p-2 flex items-center justify-center rounded-xl bg-[#25baff] text-black font-bold shadow-lg">
+                                        {item.num}
+                                    </div>
 
-                            {/* Item 2 */}
-                            <div className="flex items-start gap-4">
-                                <div className="w-20 h-12 flex items-center justify-center rounded-xl
-            bg-[#a8d97c]/25 text-[#020202] font-bold">
-                                    02
-                                </div>
-                                <div>
-                                    <h4 className="font-semibold text-[#020202]">
-                                        Result-Focused Approach
-                                    </h4>
-                                    <p className="text-sm text-gray-600 mt-1">
-                                        Every solution is aligned with ROI and measurable outcomes.
-                                    </p>
-                                </div>
-                            </div>
+                                    <div>
+                                        <h4 className="font-semibold text-[#a8d97c] text-lg">
+                                            {item.title}
+                                        </h4>
 
-                            {/* Item 3 */}
-                            <div className="flex items-start gap-4">
-                                <div className="w-20 h-12 flex items-center justify-center rounded-xl
-            bg-[#25baff]/15 text-[#25baff] font-bold">
-                                    03
+                                        <p className="text-sm text-gray-300 mt-1">
+                                            {item.desc}
+                                        </p>
+                                    </div>
                                 </div>
-                                <div>
-                                    <h4 className="font-semibold text-[#020202]">
-                                        Modern Technologies
-                                    </h4>
-                                    <p className="text-sm text-gray-600 mt-1">
-                                        MERN stack, cloud-ready architecture, and scalable systems.
-                                    </p>
-                                </div>
-                            </div>
-
-                            {/* Item 4 */}
-                            <div className="flex items-start gap-4">
-                                <div className="w-20 h-12 flex items-center justify-center rounded-xl
-            bg-[#a8d97c]/25 text-[#020202] font-bold">
-                                    04
-                                </div>
-                                <div>
-                                    <h4 className="font-semibold text-[#020202]">
-                                        Long-Term Support
-                                    </h4>
-                                    <p className="text-sm text-gray-600 mt-1">
-                                        Continuous improvement, maintenance, and growth support.
-                                    </p>
-                                </div>
-                            </div>
+                            ))}
 
                         </div>
                     </div>
+
                 </div>
             </section>
+
 
 
             {/* STATS (UPDATED WITH ICONS + COUNT UP) */}
@@ -283,77 +266,107 @@ export default function Home() {
 
 
             {/* Projects */}
-            <section className="py-20">
-                <div className="max-w-7xl mx-auto px-6">
+            <section className="py-24 relative overflow-hidden bg-gradient-to-br from-[#020202] via-[#0b1a24] to-[#020202]">
 
-                    {/* Header */}
-                    <div className="flex justify-between items-center mb-10">
-                        <h2 className="text-3xl font-bold text-[#020202]">
-                            Our Latest Projects
-                        </h2>
+                {/* Glow Effects */}
+                <div className="absolute top-0 left-0 w-72 h-72 bg-[#25baff]/20 blur-[120px] rounded-full"></div>
+                <div className="absolute bottom-0 right-0 w-72 h-72 bg-[#a8d97c]/20 blur-[120px] rounded-full"></div>
+
+                <div className="relative max-w-7xl mx-auto px-6">
+
+                    {/* HEADER */}
+                    <div className="flex justify-between items-center mb-14">
+
+                        <div>
+                            <p className="text-[#25baff] uppercase tracking-widest font-bold text-sm">
+                                Portfolio
+                            </p>
+
+                            <h2 className="text-4xl font-bold text-white mt-2">
+                                Our Latest Projects
+                            </h2>
+                        </div>
 
                         <Link
                             to="/projects"
-                            className="text-[#25baff] font-semibold hover:underline"
+                            className="
+        px-6 py-3 rounded-xl
+        bg-[#25baff]/10 border border-[#25baff]/30
+        text-[#25baff] font-semibold
+        hover:bg-[#25baff] hover:text-black
+        transition-all duration-300
+      "
                         >
                             View All →
                         </Link>
+
                     </div>
 
-                    {/* Projects Grid */}
-                    <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    {/* PROJECT GRID */}
+                    <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-10">
+
                         {projects
                             .filter((p) => p.featured)
                             .slice(0, 3)
                             .map((project) => (
+
                                 <Link
                                     key={project.id}
                                     to={`/projects/${project.slug}`}
-                                    className="group relative rounded-2xl overflow-hidden
-              shadow-lg transform transition-all duration-500
-              hover:-translate-y-3 hover:shadow-2xl"
+                                    className="
+            group relative rounded-3xl overflow-hidden
+            bg-white/5 backdrop-blur-md
+            border border-white/10
+            shadow-xl transition-all duration-500
+            hover:-translate-y-4 hover:shadow-[0_20px_60px_rgba(37,186,255,0.25)]
+          "
                                 >
-                                    {/* Image */}
+
+                                    {/* IMAGE */}
                                     <img
                                         src="https://plus.unsplash.com/premium_photo-1678565879444-f87c8bd9f241?w=800"
                                         alt={project.title}
-                                        className="h-64 w-full object-cover
+                                        className="
+                h-64 w-full object-cover
                 transition-transform duration-[1200ms]
-                group-hover:scale-110"
+                group-hover:scale-110
+              "
                                     />
 
-                                    {/* Overlay */}
-                                    <div className="absolute inset-0 bg-gradient-to-t from-[#020202]/90 via-[#020202]/60 to-transparent" />
+                                    {/* OVERLAY */}
+                                    <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent" />
 
-                                    {/* Bottom Content */}
-                                    <div className="absolute inset-0 flex flex-col justify-end p-6">
+                                    {/* CONTENT */}
+                                    <div className="absolute bottom-0 p-6">
+
                                         <h3 className="text-white text-xl font-semibold">
                                             {project.title}
                                         </h3>
 
-                                        <p className="text-gray-200 text-sm mt-1">
+                                        <p className="text-gray-300 text-sm mt-2">
                                             {project.shortDesc}
                                         </p>
 
-                                        {/* Button */}
-                                        <button
+                                        {/* BUTTON */}
+                                        <div
                                             className="
-                  mt-4 w-max
-                  bg-[#25baff] text-white
-                  px-5 py-2 rounded-lg text-sm font-semibold
+                mt-5 inline-block
+                px-5 py-2 rounded-lg text-sm font-semibold
+                bg-[#25baff] text-black
 
-                  opacity-100 translate-y-0
-                  md:opacity-0 md:translate-y-3
-                  md:group-hover:opacity-100 md:group-hover:translate-y-0
+                opacity-0 translate-y-4
+                group-hover:opacity-100 group-hover:translate-y-0
 
-                  transition-all duration-400
-                  hover:bg-[#a8d97c] hover:text-[#020202]
-                "
+                transition-all duration-500
+              "
                                         >
-                                            View Project
-                                        </button>
+                                            View Project →
+                                        </div>
+
                                     </div>
+
                                 </Link>
+
                             ))}
                     </div>
 
@@ -361,22 +374,23 @@ export default function Home() {
             </section>
 
 
+
             <DevelopmentProcess />
 
             <section
                 className="
     py-16 sm:py-20 lg:py-24
-    bg-gradient-to-br from-[#25baff]/10 via-white to-[#a8d97c]/10
+    bg-gradient-to-br from-[#25baff]/10 via-white/50 to-[#a8d97c]/10
   "
             >
                 <div className="max-w-7xl mx-auto px-4 sm:px-6">
 
                     {/* Header */}
-                    <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
-                        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#020202]">
+                    <div className="text-center max-w-3xl mx-auto mb-4 sm:mb-16">
+                        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-black">
                             Let’s Start a Conversation
                         </h2>
-                        <p className="mt-3 sm:mt-4 text-sm sm:text-base text-gray-600 leading-relaxed">
+                        <p className="mt-3 sm:mt-4 text-sm sm:text-base text-white leading-relaxed">
                             Reach out to us for inquiries, collaborations, or project discussions.
                             Our team is always ready to help.
                         </p>
@@ -384,20 +398,27 @@ export default function Home() {
 
                     <div className="grid lg:grid-cols-3 gap-10 lg:gap-12 items-start">
 
-                        {/* Contact Info */}
-                        <div className="space-y-8">
-
+                        {/* CONTACT INFO - GLASS */}
+                        <div
+                            className="
+        space-y-8
+        p-6 sm:p-8 rounded-2xl sm:rounded-3xl
+        bg-white/40 backdrop-blur-xl
+        border border-white/50
+        shadow-lg mt-8
+      "
+                        >
                             {/* Address */}
                             <div className="flex gap-4 sm:gap-5">
                                 <div className="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center rounded-xl
-            bg-[#25baff]/15 text-[#25baff] shrink-0">
+            bg-[#25baff]/20 text-[#25baff] shrink-0">
                                     <FiMapPin size={20} />
                                 </div>
                                 <div>
-                                    <h4 className="font-semibold text-[#020202] text-sm sm:text-base">
+                                    <h4 className="font-semibold text-black text-md sm:text-base">
                                         Office Address
                                     </h4>
-                                    <p className="text-gray-600 text-sm mt-1 leading-relaxed">
+                                    <p className="text-black text-sm mt-1 leading-relaxed">
                                         B 108, 1st Floor, Office No. 2nd, Sector 63,<br />
                                         Noida - 201301
                                     </p>
@@ -407,14 +428,14 @@ export default function Home() {
                             {/* Phone */}
                             <div className="flex gap-4 sm:gap-5">
                                 <div className="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center rounded-xl
-            bg-[#a8d97c]/30 text-[#020202] shrink-0">
+            bg-[#a8d97c]/40 text-black shrink-0">
                                     <FiPhoneCall size={20} />
                                 </div>
                                 <div>
-                                    <h4 className="font-semibold text-[#020202] text-sm sm:text-base">
+                                    <h4 className="font-semibold text-black text-md sm:text-base">
                                         Call Us
                                     </h4>
-                                    <p className="text-gray-600 text-sm mt-1 leading-relaxed">
+                                    <p className="text-black text-sm mt-1 leading-relaxed">
                                         +91 85058 37801<br />
                                         +91 01204545733<br />
                                         +1 (310) 807-2867
@@ -425,24 +446,32 @@ export default function Home() {
                             {/* Email */}
                             <div className="flex gap-4 sm:gap-5">
                                 <div className="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center rounded-xl
-            bg-[#25baff]/15 text-[#25baff] shrink-0">
+            bg-[#25baff]/20 text-black shrink-0">
                                     <FiMail size={20} />
                                 </div>
                                 <div>
-                                    <h4 className="font-semibold text-[#020202] text-sm sm:text-base">
+                                    <h4 className="font-semibold text-black text-md sm:text-base">
                                         Email & Website
                                     </h4>
-                                    <p className="text-gray-600 text-sm mt-1 leading-relaxed break-words">
+                                    <p className="text-black text-sm mt-1 leading-relaxed break-words">
                                         info@worldweblogic.com<br />
                                         www.worldweblogic.com
                                     </p>
                                 </div>
                             </div>
-
                         </div>
 
-                        {/* Contact Form */}
-                        <div className="lg:col-span-2 bg-white rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-10 shadow-lg">
+                        {/* CONTACT FORM - GLASS */}
+                        <div
+                            className="
+        lg:col-span-2
+        rounded-2xl sm:rounded-3xl
+        p-6 sm:p-8 lg:p-10
+        bg-white/60 backdrop-blur-xl
+        border border-white/40
+        shadow-lg
+      "
+                        >
                             <h3 className="text-xl sm:text-2xl font-semibold text-[#020202] mb-6 sm:mb-8">
                                 Send Us a Message
                             </h3>
@@ -453,43 +482,46 @@ export default function Home() {
                                     type="text"
                                     placeholder="Your Name"
                                     className="
-              w-full px-4 sm:px-5 py-3 sm:py-4 rounded-xl
-              border border-gray-200
-              focus:outline-none focus:ring-2 focus:ring-[#25baff]
-            "
+            w-full px-4 sm:px-5 py-3 sm:py-4 rounded-xl
+            border border-white/40
+            bg-white/70 backdrop-blur
+            focus:outline-none focus:ring-2 focus:ring-[#25baff]
+          "
                                 />
 
                                 <input
                                     type="email"
                                     placeholder="Your Email"
                                     className="
-              w-full px-4 sm:px-5 py-3 sm:py-4 rounded-xl
-              border border-gray-200
-              focus:outline-none focus:ring-2 focus:ring-[#25baff]
-            "
+            w-full px-4 sm:px-5 py-3 sm:py-4 rounded-xl
+            border border-white/40
+            bg-white/70 backdrop-blur
+            focus:outline-none focus:ring-2 focus:ring-[#25baff]
+          "
                                 />
 
                                 <textarea
                                     rows="5"
                                     placeholder="Write your message..."
                                     className="
-              md:col-span-2 w-full px-4 sm:px-5 py-3 sm:py-4
-              rounded-xl border border-gray-200
-              focus:outline-none focus:ring-2 focus:ring-[#a8d97c]
-            "
+            md:col-span-2 w-full px-4 sm:px-5 py-3 sm:py-4
+            rounded-xl border border-white/40
+            bg-white/70 backdrop-blur
+            focus:outline-none focus:ring-2 focus:ring-[#a8d97c]
+          "
                                 />
 
                                 <button
                                     type="submit"
                                     className="
-              md:col-span-2 w-full
-              mt-2 sm:mt-4
-              px-6 sm:px-8 py-3 sm:py-4
-              rounded-xl
-              bg-[#25baff] text-white font-semibold
-              hover:bg-[#020202]
-              transition
-            "
+            md:col-span-2 w-full
+            mt-2 sm:mt-4
+            px-6 sm:px-8 py-3 sm:py-4
+            rounded-xl
+            bg-[#25baff] text-white font-semibold
+            hover:bg-[#020202]
+            transition
+          "
                                 >
                                     Send Message
                                 </button>
@@ -503,6 +535,7 @@ export default function Home() {
 
 
 
+
             <OurPartners />
 
             <Testimonials />
@@ -512,55 +545,53 @@ export default function Home() {
 
 
             {/* CTA */}
-            <section
-                className="
-    py-14 md:py-16
-    bg-black text-white
-    transition-all duration-500
-  "
-            >
-                <div
-                    className="
-      max-w-7xl mx-auto px-6
-      flex flex-col md:flex-row
-      items-center justify-center md:justify-between
-      text-center md:text-left
-      gap-6
-    "
+            <section className="relative py-14 md:py-16 text-white overflow-hidden">
+
+                {/* BACKGROUND VIDEO */}
+                <video
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                    className="absolute inset-0 w-full h-full object-cover"
                 >
-                    {/* Text */}
-                    <h2
-                        className="
-        text-2xl sm:text-3xl md:text-3xl
-        font-bold
-        leading-snug
-        max-w-xl
-      "
-                    >
+                    <source src={CTA} type="video/mp4" />
+                </video>
+
+                {/* DARK OVERLAY */}
+                <div className="absolute inset-0 bg-black/70"></div>
+
+                {/* CONTENT */}
+                <div className="relative max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-center md:justify-between text-center md:text-left gap-6">
+
+                    {/* TEXT */}
+                    <h2 className="text-2xl sm:text-3xl md:text-3xl font-bold leading-snug max-w-xl">
                         Let’s Build Your Digital Success Story
                     </h2>
 
-                    {/* Button */}
+                    {/* BUTTON */}
                     <Link
                         to="/contact"
                         className="
-        group
-        w-full sm:w-auto
-        bg-[#a8d97c] text-[#020202]
-        px-8 py-3 rounded-xl font-semibold
-        flex items-center justify-center gap-2
+            group
+            w-full sm:w-auto
+            bg-[#a8d97c] text-[#020202]
+            px-8 py-3 rounded-xl font-semibold
+            flex items-center justify-center gap-2
 
-        transition-all duration-300
-        hover:bg-[#25baff] hover:text-white
-        hover:-translate-y-1
-        hover:shadow-[0_12px_30px_rgba(37,186,255,0.4)]
-        active:scale-95
-      "
+            transition-all duration-300
+            hover:bg-[#25baff] hover:text-white
+            hover:-translate-y-1
+            hover:shadow-[0_12px_30px_rgba(37,186,255,0.4)]
+            active:scale-95
+        "
                     >
                         Contact Us
                     </Link>
+
                 </div>
             </section>
+
 
 
 
