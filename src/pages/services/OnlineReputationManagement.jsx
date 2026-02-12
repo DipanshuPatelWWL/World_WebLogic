@@ -1,6 +1,6 @@
 import { useLayoutEffect, useRef, useState } from "react";
-import { FiPlus, FiMinus, FiSmartphone, FiTablet } from "react-icons/fi";
-import { FaAndroid } from "react-icons/fa";
+import { FiPlus, FiMinus } from "react-icons/fi";
+import { FaCheckCircle } from "react-icons/fa";
 
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -64,29 +64,31 @@ const OnlineReputationManagement = () => {
   const faqs = [
     {
       question:
-        "What is online reputation management and why is it important?",
+        "What is Online Reputation Management (ORM) and why does it matter?",
       answer:
-        "Online reputation management (ORM) involves monitoring, addressing, and influencing the online perception of your brand. It is important because a positive online reputation builds trust with potential customers, improves your brand’s credibility, and can significantly impact your business’s success.",
+        "Online Reputation Management (ORM) is the process of monitoring, managing, and improving how your brand is perceived online. A strong reputation builds customer trust, enhances credibility, and directly influences purchasing decisions and long-term business growth.",
     },
     {
-      question: "What services do you offer in your online reputation management package?",
+      question:
+        "What is included in your Online Reputation Management services?",
       answer:
-        "Our ORM services include monitoring online mentions and reviews, responding to customer feedback, managing social media profiles, creating and promoting positive content, suppressing negative content, and providing detailed reputation analysis and reports.",
+        "Our ORM services cover monitoring brand mentions, managing online reviews, responding to customer feedback, promoting positive content, improving search results, and providing detailed performance reports to track your brand image.",
     },
     {
-      question: "How do you monitor my online reputation?",
+      question: "How do you track and monitor my online presence?",
       answer:
-        "We use advanced tools and techniques to continuously monitor your brand’s online presence across various platforms, including social media, review sites, forums, and news articles. We track mentions, reviews, and discussions to stay informed about what people are saying about your business.",
+        "We use advanced monitoring tools to track reviews, social media mentions, search results, forums, and other online platforms. This helps us stay updated on public sentiment and respond quickly to protect your brand image.",
     },
     {
-      question: "Can you remove negative reviews or content about my business?",
+      question: "Can negative reviews or harmful content be removed?",
       answer:
-        "While we cannot directly remove negative reviews or content, we can work to suppress negative search results and promote positive content to improve your overall online image. We also help you respond to negative feedback professionally and effectively to mitigate any potential damage.",
+        "While not all negative content can be directly removed, we apply strategies to reduce its visibility, promote positive content, and professionally manage responses to protect and improve your brand’s perception.",
     },
     {
-      question: "How long does it take to see results from online reputation management?",
+      question:
+        "How long does it take to see improvements in online reputation?",
       answer:
-        "The timeline for seeing results can vary based on the current state of your online reputation and the specific strategies implemented. Generally, you can expect to see noticeable improvements within a few months, but ongoing efforts are required to maintain and enhance your reputation over time.",
+        "Results depend on your current reputation status and the strategies implemented. In most cases, noticeable improvements can be seen within a few months, with continuous efforts ensuring long-term reputation growth and stability.",
     },
   ];
 
@@ -108,7 +110,7 @@ const OnlineReputationManagement = () => {
         >
           <h1 className="text-5xl md:text-6xl font-extrabold">Services</h1>
           <p className="mt-6 text-lg text-gray-300">
-            Home - Online Reputation Management
+            Online Reputation Management
           </p>
         </div>
       </section>
@@ -117,16 +119,16 @@ const OnlineReputationManagement = () => {
       <section className="bg-white py-24 px-6">
         <div className="max-w-5xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-extrabold text-[#020202] mb-6">
-            How Well Do You Manage Your
+            Protect & Strengthen Your
             <span className="text-[#25baff]"> Online Reputation</span>
           </h2>
+
           <p className="text-gray-600 text-lg">
-            If the answer is not great, then hire our services today. This is an
-            area that a lot of companies out there tend to neglect, and the sad
-            part is that it is one of the most important. It is very important
-            that you see the big picture when it comes to your digital
-            experience. So, here we are with all the knowledge and skill needed
-            to help your company grow here.
+            Your brand’s online image plays a crucial role in building trust and
+            attracting customers. Ignoring reviews, feedback, and digital
+            presence can impact your growth. We help you monitor, manage, and
+            enhance your reputation across platforms to ensure your business
+            maintains a strong and positive online presence.
           </p>
         </div>
       </section>
@@ -145,28 +147,30 @@ const OnlineReputationManagement = () => {
         </div>
 
         <div className="gsap-item">
+          {/* Heading */}
+          <h3 className="text-3xl font-extrabold mb-8 text-[#020202] relative inline-block">
+            Complete
+            <span className="text-[#25baff]"> Reputation Management</span>
+            <span className="absolute left-0 -bottom-2 w-20 h-1 bg-[#25baff] rounded-full"></span>
+          </h3>
+
           <p className="text-gray-700 mb-6">
-            Did you know that about 80 percent of customers rely on digital
-            media when it comes to finding a product or service? So, what do
-            customers find about your business when they come online? We have a
-            team that is dedicated to monitoring this so that your presence
-            online has a positive impact on all customers who search for your
-            business.
+            Today, most customers research a brand online before making a
+            decision. What they see about your business directly impacts their
+            trust. We monitor and manage your digital presence to ensure your
+            brand creates a strong and positive impression.
           </p>
+
           <p className="text-gray-700 mb-6">
-            We help you build a positive image of your brand with all the
-            strategies that we have. In this way, you can maintain a good
-            business image. Don’t you want to be in the spotlight? We help you
-            with this through our reputation marketing services. Our services
-            are directed towards helping you win more opportunities with your
-            clients.
+            Our strategies focus on building credibility, improving reviews, and
+            strengthening your online image. We help you stay in control of how
+            your brand is perceived across platforms.
           </p>
+
           <p className="text-gray-700">
-            Your core business activities are something we will get to know in
-            depth. We have a thorough look at how well your business is liked
-            online. This way, you won’t miss any information when it comes to
-            the kind of impact your business is making. This way, we manage your
-            reputation so you have plenty of clients.
+            By analyzing feedback, tracking mentions, and managing public
+            interactions, we ensure your reputation supports business growth and
+            attracts more opportunities.
           </p>
         </div>
       </section>
@@ -174,30 +178,44 @@ const OnlineReputationManagement = () => {
       {/* WHY CHOOSE */}
       <section className="bg-gray-50 py-24">
         <div className="container mx-auto px-6">
-          <h2 className="text-4xl font-bold text-[#020202] mb-14">
-            How We Do This
+          <h2 className="text-4xl font-bold text-[#020202] mb-14 text-center">
+            How We Manage Your
+            <span className="text-[#25baff]"> Online Reputation</span>
           </h2>
 
           <div className="grid md:grid-cols-2 gap-8">
             {[
-              "Well, we analyze your firm and take a look at all its content on the internet to determine the kind of impact it is creating on its audience. Then, we give you feedback about what you need to do, whether it’s easy or complex and so on.",
-              "This way, you have the strategy needed, negative influences are removed, and bad reviews won’t be found on your site. Negative aspects of your content will be worked on again and made positive. This way, your visitors are happy.",
-              "We know how important your online presence is to you, and we will take the utmost care to ensure the best for you. You can be assured of effective solutions with us.",
+              "We analyze your online presence, including reviews, mentions, and content, to understand how your brand is perceived.",
+              "We identify negative feedback and apply strategies to strengthen your brand image and credibility.",
+              "We create positive, engaging content and encourage authentic reviews to build customer trust.",
+              "We continuously monitor your digital presence to maintain a strong and positive reputation.",
             ].map((text, index) => (
               <div
                 key={index}
-                className="bg-white border border-gray-200 rounded-2xl px-8 py-6 flex gap-4
-                transition-all hover:-translate-y-2 hover:shadow-xl hover:border-[#25baff]"
+                className="group bg-white border border-gray-200 rounded-2xl px-8 py-6 flex items-start gap-4
+          shadow-md shadow-[#25baff]/10
+          transition-all duration-300
+          hover:-translate-y-2
+          hover:bg-[#25baff]
+          hover:border-[#25baff]
+          hover:shadow-2xl hover:shadow-[#25baff]/30"
               >
-                <span className="text-[#a8d97c] text-2xl font-bold">»</span>
-                <p className="text-[#020202] text-lg">{text}</p>
+                <FaCheckCircle
+                  className="text-[#a8d97c] text-2xl mt-1
+            group-hover:text-white transition-colors duration-300"
+                />
+
+                <p
+                  className="text-[#020202] text-lg leading-relaxed
+            group-hover:text-white transition-colors duration-300"
+                >
+                  {text}
+                </p>
               </div>
             ))}
           </div>
         </div>
       </section>
-
-     
 
       {/* CTA */}
       <section
@@ -205,8 +223,7 @@ const OnlineReputationManagement = () => {
         className="relative py-24 px-6"
         style={{ backgroundColor: "#020202" }}
       >
-
-       <div
+        <div
           className="absolute inset-0 
    bg-[radial-gradient(circle_at_20%_20%,rgba(37,186,255,0.25),transparent_45%),
 radial-gradient(circle_at_80%_80%,rgba(168,217,124,0.2),transparent_45%)]
@@ -231,9 +248,9 @@ radial-gradient(circle_at_80%_80%,rgba(168,217,124,0.2),transparent_45%)]
         </div>
         <div className="relative z-10 max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-10">
           <h2 className="gsap-item text-white text-3xl font-extrabold max-w-4xl">
-            Protect and enhance your online presence with our expert Online
-            Reputation Management services—start building a stronger, more
-            positive image today
+            Strengthen and safeguard your digital presence with our professional
+            Online Reputation Management services — start shaping a powerful and
+            positive brand image today.
           </h2>
 
           <button className="bg-[#25baff] text-[#020202] px-6 py-3 rounded-full font-semibold hover:bg-[#a8d97c] transition">
@@ -243,18 +260,23 @@ radial-gradient(circle_at_80%_80%,rgba(168,217,124,0.2),transparent_45%)]
       </section>
 
       {/* FAQ */}
-      <section ref={addSectionRef} className="bg-white py-28 px-6">
+      <section ref={addSectionRef} className="bg-gray-50 py-28 px-6">
         <div className="max-w-5xl mx-auto">
-          <h2 className="gsap-item text-4xl font-extrabold text-[#25baff] mb-12">
-            FAQs
+          <h2 className="gsap-item text-4xl font-extrabold text-[#020202] mb-12 text-center">
+            Frequently Asked
+            <span className="text-[#25baff]"> Questions</span>
           </h2>
 
-          <div className="space-y-4">
+          <div className="space-y-6">
             {faqs.map((faq, index) => (
               <div
                 key={index}
                 ref={(el) => (faqRefs.current[index] = el)}
-                className="gsap-item border border-gray-200 rounded-xl hover:border-[#25baff]"
+                className="gsap-item bg-white border border-gray-200 rounded-2xl
+          shadow-lg shadow-[#25baff]/20
+          hover:shadow-2xl hover:shadow-[#25baff]/40
+          hover:border-[#25baff]
+          transition-all duration-300"
               >
                 <button
                   onClick={() => {
@@ -266,6 +288,7 @@ radial-gradient(circle_at_80%_80%,rgba(168,217,124,0.2),transparent_45%)]
                         height: 0,
                         opacity: 0,
                         duration: 0.3,
+                        ease: "power2.inOut",
                       });
                       setActiveFaq(null);
                     } else {
@@ -273,10 +296,12 @@ radial-gradient(circle_at_80%_80%,rgba(168,217,124,0.2),transparent_45%)]
                         const prevEl = faqRefs.current[activeFaq];
                         const prevContent =
                           prevEl.querySelector(".faq-content");
+
                         gsap.to(prevContent, {
                           height: 0,
                           opacity: 0,
                           duration: 0.3,
+                          ease: "power2.inOut",
                         });
                       }
 
@@ -284,24 +309,33 @@ radial-gradient(circle_at_80%_80%,rgba(168,217,124,0.2),transparent_45%)]
                         height: "auto",
                         opacity: 1,
                         duration: 0.4,
+                        ease: "power2.out",
                       });
+
                       setActiveFaq(index);
                     }
                   }}
-                  className="w-full flex justify-between px-6 py-5 text-left font-semibold text-[#020202]"
+                  className="w-full flex justify-between items-center px-6 py-5 text-left font-semibold text-[#020202]"
                 >
-                  <span className={activeFaq === index ? "text-[#25baff]" : ""}>
+                  <span
+                    className={`${
+                      activeFaq === index ? "text-[#25baff]" : "text-[#020202]"
+                    } transition-colors duration-300`}
+                  >
                     {faq.question}
                   </span>
+
                   {activeFaq === index ? (
-                    <FiMinus className="text-[#25baff]" />
+                    <FiMinus className="text-[#25baff] text-xl" />
                   ) : (
-                    <FiPlus className="text-gray-500" />
+                    <FiPlus className="text-gray-500 text-xl" />
                   )}
                 </button>
 
                 <div className="faq-content h-0 overflow-hidden px-6 opacity-0">
-                  <p className="pb-6 text-gray-600">{faq.answer}</p>
+                  <p className="pb-6 text-gray-600 leading-relaxed">
+                    {faq.answer}
+                  </p>
                 </div>
               </div>
             ))}
