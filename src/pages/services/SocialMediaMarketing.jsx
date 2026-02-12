@@ -1,6 +1,8 @@
 import { useLayoutEffect, useRef, useState } from "react";
 import { FiPlus, FiMinus } from "react-icons/fi";
 
+import { FaCheckCircle } from "react-icons/fa";
+
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -68,32 +70,29 @@ const SocialMediaMarketing = () => {
 
   const faqs = [
     {
-      question:
-        "What social media marketing services does World Web Logic offer?",
+      question: "What social media marketing services do you provide?",
       answer:
-        "We offer a wide range of social media marketing services, including social media strategy development, content creation and curation, social media management, paid advertising campaigns, influencer marketing, and performance analytics. We tailor our services to meet the unique needs and goals of your business.",
+        "We offer complete social media marketing solutions including strategy planning, content creation, account management, paid advertising campaigns, influencer collaborations, and performance tracking. Our services are customized to match your business goals and target audience.",
     },
     {
-      question: "What technologies and frameworks do you specialize in?",
+      question: "Which social media platforms do you work with?",
       answer:
-        "We specialize in marketing on all major social media platforms, including Facebook, Instagram, Twitter, LinkedIn, Pinterest, and TikTok. Our team stays updated with the latest trends and best practices on each platform to ensure effective and engaging marketing campaigns.",
+        "We manage and promote brands across major platforms such as Facebook, Instagram, Twitter (X), LinkedIn, Pinterest, and TikTok. Our team stays updated with platform trends and algorithm changes to ensure effective campaigns.",
     },
     {
-      question:
-        "How do you develop a social media marketing strategy for a business?",
+      question: "How do you create a social media strategy for a business?",
       answer:
-        "Our strategy development process starts with understanding your business goals, target audience, and current social media presence. We conduct a competitive analysis, identify key performance indicators (KPIs), and create a comprehensive strategy that includes content plans, posting schedules, and advertising tactics to achieve your objectives.",
+        "We begin by understanding your business objectives, audience, and competitors. Based on research and key performance indicators (KPIs), we develop a detailed plan that includes content strategy, posting schedules, and advertising tactics to achieve measurable results.",
     },
     {
-      question: "Can you manage our social media accounts on our behalf?",
+      question: "Do you handle complete social media account management?",
       answer:
-        "Yes, we offer full social media management services. This includes creating and scheduling posts, engaging with your audience, responding to comments and messages, monitoring social media trends, and providing regular performance reports. Our goal is to ensure your social media presence is active, engaging, and aligned with your brand.",
+        "Yes, we provide full account management services including content posting, audience engagement, responding to messages, trend monitoring, and regular performance reporting to keep your brand active and engaging.",
     },
     {
-      question:
-        "How do you measure the success of a social media marketing campaign?",
+      question: "How do you track and measure campaign performance?",
       answer:
-        "We measure the success of our social media marketing campaigns using various metrics and KPIs, such as engagement rates, follower growth, website traffic, conversion rates, and return on investment (ROI). We provide detailed analytics and reports to help you understand the impact of our efforts and make data-driven decisions for future campaigns.",
+        "We measure campaign success using metrics such as engagement rate, follower growth, website traffic, conversions, and return on investment (ROI). Detailed reports and analytics help you understand results and guide future strategies.",
     },
   ];
 
@@ -115,9 +114,7 @@ const SocialMediaMarketing = () => {
           className="relative z-10 text-center px-6 text-white"
         >
           <h1 className="text-5xl md:text-6xl font-extrabold">Services</h1>
-          <p className="mt-6 text-lg text-gray-300">
-            Home - Social Media Marketing
-          </p>
+          <p className="mt-6 text-lg text-gray-300">Social Media Marketing</p>
         </div>
       </section>
 
@@ -130,10 +127,10 @@ const SocialMediaMarketing = () => {
           </h2>
 
           <p className="text-gray-600 max-w-3xl mx-auto text-lg">
-            The first impression is the last impression, and in the world of
-            online business, the design of your website is what makes the first
-            impression. Hence the reason that this should be a good one. So, how
-            appealing and responsive is your website?
+            In today’s digital landscape, your social media presence defines how
+            your audience sees your brand. A strong and strategic approach can
+            boost engagement, build trust, and drive real business growth. Is
+            your brand making the right impact online?
           </p>
         </div>
       </section>
@@ -150,46 +147,85 @@ const SocialMediaMarketing = () => {
           />
         </div>
 
-        <div className="gsap-item ">
+        <div className="gsap-item">
+          {/* Heading */}
+          <h3 className="text-3xl font-extrabold mb-8 text-[#020202] relative inline-block">
+            Strategic
+            <span className="text-[#25baff]"> Social Media Growth</span>
+            <span className="absolute left-0 -bottom-2 w-20 h-1 bg-[#25baff] rounded-full"></span>
+          </h3>
+
           <p className="text-gray-700 mb-6">
-            Word of mouth travels faster today by way of stories and statuses,
-            so how well does your business do when it comes to securing a place
-            in these activities? It is for this reason that our SMO experts are
-            there for you. We know exactly what you need to enhance your brand
-            image and increase its presence on sites like these.
+            In today’s digital world, conversations happen through posts,
+            stories, and reels. We help your brand stay visible and relevant by
+            creating impactful social media strategies that strengthen your
+            online presence.
           </p>
+
           <p className="text-gray-700 mb-6">
-            We have all the expertise needed to help you with what works and
-            what doesn’t in the world of social media. This can go a long way in
-            increasing the visibility of your business. And it is not just this.
-            You also enjoy a better engagement with your customers, and this in
-            turn will help you create a positive brand image. You can get all
-            the feedback that you can work on to please your clients better.
+            Our experts understand what works on social platforms and how to
+            turn engagement into real growth. From increasing visibility to
+            building meaningful customer interactions, we help you create a
+            strong and positive brand image.
           </p>
+
+          <p className="text-gray-700 mb-6">
+            We create engaging content, manage campaigns, and optimize
+            performance to ensure consistent and measurable results.
+          </p>
+
           <p className="text-gray-700">
-            Apart from this, we also detect the latest trends in social media
-            and help you go with the flow. In this way, you are not lagging
-            behind. You can enjoy just the kind of exposure you need on sites
-            like Facebook, Twitter and YouTube.
+            Across platforms like Facebook, Instagram, Twitter, and YouTube, we
+            ensure your business gains the exposure and growth it deserves.
           </p>
         </div>
-
-        <p className="text-gray-700 -mt-18">
-          Yes, we are committed to providing you with success as well as
-          satisfaction when it comes to making your presence in the world of
-          digital media.
-        </p>
-
-        <p className="text-gray-700">
-          And no, we do not just create an automated strategy for you. We first
-          work towards understanding your business and it needs so that we can
-          come up with a custom approach that would work best for you. We know
-          how social media can play a crucial role when it comes to the
-          promotion of your business and so work closely in this area to ensure
-          that this is all done to perfection. And we have all the latest tools
-          and techniques that are required to help you out in this process.
-        </p>
       </section>
+
+    <section className="bg-gray-50 py-24">
+  <div className="container mx-auto px-6">
+    <h2 className="text-4xl font-bold text-[#020202] mb-14 text-center">
+      Why Choose
+      <span className="text-[#25baff]"> Our Social Media Marketing</span>
+    </h2>
+
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+      {[
+        "Creative content strategies tailored to your brand.",
+        "Data-driven campaigns focused on measurable growth.",
+        "Expert management across all major social platforms.",
+        "Targeted paid advertising for maximum ROI.",
+        "Consistent audience engagement and community building.",
+        "Trend analysis to keep your brand ahead of competitors.",
+        "Transparent reporting with detailed performance insights.",
+        "Dedicated support to ensure long-term social success.",
+      ].map((text, index) => (
+        <div
+          key={index}
+          className="group bg-white border border-gray-200 rounded-2xl px-8 py-6 flex items-start gap-4
+          shadow-md shadow-[#25baff]/10
+          transition-all duration-300
+          hover:-translate-y-2
+          hover:bg-[#25baff]
+          hover:border-[#25baff]
+          hover:shadow-2xl hover:shadow-[#25baff]/30"
+        >
+          <FaCheckCircle
+            className="text-[#a8d97c] text-2xl mt-1
+            group-hover:text-white transition-colors duration-300"
+          />
+
+          <p
+            className="text-black text-lg leading-relaxed
+            group-hover:text-white transition-colors duration-300"
+          >
+            {text}
+          </p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
 
       {/* =================  CTA ================= */}
       <section
@@ -224,8 +260,8 @@ radial-gradient(circle_at_80%_80%,rgba(168,217,124,0.2),transparent_45%)]
         {/* CONTENT */}
         <div className="relative z-10 max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-10">
           <h2 className="gsap-item text-white text-3xl md:text-4xl lg:text-3xl font-extrabold leading-tight max-w-4xl">
-            If you want an effective website, approach us and you won’t be
-            disappointed.
+            If you’re ready to grow your brand on social media, partner with us
+            — we’ll help you build strong engagement and real results.
           </h2>
 
           {/* BUTTON */}
@@ -249,21 +285,23 @@ hover:bg-[#a8d97c]
         </div>
       </section>
 
-      <section ref={addSectionRef} className="bg-white py-28 px-6">
+      <section ref={addSectionRef} className="bg-gray-50 py-28 px-6">
         <div className="max-w-5xl mx-auto">
-         <h2 className="gsap-item text-4xl font-extrabold text-[#25baff] mb-12">
-
-            FAQs
+          <h2 className="gsap-item text-4xl font-extrabold text-[#020202] mb-12 text-center">
+            Frequently Asked
+            <span className="text-[#25baff]"> Questions</span>
           </h2>
 
-          <div className="space-y-4">
+          <div className="space-y-6">
             {faqs.map((faq, index) => (
               <div
                 key={index}
                 ref={(el) => (faqRefs.current[index] = el)}
-                className="gsap-item border border-gray-200 rounded-xl
+                className="gsap-item bg-white border border-gray-200 rounded-2xl
+          shadow-lg shadow-[#25baff]/20
+          hover:shadow-2xl hover:shadow-[#25baff]/40
           hover:border-[#25baff]
- transition-colors"
+          transition-all duration-300"
               >
                 {/* Question */}
                 <button
@@ -304,18 +342,18 @@ hover:bg-[#a8d97c]
                     }
                   }}
                   className="w-full flex items-center justify-between
-            px-6 py-5 text-left font-semibold text-[#0b3253]"
+            px-6 py-5 text-left font-semibold text-[#020202]"
                 >
                   <span
-                    className={activeFaq === index ? "text-[#25baff]" : ""}
-
+                    className={`${
+                      activeFaq === index ? "text-[#25baff]" : "text-[#020202]"
+                    } transition-colors duration-300`}
                   >
                     {faq.question}
                   </span>
 
                   {activeFaq === index ? (
-                   <FiMinus className="text-[#25baff] text-xl" />
-
+                    <FiMinus className="text-[#25baff] text-xl" />
                   ) : (
                     <FiPlus className="text-gray-600 text-xl" />
                   )}
