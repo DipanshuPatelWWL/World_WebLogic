@@ -17,13 +17,13 @@ export default function Footer() {
                         <div className="inline-block">
                             <img
                                 src={logo}
-                                alt="World WebLogic"
+                                alt="logo"
                                 className="h-54 w-full mt-[-40px]"
                             />
                         </div>
 
                         <p className="text-sm leading-relaxed mt-[-40px] text-white">
-                            World WebLogic delivers end-to-end digital solutions including Web
+                            XYZ delivers end-to-end digital solutions including Web
                             Development, Mobile Apps, SEO, PPC, SMO, and ORM.
                         </p>
                     </div>
@@ -93,8 +93,8 @@ export default function Footer() {
 
                 {/* BOTTOM BAR */}
                 <div className="border-t border-white/20 bg-white/10 backdrop-blur-lg">
-                    <div className="max-w-7xl mx-auto px-6 py-6 text-center font-bold text-white">
-                        © {new Date().getFullYear()} World WebLogic. All rights reserved.
+                    <div className="max-w-7xl mx-auto px-6 py-6 text-sm text-center text-white">
+                        © {new Date().getFullYear()} XYZ. All rights reserved.
                     </div>
                 </div>
             </div>

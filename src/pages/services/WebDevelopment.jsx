@@ -74,36 +74,36 @@ const WebDevelopment = () => {
     return () => ctx.revert();
   }, []);
 
-const faqs = [
-  {
-    question: "What web development solutions do you provide?",
-    answer:
-      "We deliver end-to-end web development services such as PHP development, WordPress solutions, and JavaScript-based applications. Our expertise also includes custom web apps, e-commerce development, third-party API integrations, and website performance enhancement.",
-  },
-  {
-    question: "Which technologies and frameworks do you work with?",
-    answer:
-      "Our developers work with modern technologies including PHP, WordPress, JavaScript, HTML5, CSS3, Laravel, React, and Node.js. We continuously upgrade our skills to implement the latest tools and frameworks for high-quality web solutions.",
-  },
-  {
-    question:
-      "How do you maintain the quality and security of your web projects?",
-    answer:
-      "We follow industry best practices, perform detailed testing, and apply strong security standards during development. Our process includes code reviews, functionality testing, security checks, and regular updates to keep applications safe and reliable.",
-  },
-  {
-    question:
-      "Can you upgrade or migrate my existing website to a new platform?",
-    answer:
-      "Yes, we handle website migrations and upgrades efficiently. Whether it’s shifting to a new platform, redesigning the interface, adding new features, or improving speed and performance, our team ensures a smooth transition.",
-  },
-  {
-    question:
-      "Do you offer post-development support and maintenance services?",
-    answer:
-      "Yes, we provide continuous maintenance and technical support to keep your website secure and optimized. Our services include updates, monitoring, bug resolution, performance improvements, and ongoing assistance whenever required.",
-  },
-];
+  const faqs = [
+    {
+      question: "What web development solutions do you provide?",
+      answer:
+        "We deliver end-to-end web development services such as PHP development, WordPress solutions, and JavaScript-based applications. Our expertise also includes custom web apps, e-commerce development, third-party API integrations, and website performance enhancement.",
+    },
+    {
+      question: "Which technologies and frameworks do you work with?",
+      answer:
+        "Our developers work with modern technologies including PHP, WordPress, JavaScript, HTML5, CSS3, Laravel, React, and Node.js. We continuously upgrade our skills to implement the latest tools and frameworks for high-quality web solutions.",
+    },
+    {
+      question:
+        "How do you maintain the quality and security of your web projects?",
+      answer:
+        "We follow industry best practices, perform detailed testing, and apply strong security standards during development. Our process includes code reviews, functionality testing, security checks, and regular updates to keep applications safe and reliable.",
+    },
+    {
+      question:
+        "Can you upgrade or migrate my existing website to a new platform?",
+      answer:
+        "Yes, we handle website migrations and upgrades efficiently. Whether it’s shifting to a new platform, redesigning the interface, adding new features, or improving speed and performance, our team ensures a smooth transition.",
+    },
+    {
+      question:
+        "Do you offer post-development support and maintenance services?",
+      answer:
+        "Yes, we provide continuous maintenance and technical support to keep your website secure and optimized. Our services include updates, monitoring, bug resolution, performance improvements, and ongoing assistance whenever required.",
+    },
+  ];
 
 
   return (
@@ -189,61 +189,61 @@ const faqs = [
       </section>
 
       {/* ================= list ================= */}
-     <section className="bg-gray-50 py-28">
-  <div className="container mx-auto px-6">
+      <section className="bg-gray-50 py-28">
+        <div className="container mx-auto px-6">
 
-    {/* Updated Heading Style */}
-    <div className="text-center mb-16">
-      <p className="uppercase tracking-widest text-sm font-semibold text-gray-500 mb-3">
-        What We Offer
-      </p>
+          {/* Updated Heading Style */}
+          <div className="text-center mb-16">
+            <p className="uppercase tracking-widest text-sm font-semibold text-gray-500 mb-3">
+              What We Offer
+            </p>
 
-      <h2 className="text-3xl md:text-4xl font-extrabold text-[#020202]">
-        Our Web Development
-        <span className="text-[#25baff]"> Services Include</span>
-      </h2>
-    </div>
+            <h2 className="text-3xl md:text-4xl font-extrabold text-[#020202]">
+              Our Web Development
+              <span className="text-[#25baff]"> Services Include</span>
+            </h2>
+          </div>
 
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-      {[
-        { icon: <FaLaptopCode />, text: "Web Application Development" },
-        { icon: <FaCode />, text: "Custom Software Development" },
-        { icon: <FaPhp />, text: "PHP Development Solutions" },
-        { icon: <FaReact />, text: "MERN Stack Development" },
-        { icon: <FaNodeJs />, text: "Node.js Backend Development" },
-        { icon: <FaDatabase />, text: "Database Design & Integration" },
-        { icon: <FaReact />, text: "API Development & Integration" },
-        { icon: <FaLaptopCode />, text: "Website Maintenance & Support" },
-      ].map((item, index) => (
-        <div
-          key={index}
-          className="group bg-white border border-gray-200 rounded-2xl px-8 py-6 flex items-center gap-4
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {[
+              { icon: <FaLaptopCode />, text: "Web Application Development" },
+              { icon: <FaCode />, text: "Custom Software Development" },
+              { icon: <FaPhp />, text: "PHP Development Solutions" },
+              { icon: <FaReact />, text: "MERN Stack Development" },
+              { icon: <FaNodeJs />, text: "Node.js Backend Development" },
+              { icon: <FaDatabase />, text: "Database Design & Integration" },
+              { icon: <FaReact />, text: "API Development & Integration" },
+              { icon: <FaLaptopCode />, text: "Website Maintenance & Support" },
+            ].map((item, index) => (
+              <div
+                key={index}
+                className="group bg-white border border-gray-200 rounded-2xl px-8 py-6 flex items-center gap-4
           shadow-lg shadow-[#25baff]/10
           transition-all duration-500
           hover:-translate-y-2
           hover:bg-[#25baff]
           hover:border-[#25baff]
           hover:shadow-2xl hover:shadow-[#25baff]/40"
-        >
-          <div
-            className="text-[#a8d97c]
+              >
+                <div
+                  className="text-[#a8d97c]
  text-2xl
             group-hover:text-white transition-colors duration-300"
-          >
-            {item.icon}
-          </div>
+                >
+                  {item.icon}
+                </div>
 
-          <p
-            className="text-black text-lg leading-relaxed
+                <p
+                  className="text-black text-lg leading-relaxed
             group-hover:text-white transition-colors duration-300"
-          >
-            {item.text}
-          </p>
+                >
+                  {item.text}
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
-      ))}
-    </div>
-  </div>
-</section>
+      </section>
 
       {/* =================  CTA ================= */}
       <section
@@ -305,90 +305,89 @@ hover:bg-[#a8d97c]
       </section>
 
       <section ref={addSectionRef} className="bg-gray-50 py-28 px-6">
-  <div className="max-w-5xl mx-auto">
-    <h2 className="gsap-item text-4xl font-extrabold text-[#020202] mb-12 text-center">
-      Frequently Asked
-      <span className="text-[#25baff]"> Questions</span>
-    </h2>
+        <div className="max-w-5xl mx-auto">
+          <h2 className="gsap-item text-4xl font-extrabold text-[#020202] mb-12 text-center">
+            Frequently Asked
+            <span className="text-[#25baff]"> Questions</span>
+          </h2>
 
-    <div className="space-y-6">
-      {faqs.map((faq, index) => (
-        <div
-          key={index}
-          ref={(el) => (faqRefs.current[index] = el)}
-          className="gsap-item bg-white border border-gray-200 rounded-2xl
+          <div className="space-y-6">
+            {faqs.map((faq, index) => (
+              <div
+                key={index}
+                ref={(el) => (faqRefs.current[index] = el)}
+                className="gsap-item bg-white border border-gray-200 rounded-2xl
           shadow-lg shadow-[#25baff]/20
           hover:shadow-2xl hover:shadow-[#25baff]/40
           hover:border-[#25baff]
           transition-all duration-300"
-        >
-          {/* Question */}
-          <button
-            onClick={() => {
-              const el = faqRefs.current[index];
-              const content = el.querySelector(".faq-content");
+              >
+                {/* Question */}
+                <button
+                  onClick={() => {
+                    const el = faqRefs.current[index];
+                    const content = el.querySelector(".faq-content");
 
-              if (activeFaq === index) {
-                gsap.to(content, {
-                  height: 0,
-                  opacity: 0,
-                  duration: 0.35,
-                  ease: "power2.inOut",
-                });
-                setActiveFaq(null);
-              } else {
-                if (activeFaq !== null) {
-                  const prevEl = faqRefs.current[activeFaq];
-                  const prevContent =
-                    prevEl.querySelector(".faq-content");
+                    if (activeFaq === index) {
+                      gsap.to(content, {
+                        height: 0,
+                        opacity: 0,
+                        duration: 0.35,
+                        ease: "power2.inOut",
+                      });
+                      setActiveFaq(null);
+                    } else {
+                      if (activeFaq !== null) {
+                        const prevEl = faqRefs.current[activeFaq];
+                        const prevContent =
+                          prevEl.querySelector(".faq-content");
 
-                  gsap.to(prevContent, {
-                    height: 0,
-                    opacity: 0,
-                    duration: 0.35,
-                    ease: "power2.inOut",
-                  });
-                }
+                        gsap.to(prevContent, {
+                          height: 0,
+                          opacity: 0,
+                          duration: 0.35,
+                          ease: "power2.inOut",
+                        });
+                      }
 
-                gsap.to(content, {
-                  height: "auto",
-                  opacity: 1,
-                  duration: 0.4,
-                  ease: "power2.out",
-                });
+                      gsap.to(content, {
+                        height: "auto",
+                        opacity: 1,
+                        duration: 0.4,
+                        ease: "power2.out",
+                      });
 
-                setActiveFaq(index);
-              }
-            }}
-            className="w-full flex items-center justify-between
+                      setActiveFaq(index);
+                    }
+                  }}
+                  className="w-full flex items-center justify-between
             px-6 py-5 text-left font-semibold text-[#020202]"
-          >
-            <span
-              className={`${
-                activeFaq === index ? "text-[#25baff]" : "text-[#020202]"
-              } transition-colors duration-300`}
-            >
-              {faq.question}
-            </span>
+                >
+                  <span
+                    className={`${activeFaq === index ? "text-[#25baff]" : "text-[#020202]"
+                      } transition-colors duration-300`}
+                  >
+                    {faq.question}
+                  </span>
 
-            {activeFaq === index ? (
-              <FiMinus className="text-[#25baff] text-xl" />
-            ) : (
-              <FiPlus className="text-gray-600 text-xl" />
-            )}
-          </button>
+                  {activeFaq === index ? (
+                    <FiMinus className="text-[#25baff] text-xl" />
+                  ) : (
+                    <FiPlus className="text-gray-600 text-xl" />
+                  )}
+                </button>
 
-          {/* Answer */}
-          <div className="faq-content px-6 overflow-hidden h-0 opacity-0">
-            <p className="pb-6 text-gray-600 leading-relaxed">
-              {faq.answer}
-            </p>
+                {/* Answer */}
+                <div className="faq-content px-6 overflow-hidden h-0 opacity-0">
+                  <p className="pb-6 text-gray-600 leading-relaxed">
+                    {faq.answer}
+                  </p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
-      ))}
-    </div>
-  </div>
-</section>
+      </section>
 
     </div>
   );

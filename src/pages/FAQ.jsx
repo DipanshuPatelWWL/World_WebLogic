@@ -5,12 +5,12 @@ const FAQ = () => {
 
     const faqData = [
         {
-            question: "Who is World WebLogic and what do you do?",
+            question: "Who is XYZ and what do you do?",
             answer:
-                "World WebLogic is a full-service IT and digital solutions company that helps startups and growing businesses design, develop, and scale digital products including websites, web apps, mobile apps, and digital marketing solutions."
+                "XYZ is a full-service IT and digital solutions company that helps startups and growing businesses design, develop, and scale digital products including websites, web apps, mobile apps, and digital marketing solutions."
         },
         {
-            question: "What services does World WebLogic specialize in?",
+            question: "What services does XYZ specialize in?",
             answer:
                 "We specialize in web design and development, custom web applications, mobile app development, SEO, performance marketing, UI/UX design, and long-term digital growth solutions."
         },
@@ -20,7 +20,7 @@ const FAQ = () => {
                 "We work with startups, small and mid-sized businesses, and enterprises across industries such as SaaS, e-commerce, healthcare, education, fintech, and service-based businesses."
         },
         {
-            question: "Why should I choose World WebLogic over other agencies?",
+            question: "Why should I choose XYZ over other agencies?",
             answer:
                 "We focus on business outcomes, not just delivery. Our approach includes transparent communication, result-driven strategies, modern technologies, flexible pricing, and dedicated support throughout the project lifecycle."
         },

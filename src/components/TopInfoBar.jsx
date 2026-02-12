@@ -12,12 +12,12 @@ const TopInfoBar = () => {
 
           {/* EMAIL */}
           <a
-            href="mailto:info@worldweblogic.com"
+            href="mailto:#"
             className="group flex items-center justify-center sm:justify-start gap-2 opacity-90 hover:opacity-100 transition"
           >
             <HiOutlineMail className="text-[#25baff] text-base transition group-hover:text-[#a8d97c]" />
             <span className="transition group-hover:text-[#a8d97c]">
-              info@worldweblogic.com
+              info@xyz.com
             </span>
           </a>
 

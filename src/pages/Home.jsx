@@ -141,7 +141,7 @@ export default function Home() {
 
                         <img
                             src={About}
-                            alt="About WorldWeblogic"
+                            alt="About XYZ"
                             className="relative z-10 rounded-3xl shadow-2xl"
                         />
                     </div>
@@ -159,7 +159,7 @@ export default function Home() {
                         </h2>
 
                         <p className="mt-6 text-gray-200 leading-relaxed text-lg">
-                            WorldWeblogic empowers businesses with scalable, secure, and future-ready
+                            XYZ empowers businesses with scalable, secure, and future-ready
                             digital solutions. We blend strategy, design, and cutting-edge technology
                             to create products that perform, adapt, and grow with your vision.
                         </p>
@@ -454,8 +454,8 @@ export default function Home() {
                                         Email & Website
                                     </h4>
                                     <p className="text-black text-sm mt-1 leading-relaxed break-words">
-                                        info@worldweblogic.com<br />
-                                        www.worldweblogic.com
+                                        info@xyz.com<br />
+                                        www.xyz.com
                                     </p>
                                 </div>
                             </div>
