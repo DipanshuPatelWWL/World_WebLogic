@@ -64,14 +64,15 @@ const FAQ = () => {
     return (
         <div
             className="
-        min-h-screen flex items-center justify-center px-4 py-12
-        bg-gradient-to-br from-[#25baff]/10 via-white to-[#a8d97c]/10
-      "
+    min-h-screen flex items-center justify-center
+    px-4 sm:px-6 py-10 sm:py-12
+    bg-gradient-to-br from-[#25baff]/10 via-white to-[#a8d97c]/10
+  "
         >
-            <div className="w-full max-w-5xl rounded-2xl bg-white p-8 shadow-[0_0_40px_rgba(37,186,255,0.2)]">
+            <div className="w-full max-w-4xl rounded-2xl bg-white p-6 sm:p-8 shadow-[0_0_40px_rgba(37,186,255,0.15)]">
 
                 {/* Title */}
-                <h2 className="text-center text-4xl font-semibold mb-10 text-[#020202]">
+                <h2 className="text-center text-2xl sm:text-3xl md:text-4xl font-semibold mb-8 sm:mb-10 text-[#020202]">
                     Frequently Asked Questions
                 </h2>
 
@@ -84,28 +85,32 @@ const FAQ = () => {
                             <div
                                 key={index}
                                 className={`
-                  rounded-2xl bg-white overflow-hidden border cursor-pointer
-                  transition-all duration-300
-                  ${isActive
+              rounded-xl sm:rounded-2xl bg-white
+              border transition-all duration-300
+              cursor-pointer
+              ${isActive
                                         ? "border-[#25baff] shadow-[0_0_18px_rgba(37,186,255,0.25)]"
                                         : "border-gray-200"}
-                `}
+            `}
                                 onClick={() => toggleFAQ(index)}
                             >
                                 {/* Question */}
-                                <div className="flex items-center justify-between px-6 py-5 text-left">
-                                    <span className="text-[#020202] font-medium text-sm md:text-base">
+                                <div className="flex items-center justify-between gap-4 px-4 sm:px-6 py-4 sm:py-5">
+                                    <span className="text-[#020202] font-medium text-sm sm:text-base leading-snug">
                                         {item.question}
                                     </span>
 
                                     {/* Plus Icon */}
                                     <span
                                         className={`
-                      flex h-9 w-9 items-center justify-center rounded-full
-                      bg-[#25baff] text-white text-xl font-medium
-                      transition-all duration-300
-                      ${isActive ? "rotate-45 bg-[#a8d97c] text-[#020202]" : ""}
-                    `}
+                  flex h-8 w-8 sm:h-9 sm:w-9
+                  items-center justify-center
+                  rounded-full
+                  bg-[#25baff] text-white
+                  text-lg font-medium
+                  transition-all duration-300 flex-shrink-0
+                  ${isActive ? "rotate-45 bg-[#a8d97c] text-[#020202]" : ""}
+                `}
                                     >
                                         +
                                     </span>
@@ -114,11 +119,15 @@ const FAQ = () => {
                                 {/* Answer */}
                                 <div
                                     className={`
-                    px-6 text-sm leading-relaxed transition-all duration-300 ease-in-out
-                    ${isActive
-                                            ? "max-h-40 pb-5 opacity-100 text-gray-600"
-                                            : "max-h-0 opacity-0 overflow-hidden"}
-                  `}
+                px-4 sm:px-6
+                text-sm sm:text-base
+                leading-relaxed
+                transition-all duration-300 ease-in-out
+                overflow-hidden
+                ${isActive
+                                            ? "max-h-96 pb-4 sm:pb-5 opacity-100 text-gray-600"
+                                            : "max-h-0 opacity-0"}
+              `}
                                 >
                                     {item.answer}
                                 </div>
@@ -128,6 +137,7 @@ const FAQ = () => {
                 </div>
             </div>
         </div>
+
     );
 };
 

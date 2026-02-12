@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import {
     FaMobileAlt,
     FaRobot,
@@ -7,6 +7,8 @@ import {
     FaBug,
     FaCloud,
 } from "react-icons/fa";
+import video from "../assets/video/video.mp4"
+
 
 /* ================= ICON MAP ================= */
 const iconMap = {
@@ -140,93 +142,138 @@ const servicesData = {
 const OurServices = () => {
     const categories = Object.keys(servicesData);
     const [activeCategory, setActiveCategory] = useState(categories[0]);
+    const buttonRefs = useRef([]);
+
 
     return (
-        <section className="py-20 bg-white text-black">
-            {/* Heading */}
-            <div className="text-center mb-14">
-                <p className="text-[#25baff] font-bold uppercase text-lg tracking-widest">
-                    Our Services
-                </p>
-                <h2 className="text-4xl font-semibold text-gray-900">
-                    What We Provide
-                </h2>
-            </div>
+        <section className="relative py-20 text-white overflow-hidden">
 
-            <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-4 gap-8">
-                {/* Sidebar */}
-                <div className="space-y-3">
-                    {categories.map((cat, index) => (
-                        <button
-                            key={index}
-                            onClick={() => setActiveCategory(cat)}
-                            className={`w-full text-left px-5 py-4 rounded-md font-medium transition-all duration-300 border-l-4
-              ${activeCategory === cat
-                                    ? "bg-[#25baff] text-white border-[#a8d97c]"
-                                    : "bg-white text-gray-700 border-gray-200 hover:bg-[#25baff]/10"
-                                }`}
-                        >
-                            {cat}
-                        </button>
-                    ))}
+            {/* Background Video */}
+            <video
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="absolute inset-0 w-full h-full object-cover"
+            >
+                <source src={video} type="video/mp4" />
+                {/* Replace this path later with your real video */}
+            </video>
+
+            {/* Dark Overlay for Readability */}
+            <div className="absolute inset-0 bg-black/70"></div>
+
+            {/* Content Wrapper */}
+            <div className="relative z-10">
+
+                {/* Heading */}
+                <div className="text-center mb-14">
+                    <p className="text-[#25baff] font-bold uppercase text-lg tracking-widest">
+                        Our Services
+                    </p>
+                    <h2 className="text-4xl font-semibold text-white">
+                        What We Provide
+                    </h2>
                 </div>
 
-                {/* Cards */}
-                <div className="lg:col-span-3 grid grid-cols-1 md:grid-cols-2 gap-6">
-                    {servicesData[activeCategory].map((item, index) => {
-                        const BgIcon = iconMap[item.title];
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 grid grid-cols-1 lg:grid-cols-4 gap-6 lg:gap-8">
 
-                        return (
-                            <div
+                    {/* Sidebar */}
+                    <div
+                        className="
+                lg:space-y-3
+                flex lg:flex-col
+                overflow-x-auto lg:overflow-visible
+                gap-3
+                pb-2
+            "
+                    >
+                        {categories.map((cat, index) => (
+                            <button
                                 key={index}
-                                className="relative overflow-hidden group rounded-xl bg-white border border-gray-200 p-6
-                transition-all duration-500 cursor-pointer
-                hover:border-[#25baff] hover:shadow-lg"
+                                ref={(el) => (buttonRefs.current[index] = el)}
+                                onClick={() => {
+                                    setActiveCategory(cat);
+                                    buttonRefs.current[index]?.scrollIntoView({
+                                        behavior: "smooth",
+                                        inline: "center",
+                                        block: "nearest",
+                                    });
+                                }}
+                                className={`flex-shrink-0
+                        text-left px-5 py-3 rounded-md font-medium transition-all duration-300 border-l-4
+                        min-w-[180px] lg:min-w-full
+                        ${activeCategory === cat
+                                        ? "bg-[#25baff] text-white border-[#a8d97c]"
+                                        : "bg-white/10 backdrop-blur-md text-white border-white/20 hover:bg-[#25baff]/30"
+                                    }`}
                             >
-                                {/* Animated Background */}
-                                <div
-                                    className="absolute inset-0 bg-[#25baff]/10
-                  scale-y-0 origin-bottom
-                  transition-transform duration-500 ease-out
-                  group-hover:scale-y-100"
-                                />
+                                {cat}
+                            </button>
+                        ))}
+                    </div>
 
-                                {/* Background Icon */}
+                    {/* Cards */}
+                    <div className="lg:col-span-3 grid grid-cols-1 md:grid-cols-2 gap-6">
+                        {servicesData[activeCategory].map((item, index) => {
+                            const BgIcon = iconMap[item.title];
+
+                            return (
                                 <div
-                                    className="absolute right-4 bottom-4 text-[120px] text-[#25baff]/10
-                  transition-all duration-500
-                  group-hover:scale-110 group-hover:text-[#25baff]/20"
+                                    key={index}
+                                    className="relative overflow-hidden group rounded-xl 
+                            bg-white/10 backdrop-blur-md border border-white/20 p-6
+                            transition-all duration-500 cursor-pointer
+                            hover:border-[#25baff] hover:shadow-lg"
                                 >
-                                    {BgIcon && <BgIcon />}
-                                </div>
 
-                                {/* Content */}
-                                <div className="relative z-10">
-                                    <div className="mb-4">
-                                        <div
-                                            className="h-12 w-12 flex items-center justify-center rounded-lg
-                      bg-[#25baff]/15 text-[#25baff] text-2xl
-                      transition-all duration-700 ease-out
-                      group-hover:rotate-[360deg]
-                      group-hover:bg-[#a8d97c]/30"
-                                        >
-                                            {item.icon}
-                                        </div>
+                                    {/* Animated Background */}
+                                    <div
+                                        className="absolute inset-0 bg-[#25baff]/20
+                                scale-y-0 origin-bottom
+                                transition-transform duration-500 ease-out
+                                group-hover:scale-y-100"
+                                    />
+
+                                    {/* Background Icon */}
+                                    <div
+                                        className="absolute right-4 bottom-4 text-[120px] text-[#25baff]/10
+                                transition-all duration-500
+                                group-hover:scale-110 group-hover:text-[#25baff]/20"
+                                    >
+                                        {BgIcon && <BgIcon />}
                                     </div>
 
-                                    <h3 className="text-lg font-semibold mb-2 text-gray-800 group-hover:text-[#25baff]">
-                                        {item.title}
-                                    </h3>
-                                    <p className="text-sm text-gray-600 leading-relaxed">
-                                        {item.desc}
-                                    </p>
+                                    {/* Content */}
+                                    <div className="relative z-10">
+                                        <div className="mb-4">
+                                            <div
+                                                className="h-12 w-12 flex items-center justify-center rounded-lg
+                                        bg-[#25baff]/20 text-[#25baff] text-2xl
+                                        transition-all duration-700 ease-out
+                                        group-hover:rotate-[360deg]
+                                        group-hover:bg-[#a8d97c]/30"
+                                            >
+                                                {item.icon}
+                                            </div>
+                                        </div>
+
+                                        <h3 className="text-lg font-semibold mb-2 text-white group-hover:text-[#25baff]">
+                                            {item.title}
+                                        </h3>
+                                        <p className="text-sm text-gray-200 leading-relaxed">
+                                            {item.desc}
+                                        </p>
+                                    </div>
                                 </div>
-                            </div>
-                        );
-                    })}
+                            );
+                        })}
+                    </div>
+
                 </div>
             </div>
         </section>
+
     );
 };
 

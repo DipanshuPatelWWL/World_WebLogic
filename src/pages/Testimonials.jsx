@@ -87,15 +87,15 @@ export default function Testimonials() {
     };
 
     return (
-        <section className="py-28 bg-gradient-to-br from-[#25baff]/10 via-white to-[#a8d97c]/10 overflow-hidden">
+        <section className="py-28 bg-gradient-to-br from-[#a8d97c] to-[#a8d97c]/10 overflow-hidden">
             <div className="max-w-6xl mx-auto px-6 text-center">
 
                 {/* Header */}
-                <span className="inline-block px-4 py-1 text-sm font-semibold rounded-full bg-[#25baff]/20 text-[#25baff]">
+                <span className="inline-block text-5xl font-bold rounded-full text-[#000000]">
                     TESTIMONIALS
                 </span>
-                <h2 className="mt-6 text-4xl md:text-5xl font-bold text-[#020202] mb-20">
-                    Trusted by people <br /> around the world.
+                <h2 className="mt-2 text-3xl md:text-2xl font-bold text-[#25baff] mb-2">
+                    Trusted by people around the world.
                 </h2>
 
                 {/* Cards */}
