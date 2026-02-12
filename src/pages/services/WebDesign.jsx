@@ -1,5 +1,6 @@
 import { useLayoutEffect, useRef, useState } from "react";
 import { FiPlus, FiMinus } from "react-icons/fi";
+import { FaCheckCircle } from "react-icons/fa";
 
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -68,30 +69,29 @@ const WebDesign = () => {
 
   const faqs = [
     {
-      question: "What services do you offer in your web design package?",
+      question: "What is included in your web design services?",
       answer:
-        "We offer a comprehensive web design package that includes custom website design, responsive design for mobile and tablet compatibility, search engine optimization (SEO), content management system (CMS) integration, e-commerce solutions, and ongoing maintenance and support.",
+        "Our web design services include custom website layouts, fully responsive design, basic SEO setup, CMS integration, e-commerce functionality if required, and post-launch support to ensure smooth performance.",
     },
     {
-      question: "How long does it take to design and develop a website?",
+      question: "How much time do you need to complete a website?",
       answer:
-        "The timeline for designing and developing a website varies depending on the complexity and specific requirements of the project. Typically, a standard business website can take between 4 to 8 weeks from initial consultation to launch. More complex projects may require additional time.",
+        "The development timeline depends on the project scope and features. On average, a standard business website takes around 3 to 6 weeks, while more advanced or customized websites may take longer.",
     },
     {
-      question: "Will my website be mobile-friendly?",
+      question: "Do you create responsive and mobile-optimized websites?",
       answer:
-        "Yes, all the websites we design are mobile-friendly. We ensure that your website looks great and functions well on all devices, including smartphones, tablets, and desktops, providing a seamless user experience for your visitors.",
+        "Yes, every website we design is fully responsive and optimized for all screen sizes. We make sure it delivers a seamless experience across mobile phones, tablets, and desktops.",
     },
     {
-      question: "Can I update my website content on my own after it’s built?",
+      question: "Will I be able to manage my website after it goes live?",
       answer:
-        "Absolutely! We build our websites using user-friendly content management systems (CMS) like WordPress, which allows you to easily update and manage your website content without needing any technical skills. We also provide training and support to help you get started.",
+        "Yes, we develop websites using easy-to-manage CMS platforms, allowing you to update text, images, and other content without technical expertise. We also provide basic guidance to help you manage it confidently.",
     },
     {
-      question:
-        "Do you provide ongoing support and maintenance after the website is launched?",
+      question: "Do you offer website maintenance and technical support?",
       answer:
-        "Yes, we offer ongoing support and maintenance packages to ensure your website remains up-to-date, secure, and running smoothly. Our support services include regular updates, security monitoring, backups, and technical assistance as needed.",
+        "Yes, we provide ongoing maintenance and support services, including updates, security checks, backups, and performance monitoring to keep your website secure and running efficiently.",
     },
   ];
 
@@ -106,14 +106,14 @@ const WebDesign = () => {
           backgroundPosition: "center",
         }}
       >
-       <div className="absolute inset-0 bg-[#020202]/80" />
+        <div className="absolute inset-0 bg-[#020202]/80" />
 
         <div
           ref={heroRef}
           className="relative z-10 text-center px-6 text-white"
         >
           <h1 className="text-5xl md:text-6xl font-extrabold">Services</h1>
-          <p className="mt-6 text-lg text-gray-300">Home - Web Design</p>
+          <p className="mt-6 text-lg text-gray-300">Web Designing</p>
         </div>
       </section>
 
@@ -121,17 +121,15 @@ const WebDesign = () => {
       <section className="bg-white py-24 px-6">
         <div className="max-w-5xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-extrabold text-[#020202] mb-6">
-
-            Our Web
-            <span className="text-[#25baff]"> Design Services</span>
-
+            Our Professional
+            <span className="text-[#25baff]"> Web Design Services</span>
           </h2>
 
           <p className="text-gray-600 max-w-3xl mx-auto text-lg">
-            The design of your website is one of the most important factors that
-            ensure whether a visitor will stay on your page or not. So, do you
-            have a website that keeps customers or sends them clicking the cross
-            at the top of your tab?
+            A well-crafted website design is essential for creating a strong
+            first impression and keeping visitors engaged. Does your website
+            capture attention, build trust, and encourage users to explore
+            further — or does it make them leave within seconds?
           </p>
         </div>
       </section>
@@ -148,82 +146,94 @@ const WebDesign = () => {
           />
         </div>
 
-        <div className="gsap-item ">
-          <p className="text-gray-700 mb-6">
-            Yes, your website can make a huge impression on your clients, which
-            makes it very important that you pay utmost importance to the way it
-            looks and the way it makes a visitor feel, and most of all, whether
-            it has the power to turn a visitor into a customer.
+        <div className="gsap-item">
+          {/* Heading */}
+          <h3 className="text-3xl font-extrabold mb-5 text-[#020202] relative inline-block">
+            Why Choose
+            <span className="text-[#25baff]"> Our Web Design</span>
+            <span className="absolute left-0 -bottom-2 w-20 h-1 bg-[#25baff] rounded-full"></span>
+          </h3>
+
+          <p className="text-gray-700 mb-4">
+            Your website creates the first impression of your brand, so its
+            design and user experience matter a lot. A well-designed site not
+            only looks attractive but also builds trust and encourages visitors
+            to become customers.
           </p>
-          <p className="text-gray-700 mb-6">
-            Our committed team helps you design sites that are not just pleasant
-            to the eye but easy to navigate too with a good user experience. We
-            employ all the right strategies that we have gained from our years
-            of experience. We help you with all the advice you need and give you
-            designs that go well with the kind of business that you run.
+
+          <p className="text-gray-700 mb-4">
+            Our expert team designs websites that are visually appealing, easy
+            to navigate, and aligned with your business goals. We use proven
+            strategies and modern design practices to ensure your website stands
+            out and delivers a smooth user experience.
           </p>
-          <p className="text-gray-700">
-            It is for this reason that you can entirely trust us when it comes
-            to this domain of digital marketing. We will ensure that you have a
-            website that is equal to that of your competitors. Apart from this,
-            we also offer you a wide range of web solutions that you would need
-            in order to keep your business thriving.
+
+          <p className="text-gray-700 mb-4">
+            Whether you are starting fresh or redesigning your existing site, we
+            provide tailored web design solutions for every industry. From
+            simple and clean layouts to bold and engaging designs, we create
+            websites that truly represent your business.
           </p>
-          <p className="text-gray-700 mb-6 ml-5"></p>
+
+          <p className="text-gray-700 mb-4">
+            In addition to great design, we focus on functionality and
+            performance to ensure your website runs smoothly across all devices.
+            Our goal is to deliver a complete web solution that supports your
+            growth and strengthens your online presence.
+          </p>
         </div>
-        <p className="text-gray-700 ml-5">
-          So, whether you are starting a new online business or just revamping
-          your current business site, we know exactly how to help you. We will
-          help you communicate your business to clients in an interesting
-          manner.
-        </p>
-        <p className="text-gray-700">
-          It doesn’t matter whether you are interior designing, healthcare or
-          any other vertical. We will give your website just the kind of
-          professional touch that it needs. So, whether you want a website that
-          stands out from the rest, is informative and at the same time
-          interesting or just simple and easy to navigate, we will provide you
-          with the kind of solution that you need.
-        </p>
       </section>
 
       {/* ================= list ================= */}
-      <section className="bg-gray-50 py-24">
-        <div className="container mx-auto px-6">
-          <h2 className="text-4xl font-bold text-[#020202] mb-14">
+ <section className="bg-gray-50 py-24">
+  <div className="container mx-auto px-6">
+    <h2 className="text-4xl font-bold text-[#020202] mb-14">
+      How Our Web Design Services Empower Your Business
+    </h2>
 
-            What Our Web Designing Solutions Help You With
-          </h2>
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+      {[
+        "We create fully responsive websites that perform smoothly on all devices.",
+        "Our designs follow SEO best practices to improve search rankings.",
+        "We enhance user experience to keep visitors engaged longer.",
+        "We design layouts that strengthen your brand identity and credibility.",
+        "We optimize website speed for better performance and lower bounce rates.",
+        "We structure content strategically to increase lead generation.",
+        "We integrate strong call-to-actions to boost conversions.",
+        "We build scalable websites that grow with your business.",
+      ].map((text, index) => (
+        <div
+          key={index}
+          className="group bg-white border border-gray-200 rounded-2xl px-8 py-6 flex items-start gap-4
+          transition-all duration-500
+          hover:-translate-y-2
+          hover:bg-[#25baff]
+          hover:border-[#25baff]
+          hover:shadow-2xl hover:shadow-[#25baff]/40"
+        >
+          <FaCheckCircle
+            className="text-[#a8d97c] text-2xl mt-1
+            group-hover:text-white transition-colors duration-300"
+          />
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {[
-              "You have a website that is SEO friendly.",
-              "We will increase your mobile user traffic.",
-              "We will promote your brand and in turn increase your sales.",
-              "We will get your casual visitors converted into buyers.",
-            ].map((text, index) => (
-              <div
-                key={index}
-                className="bg-white border border-gray-200 rounded-2xl px-8 py-6 flex items-center gap-4
-                     transition-all duration-300
-                     hover:-translate-y-2 hover:shadow-2xl hover:border-[#25baff]
-"
-              >
-               <span className="text-[#a8d97c] text-2xl font-bold">»</span>
-
-                <p className="text-black text-lg leading-relaxed">{text}</p>
-              </div>
-            ))}
-          </div>
+          <p
+            className="text-black text-lg leading-relaxed
+            group-hover:text-white transition-colors duration-300"
+          >
+            {text}
+          </p>
         </div>
-      </section>
+      ))}
+    </div>
+  </div>
+</section>
+
 
       {/* =================  CTA ================= */}
       <section
         ref={addSectionRef}
         className="relative overflow-hidden py-24 px-6"
         style={{ backgroundColor: "#020202" }}
-
       >
         {/* Animated Gradient Glow */}
         <div
@@ -240,7 +250,6 @@ radial-gradient(circle_at_80%_80%,rgba(168,217,124,0.2),transparent_45%)]
             <span
               key={i}
               className="absolute w-1.5 h-1.5 bg-[#25baff] rounded-full opacity-40 animate-float"
-
               style={{
                 top: `${Math.random() * 100}%`,
                 left: `${Math.random() * 100}%`,
@@ -253,8 +262,8 @@ radial-gradient(circle_at_80%_80%,rgba(168,217,124,0.2),transparent_45%)]
         {/* CONTENT */}
         <div className="relative z-10 max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-10">
           <h2 className="gsap-item text-white text-3xl md:text-4xl lg:text-3xl font-extrabold leading-tight max-w-4xl">
-            If you want an effective website, approach us and you won’t be
-            disappointed.
+            If you’re looking for a powerful and results-driven website, partner
+            with us — we’ll deliver beyond your expectations.
           </h2>
 
           {/* BUTTON */}
@@ -279,21 +288,22 @@ hover:bg-[#a8d97c]
         </div>
       </section>
 
-      <section ref={addSectionRef} className="bg-white py-28 px-6">
+      <section ref={addSectionRef} className="bg-gray-50 py-28 px-6">
         <div className="max-w-5xl mx-auto">
-         <h2 className="gsap-item text-4xl font-extrabold text-[#25baff] mb-12">
-
-            FAQs
+          <h2 className="gsap-item text-4xl font-extrabold text-[#020202] mb-12 text-center">
+            Frequently Asked <span className="text-[#25baff]"> Questions</span>
           </h2>
 
-          <div className="space-y-4">
+          <div className="space-y-6">
             {faqs.map((faq, index) => (
               <div
                 key={index}
                 ref={(el) => (faqRefs.current[index] = el)}
-                className="gsap-item border border-gray-200 rounded-xl
-        hover:border-[#25baff]
- transition-colors"
+                className="gsap-item bg-white border border-gray-200 rounded-2xl
+          shadow-lg shadow-[#25baff]/20
+          hover:shadow-2xl hover:shadow-[#25baff]/40
+          hover:border-[#25baff]
+          transition-all duration-300"
               >
                 {/* Question */}
                 <button
@@ -334,19 +344,14 @@ hover:bg-[#a8d97c]
                     }
                   }}
                   className="w-full flex items-center justify-between
-            px-6 py-5 text-left font-semibold text-[#020202]
-"
+            px-6 py-5 text-left font-semibold text-[#020202]"
                 >
-                  <span
-                    className={activeFaq === index ? "text-[#25baff]" : ""}
-
-                  >
+                  <span className={activeFaq === index ? "text-[#25baff]" : ""}>
                     {faq.question}
                   </span>
 
                   {activeFaq === index ? (
                     <FiMinus className="text-[#25baff] text-xl" />
-
                   ) : (
                     <FiPlus className="text-gray-600 text-xl" />
                   )}

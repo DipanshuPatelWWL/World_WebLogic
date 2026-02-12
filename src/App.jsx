@@ -3,22 +3,21 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 /* ========= GLOBAL COMPONENTS ========= */
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import TopInfoBar from "./components/TopInfoBar";
-import ScrollToTop from "./components/ScrollToTop";
+
 
 /* ========= PAGES ========= */
 import Home from "./pages/Home";
 import WhoWeAre from "./pages/about/whoWeAre";
-import WhyWwl from "./pages/about/WhyWwl";
-import ContactUs from "./pages/ContactUs";
-import Projects from "./pages/Project";
-import ProjectDetails from "./pages/ProjectDetails";
-
-/* ========= MARKET ========= */
-import CannabisSeoServices from "./pages/market/CannabisSeoServices";
-import SeoFurnitureStores from "./pages/market/SeoFurnitureStores";
 
 /* ========= SERVICES ========= */
+import ContactUs from "./pages/ContactUs";
+import ScrollToTop from "./components/ScrollToTop";
+import ProjectDetails from "./pages/ProjectDetails";
+import Projects from "./pages/Project";
+import TopInfoBar from "./components/TopInfoBar";
+
+
+
 import Seo from "./pages/services/Seo";
 import WebDesign from "./pages/services/WebDesign";
 import WebDevelopment from "./pages/services/WebDevelopment";
@@ -32,6 +31,7 @@ import SEO_Starter_Pack from "./pages/plans-pricinng/SEO_Starter_Pack";
 import SmoPackages from "./pages/plans-pricinng/SmoPackages";
 import PpcPackages from "./pages/plans-pricinng/PpcPackages";
 import WebDesigningPackages from "./pages/plans-pricinng/WebDesigningPackages";
+import WhyUs from "./pages/about/WhyUs";
 
 /* ========= VIDEO ========= */
 import heroVideo from "./assets/video/heroVideo.mp4";
@@ -40,8 +40,6 @@ function App() {
   return (
     <Router>
       <ScrollToTop />
-
-      {/* ================= BACKGROUND VIDEO LAYER ================= */}
       <div className="fixed inset-0 -z-10">
         <video
           autoPlay
@@ -67,17 +65,7 @@ function App() {
 
           {/* ABOUT */}
           <Route path="/about/who-we-are" element={<WhoWeAre />} />
-          <Route path="/about/why-choose-us" element={<WhyWwl />} />
-
-          {/* MARKET */}
-          <Route
-            path="/market/cannabis-seo-services"
-            element={<CannabisSeoServices />}
-          />
-          <Route
-            path="/market/seo-for-furniture-stores"
-            element={<SeoFurnitureStores />}
-          />
+          <Route path="/about/why-choose-us" element={<WhyUs />} />
 
           {/* SERVICES */}
           <Route path="/services/seo" element={<Seo />} />

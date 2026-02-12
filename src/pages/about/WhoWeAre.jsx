@@ -29,15 +29,17 @@ const WhoWeAre = () => {
 
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {
+
       // HERO
-      gsap.from(heroRef.current, {
+      gsap.from(heroRef.current.children, {
         opacity: 0,
         y: 80,
         duration: 1.2,
+        stagger: 0.25,
         ease: "power4.out",
       });
 
-      // WHO WE ARE
+      // WHO SECTION
       gsap.from(whoRef.current.children, {
         scrollTrigger: {
           trigger: whoRef.current,
@@ -59,9 +61,8 @@ const WhoWeAre = () => {
             start: "top 85%",
           },
           opacity: 0,
-          scale: 0.92,
           y: 40,
-          duration: 0.7,
+          duration: 0.8,
           ease: "power3.out",
         });
       });
@@ -75,7 +76,7 @@ const WhoWeAre = () => {
         opacity: 0,
         y: 60,
         stagger: 0.25,
-        duration: 1.1,
+        duration: 1,
         ease: "power4.out",
       });
 
@@ -87,6 +88,7 @@ const WhoWeAre = () => {
 
   return (
     <div ref={rootRef} className="bg-white text-gray-900">
+
       {/* ================= HERO ================= */}
       <section
         className="relative h-[58vh] flex items-center justify-center"
@@ -103,27 +105,35 @@ const WhoWeAre = () => {
           className="relative z-10 text-center px-6 text-white"
         >
           <h1 className="text-5xl md:text-6xl font-extrabold">About Us</h1>
-          <p className="mt-6 text-lg text-gray-300">Home · Who We Are</p>
+          <p className="mt-6 text-lg text-gray-300">
+            Discover who we are & what drives us
+          </p>
         </div>
       </section>
 
       {/* ================= WHO WE ARE ================= */}
       <section
         ref={whoRef}
-        className="container mx-auto px-6 py-24 grid md:grid-cols-2 gap-16 items-center"
+        className="container mx-auto px-6 py-28 grid md:grid-cols-2 gap-16 items-center"
       >
         <div>
-          <h2 className="text-4xl font-bold mb-6 text-[#020202]">Who We Are</h2>
-          <p className="text-gray-700 leading-relaxed mb-4">
-            World WebLogic is an online marketing solutions company that
-            provides website design and development, social media marketing,
-            SEO, SEM, PPC, mobile application development, and online reputation
-            management services.
+          <p className="uppercase tracking-widest text-sm font-semibold text-gray-500 mb-3">
+            Our Identity
           </p>
+
+          <h2 className="text-3xl md:text-4xl font-extrabold text-[#020202] mb-6">
+            Who
+            <span className="text-[#25baff]"> We Are</span>
+          </h2>
+
+          <p className="text-gray-700 leading-relaxed mb-4">
+            We are a team of passionate digital strategists, developers, and
+            marketers committed to helping businesses grow in the online world.
+          </p>
+
           <p className="text-gray-700 leading-relaxed">
-            Our expert team is trusted by clients not only in India but also in
-            countries like the US and Australia. You can rely on us to build,
-            scale, and protect your digital presence.
+            Our approach combines innovation, data-driven insights, and modern
+            technology to create measurable growth and long-term success.
           </p>
         </div>
 
@@ -136,56 +146,58 @@ const WhoWeAre = () => {
         </div>
       </section>
 
-      {/* ================= REASONS ================= */}
-      <section className="bg-white py-24">
-        <h2 className="text-center text-4xl font-bold text-[#020202] mb-16">
-          Why You Should Choose Us
-        </h2>
+      {/* ================= WHY CHOOSE US ================= */}
+      <section className="bg-gray-50 py-28">
+        <div className="text-center mb-16">
+          <p className="uppercase tracking-widest text-sm font-semibold text-gray-500 mb-3">
+            Why Work With Us?
+          </p>
+
+          <h2 className="text-3xl md:text-4xl font-extrabold text-[#020202]">
+            Reasons to
+            <span className="text-[#25baff]"> Choose Us</span>
+          </h2>
+        </div>
 
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+
             {[
-              {
-                icon: FiEdit,
-                text: "Strict adherence to white-hat SEO practices.",
-              },
-              { icon: FiSettings, text: "Result-driven branding solutions." },
-              {
-                icon: FiTarget,
-                text: "Best on-page and off-page SEO strategies.",
-              },
-              { icon: FiZap, text: "Organic growth with manual submissions." },
-              { icon: FiShield, text: "Affordable and transparent pricing." },
-              { icon: FiLayers, text: "Creative and modern web solutions." },
-              { icon: FiTrendingUp, text: "Goal-oriented digital strategies." },
-              {
-                icon: FiMonitor,
-                text: "Competitive industry-level execution.",
-              },
-              {
-                icon: FiSmile,
-                text: "Maximum online exposure for your brand.",
-              },
+              { icon: FiEdit, text: "Strategic and creative digital execution." },
+              { icon: FiSettings, text: "Customized growth-focused solutions." },
+              { icon: FiTarget, text: "Goal-driven SEO & marketing plans." },
+              { icon: FiZap, text: "Fast implementation with agile methods." },
+              { icon: FiShield, text: "Transparent & ethical practices." },
+              { icon: FiLayers, text: "Modern, scalable web systems." },
+              { icon: FiTrendingUp, text: "Measurable ROI-focused campaigns." },
+              { icon: FiMonitor, text: "Advanced analytics & tracking." },
+              { icon: FiSmile, text: "Long-term partnership & support." },
             ].map((item, index) => {
               const Icon = item.icon;
               return (
                 <div
                   key={index}
                   ref={(el) => (cardsRef.current[index] = el)}
-                  className="group bg-[#25baff]/10 border border-[#25baff]/30 rounded-2xl p-10
- flex flex-col items-center text-center transition-all duration-300
- hover:bg-[#25baff] hover:-translate-y-3 hover:shadow-2xl"
+                  className="group bg-white rounded-2xl p-10
+                  shadow-lg shadow-[#25baff]/10
+                  border border-gray-200
+                  transition-all duration-500
+                  hover:bg-[#25baff]
+                  hover:-translate-y-4
+                  hover:shadow-2xl hover:shadow-[#25baff]/40"
                 >
                   <Icon
-                    className="text-4xl text-[#25baff] mb-6 group-hover:text-white
- transition-colors duration-300"
+                    className="text-4xl text-[#25baff] mb-6
+                    group-hover:text-white transition-colors duration-300"
                   />
-                  <p className="text-gray-700 text-sm leading-relaxed group-hover:text-white transition-colors duration-300">
+                  <p className="text-gray-700 text-sm leading-relaxed
+                  group-hover:text-white transition-colors duration-300">
                     {item.text}
                   </p>
                 </div>
               );
             })}
+
           </div>
         </div>
       </section>
@@ -196,22 +208,26 @@ const WhoWeAre = () => {
         className="container mx-auto px-6 py-28 grid md:grid-cols-2 gap-16 items-center"
       >
         <div>
-          <h3 className="text-[#25baff] font-bold mb-4 text-2xl">
-            Like What We Offer?
-          </h3>
-          <h2 className="text-4xl font-bold mb-6 text-[#020202]">
-            Looking to grow your online business?
+          <p className="uppercase tracking-widest text-sm font-semibold text-gray-500 mb-3">
+            Let’s Work Together
+          </p>
+
+          <h2 className="text-3xl md:text-4xl font-extrabold text-[#020202] mb-6">
+            Ready to
+            <span className="text-[#25baff]"> Grow Your Business?</span>
           </h2>
+
           <p className="text-gray-700 mb-6">
-            Our team of experts uses modern tools, smart strategies, and strict
-            timelines to help your business reach new heights.
+            We combine strategy, creativity, and technology to deliver real
+            results that move your business forward.
           </p>
 
           <Link to="/contact">
             <button
-              className="px-8 py-4 rounded-full bg-[#25baff] text-[#020202]
- font-semibold shadow-lg transition-all duration-300 hover:bg-[#a8d97c] hover:scale-105 hover:shadow-2xl
- active:scale-95"
+              className="px-8 py-4 rounded-full bg-[#25baff] text-white
+              font-semibold shadow-lg transition-all duration-300
+              hover:bg-[#a8d97c]  hover:scale-105 hover:shadow-2xl
+              active:scale-95"
             >
               Contact Us
             </button>
@@ -226,6 +242,7 @@ const WhoWeAre = () => {
           />
         </div>
       </section>
+
     </div>
   );
 };
