@@ -88,7 +88,7 @@ export default function ContactUs() {
       </section>
 
       {/* =================MAP SECTION ================= */}
-      <section className="relative w-[85%] mx-auto mb-24">
+      <section className="relative w-[85%] mx-auto pb-20">
         <div className="grid md:grid-cols-2 grid-cols-1 rounded-2xl overflow-hidden shadow-xl">
           {/* Smaller Map */}
           <div className="h-[500px] w-full">
@@ -108,7 +108,7 @@ export default function ContactUs() {
             <img
               src={image}
               alt="Office"
-              className="w-full h-full object-cover group-hover:scale-105 transition duration-700"
+              className="w-full h-full object-cover"
             />
             <div className="absolute inset-0 bg-black/20"></div>
           </div>
@@ -116,7 +116,7 @@ export default function ContactUs() {
 
         {/* Info Card */}
         <div
-          className="absolute -bottom-10 left-1/2 transform -translate-x-1/2 
+          className="absolute bottom-45 left-1/2 transform -translate-x-1/2 
   bg-[#0b3253] text-white 
   p-6 rounded-2xl 
   shadow-2xl 
@@ -164,10 +164,10 @@ export default function ContactUs() {
             <div className="flex items-start gap-3">
               <FaEnvelope className="text-[#25baff] text-lg mt-1" />
               <a
-                href="mailto:info@worldweblogic.com"
+                href="mailto:xyz.com"
                 className="hover:text-[#25baff] transition"
               >
-                info@worldweblogic.com
+                info@xyz.com
               </a>
             </div>
           </div>
