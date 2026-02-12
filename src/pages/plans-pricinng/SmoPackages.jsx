@@ -7,7 +7,7 @@ const SmoPackages = () => {
     <div className="bg-white text-gray-900">
       {/* ===== BANNER ===== */}
       <section
-        className="relative h-[55vh] flex items-center justify-center"
+        className="relative h-[45vh] sm:h-[50vh] md:h-[55vh] flex items-center justify-center"
         style={{
           backgroundImage: `url(${Banner})`,
           backgroundSize: "cover",
@@ -20,21 +20,21 @@ const SmoPackages = () => {
           <h1 className="text-5xl md:text-6xl font-extrabold">
             SMO Service Packages
           </h1>
-          <p className="mt-6 text-lg text-gray-300">
+          <p className="mt-4 text-sm sm:text-base md:text-lg text-gray-300">
             Home - Services - SMO Packages
           </p>
         </div>
       </section>
 
       {/* ===== PLANS ===== */}
-      <section className="py-24 px-6">
+      <section className="py-16 sm:py-20 lg:py-24 px-4 sm:px-6">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-4xl font-bold text-center text-[#0b3253] mb-16">
             Our SMO Plans
           </h2>
 
           {/* PRICING GRID */}
-          <div className="grid grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
             {/* BASIC */}
             <div>
               <PricingCard
@@ -189,7 +189,7 @@ const PlanDetails = ({ creative, postings, paid, remarketing }) => (
       ]}
     />
 
-      <Section
+    <Section
       title="PAID PROMOTION"
       items={[
         "Budget estimate",
@@ -198,7 +198,11 @@ const PlanDetails = ({ creative, postings, paid, remarketing }) => (
         "Daily account optimization",
         "Setting up sales funnel for conversion objective",
       ]}
-      enabledItems={paid ? [true, true, true, true, true] : [false, false, false, false, false]}
+      enabledItems={
+        paid
+          ? [true, true, true, true, true]
+          : [false, false, false, false, false]
+      }
     />
 
     {/* REMARKETING */}
@@ -218,9 +222,6 @@ const PlanDetails = ({ creative, postings, paid, remarketing }) => (
           : [false, false, false, false, false, false]
       }
     />
-
-
-   
 
     <Section
       title="SMO ACTIVITIES"
@@ -260,6 +261,5 @@ const Section = ({ title, items, enabledItems }) => (
     </ul>
   </div>
 );
-
 
 export default SmoPackages;

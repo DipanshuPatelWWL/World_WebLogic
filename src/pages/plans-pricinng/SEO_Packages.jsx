@@ -16,22 +16,22 @@ const SEO_Packages = () => {
           <div className="absolute inset-0 bg-black/70" />
 
           <div className="relative z-10 text-center px-6 text-white">
-            <h1 className="text-5xl md:text-6xl font-extrabold">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold">
               SEO Service Packages
             </h1>
-            <p className="mt-6 text-lg text-gray-300">
+            <p className="mt-4 text-sm sm:text-base md:text-lg text-gray-300">
               Home - Services - SEO Service Packages
             </p>
           </div>
         </section>
 
-        <section className="bg-white py-24 px-6">
+        <section className="bg-white py-16 sm:py-20 lg:py-24 px-4 sm:px-6">
           <div className="max-w-7xl mx-auto text-center">
             <h2 className="text-5xl font-bold text-[#0b3253] mb-6">
               Our SEO plans
             </h2>
 
-            <div className="grid grid-cols-4 gap-7 mt-20">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10 mt-16">
               <div>
                 <div className="border border-[#25baff] rounded-xl">
                   <h2 className="font-bold text-2xl text-[#25baff] mt-4">

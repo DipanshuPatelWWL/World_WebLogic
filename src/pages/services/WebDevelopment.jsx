@@ -150,7 +150,7 @@ const WebDevelopment = () => {
 
         <div className="gsap-item ">
           <p className="text-gray-700 mb-6">
-            here are a lot of things that you need to keep in mind when it comes
+            Here are a lot of things that you need to keep in mind when it comes
             to working on your website. If you thought it was all about colors
             and images, then you are wrong. Understanding the minds of your
             visitors, for one, is an important thing that you need to keep in
