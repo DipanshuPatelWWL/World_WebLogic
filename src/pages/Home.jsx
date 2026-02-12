@@ -365,36 +365,38 @@ export default function Home() {
 
             <section
                 className="
-    py-24 relative
+    py-16 sm:py-20 lg:py-24
     bg-gradient-to-br from-[#25baff]/10 via-white to-[#a8d97c]/10
   "
             >
-                <div className="max-w-7xl mx-auto px-6">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6">
 
                     {/* Header */}
-                    <div className="text-center max-w-4xl mx-auto mb-16">
-                        <h2 className="text-4xl font-bold text-[#020202]">
+                    <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
+                        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#020202]">
                             Let’s Start a Conversation
                         </h2>
-                        <p className="mt-4 text-gray-600">
+                        <p className="mt-3 sm:mt-4 text-sm sm:text-base text-gray-600 leading-relaxed">
                             Reach out to us for inquiries, collaborations, or project discussions.
                             Our team is always ready to help.
                         </p>
                     </div>
 
-                    <div className="grid lg:grid-cols-3 gap-12 items-start">
+                    <div className="grid lg:grid-cols-3 gap-10 lg:gap-12 items-start">
 
                         {/* Contact Info */}
-                        <div className="space-y-8 mt-10">
+                        <div className="space-y-8">
 
                             {/* Address */}
-                            <div className="flex gap-5">
-                                <div className="w-12 h-12 flex items-center justify-center rounded-xl
-            bg-[#25baff]/15 text-[#25baff]">
-                                    <FiMapPin size={22} />
+                            <div className="flex gap-4 sm:gap-5">
+                                <div className="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center rounded-xl
+            bg-[#25baff]/15 text-[#25baff] shrink-0">
+                                    <FiMapPin size={20} />
                                 </div>
                                 <div>
-                                    <h4 className="font-semibold text-[#020202]">Office Address</h4>
+                                    <h4 className="font-semibold text-[#020202] text-sm sm:text-base">
+                                        Office Address
+                                    </h4>
                                     <p className="text-gray-600 text-sm mt-1 leading-relaxed">
                                         B 108, 1st Floor, Office No. 2nd, Sector 63,<br />
                                         Noida - 201301
@@ -403,13 +405,15 @@ export default function Home() {
                             </div>
 
                             {/* Phone */}
-                            <div className="flex gap-5">
-                                <div className="w-12 h-12 flex items-center justify-center rounded-xl
-            bg-[#a8d97c]/30 text-[#020202]">
-                                    <FiPhoneCall size={22} />
+                            <div className="flex gap-4 sm:gap-5">
+                                <div className="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center rounded-xl
+            bg-[#a8d97c]/30 text-[#020202] shrink-0">
+                                    <FiPhoneCall size={20} />
                                 </div>
                                 <div>
-                                    <h4 className="font-semibold text-[#020202]">Call Us</h4>
+                                    <h4 className="font-semibold text-[#020202] text-sm sm:text-base">
+                                        Call Us
+                                    </h4>
                                     <p className="text-gray-600 text-sm mt-1 leading-relaxed">
                                         +91 85058 37801<br />
                                         +91 01204545733<br />
@@ -419,14 +423,16 @@ export default function Home() {
                             </div>
 
                             {/* Email */}
-                            <div className="flex gap-5">
-                                <div className="w-12 h-12 flex items-center justify-center rounded-xl
-            bg-[#25baff]/15 text-[#25baff]">
-                                    <FiMail size={22} />
+                            <div className="flex gap-4 sm:gap-5">
+                                <div className="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center rounded-xl
+            bg-[#25baff]/15 text-[#25baff] shrink-0">
+                                    <FiMail size={20} />
                                 </div>
                                 <div>
-                                    <h4 className="font-semibold text-[#020202]">Email & Website</h4>
-                                    <p className="text-gray-600 text-sm mt-1 leading-relaxed">
+                                    <h4 className="font-semibold text-[#020202] text-sm sm:text-base">
+                                        Email & Website
+                                    </h4>
+                                    <p className="text-gray-600 text-sm mt-1 leading-relaxed break-words">
                                         info@worldweblogic.com<br />
                                         www.worldweblogic.com
                                     </p>
@@ -436,17 +442,19 @@ export default function Home() {
                         </div>
 
                         {/* Contact Form */}
-                        <div className="lg:col-span-2 bg-white rounded-3xl p-10 shadow-lg">
-                            <h3 className="text-2xl font-semibold text-[#020202] mb-8">
+                        <div className="lg:col-span-2 bg-white rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-10 shadow-lg">
+                            <h3 className="text-xl sm:text-2xl font-semibold text-[#020202] mb-6 sm:mb-8">
                                 Send Us a Message
                             </h3>
 
-                            <form className="grid md:grid-cols-2 gap-6">
+                            <form className="grid gap-5 sm:gap-6 md:grid-cols-2">
+
                                 <input
                                     type="text"
                                     placeholder="Your Name"
                                     className="
-              w-full px-5 py-4 rounded-xl border border-gray-200
+              w-full px-4 sm:px-5 py-3 sm:py-4 rounded-xl
+              border border-gray-200
               focus:outline-none focus:ring-2 focus:ring-[#25baff]
             "
                                 />
@@ -455,7 +463,8 @@ export default function Home() {
                                     type="email"
                                     placeholder="Your Email"
                                     className="
-              w-full px-5 py-4 rounded-xl border border-gray-200
+              w-full px-4 sm:px-5 py-3 sm:py-4 rounded-xl
+              border border-gray-200
               focus:outline-none focus:ring-2 focus:ring-[#25baff]
             "
                                 />
@@ -464,7 +473,8 @@ export default function Home() {
                                     rows="5"
                                     placeholder="Write your message..."
                                     className="
-              md:col-span-2 w-full px-5 py-4 rounded-xl border border-gray-200
+              md:col-span-2 w-full px-4 sm:px-5 py-3 sm:py-4
+              rounded-xl border border-gray-200
               focus:outline-none focus:ring-2 focus:ring-[#a8d97c]
             "
                                 />
@@ -472,21 +482,25 @@ export default function Home() {
                                 <button
                                     type="submit"
                                     className="
-              md:col-span-2 mt-4 inline-flex items-center justify-center
-              px-8 py-4 rounded-xl
+              md:col-span-2 w-full
+              mt-2 sm:mt-4
+              px-6 sm:px-8 py-3 sm:py-4
+              rounded-xl
               bg-[#25baff] text-white font-semibold
               hover:bg-[#020202]
-              transition hover:cursor-pointer
+              transition
             "
                                 >
                                     Send Message
                                 </button>
+
                             </form>
                         </div>
 
                     </div>
                 </div>
             </section>
+
 
 
             <OurPartners />
@@ -500,8 +514,8 @@ export default function Home() {
             {/* CTA */}
             <section
                 className="
-    py-16 text-white
-    bg-black
+    py-14 md:py-16
+    bg-black text-white
     transition-all duration-500
   "
             >
@@ -509,15 +523,18 @@ export default function Home() {
                     className="
       max-w-7xl mx-auto px-6
       flex flex-col md:flex-row
-      items-center justify-between gap-6
+      items-center justify-center md:justify-between
+      text-center md:text-left
+      gap-6
     "
                 >
                     {/* Text */}
                     <h2
                         className="
-        text-2xl md:text-3xl font-bold
-        text-white
-        transition-transform duration-500
+        text-2xl sm:text-3xl md:text-3xl
+        font-bold
+        leading-snug
+        max-w-xl
       "
                     >
                         Let’s Build Your Digital Success Story
@@ -528,12 +545,12 @@ export default function Home() {
                         to="/contact"
                         className="
         group
+        w-full sm:w-auto
         bg-[#a8d97c] text-[#020202]
         px-8 py-3 rounded-xl font-semibold
+        flex items-center justify-center gap-2
 
-        flex items-center gap-2
-        transform transition-all duration-300
-
+        transition-all duration-300
         hover:bg-[#25baff] hover:text-white
         hover:-translate-y-1
         hover:shadow-[0_12px_30px_rgba(37,186,255,0.4)]
@@ -544,6 +561,7 @@ export default function Home() {
                     </Link>
                 </div>
             </section>
+
 
 
 

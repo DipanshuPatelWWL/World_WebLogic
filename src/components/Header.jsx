@@ -1,9 +1,28 @@
-import React from "react";
+import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import logo from "../assets/logo2.png";
-import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
+import {
+    FaFacebookF,
+    FaInstagram,
+    FaLinkedinIn,
+    FaBars,
+    FaTimes,
+    FaChevronDown
+} from "react-icons/fa";
+
 
 const Header = () => {
+    const [mobileOpen, setMobileOpen] = useState(false);
+    const [openSubMenu, setOpenSubMenu] = useState(null);
+
+    const toggleSubMenu = (menu) => {
+        setOpenSubMenu(openSubMenu === menu ? null : menu);
+    };
+
+    const closeMobile = () => {
+        setMobileOpen(false);
+        setOpenSubMenu(null);
+    };
     return (
         <header className="sticky top-0 z-50 bg-white border-b border-gray-200 shadow-sm">
             <div className="max-w-7xl mx-auto px-10">
@@ -228,7 +247,7 @@ const Header = () => {
                     </nav>
 
                     {/* SOCIAL ICONS */}
-                    <div className="flex gap-5 mt-1 mr-3 text-lg text-[#020202]">
+                    <div className="hidden md:flex gap-5 mt-1 mr-3 text-lg text-[#020202]">
                         <a
                             href="https://www.facebook.com/WorldWebLogic"
                             target="_blank"
@@ -257,8 +276,200 @@ const Header = () => {
                         </a>
                     </div>
 
+                    <button
+                        className="md:hidden text-2xl text-[#020202] ml-2"
+                        onClick={() => setMobileOpen(!mobileOpen)}
+                    >
+                        {mobileOpen ? <FaTimes /> : <FaBars />}
+                    </button>
+
+
                 </div>
             </div>
+
+            {mobileOpen && (
+                <div className="md:hidden bg-white border-t border-gray-200 px-6 py-6 space-y-5">
+                    <NavLink
+                        to="/"
+                        onClick={closeMobile}
+                        className="block font-medium text-[#020202] hover:text-[#25baff]"
+                    >
+                        Home
+                    </NavLink>
+
+                    {/* ABOUT */}
+                    <div>
+                        <button
+                            onClick={() => toggleSubMenu("about")}
+                            className="w-full flex justify-between items-center font-medium text-[#020202]"
+                        >
+                            About
+                            <FaChevronDown className={`transition ${openSubMenu === "about" ? "rotate-180" : ""}`} />
+                        </button>
+
+                        {openSubMenu === "about" && (
+                            <div className="ml-4 mt-3 space-y-2">
+                                <NavLink to="/about/who-we-are" onClick={closeMobile} className="block hover:text-[#25baff]">
+                                    Who We Are
+                                </NavLink>
+                                <NavLink to="/about/why-choose-us" onClick={closeMobile} className="block hover:text-[#25baff]">
+                                    Why World WebLogic
+                                </NavLink>
+                            </div>
+                        )}
+                    </div>
+
+                    {/* MARKET */}
+                    <div>
+                        <button
+                            onClick={() => toggleSubMenu("market")}
+                            className="w-full flex justify-between items-center font-medium text-[#020202]"
+                        >
+                            Market
+                            <FaChevronDown className={`transition ${openSubMenu === "market" ? "rotate-180" : ""}`} />
+                        </button>
+
+                        {openSubMenu === "market" && (
+                            <div className="ml-4 mt-3 space-y-2">
+                                <NavLink to="/market/cannabis-seo-services" onClick={closeMobile} className="block hover:text-[#25baff]">
+                                    Cannabis SEO Services
+                                </NavLink>
+                                <NavLink to="/market/seo-for-furniture-stores" onClick={closeMobile} className="block hover:text-[#25baff]">
+                                    SEO for Furniture Stores
+                                </NavLink>
+                            </div>
+                        )}
+                    </div>
+
+                    {/* SERVICES */}
+                    <div>
+                        <button
+                            onClick={() => toggleSubMenu("services")}
+                            className="w-full flex justify-between items-center font-medium text-[#020202]"
+                        >
+                            Services
+                            <FaChevronDown className={`transition ${openSubMenu === "services" ? "rotate-180" : ""}`} />
+                        </button>
+
+                        {openSubMenu === "services" && (
+                            <div className="ml-4 mt-3 space-y-2">
+                                <NavLink to="/services/seo" onClick={closeMobile} className="block hover:text-[#25baff]">SEO</NavLink>
+                                <NavLink to="/services/web-design" onClick={closeMobile} className="block hover:text-[#25baff]">Web Design</NavLink>
+                                <NavLink to="/services/web-development" onClick={closeMobile} className="block hover:text-[#25baff]">Web Development</NavLink>
+                                <NavLink to="/services/mobile-application-development" onClick={closeMobile} className="block hover:text-[#25baff]">Mobile Application Development</NavLink>
+                                <NavLink to="/services/social-media-marketing" onClick={closeMobile} className="block hover:text-[#25baff]">Social Media Marketing</NavLink>
+                                <NavLink to="/services/online-reputation-management" onClick={closeMobile} className="block hover:text-[#25baff]">Online Reputation Management</NavLink>
+                            </div>
+                        )}
+                    </div>
+
+                    {/* PLANS & PRICING */}
+                    <div>
+                        <button
+                            onClick={() => toggleSubMenu("pricing")}
+                            className="w-full flex justify-between items-center font-medium text-[#020202]"
+                        >
+                            Plans & Pricing
+                            <FaChevronDown className={`transition ${openSubMenu === "pricing" ? "rotate-180" : ""}`} />
+                        </button>
+
+                        {openSubMenu === "pricing" && (
+                            <div className="ml-4 mt-3 space-y-2">
+                                <NavLink to="/pricing/seo-packages" onClick={closeMobile} className="block hover:text-[#25baff]">
+                                    SEO Services Packages
+                                </NavLink>
+                                <NavLink to="/pricing/seo-starter-pack" onClick={closeMobile} className="block hover:text-[#25baff]">
+                                    Starter Pack
+                                </NavLink>
+                                <NavLink to="/pricing/smo-packages" onClick={closeMobile} className="block hover:text-[#25baff]">
+                                    SMO Services Packages
+                                </NavLink>
+                                <NavLink to="/pricing/ppc-packages" onClick={closeMobile} className="block hover:text-[#25baff]">
+                                    PPC Services Packages
+                                </NavLink>
+                                <NavLink to="/pricing/web-design-packages" onClick={closeMobile} className="block hover:text-[#25baff]">
+                                    Web Designing Packages
+                                </NavLink>
+                            </div>
+                        )}
+                    </div>
+
+                    <NavLink
+                        to="/portfolio"
+                        onClick={closeMobile}
+                        className="block font-medium text-[#020202] hover:text-[#25baff]"
+                    >
+                        Portfolios
+                    </NavLink>
+
+                    <NavLink
+                        to="/contact"
+                        onClick={closeMobile}
+                        className="block font-medium text-[#020202] hover:text-[#25baff]"
+                    >
+                        Contact
+                    </NavLink>
+
+                    {/* MOBILE CONTACT + SOCIAL (BOTTOM) */}
+                    <div className="border-t pt-6 space-y-4">
+
+                        {/* EMAIL + TIME */}
+                        <div className="space-y-2 text-sm text-[#020202]">
+                            <div className="flex items-center gap-2">
+                                <span className="text-[#25baff]">✉</span>
+                                <a
+                                    href="mailto:info@worldweblogic.com"
+                                    className="hover:text-[#a8d97c]"
+                                >
+                                    info@worldweblogic.com
+                                </a>
+                            </div>
+
+                            <div className="flex items-center gap-2">
+                                <span className="text-[#25baff]">⏰</span>
+                                <span className="hover:text-[#a8d97c]">
+                                    Mon – Fri: 10:00 AM – 07:00 PM
+                                </span>
+                            </div>
+                        </div>
+
+                        {/* SOCIAL ICONS */}
+                        <div className="flex gap-6 text-xl text-[#020202]">
+                            <a
+                                href="https://www.facebook.com/WorldWebLogic"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="hover:text-[#25baff]"
+                            >
+                                <FaFacebookF />
+                            </a>
+
+                            <a
+                                href="https://www.instagram.com/worldweblogic"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="hover:text-[#a8d97c]"
+                            >
+                                <FaInstagram />
+                            </a>
+
+                            <a
+                                href="https://www.linkedin.com/company/world-weblogic-pvt-ltd"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="hover:text-[#25baff]"
+                            >
+                                <FaLinkedinIn />
+                            </a>
+                        </div>
+
+                    </div>
+
+
+                </div>
+            )}
+
+
         </header>
     );
 };
