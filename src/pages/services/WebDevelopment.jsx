@@ -1,5 +1,13 @@
 import { useLayoutEffect, useRef, useState } from "react";
 import { FiPlus, FiMinus } from "react-icons/fi";
+import {
+  FaCode,
+  FaLaptopCode,
+  FaPhp,
+  FaReact,
+  FaNodeJs,
+  FaDatabase,
+} from "react-icons/fa";
 
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -66,34 +74,37 @@ const WebDevelopment = () => {
     return () => ctx.revert();
   }, []);
 
-  const faqs = [
-    {
-      question: "What web development services does World Web Logic offer?",
-      answer:
-        "We offer comprehensive web development services including PHP development, WordPress development, and JavaScript development. Our services also extend to custom web application development, e-commerce solutions, API integrations, and performance optimization.",
-    },
-    {
-      question: "What technologies and frameworks do you specialize in?",
-      answer:
-        "Our team specializes in a variety of technologies and frameworks, including PHP, WordPress, JavaScript, HTML5, CSS3, Laravel, React and Node.js. We stay updated with the latest industry trends to provide cutting-edge solutions for our clients.",
-    },
-    {
-      question: "How do you ensure the quality and security of the web applications you develop?",
-      answer:
-        "Quality and security are our top priorities. We follow best practices in coding, conduct thorough testing, and implement robust security measures to protect your website and user data. Our development process includes code reviews, automated testing, and regular updates to address any security vulnerabilities.",
-    },
-    {
-      question: "Can you help with the migration and upgrade of existing websites?",
-      answer:
-        "Yes, we can assist with migrating and upgrading existing websites. Whether you need to move your website to a new platform, update its design, enhance functionality, or improve performance, our team has the expertise to handle the process smoothly and efficiently.",
-    },
-    {
-      question:
-        "Do you provide ongoing maintenance and support after the development is complete?",
-      answer:
-        "Absolutely! We offer ongoing maintenance and support services to ensure your website remains up-to-date, secure, and running smoothly. Our support packages include regular updates, security monitoring, bug fixes, performance optimization, and technical assistance as needed.",
-    },
-  ];
+const faqs = [
+  {
+    question: "What web development solutions do you provide?",
+    answer:
+      "We deliver end-to-end web development services such as PHP development, WordPress solutions, and JavaScript-based applications. Our expertise also includes custom web apps, e-commerce development, third-party API integrations, and website performance enhancement.",
+  },
+  {
+    question: "Which technologies and frameworks do you work with?",
+    answer:
+      "Our developers work with modern technologies including PHP, WordPress, JavaScript, HTML5, CSS3, Laravel, React, and Node.js. We continuously upgrade our skills to implement the latest tools and frameworks for high-quality web solutions.",
+  },
+  {
+    question:
+      "How do you maintain the quality and security of your web projects?",
+    answer:
+      "We follow industry best practices, perform detailed testing, and apply strong security standards during development. Our process includes code reviews, functionality testing, security checks, and regular updates to keep applications safe and reliable.",
+  },
+  {
+    question:
+      "Can you upgrade or migrate my existing website to a new platform?",
+    answer:
+      "Yes, we handle website migrations and upgrades efficiently. Whether it’s shifting to a new platform, redesigning the interface, adding new features, or improving speed and performance, our team ensures a smooth transition.",
+  },
+  {
+    question:
+      "Do you offer post-development support and maintenance services?",
+    answer:
+      "Yes, we provide continuous maintenance and technical support to keep your website secure and optimized. Our services include updates, monitoring, bug resolution, performance improvements, and ongoing assistance whenever required.",
+  },
+];
+
 
   return (
     <div ref={rootRef} className="bg-white text-gray-900">
@@ -113,7 +124,7 @@ const WebDevelopment = () => {
           className="relative z-10 text-center px-6 text-white"
         >
           <h1 className="text-5xl md:text-6xl font-extrabold">Services</h1>
-          <p className="mt-6 text-lg text-gray-300">Home - Web Development</p>
+          <p className="mt-6 text-lg text-gray-300">Web Development</p>
         </div>
       </section>
 
@@ -121,17 +132,16 @@ const WebDevelopment = () => {
       <section className="bg-white py-24 px-6">
         <div className="max-w-5xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-extrabold text-[#020202] mb-6">
-
             Our Web
             <span className="text-[#25baff]"> Development Solutions</span>
-
           </h2>
 
           <p className="text-gray-600 max-w-3xl mx-auto text-lg">
-            The first impression is the last impression, and in the world of
-            online business, the design of your website is what makes the first
-            impression. Hence the reason that this should be a good one. So, how
-            appealing and responsive is your website?
+            In today’s digital world, a powerful backend and seamless
+            functionality are just as important as design. A professionally
+            developed website ensures speed, security, scalability, and smooth
+            performance. Is your website built to handle growth and deliver a
+            flawless user experience?
           </p>
         </div>
       </section>
@@ -148,81 +158,98 @@ const WebDevelopment = () => {
           />
         </div>
 
-        <div className="gsap-item ">
+        <div className="gsap-item">
+          {/* Heading */}
+          <h3 className="text-3xl font-extrabold mb-8 text-[#020202] relative inline-block">
+            Powerful & Scalable
+            <span className="text-[#25baff]"> Web Development</span>
+            <span className="absolute left-0 -bottom-2 w-20 h-1 bg-[#25baff] rounded-full"></span>
+          </h3>
+
           <p className="text-gray-700 mb-6">
-            Here are a lot of things that you need to keep in mind when it comes
-            to working on your website. If you thought it was all about colors
-            and images, then you are wrong. Understanding the minds of your
-            visitors, for one, is an important thing that you need to keep in
-            mind here.
+            Building a successful website involves much more than visuals. It
+            requires strong architecture, clean coding, and a deep understanding
+            of user behavior. A well-developed website ensures stability,
+            performance, and long-term growth for your business.
           </p>
+
           <p className="text-gray-700 mb-6">
-            Here, we will help you create a website that stands out from the
-            rest and at the same time, catches the attention of a first time
-            user.
+            Our team develops websites that are fast, secure, and tailored to
+            your business needs. We focus on creating platforms that not only
+            stand out but also deliver smooth functionality for every visitor.
           </p>
-          <p className="text-gray-700">
-            And did you know that there is more to a website than being catching
-            and standing out? Hence, we also provide importance to ensuring that
-            your website is easy to use with a good user experience. This way,
-            customers won’t have a hard time navigating and your web page will
-            be a pleasant experience. Be it web development service or PHP
-            development service that you want, we are here to help you. We
-            provide all the solutions that you need not just for a jaw dropping
-            website but everything else that you would want in a good website.
+
+          <p className="text-gray-700 mb-6">
+            From custom web applications to PHP-based solutions and advanced
+            backend systems, we provide complete development services. Our goal
+            is to build a reliable, high-performing website that offers seamless
+            navigation and an exceptional user experience.
           </p>
-          <p className="text-gray-700 mb-6 ml-5"></p>
         </div>
-        <p className="text-gray-700 ml-5">
-          Approach us for a more responsive website and see how your customers
-          are going to increase by the day. We will keep your website trendy and
-          use all the right shades and colors to make the right impression.
-        </p>
-        <p className="text-gray-700">
-          This way, your website won’t just be different from that of your
-          competitors but will perform better too. This way, you can create a
-          striking online presence to grow your business.
-        </p>
       </section>
 
       {/* ================= list ================= */}
-      <section className="bg-gray-50 py-24">
-        <div className="container mx-auto px-6">
-         <h2 className="text-4xl font-bold text-[#020202] mb-14">
+     <section className="bg-gray-50 py-28">
+  <div className="container mx-auto px-6">
 
-            That being said, the following are some of the services that we can
-            offer:
-          </h2>
+    {/* Updated Heading Style */}
+    <div className="text-center mb-16">
+      <p className="uppercase tracking-widest text-sm font-semibold text-gray-500 mb-3">
+        What We Offer
+      </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {[
-              "Web application development",
-              "Custom application development",
-              "PHP development",
-              "MERN development",
-            ].map((text, index) => (
-              <div
-                key={index}
-                className="bg-white border border-gray-200 rounded-2xl px-8 py-6 flex items-center gap-4
-                     transition-all duration-300
-                     hover:-translate-y-2 hover:shadow-2xl hover:border-[#25baff]
-"
-              >
-                <span className="text-[#a8d97c] text-2xl font-bold">»</span>
+      <h2 className="text-3xl md:text-4xl font-extrabold text-[#020202]">
+        Our Web Development
+        <span className="text-[#25baff]"> Services Include</span>
+      </h2>
+    </div>
 
-                <p className="text-black text-lg leading-relaxed">{text}</p>
-              </div>
-            ))}
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+      {[
+        { icon: <FaLaptopCode />, text: "Web Application Development" },
+        { icon: <FaCode />, text: "Custom Software Development" },
+        { icon: <FaPhp />, text: "PHP Development Solutions" },
+        { icon: <FaReact />, text: "MERN Stack Development" },
+        { icon: <FaNodeJs />, text: "Node.js Backend Development" },
+        { icon: <FaDatabase />, text: "Database Design & Integration" },
+        { icon: <FaReact />, text: "API Development & Integration" },
+        { icon: <FaLaptopCode />, text: "Website Maintenance & Support" },
+      ].map((item, index) => (
+        <div
+          key={index}
+          className="group bg-white border border-gray-200 rounded-2xl px-8 py-6 flex items-center gap-4
+          shadow-lg shadow-[#25baff]/10
+          transition-all duration-500
+          hover:-translate-y-2
+          hover:bg-[#25baff]
+          hover:border-[#25baff]
+          hover:shadow-2xl hover:shadow-[#25baff]/40"
+        >
+          <div
+            className="text-[#a8d97c]
+ text-2xl
+            group-hover:text-white transition-colors duration-300"
+          >
+            {item.icon}
           </div>
+
+          <p
+            className="text-black text-lg leading-relaxed
+            group-hover:text-white transition-colors duration-300"
+          >
+            {item.text}
+          </p>
         </div>
-      </section>
+      ))}
+    </div>
+  </div>
+</section>
 
       {/* =================  CTA ================= */}
       <section
         ref={addSectionRef}
         className="relative overflow-hidden py-24 px-6"
         style={{ backgroundColor: "#020202" }}
-
       >
         {/* Animated Gradient Glow */}
         <div
@@ -239,7 +266,6 @@ radial-gradient(circle_at_80%_80%,rgba(168,217,124,0.2),transparent_45%)]
             <span
               key={i}
               className="absolute w-1.5 h-1.5 bg-[#25baff] rounded-full opacity-40 animate-float"
-
               style={{
                 top: `${Math.random() * 100}%`,
                 left: `${Math.random() * 100}%`,
@@ -252,8 +278,8 @@ radial-gradient(circle_at_80%_80%,rgba(168,217,124,0.2),transparent_45%)]
         {/* CONTENT */}
         <div className="relative z-10 max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-10">
           <h2 className="gsap-item text-white text-3xl md:text-4xl lg:text-3xl font-extrabold leading-tight max-w-4xl">
-            If you want an effective website, approach us and you won’t be
-            disappointed.
+            If you're ready to build a high-performing website, connect with us
+            — we’ll turn your vision into a powerful digital reality.
           </h2>
 
           {/* BUTTON */}
@@ -278,90 +304,92 @@ hover:bg-[#a8d97c]
         </div>
       </section>
 
-      <section ref={addSectionRef} className="bg-white py-28 px-6">
-        <div className="max-w-5xl mx-auto">
-          <h2 className="gsap-item text-4xl font-extrabold text-[#25baff] mb-12">
+      <section ref={addSectionRef} className="bg-gray-50 py-28 px-6">
+  <div className="max-w-5xl mx-auto">
+    <h2 className="gsap-item text-4xl font-extrabold text-[#020202] mb-12 text-center">
+      Frequently Asked
+      <span className="text-[#25baff]"> Questions</span>
+    </h2>
 
-            FAQs
-          </h2>
+    <div className="space-y-6">
+      {faqs.map((faq, index) => (
+        <div
+          key={index}
+          ref={(el) => (faqRefs.current[index] = el)}
+          className="gsap-item bg-white border border-gray-200 rounded-2xl
+          shadow-lg shadow-[#25baff]/20
+          hover:shadow-2xl hover:shadow-[#25baff]/40
+          hover:border-[#25baff]
+          transition-all duration-300"
+        >
+          {/* Question */}
+          <button
+            onClick={() => {
+              const el = faqRefs.current[index];
+              const content = el.querySelector(".faq-content");
 
-          <div className="space-y-4">
-            {faqs.map((faq, index) => (
-              <div
-                key={index}
-                ref={(el) => (faqRefs.current[index] = el)}
-                className="gsap-item border border-gray-200 rounded-xl
-      hover:border-[#25baff]
- transition-colors"
-              >
-                {/* Question */}
-                <button
-                  onClick={() => {
-                    const el = faqRefs.current[index];
-                    const content = el.querySelector(".faq-content");
+              if (activeFaq === index) {
+                gsap.to(content, {
+                  height: 0,
+                  opacity: 0,
+                  duration: 0.35,
+                  ease: "power2.inOut",
+                });
+                setActiveFaq(null);
+              } else {
+                if (activeFaq !== null) {
+                  const prevEl = faqRefs.current[activeFaq];
+                  const prevContent =
+                    prevEl.querySelector(".faq-content");
 
-                    if (activeFaq === index) {
-                      gsap.to(content, {
-                        height: 0,
-                        opacity: 0,
-                        duration: 0.35,
-                        ease: "power2.inOut",
-                      });
-                      setActiveFaq(null);
-                    } else {
-                      if (activeFaq !== null) {
-                        const prevEl = faqRefs.current[activeFaq];
-                        const prevContent =
-                          prevEl.querySelector(".faq-content");
+                  gsap.to(prevContent, {
+                    height: 0,
+                    opacity: 0,
+                    duration: 0.35,
+                    ease: "power2.inOut",
+                  });
+                }
 
-                        gsap.to(prevContent, {
-                          height: 0,
-                          opacity: 0,
-                          duration: 0.35,
-                          ease: "power2.inOut",
-                        });
-                      }
+                gsap.to(content, {
+                  height: "auto",
+                  opacity: 1,
+                  duration: 0.4,
+                  ease: "power2.out",
+                });
 
-                      gsap.to(content, {
-                        height: "auto",
-                        opacity: 1,
-                        duration: 0.4,
-                        ease: "power2.out",
-                      });
+                setActiveFaq(index);
+              }
+            }}
+            className="w-full flex items-center justify-between
+            px-6 py-5 text-left font-semibold text-[#020202]"
+          >
+            <span
+              className={`${
+                activeFaq === index ? "text-[#25baff]" : "text-[#020202]"
+              } transition-colors duration-300`}
+            >
+              {faq.question}
+            </span>
 
-                      setActiveFaq(index);
-                    }
-                  }}
-                  className="w-full flex items-center justify-between
-            px-6 py-5 text-left font-semibold text-[#020202]
-"
-                >
-                  <span
-                  className={activeFaq === index ? "text-[#25baff]" : ""}
+            {activeFaq === index ? (
+              <FiMinus className="text-[#25baff] text-xl" />
+            ) : (
+              <FiPlus className="text-gray-600 text-xl" />
+            )}
+          </button>
 
-                  >
-                    {faq.question}
-                  </span>
-
-                  {activeFaq === index ? (
-                    <FiMinus className="text-[#25baff] text-xl" />
-
-                  ) : (
-                    <FiPlus className="text-gray-600 text-xl" />
-                  )}
-                </button>
-
-                {/* Answer */}
-                <div className="faq-content px-6 overflow-hidden h-0 opacity-0">
-                  <p className="pb-6 text-gray-600 leading-relaxed">
-                    {faq.answer}
-                  </p>
-                </div>
-              </div>
-            ))}
+          {/* Answer */}
+          <div className="faq-content px-6 overflow-hidden h-0 opacity-0">
+            <p className="pb-6 text-gray-600 leading-relaxed">
+              {faq.answer}
+            </p>
           </div>
         </div>
-      </section>
+      ))}
+    </div>
+  </div>
+</section>
+
     </div>
   );
 };
