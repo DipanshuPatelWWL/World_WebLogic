@@ -109,7 +109,7 @@ const CannabisSeoServices = () => {
     <div ref={rootRef} className="bg-white text-gray-900">
       {/* ================= HERO ================= */}
       <section
-        className="relative h-[58vh] flex items-center justify-center"
+       className="relative min-h-[45vh] md:h-[58vh] flex items-center justify-center px-4"
         style={{
           backgroundImage: `url(${Banner})`,
           backgroundSize: "cover",
@@ -122,7 +122,8 @@ const CannabisSeoServices = () => {
           ref={heroRef}
           className="relative z-10 text-center px-6 text-white"
         >
-          <h1 className="text-5xl md:text-6xl font-extrabold">
+          <h1 className="text-3xl sm:text-4xl md:text-6xl font-extrabold leading-tight">
+
             Cannabis Seo Services
           </h1>
           {/* <p className="mt-6 text-lg text-gray-300">Home · Who We Are</p> */}
@@ -132,7 +133,8 @@ const CannabisSeoServices = () => {
       {/* ================= WHO WE ARE ================= */}
       <section
         ref={addSectionRef}
-        className="gsap container mx-auto px-6 py-24 grid md:grid-cols-2 gap-16 items-center"
+        className="gsap container mx-auto px-6 py-24 grid grid-cols-1 md:grid-cols-2 gap-6 md:p-10 md:gap-16
+ items-center"
       >
         <div className="gsap-item">
           <h2 className=" text-4xl font-bold mb-6 text-[#0d3253]">
@@ -168,7 +170,7 @@ const CannabisSeoServices = () => {
 
         <div
           className="gsap-item rounded-2xl p-[2px] bg-gradient-to-br from-[#25baff] to-[#a8d97c]
- shadow-2xl w-120 ml-15"
+ shadow-2xl w-full"
         >
           <div className=" rounded-2xl bg-white p-6 md:p-8 transition-all duration-300 hover:shadow-[#25baff]/30
 ">
@@ -246,7 +248,8 @@ const CannabisSeoServices = () => {
       {/* ================= CTA ================= */}
       <section
         ref={addSectionRef}
-        className="container mx-auto px-6 py-28 grid md:grid-cols-2 gap-16 items-center"
+        className="container mx-auto px-6 py-28 grid grid-cols-1 md:grid-cols-2 gap-6 md:p-10 md:gap-16
+ items-center"
       >
         <div className="gsap-item  rounded-2xl overflow-hidden group">
           <img
@@ -284,7 +287,8 @@ const CannabisSeoServices = () => {
 
       <section
         ref={addSectionRef}
-        className="container mx-auto px-6 py-28 grid md:grid-cols-2 gap-16 items-center"
+        className="container mx-auto px-6 py-28 grid grid-cols-1 md:grid-cols-2 gap-6 md:p-10 md:gap-16
+ items-center"
       >
         <div className="gsap-item ">
           <h2 className="text-[#25baff] font-bold mb-4 text-3xl">
@@ -315,7 +319,7 @@ const CannabisSeoServices = () => {
           </p>
         </div>
 
-        <div className="gsap-item  rounded-2xl overflow-hidden group w-126 ml-8">
+        <div className="gsap-item  rounded-2xl overflow-hidden group w-full">
           <img
             src={Market2}
             alt="CTA"
@@ -326,7 +330,8 @@ const CannabisSeoServices = () => {
 
       <section
         ref={addSectionRef}
-        className="container mx-auto px-6 py-28 grid md:grid-cols-2 gap-16 items-center"
+        className="container mx-auto px-6 py-28 grid grid-cols-1 md:grid-cols-2 gap-6 md:p-10 md:gap-16
+ items-center"
       >
         <div className="gsap-item  rounded-2xl overflow-hidden group">
           <img
@@ -363,7 +368,8 @@ const CannabisSeoServices = () => {
 
       <section
         ref={addSectionRef}
-        className="container mx-auto px-6 py-28 grid md:grid-cols-2 gap-16 items-center"
+        className="container mx-auto px-6 py-28 grid grid-cols-1 md:grid-cols-2 gap-6 md:p-10 md:gap-16
+ items-center"
       >
         <div className="gsap-item ">
           <h3 className="text-2xl font-bold mb-6 text-[#0d3253]">
@@ -389,7 +395,8 @@ const CannabisSeoServices = () => {
           </p>
         </div>
 
-        <div className=" gsap-item  rounded-2xl overflow-hidden group w-126 ml-8">
+        <div className="gsap-item w-full rounded-2xl overflow-hidden group">
+
           <img
             src={Market4}
             alt="CTA"
@@ -400,7 +407,8 @@ const CannabisSeoServices = () => {
 
       <section
         ref={addSectionRef}
-        className="container mx-auto px-6 py-28 grid md:grid-cols-2 gap-16 items-center"
+        className="container mx-auto px-6 py-28 grid grid-cols-1 md:grid-cols-2 gap-6 md:p-10 md:gap-16
+ items-center"
       >
         <div className="gsap-item  rounded-2xl overflow-hidden group">
           <img
@@ -438,7 +446,8 @@ const CannabisSeoServices = () => {
 
       <section
         ref={addSectionRef}
-        className=" gsap-item  container mx-auto px-6 py-28 grid md:grid-cols-2 gap-16 items-center"
+        className=" gsap-item  container mx-auto px-6 py-28 grid grid-cols-1 md:grid-cols-2 gap-6 md:p-10 md:gap-16
+ items-center"
       >
         <div>
           <h3 className="text-2xl font-bold mb-6 text-[#0d3253]">
@@ -465,7 +474,8 @@ const CannabisSeoServices = () => {
           </p>
         </div>
 
-        <div className="gsap-item  rounded-2xl overflow-hidden group w-126 ml-8">
+        <div className="gsap-item w-full rounded-2xl overflow-hidden group">
+
           <img
             src={Market6}
             alt="CTA"
@@ -506,7 +516,7 @@ radial-gradient(circle_at_80%_80%,rgba(168,217,124,0.25),transparent_45%)]
         </div>
 
         {/* CONTENT */}
-        <div className="relative z-10 max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-10">
+        <div className="relative z-10 max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6 md:p-10">
           <h2 className="gsap-item text-white text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight max-w-4xl">
             Boost your cannabis business visibility and drive organic traffic
             with our expert{" "}

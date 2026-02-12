@@ -104,7 +104,7 @@ const PpcPackages = () => {
                 <p>Ad Groups – Up To 20</p>
               </div>
 
-              {/* BUTTON */}
+              {/* BUTTONS */}
               <button className="mt-8 mb-8 px-8 py-2 rounded-full bg-[#25baff] text-white cursor-pointer">
                 Start Today
               </button>

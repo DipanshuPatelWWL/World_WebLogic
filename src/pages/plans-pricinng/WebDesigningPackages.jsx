@@ -129,18 +129,22 @@ const WebDesigningPackages = () => {
           </div>
 
           {/* ===================== CMS ROW ===================== */}
-          <div className="grid grid-cols-3 text-center text-sm mb-16">
-            <div>
-              <p className="font-bold">CMS</p>
-              <p>WordPress / Joomla / C5 / Drupal</p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 text-center text-sm mb-16">
+            <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
+              <p className="font-bold text-base mb-2">CMS</p>
+              <p className="text-gray-600">WordPress / Joomla / C5 / Drupal</p>
             </div>
-            <div>
-              <p className="font-bold">CMS</p>
-              <p>WordPress / Joomla / C5 / Drupal / Magento / Shopify</p>
+
+            <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
+              <p className="font-bold text-base mb-2">CMS</p>
+              <p className="text-gray-600">
+                WordPress / Joomla / C5 / Drupal / Magento / Shopify
+              </p>
             </div>
-            <div>
-              <p className="font-bold">CMS</p>
-              <p>
+
+            <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
+              <p className="font-bold text-base mb-2">CMS</p>
+              <p className="text-gray-600">
                 WordPress / Joomla / C5 / Drupal / Magento / Prestashop /
                 Shopify / BigCommerce
               </p>
