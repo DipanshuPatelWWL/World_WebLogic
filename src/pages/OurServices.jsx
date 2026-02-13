@@ -204,8 +204,8 @@ const OurServices = () => {
                         text-left px-5 py-3 rounded-md font-medium transition-all duration-300 border-l-4
                         min-w-[180px] lg:min-w-full
                         ${activeCategory === cat
-                                        ? "bg-[#25baff] text-white border-[#a8d97c]"
-                                        : "bg-white/10 backdrop-blur-md text-white border-white/20 hover:bg-[#25baff]/30"
+                                        ? "bg-[#25baff] text-white border-[#a8d97c] hover:cursor-pointer"
+                                        : "bg-white/10 backdrop-blur-md text-white border-white/20 hover:bg-[#25baff]/30 hover:cursor-pointer"
                                     }`}
                             >
                                 {cat}
