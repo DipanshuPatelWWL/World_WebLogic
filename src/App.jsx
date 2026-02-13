@@ -35,11 +35,13 @@ import WhyUs from "./pages/about/WhyUs";
 
 /* ========= VIDEO ========= */
 import heroVideo from "./assets/video/heroVideo.mp4";
+import SplashCursor from "./components/SplashCursor";
 
 function App() {
   return (
     <Router>
       <ScrollToTop />
+      <SplashCursor />
       <div className="fixed inset-0 -z-10">
         <video
           autoPlay
