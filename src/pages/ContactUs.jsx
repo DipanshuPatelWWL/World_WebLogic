@@ -164,10 +164,10 @@ export default function ContactUs() {
             <div className="flex items-start gap-3">
               <FaEnvelope className="text-[#25baff] text-lg mt-1" />
               <a
-                href="mailto:xyz.com"
+                href="mailto:Digital WebGuider.com"
                 className="hover:text-[#25baff] transition"
               >
-                info@xyz.com
+                info@Digital WebGuider.com
               </a>
             </div>
           </div>

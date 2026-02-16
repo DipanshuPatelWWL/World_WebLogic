@@ -181,51 +181,50 @@ const SocialMediaMarketing = () => {
         </div>
       </section>
 
-    <section className="bg-gray-50 py-24">
-  <div className="container mx-auto px-6">
-    <h2 className="text-4xl font-bold text-[#020202] mb-14 text-center">
-      Why Choose
-      <span className="text-[#25baff]"> Our Social Media Marketing</span>
-    </h2>
+      <section className="bg-gray-50 py-24">
+        <div className="container mx-auto px-6">
+          <h2 className="text-4xl font-bold text-[#020202] mb-14 text-center">
+            Why Choose
+            <span className="text-[#25baff]"> Our Social Media Marketing</span>
+          </h2>
 
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-      {[
-        "Creative content strategies tailored to your brand.",
-        "Data-driven campaigns focused on measurable growth.",
-        "Expert management across all major social platforms.",
-        "Targeted paid advertising for maximum ROI.",
-        "Consistent audience engagement and community building.",
-        "Trend analysis to keep your brand ahead of competitors.",
-        "Transparent reporting with detailed performance insights.",
-        "Dedicated support to ensure long-term social success.",
-      ].map((text, index) => (
-        <div
-          key={index}
-          className="group bg-white border border-gray-200 rounded-2xl px-8 py-6 flex items-start gap-4
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {[
+              "Creative content strategies tailored to your brand.",
+              "Data-driven campaigns focused on measurable growth.",
+              "Expert management across all major social platforms.",
+              "Targeted paid advertising for maximum ROI.",
+              "Consistent audience engagement and community building.",
+              "Trend analysis to keep your brand ahead of competitors.",
+              "Transparent reporting with detailed performance insights.",
+              "Dedicated support to ensure long-term social success.",
+            ].map((text, index) => (
+              <div
+                key={index}
+                className="group bg-white border border-gray-200 rounded-2xl px-8 py-6 flex items-start gap-4
           shadow-md shadow-[#25baff]/10
           transition-all duration-300
           hover:-translate-y-2
           hover:bg-[#25baff]
           hover:border-[#25baff]
           hover:shadow-2xl hover:shadow-[#25baff]/30"
-        >
-          <FaCheckCircle
-            className="text-[#a8d97c] text-2xl mt-1
+              >
+                <FaCheckCircle
+                  className="text-[#a8d97c] text-2xl mt-1
             group-hover:text-white transition-colors duration-300"
-          />
+                />
 
-          <p
-            className="text-black text-lg leading-relaxed
+                <p
+                  className="text-black text-lg leading-relaxed
             group-hover:text-white transition-colors duration-300"
-          >
-            {text}
-          </p>
+                >
+                  {text}
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
-      ))}
-    </div>
-  </div>
-</section>
-
+      </section>
 
       {/* =================  CTA ================= */}
       <section
