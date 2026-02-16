@@ -23,7 +23,7 @@ export default function Footer() {
                         </div>
 
                         <p className="text-sm leading-relaxed mt-[-40px] text-white">
-                            XYZ delivers end-to-end digital solutions including Web
+                            Digital WebGuider delivers end-to-end digital solutions including Web
                             Development, Mobile Apps, SEO, PPC, SMO, and ORM.
                         </p>
                     </div>
@@ -94,7 +94,7 @@ export default function Footer() {
                 {/* BOTTOM BAR */}
                 <div className="border-t border-white/20 bg-white/10 backdrop-blur-lg">
                     <div className="max-w-7xl mx-auto px-6 py-6 text-sm text-center text-white">
-                        © {new Date().getFullYear()} XYZ. All rights reserved.
+                        © {new Date().getFullYear()} Digital WebGuider. All rights reserved.
                     </div>
                 </div>
             </div>
