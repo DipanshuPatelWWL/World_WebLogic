@@ -37,8 +37,11 @@ import WhyUs from "./pages/about/WhyUs";
 import heroVideo from "./assets/video/heroVideo.mp4";
 import SplashCursor from "./components/SplashCursor";
 import SmallBusinessSeo from "./pages/services/LocalSeoServices/SmallBusinesSeo";
-import DigitalMarketingStrategy from "./pages/services/DigitalMarketingStrategy";
-import DigitalMarketingAudit from "./pages/services/DigitalMarketingAudit";
+import DigitalMarketingStrategy from "./pages/services/digitalMarketing/DigitalMarketingStrategy";
+import DigitalMarketingAudit from "./pages/services/digitalMarketing/DigitalMarketingAudit";
+import ContentMarketing from "./pages/services/digitalMarketing/ContentMarketing";
+import EmailMarketing from "./pages/services/digitalMarketing/EmailMarketing";
+import ReputationManagement from "./pages/services/digitalMarketing/ReputationManagement";
 
 function App() {
   return (
@@ -89,7 +92,7 @@ function App() {
             element={<OnlineReputationManagement />}
           />
           <Route
-            path="/services/digital-marketing-strategy"
+            path="/services/digitalMarketing/digital-marketing-strategy"
             element={<DigitalMarketingStrategy />}
           />
 
@@ -113,9 +116,22 @@ function App() {
             element={<WebDesigningPackages />}
           />
           <Route
-            path="/services/digital-marketing-audit"
+            path="/services/digitalMarketing/digital-marketing-audit"
             element={<DigitalMarketingAudit />}
           />
+          <Route
+            path="/services/digitalMarketing/content-marketing"
+            element={<ContentMarketing />}
+          />
+          <Route
+            path="/services/digitalMarketing/email-marketing"
+            element={<EmailMarketing />}
+          />
+          <Route
+            path="/services/digitalMarketing/reputation-management"
+            element={<ReputationManagement />}
+          />
+
 
           {/* CONTACT */}
           <Route path="/contact" element={<ContactUs />} />

@@ -177,30 +177,36 @@ const Header = () => {
                       Digital Marketing
                     </h4>
                     <ul className="space-y-1.5">
-                      <NavLink to="/services/digital-marketing-strategy">
+                      <NavLink to="/services/digitalMarketing/digital-marketing-strategy">
                         <li className="flex gap-2 text-gray-600 hover:text-[#25baff] transition cursor-pointer">
                           <FaAngleRight className="mt-1 text-[#25baff] text-xs" />
                           Digital Marketing Strategy
                         </li>
                       </NavLink>
-                      <NavLink to="/services/digital-marketing-audit">
+                      <NavLink to="/services/digitalMarketing/digital-marketing-audit">
                         <li className="flex gap-2 text-gray-600 hover:text-[#25baff] transition cursor-pointer">
                         <FaAngleRight className="mt-1 text-[#25baff] text-xs" />
                         Digital Marketing Audit
                       </li>
                       </NavLink>
-                      <li className="flex gap-2 text-gray-600 hover:text-[#25baff] transition cursor-pointer">
+                      <NavLink to="/services/digitalMarketing/content-marketing">
+                        <li className="flex gap-2 text-gray-600 hover:text-[#25baff] transition cursor-pointer">
                         <FaAngleRight className="mt-1 text-[#25baff] text-xs" />
                         Content Marketing
                       </li>
-                      <li className="flex gap-2 text-gray-600 hover:text-[#25baff] transition cursor-pointer">
+                      </NavLink>
+                      <NavLink to="/services/digitalMarketing/email-marketing">
+                        <li className="flex gap-2 text-gray-600 hover:text-[#25baff] transition cursor-pointer">
                         <FaAngleRight className="mt-1 text-[#25baff] text-xs" />
                         Email Marketing
                       </li>
-                      <li className="flex gap-2 text-gray-600 hover:text-[#25baff] transition cursor-pointer">
+                      </NavLink>
+                     <NavLink to="/services/digitalMarketing/reputation-management">
+                       <li className="flex gap-2 text-gray-600 hover:text-[#25baff] transition cursor-pointer">
                         <FaAngleRight className="mt-1 text-[#25baff] text-xs" />
                         Reputation Management
                       </li>
+                     </NavLink>
                       <li className="flex gap-2 text-gray-600 hover:text-[#25baff] transition cursor-pointer">
                         <FaAngleRight className="mt-1 text-[#25baff] text-xs" />
                         Franchise Digital Marketing

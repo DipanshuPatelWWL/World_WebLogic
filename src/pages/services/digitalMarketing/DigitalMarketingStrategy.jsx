@@ -13,25 +13,25 @@ import { BsGraphUpArrow } from "react-icons/bs";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-import Banner from "../../assets/services/mobile-app-banner.jpg";
-import Intro from "../../assets/about/about2.jpg";
-import SEO from "../../assets/seo/SEO.webp";
-import LocalSEO from "../../assets/seo/localseo.avif";
-import ContentMarketing from "../../assets/services/content-marketing.avif";
-import LinkBuilding from "../../assets/services/link-build.avif";
-import SMO from "../../assets/services/smo.avif";
-import SMM from "../../assets/services/SMM.jpg";
+import Banner from "../../../assets/services/mobile-app-banner.jpg";
+import Intro from "../../../assets/about/about2.jpg";
+import SEO from "../../../assets/seo/SEO.webp";
+import LocalSEO from "../../../assets/seo/localseo.avif";
+import ContentMarketing from "../../../assets/services/content-marketing.avif";
+import LinkBuilding from "../../../assets/services/link-build.avif";
+import SMO from "../../../assets/services/smo.avif";
+import SMM from "../../../assets/services/SMM.jpg";
 
-import Fb from "../../assets/services/fb.avif";
-import Insta from "../../assets/services/insta.avif";
-import X from "../../assets/services/x.avif";
-import Yt from "../../assets/services/yt.avif";
-import Linkdin from "../../assets/services/linkdin.avif";
-import Pinterest from "../../assets/services/pinterest.avif";
-import Ppc from "../../assets/services/ppc.avif";
-import Web from "../../assets/services/web-d-d.avif";
-import Email from "../../assets/services/email.avif";
-import Cro from "../../assets/services/cro.avif";
+import Fb from "../../../assets/services/fb.avif";
+import Insta from "../../../assets/services/insta.avif";
+import X from "../../../assets/services/x.avif";
+import Yt from "../../../assets/services/yt.avif";
+import Linkdin from "../../../assets/services/linkdin.avif";
+import Pinterest from "../../../assets/services/pinterest.avif";
+import Ppc from "../../../assets/services/ppc.avif";
+import Web from "../../../assets/services/web-d-d.avif";
+import Email from "../../../assets/services/email.avif";
+import Cro from "../../../assets/services/cro.avif";
 
 
 gsap.registerPlugin(ScrollTrigger);
