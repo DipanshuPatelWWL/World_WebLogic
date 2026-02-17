@@ -10,7 +10,7 @@ import { FaSearchengin } from "react-icons/fa6";
 import { GiRelationshipBounds } from "react-icons/gi";
 import { RxComponent1 } from "react-icons/rx";
 
-import Banner from "../../../assets/services/mobile-app-banner.jpg";
+import Banner from "../../../assets/services/orm/ORM-banner.jpg";
 import Img from "../../../assets/services/orm/img1.avif";
 import Img2 from "../../../assets/services/orm/img2.avif";
 

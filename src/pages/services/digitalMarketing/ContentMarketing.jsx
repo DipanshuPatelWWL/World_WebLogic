@@ -11,7 +11,7 @@ import { MdAutoGraph } from "react-icons/md";
 
 import { PiStrategyBold } from "react-icons/pi";
 
-import Banner from "../../../assets/services/mobile-app-banner.jpg";
+import Banner from "../../../assets/services/contentMarketing/banner.avif";
 import Img from "../../../assets/services/contentMarketing/content-marketing.avif";
 import Img2 from "../../../assets/services/contentMarketing/why-content.avif";
 

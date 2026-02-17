@@ -15,7 +15,7 @@ import { TbDeviceIpadShare } from "react-icons/tb";
 import { BiSolidBookContent } from "react-icons/bi";
 import { MdOutlineAttachEmail } from "react-icons/md";
 
-import Banner from "../../../assets/services/mobile-app-banner.jpg";
+import Banner from "../../../assets/services/digital-banner.avif";
 import Img from "../../../assets/services/digital-audit.avif";
 
 gsap.registerPlugin(ScrollTrigger);
