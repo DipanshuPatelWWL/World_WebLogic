@@ -17,7 +17,7 @@ const TopInfoBar = () => {
           >
             <HiOutlineMail className="text-[#25baff] text-base transition group-hover:text-[#a8d97c]" />
             <span className="transition group-hover:text-[#a8d97c]">
-              info@Digital WebGuider.com
+              info@digitalwebguider.com
             </span>
           </a>
 
