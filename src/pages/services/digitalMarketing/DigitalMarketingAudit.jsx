@@ -3,7 +3,6 @@ import { RiDoubleQuotesL } from "react-icons/ri";
 import { FaCheckCircle } from "react-icons/fa";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { FiEdit, FiSettings, FiTarget } from "react-icons/fi";
 import { FiPlus, FiMinus } from "react-icons/fi";
 import { FcSalesPerformance } from "react-icons/fc";
 import { FaSearchengin } from "react-icons/fa";
@@ -16,8 +15,8 @@ import { TbDeviceIpadShare } from "react-icons/tb";
 import { BiSolidBookContent } from "react-icons/bi";
 import { MdOutlineAttachEmail } from "react-icons/md";
 
-import Banner from "../../assets/services/mobile-app-banner.jpg";
-import About3 from "../../assets/services/digital-audit.avif";
+import Banner from "../../../assets/services/mobile-app-banner.jpg";
+import Img from "../../../assets/services/digital-audit.avif";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -27,7 +26,6 @@ const DigitalMarketingAudit = () => {
   const whoRef = useRef(null);
   const cardsRef = useRef([]);
   const sectionRefs = useRef([]);
-  sectionRefs.current = [];
   const [activeFaq, setActiveFaq] = useState(null);
   const faqRefs = useRef([]);
 
@@ -73,6 +71,23 @@ const DigitalMarketingAudit = () => {
         });
       });
 
+      sectionRefs.current.forEach((section) => {
+        const items = section.querySelectorAll(".gsap-item");
+
+        items.forEach((item) => {
+          gsap.from(item, {
+            scrollTrigger: {
+              trigger: item,
+              start: "top 85%",
+            },
+            opacity: 0,
+            y: 60,
+            duration: 0.8,
+            ease: "power3.out",
+          });
+        });
+      });
+
       ScrollTrigger.refresh();
     }, rootRef);
 
@@ -80,36 +95,36 @@ const DigitalMarketingAudit = () => {
   }, []);
 
   const faqs = [
-  {
-    question:
-      "What steps should I take after completing a Digital Marketing Audit?",
-    answer:
-      "After the audit, focus on addressing priority issues, improving underperforming areas, and applying a well-structured digital marketing plan based on the findings. Ongoing tracking and optimization are essential for long-term success.",
-  },
-  {
-    question:
-      "How frequently should I conduct a digital marketing audit?",
-    answer:
-      "It’s advisable to perform an audit every 6–12 months to ensure your strategies remain effective and aligned with industry changes.",
-  },
-  {
-    question: "Will a Digital Marketing Audit help improve my website rankings?",
-    answer:
-      "Yes! By resolving SEO challenges, refining your content approach, and enhancing website performance, you can achieve noticeable improvements in search engine rankings.",
-  },
-  {
-    question: "Is technical expertise required to understand the audit report?",
-    answer:
-      "No, a well-prepared audit report delivers straightforward insights, practical recommendations, and clear action steps that are easy for business owners to follow.",
-  },
-  {
-    question:
-      "Can I address the identified issues on my own after the audit?",
-    answer:
-      "Definitely! The audit report outlines actionable recommendations. However, if you need professional assistance, our team can support you with full implementation.",
-  },
-];
-
+    {
+      question:
+        "What steps should I take after completing a Digital Marketing Audit?",
+      answer:
+        "After the audit, focus on addressing priority issues, improving underperforming areas, and applying a well-structured digital marketing plan based on the findings. Ongoing tracking and optimization are essential for long-term success.",
+    },
+    {
+      question: "How frequently should I conduct a digital marketing audit?",
+      answer:
+        "It’s advisable to perform an audit every 6–12 months to ensure your strategies remain effective and aligned with industry changes.",
+    },
+    {
+      question:
+        "Will a Digital Marketing Audit help improve my website rankings?",
+      answer:
+        "Yes! By resolving SEO challenges, refining your content approach, and enhancing website performance, you can achieve noticeable improvements in search engine rankings.",
+    },
+    {
+      question:
+        "Is technical expertise required to understand the audit report?",
+      answer:
+        "No, a well-prepared audit report delivers straightforward insights, practical recommendations, and clear action steps that are easy for business owners to follow.",
+    },
+    {
+      question:
+        "Can I address the identified issues on my own after the audit?",
+      answer:
+        "Definitely! The audit report outlines actionable recommendations. However, if you need professional assistance, our team can support you with full implementation.",
+    },
+  ];
 
   return (
     <div ref={rootRef} className="bg-white text-black">
@@ -164,7 +179,7 @@ const DigitalMarketingAudit = () => {
 
         <div className="rounded-2xl overflow-hidden group">
           <img
-            src={About3}
+            src={Img}
             alt="Why Choose Us"
             className="rounded-2xl shadow-2xl transition-transform duration-500 group-hover:scale-105"
           />
@@ -377,7 +392,7 @@ radial-gradient(circle_at_80%_80%,rgba(168,217,124,0.2),transparent_45%)]
             </p>
 
             <h2 className="text-3xl md:text-4xl font-extrabold text-[#020202]">
-              Who Can Gain Value from a Digital 
+              Who Can Gain Value from a Digital
               <span className="text-[#25baff]"> Marketing Audit?</span>
             </h2>
           </div>
