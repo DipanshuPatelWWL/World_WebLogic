@@ -37,6 +37,8 @@ import WhyUs from "./pages/about/WhyUs";
 import heroVideo from "./assets/video/heroVideo.mp4";
 import SplashCursor from "./components/SplashCursor";
 import SmallBusinessSeo from "./pages/services/LocalSeoServices/SmallBusinesSeo";
+import DigitalMarketingStrategy from "./pages/services/DigitalMarketingStrategy";
+import DigitalMarketingAudit from "./pages/services/DigitalMarketingAudit";
 
 function App() {
   return (
@@ -86,6 +88,10 @@ function App() {
             path="/services/online-reputation-management"
             element={<OnlineReputationManagement />}
           />
+          <Route
+            path="/services/digital-marketing-strategy"
+            element={<DigitalMarketingStrategy />}
+          />
 
           {/* LOCAL SEO SERVICES */}
           <Route path="/services/small-business-seo" element={<SmallBusinessSeo />} />
@@ -105,6 +111,10 @@ function App() {
           <Route
             path="/pricing/web-design-packages"
             element={<WebDesigningPackages />}
+          />
+          <Route
+            path="/services/digital-marketing-audit"
+            element={<DigitalMarketingAudit />}
           />
 
           {/* CONTACT */}

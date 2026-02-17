@@ -160,7 +160,7 @@ const Header = () => {
               </button>
 
               <div
-                className="absolute left-1/2 -translate-x-1/2 top-full mt-3
+                className="absolute left-15 -translate-x-1/2 top-full mt-3
     w-[1100px] bg-white
     border border-gray-200 border-t-4 border-t-[#25baff]
     shadow-xl rounded-lg
@@ -177,14 +177,18 @@ const Header = () => {
                       Digital Marketing
                     </h4>
                     <ul className="space-y-1.5">
-                      <li className="flex gap-2 text-gray-600 hover:text-[#25baff] transition cursor-pointer">
-                        <FaAngleRight className="mt-1 text-[#25baff] text-xs" />
-                        Digital Marketing Strategy
-                      </li>
-                      <li className="flex gap-2 text-gray-600 hover:text-[#25baff] transition cursor-pointer">
+                      <NavLink to="/services/digital-marketing-strategy">
+                        <li className="flex gap-2 text-gray-600 hover:text-[#25baff] transition cursor-pointer">
+                          <FaAngleRight className="mt-1 text-[#25baff] text-xs" />
+                          Digital Marketing Strategy
+                        </li>
+                      </NavLink>
+                      <NavLink to="/services/digital-marketing-audit">
+                        <li className="flex gap-2 text-gray-600 hover:text-[#25baff] transition cursor-pointer">
                         <FaAngleRight className="mt-1 text-[#25baff] text-xs" />
                         Digital Marketing Audit
                       </li>
+                      </NavLink>
                       <li className="flex gap-2 text-gray-600 hover:text-[#25baff] transition cursor-pointer">
                         <FaAngleRight className="mt-1 text-[#25baff] text-xs" />
                         Content Marketing
@@ -432,7 +436,7 @@ const Header = () => {
               </button>
 
               <div
-                className="absolute left-1/2 -translate-x-1/2 top-full mt-3
+                className="absolute -left-4 -translate-x-1/2 top-full mt-3
     w-[1100px] bg-white
     border border-gray-200 border-t-4 border-t-[#25baff]
     shadow-xl rounded-lg
