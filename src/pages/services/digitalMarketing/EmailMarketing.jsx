@@ -9,7 +9,7 @@ import { MdContentPaste } from "react-icons/md";
 import { HiMiniRocketLaunch } from "react-icons/hi2";
 import { MdOutlineAutoGraph } from "react-icons/md";
 
-import Banner from "../../../assets/services/mobile-app-banner.jpg";
+import Banner from "../../../assets/services/emailMarketing/banner.avif";
 import Img from "../../../assets/services/emailMarketing/img.avif";
 import ContentDesign from "../../../assets/services/emailMarketing/content-design.avif";
 import CRM from "../../../assets/services/emailMarketing/crm.avif";

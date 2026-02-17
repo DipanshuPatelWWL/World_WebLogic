@@ -23,7 +23,7 @@ import WebDesign from "./pages/services/WebDesign";
 import WebDevelopment from "./pages/services/WebDevelopment";
 import AppDevelopment from "./pages/services/AppDevelopment";
 import SocialMediaMarketing from "./pages/services/SocialMediaMarketing";
-import OnlineReputationManagement from "./pages/services/OnlineReputationManagement";
+
 
 /* ========= PRICING ========= */
 import SEO_Packages from "./pages/plans-pricinng/SEO_Packages";
@@ -87,10 +87,7 @@ function App() {
             path="/services/social-media-marketing"
             element={<SocialMediaMarketing />}
           />
-          <Route
-            path="/services/online-reputation-management"
-            element={<OnlineReputationManagement />}
-          />
+
           <Route
             path="/services/digitalMarketing/digital-marketing-strategy"
             element={<DigitalMarketingStrategy />}

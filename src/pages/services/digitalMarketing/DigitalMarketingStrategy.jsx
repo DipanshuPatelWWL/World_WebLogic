@@ -1,7 +1,5 @@
 import { useLayoutEffect, useRef, useState } from "react";
 import { FiPlus, FiMinus } from "react-icons/fi";
-import { FiSmartphone, FiTablet } from "react-icons/fi";
-import { FaAndroid } from "react-icons/fa";
 import { FaCheckCircle, FaTimesCircle } from "react-icons/fa";
 import { MdOutlineSettingsSuggest } from "react-icons/md";
 import { GiHiveMind } from "react-icons/gi";
@@ -13,7 +11,7 @@ import { BsGraphUpArrow } from "react-icons/bs";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-import Banner from "../../../assets/services/mobile-app-banner.jpg";
+import Banner from "../../../assets/services/digital-banner.avif";
 import Intro from "../../../assets/about/about2.jpg";
 import SEO from "../../../assets/seo/SEO.webp";
 import LocalSEO from "../../../assets/seo/localseo.avif";
