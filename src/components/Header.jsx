@@ -52,10 +52,9 @@ const Header = () => {
             <NavLink
               to="/"
               className={({ isActive }) =>
-                `font-medium transition ${
-                  isActive
-                    ? "text-[#25baff]"
-                    : "text-[#020202] hover:text-[#25baff]"
+                `font-medium transition ${isActive
+                  ? "text-[#25baff]"
+                  : "text-[#020202] hover:text-[#25baff]"
                 }`
               }
             >
@@ -212,10 +211,12 @@ const Header = () => {
                       Local SEO Services
                     </h4>
                     <ul className="space-y-1.5">
-                      <li className="flex gap-2 text-gray-600 hover:text-[#25baff] transition cursor-pointer">
-                        <FaAngleRight className="mt-1 text-[#25baff] text-xs" />
-                        Small Business SEO
-                      </li>
+                      <NavLink to="/services/small-business-seo">
+                        <li className="flex gap-2 text-gray-600 hover:text-[#25baff] transition cursor-pointer">
+                          <FaAngleRight className="mt-1 text-[#25baff] text-xs" />
+                          Small Business SEO
+                        </li>
+                      </NavLink>
                       <li className="flex gap-2 text-gray-600 hover:text-[#25baff] transition cursor-pointer">
                         <FaAngleRight className="mt-1 text-[#25baff] text-xs" />
                         GBP Optimization
@@ -711,10 +712,9 @@ const Header = () => {
             <NavLink
               to="/portfolio"
               className={({ isActive }) =>
-                `font-medium transition ${
-                  isActive
-                    ? "text-[#25baff]"
-                    : "text-[#020202] hover:text-[#25baff]"
+                `font-medium transition ${isActive
+                  ? "text-[#25baff]"
+                  : "text-[#020202] hover:text-[#25baff]"
                 }`
               }
             >
@@ -724,10 +724,9 @@ const Header = () => {
             <NavLink
               to="/contact"
               className={({ isActive }) =>
-                `font-medium transition ${
-                  isActive
-                    ? "text-[#25baff]"
-                    : "text-[#020202] hover:text-[#25baff]"
+                `font-medium transition ${isActive
+                  ? "text-[#25baff]"
+                  : "text-[#020202] hover:text-[#25baff]"
                 }`
               }
             >

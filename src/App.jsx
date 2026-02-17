@@ -36,6 +36,7 @@ import WhyUs from "./pages/about/WhyUs";
 /* ========= VIDEO ========= */
 import heroVideo from "./assets/video/heroVideo.mp4";
 import SplashCursor from "./components/SplashCursor";
+import SmallBusinessSeo from "./pages/services/LocalSeoServices/SmallBusinesSeo";
 
 function App() {
   return (
@@ -85,6 +86,9 @@ function App() {
             path="/services/online-reputation-management"
             element={<OnlineReputationManagement />}
           />
+
+          {/* LOCAL SEO SERVICES */}
+          <Route path="/services/small-business-seo" element={<SmallBusinessSeo />} />
 
           {/* PROJECTS */}
           <Route path="/projects" element={<Projects />} />
