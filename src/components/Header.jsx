@@ -52,9 +52,10 @@ const Header = () => {
             <NavLink
               to="/"
               className={({ isActive }) =>
-                `font-medium transition ${isActive
-                  ? "text-[#25baff]"
-                  : "text-[#020202] hover:text-[#25baff]"
+                `font-medium transition ${
+                  isActive
+                    ? "text-[#25baff]"
+                    : "text-[#020202] hover:text-[#25baff]"
                 }`
               }
             >
@@ -73,7 +74,7 @@ const Header = () => {
                 </span>
               </button>
 
-              <div className="absolute left-0 top-full mt-3 w-52 rounded-xl bg-white border border-gray-200 shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+              <div className="absolute left-0 top-full border-t-4 border-t-[#25baff] mt-3 w-52 rounded-xl bg-white border border-gray-200 shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
                 <NavLink
                   to="/about/who-we-are"
                   className="block px-5 py-3 text-[#020202] hover:text-[#25baff] hover:bg-[#25baff]/10 transition hover:rounded-xl"
@@ -170,258 +171,565 @@ const Header = () => {
     p-8 z-50"
               >
                 <div className="grid grid-cols-4 gap-8 text-sm">
-                  {/* Digital Marketing */}
+                  {/* ================= DIGITAL MARKETING ================= */}
                   <div>
                     <h4 className="flex items-center gap-2 font-semibold text-black mb-3">
                       <FaBullhorn className="text-[#25baff]" />
                       Digital Marketing
                     </h4>
                     <ul className="space-y-1.5">
-                      <NavLink to="/services/digitalMarketing/digital-marketing-strategy">
-                        <li className="flex gap-2 text-gray-600 hover:text-[#25baff] transition cursor-pointer">
-                          <FaAngleRight className="mt-1 text-[#25baff] text-xs" />
+                      <li>
+                        <NavLink
+                          to="/services/digitalMarketing/digital-marketing-strategy"
+                          className={({ isActive }) =>
+                            `flex gap-2 transition ${isActive ? "text-[#25baff] font-medium" : "text-gray-600 hover:text-[#25baff]"}`
+                          }
+                        >
+                          <FaAngleRight className="mt-1 text-xs" />
                           Digital Marketing Strategy
-                        </li>
-                      </NavLink>
-                      <NavLink to="/services/digitalMarketing/digital-marketing-audit">
-                        <li className="flex gap-2 text-gray-600 hover:text-[#25baff] transition cursor-pointer">
-                        <FaAngleRight className="mt-1 text-[#25baff] text-xs" />
-                        Digital Marketing Audit
+                        </NavLink>
                       </li>
-                      </NavLink>
-                      <NavLink to="/services/digitalMarketing/content-marketing">
-                        <li className="flex gap-2 text-gray-600 hover:text-[#25baff] transition cursor-pointer">
-                        <FaAngleRight className="mt-1 text-[#25baff] text-xs" />
-                        Content Marketing
+
+                      <li>
+                        <NavLink
+                          to="/services/digitalMarketing/digital-marketing-audit"
+                          className={({ isActive }) =>
+                            `flex gap-2 transition ${isActive ? "text-[#25baff] font-medium" : "text-gray-600 hover:text-[#25baff]"}`
+                          }
+                        >
+                          <FaAngleRight className="mt-1 text-xs" />
+                          Digital Marketing Audit
+                        </NavLink>
                       </li>
-                      </NavLink>
-                      <NavLink to="/services/digitalMarketing/email-marketing">
-                        <li className="flex gap-2 text-gray-600 hover:text-[#25baff] transition cursor-pointer">
-                        <FaAngleRight className="mt-1 text-[#25baff] text-xs" />
-                        Email Marketing
+
+                      <li>
+                        <NavLink
+                          to="/services/digitalMarketing/content-marketing"
+                          className={({ isActive }) =>
+                            `flex gap-2 transition ${isActive ? "text-[#25baff] font-medium" : "text-gray-600 hover:text-[#25baff]"}`
+                          }
+                        >
+                          <FaAngleRight className="mt-1 text-xs" />
+                          Content Marketing
+                        </NavLink>
                       </li>
-                      </NavLink>
-                     <NavLink to="/services/digitalMarketing/reputation-management">
-                       <li className="flex gap-2 text-gray-600 hover:text-[#25baff] transition cursor-pointer">
-                        <FaAngleRight className="mt-1 text-[#25baff] text-xs" />
-                        Reputation Management
+
+                      <li>
+                        <NavLink
+                          to="/services/digitalMarketing/email-marketing"
+                          className={({ isActive }) =>
+                            `flex gap-2 transition ${isActive ? "text-[#25baff] font-medium" : "text-gray-600 hover:text-[#25baff]"}`
+                          }
+                        >
+                          <FaAngleRight className="mt-1 text-xs" />
+                          Email Marketing
+                        </NavLink>
                       </li>
-                     </NavLink>
-                      <li className="flex gap-2 text-gray-600 hover:text-[#25baff] transition cursor-pointer">
-                        <FaAngleRight className="mt-1 text-[#25baff] text-xs" />
-                        Franchise Digital Marketing
+
+                      <li>
+                        <NavLink
+                          to="/services/digitalMarketing/reputation-management"
+                          className={({ isActive }) =>
+                            `flex gap-2 transition ${isActive ? "text-[#25baff] font-medium" : "text-gray-600 hover:text-[#25baff]"}`
+                          }
+                        >
+                          <FaAngleRight className="mt-1 text-xs" />
+                          Reputation Management
+                        </NavLink>
+                      </li>
+
+                      <li>
+                        <NavLink
+                          to="/services/digitalMarketing/franchise-digital-marketing"
+                          className={({ isActive }) =>
+                            `flex gap-2 transition ${isActive ? "text-[#25baff] font-medium" : "text-gray-600 hover:text-[#25baff]"}`
+                          }
+                        >
+                          <FaAngleRight className="mt-1 text-xs" />
+                          Franchise Digital Marketing
+                        </NavLink>
                       </li>
                     </ul>
                   </div>
 
-                  {/* Local SEO */}
+                  {/* ================= LOCAL SEO ================= */}
                   <div>
                     <h4 className="flex items-center gap-2 font-semibold text-black mb-3">
                       <FaSearch className="text-[#25baff]" />
                       Local SEO Services
                     </h4>
                     <ul className="space-y-1.5">
-                      <NavLink to="/services/small-business-seo">
-                        <li className="flex gap-2 text-gray-600 hover:text-[#25baff] transition cursor-pointer">
-                          <FaAngleRight className="mt-1 text-[#25baff] text-xs" />
+                      <li>
+                        <NavLink
+                          to="/services/small-business-seo"
+                          className={({ isActive }) =>
+                            `flex gap-2 transition ${isActive ? "text-[#25baff] font-medium" : "text-gray-600 hover:text-[#25baff]"}`
+                          }
+                        >
+                          <FaAngleRight className="mt-1 text-xs" />
                           Small Business SEO
-                        </li>
-                      </NavLink>
-                      <li className="flex gap-2 text-gray-600 hover:text-[#25baff] transition cursor-pointer">
-                        <FaAngleRight className="mt-1 text-[#25baff] text-xs" />
-                        GBP Optimization
+                        </NavLink>
+                      </li>
+
+                      <li>
+                        <NavLink
+                          to="/services/gbp-optimization"
+                          className={({ isActive }) =>
+                            `flex gap-2 transition ${isActive ? "text-[#25baff] font-medium" : "text-gray-600 hover:text-[#25baff]"}`
+                          }
+                        >
+                          <FaAngleRight className="mt-1 text-xs" />
+                          GBP Optimization
+                        </NavLink>
                       </li>
                     </ul>
                   </div>
 
-                  {/* Social Media */}
+                  {/* ================= SOCIAL MEDIA ================= */}
                   <div>
                     <h4 className="flex items-center gap-2 font-semibold text-black mb-3">
                       <FaShareAlt className="text-[#25baff]" />
                       Social Media Marketing
                     </h4>
                     <ul className="space-y-1.5">
-                      <li className="flex gap-2 text-gray-600 hover:text-[#25baff] transition cursor-pointer">
-                        <FaAngleRight className="mt-1 text-[#25baff] text-xs" />
-                        Social Media Optimization
+                      <li>
+                        <NavLink
+                          to="/services/social-media-optimization"
+                          className={({ isActive }) =>
+                            `flex gap-2 transition ${isActive ? "text-[#25baff] font-medium" : "text-gray-600 hover:text-[#25baff]"}`
+                          }
+                        >
+                          <FaAngleRight className="mt-1 text-xs" />
+                          Social Media Optimization
+                        </NavLink>
                       </li>
-                      <li className="flex gap-2 text-gray-600 hover:text-[#25baff] transition cursor-pointer">
-                        <FaAngleRight className="mt-1 text-[#25baff] text-xs" />
-                        Social Media Management
+
+                      <li>
+                        <NavLink
+                          to="/services/social-media-management"
+                          className={({ isActive }) =>
+                            `flex gap-2 transition ${isActive ? "text-[#25baff] font-medium" : "text-gray-600 hover:text-[#25baff]"}`
+                          }
+                        >
+                          <FaAngleRight className="mt-1 text-xs" />
+                          Social Media Management
+                        </NavLink>
                       </li>
-                      <li className="flex gap-2 text-gray-600 hover:text-[#25baff] transition cursor-pointer">
-                        <FaAngleRight className="mt-1 text-[#25baff] text-xs" />
-                        Social Media Advertising
+
+                      <li>
+                        <NavLink
+                          to="/services/social-media-advertising"
+                          className={({ isActive }) =>
+                            `flex gap-2 transition ${isActive ? "text-[#25baff] font-medium" : "text-gray-600 hover:text-[#25baff]"}`
+                          }
+                        >
+                          <FaAngleRight className="mt-1 text-xs" />
+                          Social Media Advertising
+                        </NavLink>
                       </li>
                     </ul>
                   </div>
 
-                  {/* Website Design */}
+                  {/* ================= WEBSITE DESIGN ================= */}
                   <div>
                     <h4 className="flex items-center gap-2 font-semibold text-black mb-3">
                       <FaLaptopCode className="text-[#25baff]" />
                       Website Design & Development
                     </h4>
                     <ul className="space-y-1.5">
-                      <li className="flex gap-2 text-gray-600 hover:text-[#25baff] transition cursor-pointer">
-                        <FaAngleRight className="mt-1 text-[#25baff] text-xs" />
-                        WordPress Development
+                      <li>
+                        <NavLink
+                          to="/services/wordpress-development"
+                          className={({ isActive }) =>
+                            `flex gap-2 transition ${isActive ? "text-[#25baff] font-medium" : "text-gray-600 hover:text-[#25baff]"}`
+                          }
+                        >
+                          <FaAngleRight className="mt-1 text-xs" />
+                          WordPress Development
+                        </NavLink>
                       </li>
-                      <li className="flex gap-2 text-gray-600 hover:text-[#25baff] transition cursor-pointer">
-                        <FaAngleRight className="mt-1 text-[#25baff] text-xs" />
-                        Custom Website Design
+
+                      <li>
+                        <NavLink
+                          to="/services/custom-website-design"
+                          className={({ isActive }) =>
+                            `flex gap-2 transition ${isActive ? "text-[#25baff] font-medium" : "text-gray-600 hover:text-[#25baff]"}`
+                          }
+                        >
+                          <FaAngleRight className="mt-1 text-xs" />
+                          Custom Website Design
+                        </NavLink>
                       </li>
-                      <li className="flex gap-2 text-gray-600 hover:text-[#25baff] transition cursor-pointer">
-                        <FaAngleRight className="mt-1 text-[#25baff] text-xs" />
-                        Website Redesign Service
+
+                      <li>
+                        <NavLink
+                          to="/services/website-redesign"
+                          className={({ isActive }) =>
+                            `flex gap-2 transition ${isActive ? "text-[#25baff] font-medium" : "text-gray-600 hover:text-[#25baff]"}`
+                          }
+                        >
+                          <FaAngleRight className="mt-1 text-xs" />
+                          Website Redesign Service
+                        </NavLink>
                       </li>
-                      <li className="flex gap-2 text-gray-600 hover:text-[#25baff] transition cursor-pointer">
-                        <FaAngleRight className="mt-1 text-[#25baff] text-xs" />
-                        Magento Development
+
+                      <li>
+                        <NavLink
+                          to="/services/magento-development"
+                          className={({ isActive }) =>
+                            `flex gap-2 transition ${isActive ? "text-[#25baff] font-medium" : "text-gray-600 hover:text-[#25baff]"}`
+                          }
+                        >
+                          <FaAngleRight className="mt-1 text-xs" />
+                          Magento Development
+                        </NavLink>
                       </li>
-                      <li className="flex gap-2 text-gray-600 hover:text-[#25baff] transition cursor-pointer">
-                        <FaAngleRight className="mt-1 text-[#25baff] text-xs" />
-                        Mobile App Development
+
+                      <li>
+                        <NavLink
+                          to="/services/mobile-app-development"
+                          className={({ isActive }) =>
+                            `flex gap-2 transition ${isActive ? "text-[#25baff] font-medium" : "text-gray-600 hover:text-[#25baff]"}`
+                          }
+                        >
+                          <FaAngleRight className="mt-1 text-xs" />
+                          Mobile App Development
+                        </NavLink>
                       </li>
-                      <li className="flex gap-2 text-gray-600 hover:text-[#25baff] transition cursor-pointer">
-                        <FaAngleRight className="mt-1 text-[#25baff] text-xs" />
-                        Joomla Website Development
+
+                      <li>
+                        <NavLink
+                          to="/services/joomla-development"
+                          className={({ isActive }) =>
+                            `flex gap-2 transition ${isActive ? "text-[#25baff] font-medium" : "text-gray-600 hover:text-[#25baff]"}`
+                          }
+                        >
+                          <FaAngleRight className="mt-1 text-xs" />
+                          Joomla Website Development
+                        </NavLink>
                       </li>
-                      <li className="flex gap-2 text-gray-600 hover:text-[#25baff] transition cursor-pointer">
-                        <FaAngleRight className="mt-1 text-[#25baff] text-xs" />
-                        Website Hosting Services
+
+                      <li>
+                        <NavLink
+                          to="/services/website-hosting"
+                          className={({ isActive }) =>
+                            `flex gap-2 transition ${isActive ? "text-[#25baff] font-medium" : "text-gray-600 hover:text-[#25baff]"}`
+                          }
+                        >
+                          <FaAngleRight className="mt-1 text-xs" />
+                          Website Hosting Services
+                        </NavLink>
                       </li>
                     </ul>
                   </div>
 
-                  {/* SEO */}
+                  {/* ================= SEO ================= */}
                   <div>
                     <h4 className="flex items-center gap-2 font-semibold text-black mb-3">
                       <FaSearch className="text-[#25baff]" />
                       SEO
                     </h4>
                     <ul className="space-y-1.5">
-                      <li className="flex gap-2 text-gray-600 hover:text-[#25baff] transition cursor-pointer">
-                        <FaAngleRight className="mt-1 text-[#25baff] text-xs" />
-                        Ecommerce SEO Services
+                      <li>
+                        <NavLink
+                          to="/services/seo/ecommerce-seo-services"
+                          className={({ isActive }) =>
+                            `flex gap-2 transition ${isActive ? "text-[#25baff] font-medium" : "text-gray-600 hover:text-[#25baff]"}`
+                          }
+                        >
+                          <FaAngleRight className="mt-1 text-xs" />
+                          Ecommerce SEO Services
+                        </NavLink>
                       </li>
-                      <li className="flex gap-2 text-gray-600 hover:text-[#25baff] transition cursor-pointer">
-                        <FaAngleRight className="mt-1 text-[#25baff] text-xs" />
-                        Link Building Services
+
+                      <li>
+                        <NavLink
+                          to="/services/seo/link-building-services"
+                          className={({ isActive }) =>
+                            `flex gap-2 transition ${isActive ? "text-[#25baff] font-medium" : "text-gray-600 hover:text-[#25baff]"}`
+                          }
+                        >
+                          <FaAngleRight className="mt-1 text-xs" />
+                          Link Building Services
+                        </NavLink>
                       </li>
-                      <li className="flex gap-2 text-gray-600 hover:text-[#25baff] transition cursor-pointer">
-                        <FaAngleRight className="mt-1 text-[#25baff] text-xs" />
-                        Technical SEO Services
+
+                      <li>
+                        <NavLink
+                          to="/services/technical-seo-services"
+                          className={({ isActive }) =>
+                            `flex gap-2 transition ${isActive ? "text-[#25baff] font-medium" : "text-gray-600 hover:text-[#25baff]"}`
+                          }
+                        >
+                          <FaAngleRight className="mt-1 text-xs" />
+                          Technical SEO Services
+                        </NavLink>
                       </li>
-                      <li className="flex gap-2 text-gray-600 hover:text-[#25baff] transition cursor-pointer">
-                        <FaAngleRight className="mt-1 text-[#25baff] text-xs" />
-                        Franchise SEO Services
+
+                      <li>
+                        <NavLink
+                          to="/services/franchise-seo-services"
+                          className={({ isActive }) =>
+                            `flex gap-2 transition ${isActive ? "text-[#25baff] font-medium" : "text-gray-600 hover:text-[#25baff]"}`
+                          }
+                        >
+                          <FaAngleRight className="mt-1 text-xs" />
+                          Franchise SEO Services
+                        </NavLink>
                       </li>
-                      <li className="flex gap-2 text-gray-600 hover:text-[#25baff] transition cursor-pointer">
-                        <FaAngleRight className="mt-1 text-[#25baff] text-xs" />
-                        Voice Search Optimization
+
+                      <li>
+                        <NavLink
+                          to="/services/voice-search-optimization"
+                          className={({ isActive }) =>
+                            `flex gap-2 transition ${isActive ? "text-[#25baff] font-medium" : "text-gray-600 hover:text-[#25baff]"}`
+                          }
+                        >
+                          <FaAngleRight className="mt-1 text-xs" />
+                          Voice Search Optimization
+                        </NavLink>
                       </li>
-                      <li className="flex gap-2 text-gray-600 hover:text-[#25baff] transition cursor-pointer">
-                        <FaAngleRight className="mt-1 text-[#25baff] text-xs" />
-                        App Store Optimization
+
+                      <li>
+                        <NavLink
+                          to="/services/app-store-optimization"
+                          className={({ isActive }) =>
+                            `flex gap-2 transition ${isActive ? "text-[#25baff] font-medium" : "text-gray-600 hover:text-[#25baff]"}`
+                          }
+                        >
+                          <FaAngleRight className="mt-1 text-xs" />
+                          App Store Optimization
+                        </NavLink>
                       </li>
-                      <li className="flex gap-2 text-gray-600 hover:text-[#25baff] transition cursor-pointer">
-                        <FaAngleRight className="mt-1 text-[#25baff] text-xs" />
-                        White Label SEO
+
+                      <li>
+                        <NavLink
+                          to="/services/white-label-seo"
+                          className={({ isActive }) =>
+                            `flex gap-2 transition ${isActive ? "text-[#25baff] font-medium" : "text-gray-600 hover:text-[#25baff]"}`
+                          }
+                        >
+                          <FaAngleRight className="mt-1 text-xs" />
+                          White Label SEO
+                        </NavLink>
                       </li>
-                      <li className="flex gap-2 text-gray-600 hover:text-[#25baff] transition cursor-pointer">
-                        <FaAngleRight className="mt-1 text-[#25baff] text-xs" />
-                        Generative Engine Optimization
+
+                      <li>
+                        <NavLink
+                          to="/services/generative-engine-optimization"
+                          className={({ isActive }) =>
+                            `flex gap-2 transition ${isActive ? "text-[#25baff] font-medium" : "text-gray-600 hover:text-[#25baff]"}`
+                          }
+                        >
+                          <FaAngleRight className="mt-1 text-xs" />
+                          Generative Engine Optimization
+                        </NavLink>
                       </li>
-                      <li className="flex gap-2 text-gray-600 hover:text-[#25baff] transition cursor-pointer">
-                        <FaAngleRight className="mt-1 text-[#25baff] text-xs" />
-                        Answer Engine Optimization
+
+                      <li>
+                        <NavLink
+                          to="/services/answer-engine-optimization"
+                          className={({ isActive }) =>
+                            `flex gap-2 transition ${isActive ? "text-[#25baff] font-medium" : "text-gray-600 hover:text-[#25baff]"}`
+                          }
+                        >
+                          <FaAngleRight className="mt-1 text-xs" />
+                          Answer Engine Optimization
+                        </NavLink>
                       </li>
                     </ul>
                   </div>
 
-                  {/* Video SEO */}
+                  {/* ================= VIDEO SEO ================= */}
                   <div>
                     <h4 className="flex items-center gap-2 font-semibold text-black mb-3">
                       <FaVideo className="text-[#25baff]" />
                       Video SEO
                     </h4>
                     <ul className="space-y-1.5">
-                      <li className="flex gap-2 text-gray-600 hover:text-[#25baff] transition cursor-pointer">
-                        <FaAngleRight className="mt-1 text-[#25baff] text-xs" />
-                        YouTube Optimization
+                      <li>
+                        <NavLink
+                          to="/services/youtube-optimization"
+                          className={({ isActive }) =>
+                            `flex gap-2 transition ${isActive ? "text-[#25baff] font-medium" : "text-gray-600 hover:text-[#25baff]"}`
+                          }
+                        >
+                          <FaAngleRight className="mt-1 text-xs" />
+                          YouTube Optimization
+                        </NavLink>
                       </li>
-                      <li className="flex gap-2 text-gray-600 hover:text-[#25baff] transition cursor-pointer">
-                        <FaAngleRight className="mt-1 text-[#25baff] text-xs" />
-                        Customer Testimonial Videos
+
+                      <li>
+                        <NavLink
+                          to="/services/customer-testimonial-videos"
+                          className={({ isActive }) =>
+                            `flex gap-2 transition ${isActive ? "text-[#25baff] font-medium" : "text-gray-600 hover:text-[#25baff]"}`
+                          }
+                        >
+                          <FaAngleRight className="mt-1 text-xs" />
+                          Customer Testimonial Videos
+                        </NavLink>
                       </li>
-                      <li className="flex gap-2 text-gray-600 hover:text-[#25baff] transition cursor-pointer">
-                        <FaAngleRight className="mt-1 text-[#25baff] text-xs" />
-                        Vlog Video Production Services
+
+                      <li>
+                        <NavLink
+                          to="/services/vlog-video-production"
+                          className={({ isActive }) =>
+                            `flex gap-2 transition ${isActive ? "text-[#25baff] font-medium" : "text-gray-600 hover:text-[#25baff]"}`
+                          }
+                        >
+                          <FaAngleRight className="mt-1 text-xs" />
+                          Vlog Video Production Services
+                        </NavLink>
                       </li>
                     </ul>
                   </div>
 
-                  {/* Digital Advertising */}
+                  {/* ================= DIGITAL ADVERTISING ================= */}
                   <div>
                     <h4 className="flex items-center gap-2 font-semibold text-black mb-3">
                       <FaAd className="text-[#25baff]" />
                       Digital Advertising
                     </h4>
                     <ul className="space-y-1.5">
-                      <li className="flex gap-2 text-gray-600 hover:text-[#25baff] transition cursor-pointer">
-                        <FaAngleRight className="mt-1 text-[#25baff] text-xs" />
-                        Pay Per Click
+                      <li>
+                        <NavLink
+                          to="/services/pay-per-click"
+                          className={({ isActive }) =>
+                            `flex gap-2 transition ${isActive ? "text-[#25baff] font-medium" : "text-gray-600 hover:text-[#25baff]"}`
+                          }
+                        >
+                          <FaAngleRight className="mt-1 text-xs" />
+                          Pay Per Click
+                        </NavLink>
                       </li>
-                      <li className="flex gap-2 text-gray-600 hover:text-[#25baff] transition cursor-pointer">
-                        <FaAngleRight className="mt-1 text-[#25baff] text-xs" />
-                        Facebook
+
+                      <li>
+                        <NavLink
+                          to="/services/facebook"
+                          className={({ isActive }) =>
+                            `flex gap-2 transition ${isActive ? "text-[#25baff] font-medium" : "text-gray-600 hover:text-[#25baff]"}`
+                          }
+                        >
+                          <FaAngleRight className="mt-1 text-xs" />
+                          Facebook
+                        </NavLink>
                       </li>
-                      <li className="flex gap-2 text-gray-600 hover:text-[#25baff] transition cursor-pointer">
-                        <FaAngleRight className="mt-1 text-[#25baff] text-xs" />
-                        Instagram
+
+                      <li>
+                        <NavLink
+                          to="/services/instagram"
+                          className={({ isActive }) =>
+                            `flex gap-2 transition ${isActive ? "text-[#25baff] font-medium" : "text-gray-600 hover:text-[#25baff]"}`
+                          }
+                        >
+                          <FaAngleRight className="mt-1 text-xs" />
+                          Instagram
+                        </NavLink>
                       </li>
-                      <li className="flex gap-2 text-gray-600 hover:text-[#25baff] transition cursor-pointer">
-                        <FaAngleRight className="mt-1 text-[#25baff] text-xs" />
-                        X
+
+                      <li>
+                        <NavLink
+                          to="/services/x"
+                          className={({ isActive }) =>
+                            `flex gap-2 transition ${isActive ? "text-[#25baff] font-medium" : "text-gray-600 hover:text-[#25baff]"}`
+                          }
+                        >
+                          <FaAngleRight className="mt-1 text-xs" />X
+                        </NavLink>
                       </li>
-                      <li className="flex gap-2 text-gray-600 hover:text-[#25baff] transition cursor-pointer">
-                        <FaAngleRight className="mt-1 text-[#25baff] text-xs" />
-                        LinkedIn
+
+                      <li>
+                        <NavLink
+                          to="/services/linkedin"
+                          className={({ isActive }) =>
+                            `flex gap-2 transition ${isActive ? "text-[#25baff] font-medium" : "text-gray-600 hover:text-[#25baff]"}`
+                          }
+                        >
+                          <FaAngleRight className="mt-1 text-xs" />
+                          LinkedIn
+                        </NavLink>
                       </li>
-                      <li className="flex gap-2 text-gray-600 hover:text-[#25baff] transition cursor-pointer">
-                        <FaAngleRight className="mt-1 text-[#25baff] text-xs" />
-                        Pinterest
+
+                      <li>
+                        <NavLink
+                          to="/services/pinterest"
+                          className={({ isActive }) =>
+                            `flex gap-2 transition ${isActive ? "text-[#25baff] font-medium" : "text-gray-600 hover:text-[#25baff]"}`
+                          }
+                        >
+                          <FaAngleRight className="mt-1 text-xs" />
+                          Pinterest
+                        </NavLink>
                       </li>
-                      <li className="flex gap-2 text-gray-600 hover:text-[#25baff] transition cursor-pointer">
-                        <FaAngleRight className="mt-1 text-[#25baff] text-xs" />
-                        Conversion Rate Optimization
+
+                      <li>
+                        <NavLink
+                          to="/services/conversion-rate-optimization"
+                          className={({ isActive }) =>
+                            `flex gap-2 transition ${isActive ? "text-[#25baff] font-medium" : "text-gray-600 hover:text-[#25baff]"}`
+                          }
+                        >
+                          <FaAngleRight className="mt-1 text-xs" />
+                          Conversion Rate Optimization
+                        </NavLink>
                       </li>
-                      <li className="flex gap-2 text-gray-600 hover:text-[#25baff] transition cursor-pointer">
-                        <FaAngleRight className="mt-1 text-[#25baff] text-xs" />
-                        Amazon PPC Services
+
+                      <li>
+                        <NavLink
+                          to="/services/amazon-ppc-services"
+                          className={({ isActive }) =>
+                            `flex gap-2 transition ${isActive ? "text-[#25baff] font-medium" : "text-gray-600 hover:text-[#25baff]"}`
+                          }
+                        >
+                          <FaAngleRight className="mt-1 text-xs" />
+                          Amazon PPC Services
+                        </NavLink>
                       </li>
                     </ul>
                   </div>
 
-                  {/* Ecommerce */}
+                  {/* ================= ECOMMERCE ================= */}
                   <div>
                     <h4 className="flex items-center gap-2 font-semibold text-black mb-3">
                       <FaShoppingCart className="text-[#25baff]" />
                       Ecommerce Development
                     </h4>
                     <ul className="space-y-1.5">
-                      <li className="flex gap-2 text-gray-600 hover:text-[#25baff] transition cursor-pointer">
-                        <FaAngleRight className="mt-1 text-[#25baff] text-xs" />
-                        Shopify Web Development
+                      <li>
+                        <NavLink
+                          to="/services/shopify-web-development"
+                          className={({ isActive }) =>
+                            `flex gap-2 transition ${isActive ? "text-[#25baff] font-medium" : "text-gray-600 hover:text-[#25baff]"}`
+                          }
+                        >
+                          <FaAngleRight className="mt-1 text-xs" />
+                          Shopify Web Development
+                        </NavLink>
                       </li>
-                      <li className="flex gap-2 text-gray-600 hover:text-[#25baff] transition cursor-pointer">
-                        <FaAngleRight className="mt-1 text-[#25baff] text-xs" />
-                        Woocommerce Development
+
+                      <li>
+                        <NavLink
+                          to="/services/woocommerce-development"
+                          className={({ isActive }) =>
+                            `flex gap-2 transition ${isActive ? "text-[#25baff] font-medium" : "text-gray-600 hover:text-[#25baff]"}`
+                          }
+                        >
+                          <FaAngleRight className="mt-1 text-xs" />
+                          Woocommerce Development
+                        </NavLink>
                       </li>
-                      <li className="flex gap-2 text-gray-600 hover:text-[#25baff] transition cursor-pointer">
-                        <FaAngleRight className="mt-1 text-[#25baff] text-xs" />
-                        Payment Gateway
+
+                      <li>
+                        <NavLink
+                          to="/services/payment-gateway"
+                          className={({ isActive }) =>
+                            `flex gap-2 transition ${isActive ? "text-[#25baff] font-medium" : "text-gray-600 hover:text-[#25baff]"}`
+                          }
+                        >
+                          <FaAngleRight className="mt-1 text-xs" />
+                          Payment Gateway
+                        </NavLink>
                       </li>
                     </ul>
                   </div>
@@ -677,7 +985,7 @@ const Header = () => {
                 </span>
               </button>
 
-              <div className="absolute left-0 top-full mt-3 w-72 rounded-xl bg-white border border-gray-200 shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+              <div className="absolute left-0 border-t-4 border-t-[#25baff] top-full mt-3 w-72 rounded-xl bg-white border border-gray-200 shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
                 <div className="relative group/sub">
                   <NavLink
                     to="/pricing/seo-packages"
@@ -722,9 +1030,10 @@ const Header = () => {
             <NavLink
               to="/portfolio"
               className={({ isActive }) =>
-                `font-medium transition ${isActive
-                  ? "text-[#25baff]"
-                  : "text-[#020202] hover:text-[#25baff]"
+                `font-medium transition ${
+                  isActive
+                    ? "text-[#25baff]"
+                    : "text-[#020202] hover:text-[#25baff]"
                 }`
               }
             >
@@ -734,9 +1043,10 @@ const Header = () => {
             <NavLink
               to="/contact"
               className={({ isActive }) =>
-                `font-medium transition ${isActive
-                  ? "text-[#25baff]"
-                  : "text-[#020202] hover:text-[#25baff]"
+                `font-medium transition ${
+                  isActive
+                    ? "text-[#25baff]"
+                    : "text-[#020202] hover:text-[#25baff]"
                 }`
               }
             >

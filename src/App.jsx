@@ -42,6 +42,10 @@ import DigitalMarketingAudit from "./pages/services/digitalMarketing/DigitalMark
 import ContentMarketing from "./pages/services/digitalMarketing/ContentMarketing";
 import EmailMarketing from "./pages/services/digitalMarketing/EmailMarketing";
 import ReputationManagement from "./pages/services/digitalMarketing/ReputationManagement";
+import FranchiseDigitalMarketing from "./pages/services/digitalMarketing/FranchiseDigitalMarketing";
+import GbpOptimization from "./pages/services/LocalSeoServices/GbpOptimization";
+import EcommerceSeoServices from "./pages/services/seo/EcommerceSeoServices";
+import LinkBuildingServices from "./pages/services/seo/LinkBuildingServices";
 
 function App() {
   return (
@@ -95,6 +99,9 @@ function App() {
 
           {/* LOCAL SEO SERVICES */}
           <Route path="/services/small-business-seo" element={<SmallBusinessSeo />} />
+          <Route path="/services/gbp-optimization" element={<GbpOptimization />} />
+
+
 
           {/* PROJECTS */}
           <Route path="/projects" element={<Projects />} />
@@ -127,6 +134,18 @@ function App() {
           <Route
             path="/services/digitalMarketing/reputation-management"
             element={<ReputationManagement />}
+          />
+          <Route
+            path="/services/digitalMarketing/franchise-digital-marketing"
+            element={<FranchiseDigitalMarketing />}
+          />
+          <Route
+            path="/services/seo/ecommerce-seo-services"
+            element={<EcommerceSeoServices />}
+          />
+          <Route
+            path="/services/seo/link-building-services"
+            element={<LinkBuildingServices />}
           />
 
 
