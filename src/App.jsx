@@ -46,6 +46,10 @@ import FranchiseDigitalMarketing from "./pages/services/digitalMarketing/Franchi
 import GbpOptimization from "./pages/services/LocalSeoServices/GbpOptimization";
 import EcommerceSeoServices from "./pages/services/seo/EcommerceSeoServices";
 import LinkBuildingServices from "./pages/services/seo/LinkBuildingServices";
+import TechnicalSeoServices from "./pages/services/seo/TechnicalSeoServices";
+import FranchisSeoServices from "./pages/services/seo/FranchiseSeoServices";
+import VoiceSearchOptimization from "./pages/services/seo/VoiceSearchOptimization";
+import AppStoreOptimization from "./pages/services/seo/AppStoreOptimization";
 
 function App() {
   return (
@@ -146,6 +150,22 @@ function App() {
           <Route
             path="/services/seo/link-building-services"
             element={<LinkBuildingServices />}
+          />
+          <Route
+            path="/services/seo/technical-seo-services"
+            element={<TechnicalSeoServices />}
+          />
+          <Route
+            path="/services/seo/franchise-seo-services"
+            element={<FranchisSeoServices />}
+          />
+          <Route
+            path="/services/seo/voice-search-optimization"
+            element={<VoiceSearchOptimization />}
+          />
+          <Route
+            path="/services/seo/app-store-optimization"
+            element={<AppStoreOptimization />}
           />
 
 

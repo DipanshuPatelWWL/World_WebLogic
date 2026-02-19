@@ -456,7 +456,7 @@ const Header = () => {
 
                       <li>
                         <NavLink
-                          to="/services/technical-seo-services"
+                          to="/services/seo/technical-seo-services"
                           className={({ isActive }) =>
                             `flex gap-2 transition ${isActive ? "text-[#25baff] font-medium" : "text-gray-600 hover:text-[#25baff]"}`
                           }
@@ -468,7 +468,7 @@ const Header = () => {
 
                       <li>
                         <NavLink
-                          to="/services/franchise-seo-services"
+                          to="/services/seo/franchise-seo-services"
                           className={({ isActive }) =>
                             `flex gap-2 transition ${isActive ? "text-[#25baff] font-medium" : "text-gray-600 hover:text-[#25baff]"}`
                           }
@@ -480,7 +480,7 @@ const Header = () => {
 
                       <li>
                         <NavLink
-                          to="/services/voice-search-optimization"
+                          to="/services/seo/voice-search-optimization"
                           className={({ isActive }) =>
                             `flex gap-2 transition ${isActive ? "text-[#25baff] font-medium" : "text-gray-600 hover:text-[#25baff]"}`
                           }
@@ -492,7 +492,7 @@ const Header = () => {
 
                       <li>
                         <NavLink
-                          to="/services/app-store-optimization"
+                          to="/services/seo/app-store-optimization"
                           className={({ isActive }) =>
                             `flex gap-2 transition ${isActive ? "text-[#25baff] font-medium" : "text-gray-600 hover:text-[#25baff]"}`
                           }
