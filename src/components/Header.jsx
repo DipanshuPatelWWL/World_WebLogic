@@ -504,7 +504,7 @@ const Header = () => {
 
                       <li>
                         <NavLink
-                          to="/services/white-label-seo"
+                          to="/services/seo/white-label-seo"
                           className={({ isActive }) =>
                             `flex gap-2 transition ${isActive ? "text-[#25baff] font-medium" : "text-gray-600 hover:text-[#25baff]"}`
                           }
@@ -516,7 +516,7 @@ const Header = () => {
 
                       <li>
                         <NavLink
-                          to="/services/generative-engine-optimization"
+                          to="/services/seo/generative-engine-optimization"
                           className={({ isActive }) =>
                             `flex gap-2 transition ${isActive ? "text-[#25baff] font-medium" : "text-gray-600 hover:text-[#25baff]"}`
                           }
@@ -528,7 +528,7 @@ const Header = () => {
 
                       <li>
                         <NavLink
-                          to="/services/answer-engine-optimization"
+                          to="/services/seo/answer-engine-optimization"
                           className={({ isActive }) =>
                             `flex gap-2 transition ${isActive ? "text-[#25baff] font-medium" : "text-gray-600 hover:text-[#25baff]"}`
                           }
@@ -1270,8 +1270,8 @@ const Header = () => {
             <div className="space-y-2 text-sm text-[#020202]">
               <div className="flex items-center gap-2">
                 <span className="text-[#25baff]">✉</span>
-                <a href="mailto:#" className="hover:text-[#a8d97c]">
-                  info@Digital WebGuider.com
+                <a href="mailto:info@digitalwebguider.com" className="hover:text-[#a8d97c]">
+                  info@digitalwebguider.com
                 </a>
               </div>
 

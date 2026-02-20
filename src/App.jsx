@@ -4,7 +4,6 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 
-
 /* ========= PAGES ========= */
 import Home from "./pages/Home";
 import WhoWeAre from "./pages/about/whoWeAre";
@@ -16,14 +15,11 @@ import ProjectDetails from "./pages/ProjectDetails";
 import Projects from "./pages/Project";
 import TopInfoBar from "./components/TopInfoBar";
 
-
-
 import Seo from "./pages/services/Seo";
 import WebDesign from "./pages/services/WebDesign";
 import WebDevelopment from "./pages/services/WebDevelopment";
 import AppDevelopment from "./pages/services/AppDevelopment";
 import SocialMediaMarketing from "./pages/services/SocialMediaMarketing";
-
 
 /* ========= PRICING ========= */
 import SEO_Packages from "./pages/plans-pricinng/SEO_Packages";
@@ -50,6 +46,10 @@ import TechnicalSeoServices from "./pages/services/seo/TechnicalSeoServices";
 import FranchisSeoServices from "./pages/services/seo/FranchiseSeoServices";
 import VoiceSearchOptimization from "./pages/services/seo/VoiceSearchOptimization";
 import AppStoreOptimization from "./pages/services/seo/AppStoreOptimization";
+import WhiteLabelSeo from "./pages/services/seo/WhiteLabelSeo";
+import Geo from "./pages/services/seo/Geo";
+import Aeo from "./pages/services/seo/Aeo";
+import YouTubeSeo from "./pages/services/videoSeo/YouTubeSeo";
 
 function App() {
   return (
@@ -86,7 +86,10 @@ function App() {
           {/* SERVICES */}
           <Route path="/services/seo" element={<Seo />} />
           <Route path="/services/web-design" element={<WebDesign />} />
-          <Route path="/services/web-development" element={<WebDevelopment />} />
+          <Route
+            path="/services/web-development"
+            element={<WebDevelopment />}
+          />
           <Route
             path="/services/mobile-application-development"
             element={<AppDevelopment />}
@@ -102,10 +105,14 @@ function App() {
           />
 
           {/* LOCAL SEO SERVICES */}
-          <Route path="/services/small-business-seo" element={<SmallBusinessSeo />} />
-          <Route path="/services/gbp-optimization" element={<GbpOptimization />} />
-
-
+          <Route
+            path="/services/small-business-seo"
+            element={<SmallBusinessSeo />}
+          />
+          <Route
+            path="/services/gbp-optimization"
+            element={<GbpOptimization />}
+          />
 
           {/* PROJECTS */}
           <Route path="/projects" element={<Projects />} />
@@ -167,7 +174,22 @@ function App() {
             path="/services/seo/app-store-optimization"
             element={<AppStoreOptimization />}
           />
-
+          <Route
+            path="/services/seo/white-label-seo"
+            element={<WhiteLabelSeo />}
+          />
+          <Route
+            path="/services/seo/generative-engine-optimization"
+            element={<Geo/>}
+          />
+          <Route
+            path="/services/seo/answer-engine-optimization"
+            element={<Aeo/>}
+          />
+          <Route
+            path="/services/youtube-optimization"
+            element={<YouTubeSeo/>}
+          />
 
           {/* CONTACT */}
           <Route path="/contact" element={<ContactUs />} />

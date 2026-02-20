@@ -3,28 +3,28 @@ import { RiDoubleQuotesL } from "react-icons/ri";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { FiPlus, FiMinus } from "react-icons/fi";
-import { MdOnlinePrediction } from "react-icons/md";
-import { VscWorkspaceTrusted } from "react-icons/vsc";
-import { FaSearchengin } from "react-icons/fa6";
-import { GiRelationshipBounds } from "react-icons/gi";
-import { SlGraph } from "react-icons/sl";
-import { VscGraphLine } from "react-icons/vsc";
+import { RxComponent1 } from "react-icons/rx";
+import { FaSearchengin } from "react-icons/fa";
+import { MdOutlineStarRate } from "react-icons/md";
+import { HiSpeakerphone } from "react-icons/hi";
+import { BsGraphUpArrow } from "react-icons/bs";
+import { GoGoal } from "react-icons/go";
 
-import Banner from "../../../assets/seo/banner.jpg";
-import Img1 from "../../../assets/services/ecommarceSeo/img1.avif";
-import Img2 from "../../../assets/services/ecommarceSeo/img2.avif";
-import Img3 from "../../../assets/services/ecommarceSeo/img3.avif";
-import Img4 from "../../../assets/services/ecommarceSeo/img4.avif";
-import Img5 from "../../../assets/services/ecommarceSeo/img5.avif";
-import Img6 from "../../../assets/services/ecommarceSeo/img6.avif";
-import Img7 from "../../../assets/services/ecommarceSeo/img7.avif";
-import Img8 from "../../../assets/services/ecommarceSeo/img8.avif";
-import Img9 from "../../../assets/services/ecommarceSeo/img9.avif";
-import Img10 from "../../../assets/services/ecommarceSeo/img10.avif";
+import Banner from "../../../assets/services/appStoreOptimization/banner.avif";
+import Img1 from "../../../assets/services/whitelabel/img1.avif";
+import Img2 from "../../../assets/services/whitelabel/img2.jpg";
+import Img3 from "../../../assets/services/whitelabel/img3.avif";
+import Img4 from "../../../assets/services/whitelabel/img4.avif";
+import Img5 from "../../../assets/services/whitelabel/img5.avif";
+import Img6 from "../../../assets/services/whitelabel/img6.avif";
+import Img7 from "../../../assets/services/whitelabel/img7.avif";
+import Img8 from "../../../assets/services/whitelabel/img8.avif";
+import Img9 from "../../../assets/services/whitelabel/img9.avif";
+import Img10 from "../../../assets/services/whitelabel/img10.avif";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const EcommerceSeoServices = () => {
+const WhiteLabelSeo = () => {
   const rootRef = useRef(null);
   const heroRef = useRef(null);
   const whoRef = useRef(null);
@@ -102,70 +102,69 @@ const EcommerceSeoServices = () => {
 
   const faqs = [
     {
-      question: "What is ecommerce SEO?",
+      question: "What are white label SEO services?",
       answer:
-        "Ecommerce SEO is the strategic process of optimizing an online store to improve its visibility in search engine results, attract high-intent organic traffic, and increase sales. It focuses on product pages, category pages, technical performance, and user experience to drive revenue growth.",
+        "White label SEO means we handle your clients’ SEO campaigns under your agency’s brand name. You manage the client relationship while we execute the strategy, delivery, and reporting behind the scenes.",
     },
     {
-      question: "Why does my online store need ecommerce SEO?",
+      question: "Will my clients know I’m outsourcing SEO?",
       answer:
-        "Most shoppers begin their buying journey on search engines. Strong ecommerce SEO ensures your products appear when potential customers search for them, helping you capture qualified traffic, build brand trust, and generate consistent, long-term sales without relying solely on paid ads.",
+        "No. Our services are 100% confidential. All communication, reports, and deliverables are provided under your branding, ensuring your clients only see your agency.",
     },
     {
-      question: "How is ecommerce SEO different from traditional SEO?",
+      question: "Can I customize the SEO reports?",
       answer:
-        "While traditional SEO focuses on improving overall website visibility, ecommerce SEO is specifically designed for online stores. It emphasizes product optimization, category structure, transactional keywords, conversion-focused content, and technical elements that directly impact sales performance.",
+        "Yes. Our white label reports are fully branded with your logo, company details, and preferred format, helping you maintain brand consistency and professionalism.",
     },
     {
-      question: "Can you improve website speed and Core Web Vitals?",
+      question: "What SEO services do you offer?",
       answer:
-        "Yes. We optimize page load speed, mobile responsiveness, and overall technical performance to meet modern Core Web Vitals standards. Faster websites improve search rankings, reduce bounce rates, and create a smoother shopping experience that increases conversions.",
+        "We provide complete SEO solutions, including technical audits, on-page optimization, content creation, local SEO, link building, and ongoing performance tracking.",
     },
     {
-      question: "What strategies are included in ecommerce SEO?",
+      question: "How does your pricing model work?",
       answer:
-        "Our approach includes in-depth keyword research, product and category page optimization, technical SEO audits, structured data implementation, content marketing, internal linking, and high-quality link building to improve rankings and drive targeted traffic.",
+        "We operate on a wholesale pricing model. You pay a fixed rate for our services and set your own pricing for clients, allowing you to control margins and maximize profitability.",
     },
     {
-      question: "What determines the success of an ecommerce SEO campaign?",
+      question: "What makes your white label SEO services different?",
       answer:
-        "Success depends on factors such as website structure, content quality, competition level, backlink profile, technical health, and overall market demand. A well-executed, data-driven strategy combined with consistent optimization delivers the strongest results.",
+        "Our focus on transparency, performance-driven strategies, and long-term partnerships sets us apart. We prioritize consistent results and seamless collaboration with your agency.",
     },
     {
-      question: "How long does it take to see results from ecommerce SEO?",
+      question: "How do you keep SEO strategies updated?",
       answer:
-        "Ecommerce SEO is a long-term growth strategy. While minor improvements may appear within a few weeks, significant ranking and traffic growth typically takes 3–6 months or more, depending on competition, website condition, and industry dynamics.",
+        "Our team continuously monitors search engine algorithm updates and industry trends. We adapt strategies accordingly to ensure campaigns remain effective and competitive.",
     },
   ];
 
   const accordionData = [
     {
-      title: "Ecommerce SEO Expertise",
+      title: "Proven SEO Expertise",
       content:
-        "Partnering with an ecommerce SEO company gives you access to specialists who understand online store structures, search algorithms, and industry best practices. Their expertise allows them to craft customized strategies that increase visibility, improve conversions, and drive higher sales.",
+        "White label SEO agencies bring years of industry experience and deep knowledge of search engine algorithms, trends, and best practices. By partnering with experts, you ensure your clients receive result-driven strategies that improve rankings, increase traffic, and strengthen long-term growth—helping you retain clients and win more projects.",
     },
     {
-      title: "Dedicated Team",
+      title: "Cost-Effective SEO Solution",
       content:
-        "Our experienced ecommerce SEO team stays updated with evolving search engine algorithms and market trends to keep your store competitive. You’ll have a dedicated project manager along with SEO, ASO, SMO, and development experts focused on optimizing your ecommerce performance.",
+        "Hiring and managing an in-house SEO team can be costly and time-consuming. White label SEO eliminates expenses related to salaries, tools, and training. You get a complete SEO execution team at a fraction of the cost, allowing you to maximize profits while focusing on scaling your agency.",
     },
     {
-      title: "More Leads & Sales",
+      title: "Dedicated SEO Professionals",
       content:
-        "Using advanced tools and competitor analysis, we implement data-driven strategies that improve rankings, organic traffic, and user engagement. By increasing your store’s visibility, we attract qualified shoppers who are more likely to convert into customers.",
+        "With white label SEO services, you gain access to a specialized team that may include SEO strategists, content writers, link-building experts, and technical analysts. This dedicated support ensures every campaign is managed efficiently, delivered on time, and aligned with your client’s goals.",
     },
     {
-      title: "Time & Resource Savings",
+      title: "Drive More Leads & Sales",
       content:
-        "Managing ecommerce SEO requires time, tools, and technical knowledge. By hiring an agency, you can focus on core business operations while experts handle strategy, optimization, and continuous improvements aligned with your goals and competition.",
+        "Effective SEO increases online visibility, attracts targeted traffic, and converts visitors into qualified leads. A reliable white label SEO partner implements ethical, data-driven strategies that help your clients grow revenue—while strengthening your agency’s reputation for delivering real results.",
     },
     {
-      title: "Comprehensive Growth Solutions",
+      title: "Fully Branded Reporting",
       content:
-        "Our ecommerce SEO services go beyond basic optimization. We offer complete solutions including technical improvements, keyword targeting, content enhancement, and ongoing performance tracking to boost traffic, leads, and long-term revenue growth.",
+        "White label SEO providers offer customized reports with your agency’s branding, allowing you to present performance insights professionally. Branded reporting enhances transparency, builds client trust, and reinforces your position as a full-service digital marketing partner.",
     },
   ];
-
   return (
     <div ref={rootRef} className="bg-white text-black">
       {/* ================= HERO ================= */}
@@ -184,7 +183,7 @@ const EcommerceSeoServices = () => {
           className="relative z-10 text-center px-6 text-white"
         >
           <h1 className="text-5xl md:text-6xl font-extrabold">Services</h1>
-          <p className="mt-6 text-lg text-gray-300">Ecommerce SEO Services</p>
+          <p className="mt-6 text-lg text-gray-300">White Label SEO</p>
         </div>
       </section>
 
@@ -195,39 +194,37 @@ const EcommerceSeoServices = () => {
       >
         <div>
           <h2 className="text-3xl md:text-4xl font-extrabold text-[#020202] mb-6">
-            What is Ecommerce
+            What is White Label
             <span className="text-[#25baff]"> SEO?</span>
           </h2>
 
           <p className="text-gray-700 leading-relaxed mb-4">
-            Ecommerce SEO is the process of optimizing your online store to
-            align with search engine guidelines and match the search intent of
-            your potential customers. It involves refining website structure,
-            product pages, and content to improve rankings and attract qualified
-            buyers. Our experienced ecommerce SEO specialists implement tailored
-            strategies to expand your brand’s visibility and drive measurable
-            growth.
+            White Label SEO is a service model where a professional SEO company
+            manages SEO campaigns for another agency, but all work is delivered
+            under the agency’s brand name. The end client never knows that a
+            third-party team is handling the execution. This allows agencies to
+            offer expert SEO solutions without building an in-house team.
           </p>
 
           <p className="text-gray-600 font-bold leading-relaxed">
-            Key Benefits
+            White Label SEO services can help in
           </p>
           <div className="text-gray-700 leading-relaxed ml-8 mb-3">
-            <li>Increase online visibility</li>
-            <li>Attract high-intent traffic</li>
-            <li>Boost sales opportunities</li>
-            <li>Strengthen brand credibility</li>
-            <li>Maximize revenue and ROI</li>
+            <li>Expand your client portfolio.</li>
+            <li>Add complete SEO solutions to your service list.</li>
+            <li>Increase recurring revenue.</li>
+            <li>Reduce hiring and operational costs.</li>
+            <li>Deliver branded SEO reports under your agency name.</li>
           </div>
 
           <p className="text-gray-600 font-bold leading-relaxed">
-            How Is It Done?
+            How is it done?
           </p>
-          <div className="text-gray-700 leading-relaxed ml-8">
-            <li>Strategic keyword research and optimization</li>
-            <li>Comprehensive technical SEO audits</li>
-            <li>Product and content optimization</li>
-            <li>High-quality link-building campaigns</li>
+          <div className="text-gray-700 leading-relaxed ml-8 mb-3">
+            <li>Customized SEO planning.</li>
+            <li>Professional SEO content creation.</li>
+            <li>Google Business Profile optimization.</li>
+            <li>Targeted local SEO execution.</li>
           </div>
         </div>
 
@@ -243,16 +240,15 @@ const EcommerceSeoServices = () => {
       {/* ================= STRATEGY CARDS ================= */}
       <section className="bg-white py-28">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-extrabold text-[#020202] mb-3">
-            How Do Ecommerce SEO Services Increase
-            <span className="text-[#25baff]"> Your Revenue?</span>
+          <h2 className="text-3xl md:text-4xl font-extrabold text-[#020202]">
+            How White Label SEO Services Increase Your
+            <span className="text-[#25baff]"> Agency Revenue?</span>
           </h2>
 
-          <p className="uppercase tracking-widest text-sm font-semibold text-gray-500 mb-3 p-4">
-            Ecommerce SEO services increase revenue by improving search
-            visibility, attracting qualified traffic, and strengthening your
-            online presence. Here’s how expert strategies drive ecommerce
-            growth:
+          <p className="uppercase tracking-widest text-sm font-semibold text-gray-500 mb-3 p-8">
+            Whether you're a startup or an established digital agency, white
+            label SEO helps you serve clients efficiently—without the high costs
+            of hiring or team expansion.
           </p>
         </div>
 
@@ -260,34 +256,34 @@ const EcommerceSeoServices = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
+                icon: HiSpeakerphone,
+                head: "Complete Digital Solutions Under One Roof",
+                text: "With white label SEO, you can transform your agency into a full-service digital partner. By offering comprehensive digital marketing solutions, you position your brand as a trusted, one-stop destination for all your clients’ online growth needs.",
+              },
+              {
+                icon: BsGraphUpArrow,
+                head: "Zero In-House Hiring Costs",
+                text: "Creating an internal SEO team requires significant time, effort, and investment. White label SEO services remove the need for recruitment, training, and overhead expenses—allowing you to cut costs and focus on growing your agency.",
+              },
+              {
                 icon: FaSearchengin,
-                head: "Higher Search Rankings",
-                text: "A fully optimized ecommerce website improves your position in search engine results. The better your store ranks, the more visibility and clicks it gains—leading to increased organic traffic and higher sales potential.",
+                head: "High-Quality SEO Services",
+                text: "Partnering with a white label SEO provider gives you access to expert strategies and proven execution. This ensures better results for your clients, stronger campaign performance, and increased revenue opportunities for your agency.",
               },
               {
-                icon: VscWorkspaceTrusted,
-                head: "Stronger Brand Presence",
-                text: "Customer-focused brands achieve greater success. An SEO-optimized ecommerce website helps you connect with your target audience, deliver valuable experiences, and build stronger brand recognition and trust.",
+                icon: GoGoal,
+                head: "Focus on Core Business Activities",
+                text: "Outsourcing SEO to a white label partner allows you to concentrate on what you do best—sales, strategy, and client relationships. By streamlining operations, you can drive higher productivity and increase overall revenue.",
               },
               {
-                icon: SlGraph,
-                head: "Increased Traffic & Sales",
-                text: "Search engines prioritize well-optimized websites, resulting in greater visibility and more visitors to your online store. With strategic ecommerce SEO, you can attract qualified customers, boost conversions, and drive consistent sales growth.",
+                icon: MdOutlineStarRate,
+                head: "Scale Your Business Efficiently",
+                text: "White label SEO offers a flexible and scalable growth model. As your client base expands, you can easily onboard new projects without operational strain—helping you grow services, attract more clients, and maximize ROI.",
               },
               {
-                icon: MdOnlinePrediction,
-                head: "Customer Engagement",
-                text: "A well-structured website with easy navigation and engaging, relevant content encourages your target audience to return to your store. This consistent positive experience boosts engagement, enhances customer satisfaction, and builds lasting loyalty.",
-              },
-              {
-                icon: GiRelationshipBounds,
-                head: "Establish Credibility",
-                text: "A strong ecommerce SEO strategy improves website performance, delivers high-quality content, resolves technical issues like index bloat and spam links, and leverages social platforms for promotion. These efforts build trust, enhance brand authority, and strengthen credibility with your customers.",
-              },
-              {
-                icon: VscGraphLine,
-                head: "Increased Conversion Rate",
-                text: "Ecommerce SEO plays a vital role in guiding customers through the marketing funnel. A well-optimized and user-friendly website streamlines the buying journey, making it easy for visitors to browse products, add items to their cart, and complete purchases—ultimately improving conversion rates and sales.",
+                icon: RxComponent1,
+                head: "Branded White Label Reports",
+                text: "White label reporting enables you to deliver fully branded SEO reports without handling the execution yourself. This helps you demonstrate consistent campaign management, build client trust, and strengthen your agency’s credibility.",
               },
             ].map((item, index) => {
               const Icon = item.icon;
@@ -326,7 +322,7 @@ const EcommerceSeoServices = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-14">
             <h2 className="text-3xl md:text-4xl font-bold text-black">
-              Why Hire an Ecommerce
+              Why Partner with a White Label
               <span className="text-[#25baff]"> SEO Company?</span>
             </h2>
             <div className="w-24 h-1 bg-[#a8d97c] mx-auto mt-4 rounded-full"></div>
@@ -337,22 +333,13 @@ const EcommerceSeoServices = () => {
             <div>
               <img
                 src={Img2}
-                alt="img"
+                alt="content marketing"
                 className="rounded-xl shadow-lg w-full"
               />
             </div>
 
             {/* Right Accordion */}
             <div>
-              <p className="text-gray-600 mb-6">
-                Partnering with a professional ecommerce SEO company helps your
-                business improve search visibility, attract high-intent
-                shoppers, and increase sales. With expert strategies, technical
-                optimization, and data-driven insights, an experienced ecommerce
-                SEO consultant can strengthen your online presence and deliver
-                sustainable growth
-              </p>
-
               <div className="space-y-4">
                 {accordionData.map((item, index) => (
                   <div
@@ -420,7 +407,7 @@ radial-gradient(circle_at_80%_80%,rgba(168,217,124,0.2),transparent_45%)]
         </div>
         <div className="relative z-10 max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-10">
           <h2 className="gsap-item text-white text-3xl font-extrabold max-w-4xl">
-            Get Ecommerce SEO Services Now
+            Talk To Our Experts Now
           </h2>
 
           <button className="bg-[#25baff] text-[#020202] px-6 py-3 rounded-full font-semibold hover:bg-[#a8d97c] transition">
@@ -432,14 +419,13 @@ radial-gradient(circle_at_80%_80%,rgba(168,217,124,0.2),transparent_45%)]
       {/* audit services  */}
       <section className="bg-white py-28">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-extrabold text-[#020202] mb-3">
-            6 Reasons to Partner with Us as Your Ecommerce
-            <span className="text-[#25baff]"> SEO Agency</span>
+          <h2 className="text-3xl md:text-4xl font-extrabold text-[#020202] p-8">
+            Why Choose Digital Guider as Your Trusted White
+            <span className="text-[#25baff]"> Label SEO Partner?</span>
           </h2>
-          <p className="uppercase tracking-widest text-sm font-semibold text-gray-500 mb-3 p-5">
-            Choosing the right ecommerce SEO partner is key to online growth.
-            Here’s why businesses trust us to boost visibility, traffic, and
-            sales.
+          <p className="uppercase tracking-widest text-sm font-semibold text-gray-500 mb-3">
+            Digital Guider helps agencies scale with expert white label SEO and
+            consistent results. Here’s why agencies choose us:
           </p>
         </div>
 
@@ -447,28 +433,28 @@ radial-gradient(circle_at_80%_80%,rgba(168,217,124,0.2),transparent_45%)]
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
-                head: "Targeted Ecommerce Strategy",
-                text: "Our ecommerce SEO agency focuses on high-intent keywords backed by in-depth research—not just high-volume terms. By targeting shoppers actively searching for your products, we ensure your store gains qualified visibility. This strategic approach connects your brand with the right audience, driving stronger engagement and higher conversion rates.",
+                head: "Experienced SEO Professionals",
+                text: "Our white label SEO services are powered by a skilled team of SEO specialists who deliver data-driven, result-focused strategies. From keyword research and content creation to technical optimization and quality link building, we manage every aspect of your client’s campaign—ensuring consistent growth and measurable results.",
               },
               {
-                head: "Comprehensive Ecommerce Strategy",
-                text: "Our end-to-end ecommerce SEO approach covers every critical element of your online store. From customized on-page optimization to detailed site structure analysis, we fine-tune each component for maximum performance. We understand the complexities of ecommerce platforms—product pages, categories, filters, and reviews—and optimize them to improve visibility, usability, and conversions.",
+                head: "US-Based SEO Consultants",
+                text: "Partner with our white label SEO team to work with experienced U.S.-based consultants who stay updated with the latest search trends and algorithm changes—ensuring your clients achieve strong and sustainable Google rankings.",
               },
               {
-                head: "Customized SEO Strategy",
-                text: "We recognize that every ecommerce business has unique goals and challenges. That’s why we create personalized SEO strategies instead of relying on one-size-fits-all solutions. Our plans are carefully tailored to your target audience, competition, and growth objectives—ensuring measurable and sustainable online success.",
+                head: "Multi-Industry Expertise",
+                text: "Our SEO specialists have hands-on experience across diverse industries—including eCommerce, healthcare, finance, and more. With a strong track record of delivering successful white label campaigns, we understand how to tailor strategies that meet the unique needs of every client and industry.",
               },
               {
-                head: "Content Optimization Focus",
-                text: "Our team excels in creating, refining, and promoting high-quality content tailored to both users and search engines. Every piece is strategically optimized to align with your brand voice, target audience, and keyword goals. By delivering engaging, value-driven content, we improve rankings, attract backlinks, and drive consistent organic traffic growth.",
+                head: "Complete Confidentiality & Privacy",
+                text: "We understand that discretion is essential in white label partnerships. Digital Guider operates behind the scenes, ensuring full confidentiality at every stage. All communication and deliverables are managed under your brand, keeping your clients unaware while protecting your agency’s reputation.",
               },
               {
-                head: "Affordable Plans",
-                text: "Our cost-effective ecommerce SEO solutions are designed to fit your budget while delivering measurable results. We focus on driving high-quality traffic, generating qualified leads, and supporting sustainable growth—without unnecessary expenses. Explore our flexible SEO packages tailored to your business needs.",
+                head: "Dedicated 24/7 Support",
+                text: "Our support team is available around the clock to assist you whenever needed. From client queries to project consultations, we act as an extension of your agency—ensuring smooth communication, reliable assistance, and a long-term partnership you can depend on.",
               },
               {
-                head: "High Client Satisfaction",
-                text: "Our clients are at the core of everything we do. With a retention rate of over 90%, our results and long-term partnerships reflect the trust and value we consistently deliver. Beyond performance metrics, we focus on building strong relationships through transparency, dedication, and measurable success.",
+                head: "Comprehensive White Label Reporting",
+                text: "Our customized white label SEO reports provide detailed insights into your client’s campaign performance—fully branded with your agency identity. Each report covers essential metrics such as keyword rankings, traffic trends, and overall search visibility, helping you showcase measurable results with confidence.",
               },
             ].map((item, index) => {
               return (
@@ -556,12 +542,12 @@ radial-gradient(circle_at_80%_80%,rgba(168,217,124,0.2),transparent_45%)]
       {/* ALTERNATE SECTION  */}
 
       <section className="bg-white py-24 px-6" ref={addSectionRef}>
-        <h2 className="text-3xl md:text-4xl font-extrabold text-[#020202] text-center mb-25">
-          Ecommerce SEO Company Strategic
-          <span className="text-[#25baff]"> Process</span>
-          <div className="w-30 h-1 bg-[#a8d97c] mx-auto mt-4 rounded-full"></div>
-        </h2>
-
+        <div className="text-center mb-16">
+          <h2 className="text-3xl md:text-4xl font-extrabold text-[#020202] mb-3 p-8">
+            White Label SEO Company
+            <span className="text-[#25baff]"> Process</span>
+          </h2>
+        </div>
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             {/* Left Image */}
@@ -576,23 +562,20 @@ radial-gradient(circle_at_80%_80%,rgba(168,217,124,0.2),transparent_45%)]
             {/* Right Content */}
             <div>
               <h2 className="gsap-item relative inline-block text-3xl md:text-4xl font-extrabold text-[#020202] mb-6">
-                SEO Website
-                <span className="text-[#25baff]"> Audit</span>
+                In-Depth SEO Website
+                <span className="text-[#25baff]"> Analysis</span>
                 <span className="absolute left-0 -bottom-2 w-20 h-1 bg-[#25baff] rounded-full"></span>
               </h2>
 
               <p className="gsap-item text-gray-600 leading-relaxed mb-6">
-                Our ecommerce SEO website audit provides a comprehensive
-                analysis of your store’s technical structure, content quality,
-                and search visibility to uncover issues that may be limiting
-                growth. We optimize crawlability through refined robots.txt
-                files, XML sitemaps, and internal linking while improving site
-                speed, mobile performance, and Core Web Vitals. Our experts
-                eliminate duplicate or thin product content, fix indexing
-                errors, and remove harmful backlinks to strengthen domain
-                authority. With a clear, data-driven action plan, we help boost
-                rankings, increase qualified traffic, and turn your ecommerce
-                website into a high-performing revenue engine.
+                We begin with a comprehensive audit of your client’s website to
+                identify technical, structural, and performance issues. Our
+                experts analyze crawlability, indexing, site speed, content
+                quality, keyword alignment, and overall site architecture. We
+                also evaluate key user experience metrics such as bounce rate,
+                dwell time, and mobile responsiveness—implementing strategic
+                improvements to enhance usability, engagement, and search engine
+                performance.
               </p>
             </div>
           </div>
@@ -605,24 +588,20 @@ radial-gradient(circle_at_80%_80%,rgba(168,217,124,0.2),transparent_45%)]
             {/* left Content */}
             <div>
               <h2 className="gsap-item relative inline-block text-3xl md:text-4xl font-extrabold text-[#020202] mb-6">
-                Keyword
-                <span className="text-[#25baff]"> Research</span>
+                Comprehensive Competitor SEO
+                <span className="text-[#25baff]"> Analysis</span>
                 <span className="absolute left-0 -bottom-2 w-20 h-1 bg-[#25baff] rounded-full"></span>
               </h2>
 
               <p className="gsap-item text-gray-600 leading-relaxed mb-6">
-                Our ecommerce keyword research strategy focuses on uncovering
-                high-intent, revenue-driven search terms that align perfectly
-                with your products and target audience. We use advanced SEO
-                tools and data analytics to identify high-volume,
-                low-competition, and long-tail keywords that improve search
-                visibility and drive qualified traffic. By analyzing customer
-                behavior, search intent, seasonal trends, and competitor
-                performance, we build a strategic keyword funnel that supports
-                every stage of the buyer journey—from discovery to purchase.
-                This data-backed approach ensures your product and category
-                pages rank for the right queries, attract ready-to-buy
-                customers, and consistently increase conversions and sales.
+                Before launching any campaign, we conduct a detailed competitor
+                analysis to benchmark performance and uncover growth
+                opportunities. Our team studies competitor keywords, rankings,
+                SERP presence, and backlink profiles—including authority sources
+                and anchor strategies—to refine our approach. We also identify
+                content gaps and strategic opportunities to create high-quality,
+                optimized content that helps your clients outperform the
+                competition.
               </p>
             </div>
 
@@ -653,26 +632,19 @@ radial-gradient(circle_at_80%_80%,rgba(168,217,124,0.2),transparent_45%)]
             {/* Right Content */}
             <div>
               <h2 className="gsap-item relative inline-block text-3xl md:text-4xl font-extrabold text-[#020202] mb-6">
-                Content
-                <span className="text-[#25baff]"> Creation</span>
+                Strategic SEO Keyword
+                <span className="text-[#25baff]"> Research</span>
                 <span className="absolute left-0 -bottom-2 w-20 h-1 bg-[#25baff] rounded-full"></span>
               </h2>
 
               <p className="gsap-item text-gray-600 leading-relaxed mb-6">
-                Our ecommerce content creation services focus on crafting
-                compelling, conversion-driven content that not only ranks well
-                but also builds trust with your audience. We develop optimized
-                product descriptions, category pages, landing pages, and
-                informative blog content aligned with high-intent keywords and
-                your brand voice. By strategically integrating targeted
-                keywords, optimizing meta tags, headers, and structured site
-                architecture, we ensure every piece of content supports your
-                overall SEO strategy. We also enhance visibility with schema
-                markup, rich snippets, and search-focused formatting to improve
-                click-through rates. Through a blend of data-driven SEO and
-                persuasive storytelling, we help your ecommerce brand attract
-                qualified traffic, engage customers, and establish lasting
-                authority in your industry.
+                We conduct in-depth keyword research to identify high-impact
+                opportunities for your client’s business. Starting with relevant
+                seed keywords, we expand the list using advanced tools to
+                uncover long-tail, LSI, and niche keywords with strong search
+                volume and manageable competition. We then organize keywords by
+                search intent and align them with each stage of the customer
+                journey to maximize relevance, traffic, and conversions.
               </p>
             </div>
           </div>
@@ -685,25 +657,20 @@ radial-gradient(circle_at_80%_80%,rgba(168,217,124,0.2),transparent_45%)]
             {/* left Content */}
             <div>
               <h2 className="gsap-item relative inline-block text-3xl md:text-4xl font-extrabold text-[#020202] mb-6">
-                Product & Category Page
+                SEO Content
                 <span className="text-[#25baff]"> Optimization</span>
                 <span className="absolute left-0 -bottom-2 w-20 h-1 bg-[#25baff] rounded-full"></span>
               </h2>
 
               <p className="gsap-item text-gray-600 leading-relaxed mb-6">
-                Our product and category page optimization strategy is designed
-                to maximize visibility, usability, and conversions. We refine
-                URL structures, improve site navigation, and ensure a clean,
-                search-friendly architecture that helps both users and search
-                engines easily understand your store. By strategically placing
-                high-intent keywords in title tags, meta descriptions, headers,
-                and on-page content, we strengthen relevance and improve ranking
-                potential. Our experts enhance internal linking to distribute
-                authority across key pages, optimize image alt text for
-                accessibility and search visibility, and implement structured
-                data (schema markup) to boost rich result eligibility. The
-                result is a seamless shopping experience that drives higher
-                search rankings, better engagement, and increased sales.
+                We create and optimize high-quality, E-E-A-T–focused content
+                that aligns with targeted keywords and user search intent. Our
+                writers craft SEO-friendly content that follows search engine
+                guidelines while driving engagement and conversions. To maximize
+                reach, we promote content through strategic marketing channels
+                and continuously refresh existing assets—updating information,
+                improving keyword targeting, and enhancing user experience to
+                maintain strong rankings and authority.
               </p>
             </div>
 
@@ -734,25 +701,21 @@ radial-gradient(circle_at_80%_80%,rgba(168,217,124,0.2),transparent_45%)]
             {/* Right Content */}
             <div>
               <h2 className="gsap-item relative inline-block text-3xl md:text-4xl font-extrabold text-[#020202] mb-6">
-                Thematic Link
-                <span className="text-[#25baff]"> Building</span>
+                On-Page SEO
+                <span className="text-[#25baff]"> Optimization</span>
                 <span className="absolute left-0 -bottom-2 w-20 h-1 bg-[#25baff] rounded-full"></span>
               </h2>
 
               <p className="gsap-item text-gray-600 leading-relaxed mb-6">
-                Our thematic link building strategy focuses on earning
-                high-quality, niche-relevant backlinks that strengthen your
-                ecommerce store’s authority and trust. We develop targeted
-                outreach campaigns to secure placements on reputable websites
-                within your industry, ensuring every link is natural,
-                contextually relevant, and aligned with your brand. Using proven
-                techniques such as guest posting, content partnerships,
-                skyscraper outreach, strategic link insertions, and digital PR,
-                we prioritize quality over quantity to deliver sustainable
-                ranking growth. These authoritative backlinks act as strong
-                trust signals for search engines, improving domain credibility,
-                increasing organic visibility, and driving qualified traffic
-                that converts into loyal customers.
+                Our white label SEO team applies strategic on-page enhancements
+                to improve both search visibility and user experience. We
+                optimize title tags and meta descriptions to increase CTR,
+                structure headings (H1, H2, H3) for semantic clarity, and
+                maintain proper content hierarchy. Additionally, we optimize
+                images with relevant file names, alt text, and captions to boost
+                accessibility and SEO value. These combined efforts help improve
+                rankings, engagement, and overall website performance—while you
+                take full credit under your brand.
               </p>
             </div>
           </div>
@@ -765,23 +728,19 @@ radial-gradient(circle_at_80%_80%,rgba(168,217,124,0.2),transparent_45%)]
             {/* left Content */}
             <div>
               <h2 className="gsap-item relative inline-block text-3xl md:text-4xl font-extrabold text-[#020202] mb-6">
-                Mobile
+                GMB
                 <span className="text-[#25baff]"> Optimization</span>
                 <span className="absolute left-0 -bottom-2 w-20 h-1 bg-[#25baff] rounded-full"></span>
               </h2>
 
               <p className="gsap-item text-gray-600 leading-relaxed mb-6">
-                With the majority of online shopping now happening on mobile
-                devices, mobile optimization is essential for ecommerce success.
-                We ensure your online store delivers a fast, seamless, and
-                user-friendly experience across smartphones and tablets. Our
-                approach includes responsive design improvements, faster page
-                load times, mobile-friendly navigation, optimized images, and
-                streamlined checkout processes to reduce friction and increase
-                conversions. By aligning your website with mobile-first indexing
-                standards and enhancing usability on smaller screens, we help
-                you capture more mobile traffic, improve engagement, and turn
-                mobile visitors into loyal customers.
+                To achieve strong local visibility, we fully optimize your
+                client’s Google Business Profile for better rankings in the
+                local 3-pack. We ensure accurate and complete business details,
+                including address, phone number, business hours, and website
+                URL. Our team also builds and manages consistent NAP citations
+                across trusted directories to strengthen local credibility,
+                improve trust, and enhance overall local search performance.
               </p>
             </div>
 
@@ -812,22 +771,21 @@ radial-gradient(circle_at_80%_80%,rgba(168,217,124,0.2),transparent_45%)]
             {/* Right Content */}
             <div>
               <h2 className="gsap-item relative inline-block text-3xl md:text-4xl font-extrabold text-[#020202] mb-6">
-                Local SEO for
-                <span className="text-[#25baff]"> Ecommerce</span>
+                Strategic Link Building
+                <span className="text-[#25baff]"> Campaigns</span>
                 <span className="absolute left-0 -bottom-2 w-20 h-1 bg-[#25baff] rounded-full"></span>
               </h2>
 
               <p className="gsap-item text-gray-600 leading-relaxed mb-6">
-                Our local ecommerce SEO strategy helps you connect with nearby
-                customers who are actively searching for your products. We
-                optimize your website with location-specific keywords,
-                geographic modifiers, and locally relevant content to improve
-                visibility in regional search results. By enhancing and managing
-                your Google Business Profile, optimizing local citations, and
-                strengthening map pack presence, we position your brand as a
-                trusted authority within your area. This targeted approach
-                increases local discoverability, drives qualified nearby
-                traffic, and boosts both online and in-store conversions.
+                Link building is one of the most critical aspects of SEO, and
+                our white label off-page team manages it seamlessly behind the
+                scenes. We develop customized outreach strategies targeting
+                high-authority websites within your client’s niche and create
+                valuable, shareable content assets to attract quality backlinks.
+                By analyzing competitor backlink profiles and identifying new
+                opportunities, we secure strong, relevant links—while strictly
+                avoiding low-quality or spammy sources to protect long-term
+                rankings and brand reputation.
               </p>
             </div>
           </div>
@@ -840,24 +798,20 @@ radial-gradient(circle_at_80%_80%,rgba(168,217,124,0.2),transparent_45%)]
             {/* left Content */}
             <div>
               <h2 className="gsap-item relative inline-block text-3xl md:text-4xl font-extrabold text-[#020202] mb-6">
-                Ecommerce Site
-                <span className="text-[#25baff]"> Reporting</span>
+                Transparent White Label
+                <span className="text-[#25baff]"> SEO Reporting</span>
                 <span className="absolute left-0 -bottom-2 w-20 h-1 bg-[#25baff] rounded-full"></span>
               </h2>
 
               <p className="gsap-item text-gray-600 leading-relaxed mb-6">
-                Our ecommerce site reporting provides clear, data-driven
-                insights into your SEO performance and overall online growth. We
-                use advanced analytics tools, including Google Analytics and
-                Google Search Console, to track key metrics such as organic
-                traffic, product page engagement, conversion rates, keyword
-                rankings, backlink health, and click-through rates. By analyzing
-                user behavior, traffic sources, and on-site interactions, we
-                uncover actionable opportunities to improve performance and
-                maximize ROI. Our detailed, easy-to-understand reports empower
-                you to make informed decisions, adapt quickly to market changes,
-                and continuously refine your ecommerce SEO strategy for
-                sustainable growth.
+                We provide detailed monthly campaign reports through a fully
+                branded white label dashboard aligned with your agency identity.
+                Our easy-to-understand reports highlight key performance
+                metrics, including rankings, traffic, and growth insights—giving
+                you and your clients complete transparency. Each report also
+                includes actionable recommendations to support smarter decisions
+                and clearly demonstrate the impact of SEO efforts, helping you
+                showcase real value while maintaining your brand authority.
               </p>
             </div>
 
@@ -873,66 +827,49 @@ radial-gradient(circle_at_80%_80%,rgba(168,217,124,0.2),transparent_45%)]
         </div>
       </section>
 
-      <section className="py-5 sm:py-10 lg:py-12 px-4 sm:px-6 bg-[#ebf0e8]">
+      <section className="py-5 sm:py-10 lg:py-12 px-4 sm:px-6 bg-blue-50">
         <div className="max-w-7xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-extrabold text-[#020202] mb-3">
-            Affordable Package of Ecommerce
-            <span className="text-[#25baff]"> SEO Company</span>
-          </h2>
+          <div className="text-center mb-16">
+            <h2 className="text-5xl md:text-4xl font-extrabold text-[#020202] mb-3 p-8">
+              Affordable & Scalable White
+              <span className="text-[#25baff]"> Label SEO Plans</span>
+            </h2>
+          </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10 mt-16">
-            {/* ================= BASIC ================= */}
-            <div className="border border-[#25baff] rounded-xl bg-white">
+            {/* BASIC */}
+            <div className="border border-[#25baff] rounded-xl">
               <h2 className="font-bold text-2xl text-[#25baff] mt-4">BASIC</h2>
 
               <div className="bg-gray-50 mt-5 px-10">
                 <div className="p-5">
-                  <span className="text-lg font-bold text-[#52CC55] pr-1 align-top">
+                  <span className="text-lg font-bold text-[#2E7D32] pr-1 align-top">
                     $
                   </span>
-                  <span className="text-6xl font-bold text-[#52CC55]">500</span>
-                  <span className="line-through text-gray-400 ml-2">700</span>
-                  <p>/ MONTH</p>
+                  <span className="text-6xl font-bold text-[#2E7D32]">500</span>
+                  <p className="italic">monthly</p>
                 </div>
               </div>
 
               <div className="text-center">
                 <div className="py-4">30 Keywords</div>
                 <hr className="border-gray-300 w-3/4 mx-auto" />
-
                 <div className="py-4">40 Backlinks (per month)</div>
                 <hr className="border-gray-300 w-3/4 mx-auto" />
-
-                <div className="py-4">Target Pages Optimized – Up to 10</div>
-                <hr className="border-gray-300 w-3/4 mx-auto" />
-
                 <div className="py-4">GBP (GMB) – ✕</div>
                 <hr className="border-gray-300 w-3/4 mx-auto" />
-
                 <div className="py-4">Geotagging – ✕</div>
-                <hr className="border-gray-300 w-3/4 mx-auto" />
-
-                <div className="py-4">G.E.O – ✕</div>
-                <hr className="border-gray-300 w-3/4 mx-auto" />
-
-                <div className="py-4">A.E.O – ✕</div>
-                <hr className="border-gray-300 w-3/4 mx-auto" />
-
-                <div className="py-4">AI Compatibility Testing – ✓</div>
-                <hr className="border-gray-300 w-3/4 mx-auto" />
-
-                <div className="py-4">AI Visibility Audit – 2 pages</div>
               </div>
 
               <div className="bg-gray-50 mt-5 rounded-b-xl">
-                <button className="start-btn text-lg border border-[#25baff] mt-8 mb-8 p-2 rounded-2xl pr-8 pl-8 hover:bg-[#25baff] hover:text-white cursor-pointer">
-                  Start Today
+                <button className="start-btn text-lg border border-[#25baff] mt-8 mb-8 p-2 rounded-2xl pr-8 pl-8 hover:bg-[#25baff] hover:text-white">
+                  START TODAY
                 </button>
               </div>
             </div>
 
-            {/* ================= SILVER ================= */}
-            <div className="border border-[#25baff] rounded-xl bg-white">
+            {/* SILVER */}
+            <div className="border border-[#25baff] rounded-xl">
               <h2 className="font-bold text-2xl text-[#25baff] mt-4">SILVER</h2>
 
               <div className="bg-gray-50 mt-5 px-10">
@@ -941,48 +878,29 @@ radial-gradient(circle_at_80%_80%,rgba(168,217,124,0.2),transparent_45%)]
                     $
                   </span>
                   <span className="text-6xl font-bold text-[#555555]">700</span>
-                  <span className="line-through text-gray-400 ml-2">900</span>
-                  <p>/ MONTH</p>
+                  <p className="italic">monthly</p>
                 </div>
               </div>
 
               <div className="text-center">
                 <div className="py-4">40 Keywords</div>
                 <hr className="border-gray-300 w-3/4 mx-auto" />
-
                 <div className="py-4">60 Backlinks (per month)</div>
                 <hr className="border-gray-300 w-3/4 mx-auto" />
-
-                <div className="py-4">Target Pages Optimized – Up to 15</div>
-                <hr className="border-gray-300 w-3/4 mx-auto" />
-
                 <div className="py-4">GBP (GMB) – ✓</div>
                 <hr className="border-gray-300 w-3/4 mx-auto" />
-
                 <div className="py-4">Geotagging – ✕</div>
-                <hr className="border-gray-300 w-3/4 mx-auto" />
-
-                <div className="py-4">G.E.O – ✕</div>
-                <hr className="border-gray-300 w-3/4 mx-auto" />
-
-                <div className="py-4">A.E.O – ✕</div>
-                <hr className="border-gray-300 w-3/4 mx-auto" />
-
-                <div className="py-4">AI Compatibility Testing – ✓</div>
-                <hr className="border-gray-300 w-3/4 mx-auto" />
-
-                <div className="py-4">AI Visibility Audit – 4 pages</div>
               </div>
 
               <div className="bg-gray-50 mt-5 rounded-b-xl">
-                <button className="start-btn text-lg border border-[#25baff] mt-8 mb-8 p-2 rounded-2xl pr-8 pl-8 hover:bg-[#25baff] hover:text-white cursor-pointer">
-                  Start Today
+                <button className="start-btn text-lg border border-[#25baff] mt-8 mb-8 p-2 rounded-2xl pr-8 pl-8 hover:bg-[#25baff] hover:text-white">
+                  START TODAY
                 </button>
               </div>
             </div>
 
-            {/* ================= GOLD (POPULAR STRIP) ================= */}
-            <div className="border border-[#25baff] rounded-xl bg-white">
+            {/* GOLD (POPULAR) */}
+            <div className="border-4 border-[#25baff] rounded-xl relative">
               <div className="rounded-t-xl overflow-hidden">
                 <div className="bg-[#25baff] py-4 text-center relative">
                   <h2 className="text-2xl font-bold text-white tracking-wide">
@@ -991,7 +909,7 @@ radial-gradient(circle_at_80%_80%,rgba(168,217,124,0.2),transparent_45%)]
 
                   {/* Popular Ribbon */}
                   <div className="absolute top-0 right-0 w-28 h-28 overflow-hidden">
-                    <div className="absolute top-5 right-[-35px] rotate-45 bg-[#a8d97c] text-black text-xs font-bold py-1 w-40 text-center shadow-md">
+                    <div className="absolute top-5 right-[-35px] rotate-45 bg-[#a8d97c] text-white text-xs font-bold py-1 w-40 text-center shadow-md">
                       POPULAR
                     </div>
                   </div>
@@ -1000,54 +918,35 @@ radial-gradient(circle_at_80%_80%,rgba(168,217,124,0.2),transparent_45%)]
 
               <div className="bg-gray-50 px-10">
                 <div className="p-5">
-                  <span className="text-lg font-bold text-[#FFC107] pr-1 align-top">
+                  <span className="text-lg font-bold text-[#E65100] pr-1 align-top">
                     $
                   </span>
-                  <span className="text-6xl font-bold text-[#FFC107]">
+                  <span className="text-6xl font-bold text-[#E65100]">
                     1000
                   </span>
-                  <span className="line-through text-gray-400 ml-2">1200</span>
-                  <p>/ MONTH</p>
+                  <p className="italic">monthly</p>
                 </div>
               </div>
 
               <div className="text-center">
                 <div className="py-4">50 Keywords</div>
                 <hr className="border-gray-300 w-3/4 mx-auto" />
-
                 <div className="py-4">100 Backlinks (per month)</div>
                 <hr className="border-gray-300 w-3/4 mx-auto" />
-
-                <div className="py-4">Target Pages Optimized – Up to 25</div>
-                <hr className="border-gray-300 w-3/4 mx-auto" />
-
                 <div className="py-4">GBP (GMB) – ✓</div>
                 <hr className="border-gray-300 w-3/4 mx-auto" />
-
                 <div className="py-4">Geotagging – ✓</div>
-                <hr className="border-gray-300 w-3/4 mx-auto" />
-
-                <div className="py-4">G.E.O – ✕</div>
-                <hr className="border-gray-300 w-3/4 mx-auto" />
-
-                <div className="py-4">A.E.O – ✕</div>
-                <hr className="border-gray-300 w-3/4 mx-auto" />
-
-                <div className="py-4">AI Compatibility Testing – ✓</div>
-                <hr className="border-gray-300 w-3/4 mx-auto" />
-
-                <div className="py-4">AI Visibility Audit – 6 pages</div>
               </div>
 
               <div className="bg-gray-50 mt-6 rounded-b-xl">
-                <button className="start-btn text-lg border border-[#25baff] mt-8 mb-8 p-2 rounded-2xl pr-8 pl-8 bg-[#25baff] text-white hover:bg-white hover:text-black cursor-pointer">
-                  Start Today
+                <button className="text-lg mt-8 mb-8 p-2 rounded-2xl pr-8 pl-8 bg-[#25baff] text-white hover:bg-white hover:text-black border border-[#25baff]">
+                  START TODAY
                 </button>
               </div>
             </div>
 
-            {/* ================= PREMIUM ================= */}
-            <div className="border border-[#25baff] rounded-xl bg-white">
+            {/* PREMIUM */}
+            <div className="border border-[#25baff] rounded-xl">
               <h2 className="font-bold text-2xl text-[#25baff] mt-4">
                 PREMIUM
               </h2>
@@ -1060,42 +959,23 @@ radial-gradient(circle_at_80%_80%,rgba(168,217,124,0.2),transparent_45%)]
                   <span className="text-6xl font-bold text-[#607AFE]">
                     1800
                   </span>
-                  <span className="line-through text-gray-400 ml-2">2000</span>
-                  <p>/ MONTH</p>
+                  <p className="italic">monthly</p>
                 </div>
               </div>
 
               <div className="text-center">
                 <div className="py-4">100 Keywords</div>
                 <hr className="border-gray-300 w-3/4 mx-auto" />
-
                 <div className="py-4">200 Backlinks (per month)</div>
                 <hr className="border-gray-300 w-3/4 mx-auto" />
-
-                <div className="py-4">Target Pages Optimized – Up to 40</div>
-                <hr className="border-gray-300 w-3/4 mx-auto" />
-
                 <div className="py-4">GBP (GMB) – ✓</div>
                 <hr className="border-gray-300 w-3/4 mx-auto" />
-
                 <div className="py-4">Geotagging – ✓</div>
-                <hr className="border-gray-300 w-3/4 mx-auto" />
-
-                <div className="py-4">G.E.O – ✓</div>
-                <hr className="border-gray-300 w-3/4 mx-auto" />
-
-                <div className="py-4">A.E.O – ✓</div>
-                <hr className="border-gray-300 w-3/4 mx-auto" />
-
-                <div className="py-4">AI Compatibility Testing – ✓</div>
-                <hr className="border-gray-300 w-3/4 mx-auto" />
-
-                <div className="py-4">AI Visibility Audit – 8 pages</div>
               </div>
 
               <div className="bg-gray-50 mt-5 rounded-b-xl">
-                <button className="start-btn text-lg border border-[#25baff] mt-8 mb-8 p-2 rounded-2xl pr-8 pl-8 hover:bg-[#25baff] hover:text-white cursor-pointer">
-                  Start Today
+                <button className="start-btn text-lg border border-[#25baff] mt-8 mb-8 p-2 rounded-2xl pr-8 pl-8 hover:bg-[#25baff] hover:text-white">
+                  START TODAY
                 </button>
               </div>
             </div>
@@ -1190,4 +1070,4 @@ radial-gradient(circle_at_80%_80%,rgba(168,217,124,0.2),transparent_45%)]
   );
 };
 
-export default EcommerceSeoServices;
+export default WhiteLabelSeo;
