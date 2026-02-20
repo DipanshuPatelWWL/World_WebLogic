@@ -454,8 +454,8 @@ export default function Home() {
                                         Email & Website
                                     </h4>
                                     <p className="text-black text-sm mt-1 leading-relaxed break-words">
-                                        info@Digital WebGuider.com<br />
-                                        www.Digital WebGuider.com
+                                        info@digitalwebguider.com<br />
+                                        www.digitalwebguider.com
                                     </p>
                                 </div>
                             </div>
