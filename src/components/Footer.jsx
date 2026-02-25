@@ -101,9 +101,8 @@ export default function Footer() {
                     <FooterColumn
                         title="Web Development"
                         links={[
-                            { name: "Web Design", path: "/services/web-design" },
-                            { name: "Web Development", path: "/services/web-development" },
-                            { name: "SEO Services", path: "/services/seo" },
+                            { name: "Website Redesign", path: "/services/website-redesign" },
+                            { name: "WordPress Development", path: "/services/wordpress-development" },
                             { name: "Small Business SEO", path: "/services/small-business-seo" },
                             { name: "Technical SEO", path: "/services/seo/technical-seo-services" },
                             { name: "Link Building", path: "/services/seo/link-building-services" }
@@ -115,7 +114,7 @@ export default function Footer() {
                     <FooterColumn
                         title="App Development"
                         links={[
-                            { name: "Mobile App Development", path: "/services/mobile-application-development" },
+                            { name: "Mobile App Development", path: "/services/mobile-app-development" },
                             { name: "App Store Optimization", path: "/services/seo/app-store-optimization" },
                             { name: "Voice Search Optimization", path: "/services/seo/voice-search-optimization" },
                             { name: "YouTube Optimization", path: "/services/youtube-optimization" }
