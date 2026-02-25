@@ -50,12 +50,18 @@ import WhiteLabelSeo from "./pages/services/seo/WhiteLabelSeo";
 import Geo from "./pages/services/seo/Geo";
 import Aeo from "./pages/services/seo/Aeo";
 import YouTubeSeo from "./pages/services/videoSeo/YouTubeSeo";
+import SocialMediaOptimization from "./pages/services/socialMediaMarketing/SocialMediaOptimization";
+import SocialMediaManagement from "./pages/services/socialMediaMarketing/SocialMediaManagement";
+import SocialMediaAdvertise from "./pages/services/socialMediaMarketing/SocialMediaAdvertise";
+import ShopifyWebDev from "./pages/services/ecommerceDevelopment/ShopifyWebDev";
+import WoocommerceDev from "./pages/services/ecommerceDevelopment/WoocommerceDev";
+import PaymentGateway from "./pages/services/ecommerceDevelopment/PaymentGateway";
 
 function App() {
   return (
     <Router>
       <ScrollToTop />
-      <SplashCursor />
+      {/* <SplashCursor /> */}
       <div className="fixed inset-0 -z-10">
         <video
           autoPlay
@@ -180,15 +186,39 @@ function App() {
           />
           <Route
             path="/services/seo/generative-engine-optimization"
-            element={<Geo/>}
+            element={<Geo />}
           />
           <Route
             path="/services/seo/answer-engine-optimization"
-            element={<Aeo/>}
+            element={<Aeo />}
           />
           <Route
             path="/services/youtube-optimization"
-            element={<YouTubeSeo/>}
+            element={<YouTubeSeo />}
+          />
+          <Route
+            path="/services/smo/social-media-optimization"
+            element={<SocialMediaOptimization />}
+          />
+          <Route
+            path="/services/smo/social-media-management"
+            element={<SocialMediaManagement />}
+          />
+          <Route
+            path="/services/smo/social-media-advertise"
+            element={<SocialMediaAdvertise />}
+          />
+          <Route
+            path="/services/shopify-web-development"
+            element={<ShopifyWebDev />}
+          />
+          <Route
+            path="/services/woocommerce-web-development"
+            element={<WoocommerceDev />}
+          />
+          <Route
+            path="/services/payment-gateway-integration"
+            element={<PaymentGateway />}
           />
 
           {/* CONTACT */}

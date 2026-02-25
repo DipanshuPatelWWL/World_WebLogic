@@ -52,10 +52,9 @@ const Header = () => {
             <NavLink
               to="/"
               className={({ isActive }) =>
-                `font-medium transition ${
-                  isActive
-                    ? "text-[#25baff]"
-                    : "text-[#020202] hover:text-[#25baff]"
+                `font-medium transition ${isActive
+                  ? "text-[#25baff]"
+                  : "text-[#020202] hover:text-[#25baff]"
                 }`
               }
             >
@@ -294,7 +293,7 @@ const Header = () => {
                     <ul className="space-y-1.5">
                       <li>
                         <NavLink
-                          to="/services/social-media-optimization"
+                          to="/services/smo/social-media-optimization"
                           className={({ isActive }) =>
                             `flex gap-2 transition ${isActive ? "text-[#25baff] font-medium" : "text-gray-600 hover:text-[#25baff]"}`
                           }
@@ -306,7 +305,7 @@ const Header = () => {
 
                       <li>
                         <NavLink
-                          to="/services/social-media-management"
+                          to="/services/smo/social-media-management"
                           className={({ isActive }) =>
                             `flex gap-2 transition ${isActive ? "text-[#25baff] font-medium" : "text-gray-600 hover:text-[#25baff]"}`
                           }
@@ -318,7 +317,7 @@ const Header = () => {
 
                       <li>
                         <NavLink
-                          to="/services/social-media-advertising"
+                          to="/services/smo/social-media-advertise"
                           className={({ isActive }) =>
                             `flex gap-2 transition ${isActive ? "text-[#25baff] font-medium" : "text-gray-600 hover:text-[#25baff]"}`
                           }
@@ -698,7 +697,7 @@ const Header = () => {
                     <ul className="space-y-1.5">
                       <li>
                         <NavLink
-                          to="/services/shopify-web-development"
+                          to="services/shopify-web-development"
                           className={({ isActive }) =>
                             `flex gap-2 transition ${isActive ? "text-[#25baff] font-medium" : "text-gray-600 hover:text-[#25baff]"}`
                           }
@@ -710,7 +709,7 @@ const Header = () => {
 
                       <li>
                         <NavLink
-                          to="/services/woocommerce-development"
+                          to="/services/woocommerce-web-development"
                           className={({ isActive }) =>
                             `flex gap-2 transition ${isActive ? "text-[#25baff] font-medium" : "text-gray-600 hover:text-[#25baff]"}`
                           }
@@ -722,7 +721,7 @@ const Header = () => {
 
                       <li>
                         <NavLink
-                          to="/services/payment-gateway"
+                          to="/services/payment-gateway-integration"
                           className={({ isActive }) =>
                             `flex gap-2 transition ${isActive ? "text-[#25baff] font-medium" : "text-gray-600 hover:text-[#25baff]"}`
                           }
@@ -1030,10 +1029,9 @@ const Header = () => {
             <NavLink
               to="/portfolio"
               className={({ isActive }) =>
-                `font-medium transition ${
-                  isActive
-                    ? "text-[#25baff]"
-                    : "text-[#020202] hover:text-[#25baff]"
+                `font-medium transition ${isActive
+                  ? "text-[#25baff]"
+                  : "text-[#020202] hover:text-[#25baff]"
                 }`
               }
             >
@@ -1043,10 +1041,9 @@ const Header = () => {
             <NavLink
               to="/contact"
               className={({ isActive }) =>
-                `font-medium transition ${
-                  isActive
-                    ? "text-[#25baff]"
-                    : "text-[#020202] hover:text-[#25baff]"
+                `font-medium transition ${isActive
+                  ? "text-[#25baff]"
+                  : "text-[#020202] hover:text-[#25baff]"
                 }`
               }
             >
