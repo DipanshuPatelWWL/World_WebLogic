@@ -27,11 +27,12 @@ const Header = () => {
   const [openSubMenu, setOpenSubMenu] = useState(null);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const [isMarketOpen, setIsMarketOpen] = useState(false);
 
-  const handleCloseMarket = () => {
-    setIsMarketOpen(false);
-  };
+const [isMarketOpen, setIsMarketOpen] = useState(false);
+
+const handleCloseMarket = () => {
+  setIsMarketOpen(false);
+};
 
   const handleCloseMenu = () => {
     setIsMenuOpen(false);
@@ -44,13 +45,6 @@ const Header = () => {
     setMobileOpen(false);
     setOpenSubMenu(null);
   };
-
-  const navClass = ({ isActive }) =>
-    `flex gap-2 transition ${isActive
-      ? "text-[#25baff] font-medium"
-      : "text-gray-600 hover:text-[#25baff]"
-    }`;
-
   return (
     <header className="sticky top-0 z-50 bg-white border-b border-gray-200 shadow-sm">
       <div className="max-w-7xl mx-auto px-10">
@@ -69,9 +63,10 @@ const Header = () => {
             <NavLink
               to="/"
               className={({ isActive }) =>
-                `font-medium transition ${isActive
-                  ? "text-[#25baff]"
-                  : "text-[#020202] hover:text-[#25baff]"
+                `font-medium transition ${
+                  isActive
+                    ? "text-[#25baff]"
+                    : "text-[#020202] hover:text-[#25baff]"
                 }`
               }
             >
@@ -172,9 +167,10 @@ const Header = () => {
                             to={path}
                             onClick={handleCloseMenu}
                             className={({ isActive }) =>
-                              `flex gap-2 transition ${isActive
-                                ? "text-[#25baff] font-medium"
-                                : "text-gray-600 hover:text-[#25baff]"
+                              `flex gap-2 transition ${
+                                isActive
+                                  ? "text-[#25baff] font-medium"
+                                  : "text-gray-600 hover:text-[#25baff]"
                               }`
                             }
                           >
@@ -202,9 +198,10 @@ const Header = () => {
                             to={path}
                             onClick={handleCloseMenu}
                             className={({ isActive }) =>
-                              `flex gap-2 transition ${isActive
-                                ? "text-[#25baff] font-medium"
-                                : "text-gray-600 hover:text-[#25baff]"
+                              `flex gap-2 transition ${
+                                isActive
+                                  ? "text-[#25baff] font-medium"
+                                  : "text-gray-600 hover:text-[#25baff]"
                               }`
                             }
                           >
@@ -242,9 +239,10 @@ const Header = () => {
                             to={path}
                             onClick={handleCloseMenu}
                             className={({ isActive }) =>
-                              `flex gap-2 transition ${isActive
-                                ? "text-[#25baff] font-medium"
-                                : "text-gray-600 hover:text-[#25baff]"
+                              `flex gap-2 transition ${
+                                isActive
+                                  ? "text-[#25baff] font-medium"
+                                  : "text-gray-600 hover:text-[#25baff]"
                               }`
                             }
                           >
@@ -298,9 +296,10 @@ const Header = () => {
                             to={path}
                             onClick={handleCloseMenu}
                             className={({ isActive }) =>
-                              `flex gap-2 transition ${isActive
-                                ? "text-[#25baff] font-medium"
-                                : "text-gray-600 hover:text-[#25baff]"
+                              `flex gap-2 transition ${
+                                isActive
+                                  ? "text-[#25baff] font-medium"
+                                  : "text-gray-600 hover:text-[#25baff]"
                               }`
                             }
                           >
@@ -359,9 +358,10 @@ const Header = () => {
                             to={path}
                             onClick={handleCloseMenu}
                             className={({ isActive }) =>
-                              `flex gap-2 transition ${isActive
-                                ? "text-[#25baff] font-medium"
-                                : "text-gray-600 hover:text-[#25baff]"
+                              `flex gap-2 transition ${
+                                isActive
+                                  ? "text-[#25baff] font-medium"
+                                  : "text-gray-600 hover:text-[#25baff]"
                               }`
                             }
                           >
@@ -399,9 +399,10 @@ const Header = () => {
                             to={path}
                             onClick={handleCloseMenu}
                             className={({ isActive }) =>
-                              `flex gap-2 transition ${isActive
-                                ? "text-[#25baff] font-medium"
-                                : "text-gray-600 hover:text-[#25baff]"
+                              `flex gap-2 transition ${
+                                isActive
+                                  ? "text-[#25baff] font-medium"
+                                  : "text-gray-600 hover:text-[#25baff]"
                               }`
                             }
                           >
@@ -441,9 +442,10 @@ const Header = () => {
                             to={path}
                             onClick={handleCloseMenu}
                             className={({ isActive }) =>
-                              `flex gap-2 transition ${isActive
-                                ? "text-[#25baff] font-medium"
-                                : "text-gray-600 hover:text-[#25baff]"
+                              `flex gap-2 transition ${
+                                isActive
+                                  ? "text-[#25baff] font-medium"
+                                  : "text-gray-600 hover:text-[#25baff]"
                               }`
                             }
                           >
@@ -481,9 +483,10 @@ const Header = () => {
                             to={path}
                             onClick={handleCloseMenu}
                             className={({ isActive }) =>
-                              `flex gap-2 transition ${isActive
-                                ? "text-[#25baff] font-medium"
-                                : "text-gray-600 hover:text-[#25baff]"
+                              `flex gap-2 transition ${
+                                isActive
+                                  ? "text-[#25baff] font-medium"
+                                  : "text-gray-600 hover:text-[#25baff]"
                               }`
                             }
                           >
@@ -499,23 +502,23 @@ const Header = () => {
             </div>
 
             {/* MARKET DROPDOWN */}
-            <div
-              className="relative group"
-              onMouseEnter={() => setIsMarketOpen(true)}
-              onMouseLeave={() => setIsMarketOpen(false)}
-            >
-              <button
-                type="button"
-                className="cursor-pointer font-medium text-[#020202] hover:text-[#25baff] transition flex items-center gap-1"
-              >
-                Market
-                <span className="inline-block mt-1 text-xs transition-transform duration-300 group-hover:rotate-180">
-                  ▼
-                </span>
-              </button>
+  <div
+  className="relative group"
+  onMouseEnter={() => setIsMarketOpen(true)}
+  onMouseLeave={() => setIsMarketOpen(false)}
+>
+  <button
+    type="button"
+    className="cursor-pointer font-medium text-[#020202] hover:text-[#25baff] transition flex items-center gap-1"
+  >
+    Market
+    <span className="inline-block mt-1 text-xs transition-transform duration-300 group-hover:rotate-180">
+      ▼
+    </span>
+  </button>
 
-              <div
-                className={`absolute -left-4 -translate-x-1/2 top-full mt-3
+  <div
+    className={`absolute -left-4 -translate-x-1/2 top-full mt-3
       w-[1100px] bg-white
       border border-gray-200 border-t-4 border-t-[#25baff]
       shadow-xl rounded-lg
@@ -523,402 +526,207 @@ const Header = () => {
       p-8 z-50
       ${isMarketOpen ? "opacity-100 visible" : "opacity-0 invisible"}
     `}
+  >
+    <div className="grid grid-cols-5 gap-8 text-sm">
+
+      {/* Popular Markets */}
+      <div>
+        <h4 className="flex items-center gap-2 font-semibold text-black mb-3">
+          <FaIndustry className="text-[#25baff]" />
+          Popular Markets
+        </h4>
+        <ul className="space-y-1.5">
+          {[
+            "automotive-seo",
+            "construction-seo",
+            "dental-seo",
+            "hvac-seo",
+            "healthcare-seo",
+            "insurance-seo",
+            "lawyer-seo",
+            "real-estate-seo",
+            "plumber-seo",
+          ].map((slug) => (
+            <li key={slug}>
+              <NavLink
+                to={`/market/${slug}`}
+                onClick={handleCloseMarket}
+                className={({ isActive }) =>
+                  `flex gap-2 transition ${
+                    isActive
+                      ? "text-[#25baff] font-medium"
+                      : "text-gray-600 hover:text-[#25baff]"
+                  }`
+                }
               >
+                <FaAngleRight className="mt-1 text-xs" />
+                {slug
+                  .replace(/-/g, " ")
+                  .replace(/\b\w/g, (l) => l.toUpperCase())}
+              </NavLink>
+            </li>
+          ))}
+        </ul>
+      </div>
 
-                <div className="grid grid-cols-5 gap-8 text-sm">
+      {/* Automobile & Home */}
+      <div>
+        <h4 className="flex items-center gap-2 font-semibold text-black mb-3">
+          <FaIndustry className="text-[#25baff]" />
+          Automobile & Home
+        </h4>
+        <ul className="space-y-1.5">
+          {[
+            "aviation-seo",
+            "home-remodeling-seo",
+            "cleaning-seo",
+            "furniture-seo",
+            "entertainment-seo",
+            "logistic-seo",
+            "appliance-repair-seo",
+          ].map((slug) => (
+            <li key={slug}>
+              <NavLink
+                to={`/market/${slug}`}
+                onClick={handleCloseMarket}
+                className={({ isActive }) =>
+                  `flex gap-2 transition ${
+                    isActive
+                      ? "text-[#25baff] font-medium"
+                      : "text-gray-600 hover:text-[#25baff]"
+                  }`
+                }
+              >
+                <FaAngleRight className="mt-1 text-xs" />
+                {slug
+                  .replace(/-/g, " ")
+                  .replace(/\b\w/g, (l) => l.toUpperCase())}
+              </NavLink>
+            </li>
+          ))}
+        </ul>
+      </div>
 
-                  {/* Popular Markets */}
-                  <div>
-                    <h4 className="flex items-center gap-2 font-semibold text-black mb-3">
-                      <FaIndustry className="text-[#25baff]" />
-                      Popular Markets
-                    </h4>
+      {/* Food & Health */}
+      <div>
+        <h4 className="flex items-center gap-2 font-semibold text-black mb-3">
+          <FaIndustry className="text-[#25baff]" />
+          Food & Health
+        </h4>
+        <ul className="space-y-1.5">
+          {[
+            "restaurant-seo",
+            "agriculture-seo",
+            "fitness-seo",
+            "kitchen-remodeler-seo",
+            "therapist-seo",
+            "catering-seo",
+            "yoga-seo",
+            "pharma-seo",
+          ].map((slug) => (
+            <li key={slug}>
+              <NavLink
+                to={`/market/${slug}`}
+                onClick={handleCloseMarket}
+                className={({ isActive }) =>
+                  `flex gap-2 transition ${
+                    isActive
+                      ? "text-[#25baff] font-medium"
+                      : "text-gray-600 hover:text-[#25baff]"
+                  }`
+                }
+              >
+                <FaAngleRight className="mt-1 text-xs" />
+                {slug
+                  .replace(/-/g, " ")
+                  .replace(/\b\w/g, (l) => l.toUpperCase())}
+              </NavLink>
+            </li>
+          ))}
+        </ul>
+      </div>
 
-                    <ul className="space-y-1.5">
-                      <li>
-                        <NavLink to="/market/automotive-seo" className={navClass}>
-                          <FaAngleRight className="mt-1 text-xs" />
-                          Automotive SEO
-                        </NavLink>
-                      </li>
+      {/* Service Sector */}
+      <div>
+        <h4 className="flex items-center gap-2 font-semibold text-black mb-3">
+          <FaIndustry className="text-[#25baff]" />
+          Service Sector
+        </h4>
+        <ul className="space-y-1.5">
+          {[
+            "daycare-seo",
+            "contractors-seo",
+            "fire-protection-seo",
+            "financial-seo",
+            "pest-control-seo",
+            "salons-seo",
+            "veterinary-seo",
+          ].map((slug) => (
+            <li key={slug}>
+              <NavLink
+                to={`/market/${slug}`}
+                onClick={handleCloseMarket}
+                className={({ isActive }) =>
+                  `flex gap-2 transition ${
+                    isActive
+                      ? "text-[#25baff] font-medium"
+                      : "text-gray-600 hover:text-[#25baff]"
+                  }`
+                }
+              >
+                <FaAngleRight className="mt-1 text-xs" />
+                {slug
+                  .replace(/-/g, " ")
+                  .replace(/\b\w/g, (l) => l.toUpperCase())}
+              </NavLink>
+            </li>
+          ))}
+        </ul>
+      </div>
 
-                      <li>
-                        <NavLink to="/market/construction-seo" className={navClass}>
-                          <FaAngleRight className="mt-1 text-xs" />
-                          Construction SEO
-                        </NavLink>
-                      </li>
+      {/* Others */}
+      <div>
+        <h4 className="flex items-center gap-2 font-semibold text-black mb-3">
+          <FaIndustry className="text-[#25baff]" />
+          Others
+        </h4>
+        <ul className="space-y-1.5">
+          {[
+            "education-seo",
+            "jewelry-seo",
+            "retail-seo",
+            "hospitality-seo",
+            "tree-service-seo",
+            "photography-seo",
+            "movers-seo",
+            "cannabis-seo",
+            "travel-seo",
+          ].map((slug) => (
+            <li key={slug}>
+              <NavLink
+                to={`/market/${slug}`}
+                onClick={handleCloseMarket}
+                className={({ isActive }) =>
+                  `flex gap-2 transition ${
+                    isActive
+                      ? "text-[#25baff] font-medium"
+                      : "text-gray-600 hover:text-[#25baff]"
+                  }`
+                }
+              >
+                <FaAngleRight className="mt-1 text-xs" />
+                {slug
+                  .replace(/-/g, " ")
+                  .replace(/\b\w/g, (l) => l.toUpperCase())}
+              </NavLink>
+            </li>
+          ))}
+        </ul>
+      </div>
 
-                      <li>
-                        <NavLink to="/market/dental-seo" className={navClass}>
-                          <FaAngleRight className="mt-1 text-xs" />
-                          Dental SEO
-                        </NavLink>
-                      </li>
-
-                      <li>
-                        <NavLink to="/market/hvac-seo" className={navClass}>
-                          <FaAngleRight className="mt-1 text-xs" />
-                          HVAC SEO
-                        </NavLink>
-                      </li>
-
-                      <li>
-                        <NavLink to="/market/healthcare-seo" className={navClass}>
-                          <FaAngleRight className="mt-1 text-xs" />
-                          Healthcare SEO
-                        </NavLink>
-                      </li>
-
-                      <li>
-                        <NavLink to="/market/insurance-seo" className={navClass}>
-                          <FaAngleRight className="mt-1 text-xs" />
-                          Insurance SEO
-                        </NavLink>
-                      </li>
-
-                      <li>
-                        <NavLink to="/market/lawyer-seo" className={navClass}>
-                          <FaAngleRight className="mt-1 text-xs" />
-                          Lawyer SEO
-                        </NavLink>
-                      </li>
-
-                      <li>
-                        <NavLink to="/market/real-estate-seo" className={navClass}>
-                          <FaAngleRight className="mt-1 text-xs" />
-                          Real Estate SEO
-                        </NavLink>
-                      </li>
-
-                      <li>
-                        <NavLink to="/market/plumber-seo" className={navClass}>
-                          <FaAngleRight className="mt-1 text-xs" />
-                          Plumber SEO
-                        </NavLink>
-                      </li>
-                      {[
-                        "automotive-seo",
-                        "construction-seo",
-                        "dental-seo",
-                        "hvac-seo",
-                        "healthcare-seo",
-                        "insurance-seo",
-                        "lawyer-seo",
-                        "real-estate-seo",
-                        "plumber-seo",
-                      ].map((slug) => (
-                        <li key={slug}>
-                          <NavLink
-                            to={`/market/${slug}`}
-                            onClick={handleCloseMarket}
-                            className={({ isActive }) =>
-                              `flex gap-2 transition ${isActive
-                                ? "text-[#25baff] font-medium"
-                                : "text-gray-600 hover:text-[#25baff]"
-                              }`
-                            }
-                          >
-                            <FaAngleRight className="mt-1 text-xs" />
-                            {slug
-                              .replace(/-/g, " ")
-                              .replace(/\b\w/g, (l) => l.toUpperCase())}
-                          </NavLink>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-
-
-                  {/* Automobile & Home */}
-                  <div>
-                    <h4 className="flex items-center gap-2 font-semibold text-black mb-3">
-                      <FaIndustry className="text-[#25baff]" />
-                      Automobile & Home
-                    </h4>
-
-                    <ul className="space-y-1.5">
-                      <li>
-                        <NavLink to="/market/aviation-seo" className={navClass}>
-                          <FaAngleRight className="mt-1 text-xs" />
-                          Aviation SEO
-                        </NavLink>
-                      </li>
-
-                      <li>
-                        <NavLink to="/market/home-remodeling-seo" className={navClass}>
-                          <FaAngleRight className="mt-1 text-xs" />
-                          Home Remodeling SEO
-                        </NavLink>
-                      </li>
-
-                      <li>
-                        <NavLink to="/market/cleaning-seo" className={navClass}>
-                          <FaAngleRight className="mt-1 text-xs" />
-                          Cleaning SEO
-                        </NavLink>
-                      </li>
-
-                      <li>
-                        <NavLink to="/market/furniture-seo" className={navClass}>
-                          <FaAngleRight className="mt-1 text-xs" />
-                          Furniture SEO
-                        </NavLink>
-                      </li>
-
-                      <li>
-                        <NavLink to="/market/entertainment-seo" className={navClass}>
-                          <FaAngleRight className="mt-1 text-xs" />
-                          Entertainment SEO
-                        </NavLink>
-                      </li>
-
-                      <li>
-                        <NavLink to="/market/logistic-seo" className={navClass}>
-                          <FaAngleRight className="mt-1 text-xs" />
-                          Logistic SEO
-                        </NavLink>
-                      </li>
-
-                      <li>
-                        <NavLink to="/market/appliance-repair-seo" className={navClass}>
-                          <FaAngleRight className="mt-1 text-xs" />
-                          Appliance Repair SEO
-                        </NavLink>
-                      </li>
-                      {[
-                        "aviation-seo",
-                        "home-remodeling-seo",
-                        "cleaning-seo",
-                        "furniture-seo",
-                        "entertainment-seo",
-                        "logistic-seo",
-                        "appliance-repair-seo",
-                      ].map((slug) => (
-                        <li key={slug}>
-                          <NavLink
-                            to={`/market/${slug}`}
-                            onClick={handleCloseMarket}
-                            className={({ isActive }) =>
-                              `flex gap-2 transition ${isActive
-                                ? "text-[#25baff] font-medium"
-                                : "text-gray-600 hover:text-[#25baff]"
-                              }`
-                            }
-                          >
-                            <FaAngleRight className="mt-1 text-xs" />
-                            {slug
-                              .replace(/-/g, " ")
-                              .replace(/\b\w/g, (l) => l.toUpperCase())}
-                          </NavLink>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-
-
-                  {/* Food & Health */}
-                  <div>
-                    <h4 className="flex items-center gap-2 font-semibold text-black mb-3">
-                      <FaIndustry className="text-[#25baff]" />
-                      Food & Health
-                    </h4>
-
-                    <ul className="space-y-1.5">
-                      <li>
-                        <NavLink to="/market/restaurant-seo" className={navClass}>
-                          <FaAngleRight className="mt-1 text-xs" />
-                          Restaurant SEO
-                        </NavLink>
-                      </li>
-
-                      <li>
-                        <NavLink to="/market/agriculture-seo" className={navClass}>
-                          <FaAngleRight className="mt-1 text-xs" />
-                          Agriculture SEO
-                        </NavLink>
-                      </li>
-
-                      <li>
-                        <NavLink to="/market/fitness-seo" className={navClass}>
-                          <FaAngleRight className="mt-1 text-xs" />
-                          Fitness SEO
-                        </NavLink>
-                      </li>
-
-                      <li>
-                        <NavLink to="/market/therapist-seo" className={navClass}>
-                          <FaAngleRight className="mt-1 text-xs" />
-                          Therapist SEO
-                        </NavLink>
-                      </li>
-
-                      <li>
-                        <NavLink to="/market/yoga-seo" className={navClass}>
-                          <FaAngleRight className="mt-1 text-xs" />
-                          Yoga SEO
-                        </NavLink>
-                      </li>
-                      {[
-                        "restaurant-seo",
-                        "agriculture-seo",
-                        "fitness-seo",
-                        "kitchen-remodeler-seo",
-                        "therapist-seo",
-                        "catering-seo",
-                        "yoga-seo",
-                        "pharma-seo",
-                      ].map((slug) => (
-                        <li key={slug}>
-                          <NavLink
-                            to={`/market/${slug}`}
-                            onClick={handleCloseMarket}
-                            className={({ isActive }) =>
-                              `flex gap-2 transition ${isActive
-                                ? "text-[#25baff] font-medium"
-                                : "text-gray-600 hover:text-[#25baff]"
-                              }`
-                            }
-                          >
-                            <FaAngleRight className="mt-1 text-xs" />
-                            {slug
-                              .replace(/-/g, " ")
-                              .replace(/\b\w/g, (l) => l.toUpperCase())}
-                          </NavLink>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-
-
-                  {/* Service Sector */}
-                  <div>
-                    <h4 className="flex items-center gap-2 font-semibold text-black mb-3">
-                      <FaIndustry className="text-[#25baff]" />
-                      Service Sector
-                    </h4>
-
-                    <ul className="space-y-1.5">
-
-                      <li>
-                        <NavLink to="/market/daycare-seo" className={navClass}>
-                          <FaAngleRight className="mt-1 text-xs" />
-                          Daycare SEO
-                        </NavLink>
-                      </li>
-
-                      <li>
-                        <NavLink to="/market/contractors-seo" className={navClass}>
-                          <FaAngleRight className="mt-1 text-xs" />
-                          Contractors SEO
-                        </NavLink>
-                      </li>
-
-                      <li>
-                        <NavLink to="/market/pest-control-seo" className={navClass}>
-                          <FaAngleRight className="mt-1 text-xs" />
-                          Pest Control SEO
-                        </NavLink>
-                      </li>
-
-                      {[
-                        "daycare-seo",
-                        "contractors-seo",
-                        "fire-protection-seo",
-                        "financial-seo",
-                        "pest-control-seo",
-                        "salons-seo",
-                        "veterinary-seo",
-                      ].map((slug) => (
-                        <li key={slug}>
-                          <NavLink
-                            to={`/market/${slug}`}
-                            onClick={handleCloseMarket}
-                            className={({ isActive }) =>
-                              `flex gap-2 transition ${isActive
-                                ? "text-[#25baff] font-medium"
-                                : "text-gray-600 hover:text-[#25baff]"
-                              }`
-                            }
-                          >
-                            <FaAngleRight className="mt-1 text-xs" />
-                            {slug
-                              .replace(/-/g, " ")
-                              .replace(/\b\w/g, (l) => l.toUpperCase())}
-                          </NavLink>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-
-
-                  {/* Others */}
-                  <div>
-                    <h4 className="flex items-center gap-2 font-semibold text-black mb-3">
-                      <FaIndustry className="text-[#25baff]" />
-                      Others
-                    </h4>
-
-                    <ul className="space-y-1.5">
-
-                      <li>
-                        <NavLink to="/market/education-seo" className={navClass}>
-                          <FaAngleRight className="mt-1 text-xs" />
-                          Education SEO
-                        </NavLink>
-                      </li>
-
-                      <li>
-                        <NavLink to="/market/jewelry-seo" className={navClass}>
-                          <FaAngleRight className="mt-1 text-xs" />
-                          Jewelry SEO
-                        </NavLink>
-                      </li>
-
-                      <li>
-                        <NavLink to="/market/travel-seo" className={navClass}>
-                          <FaAngleRight className="mt-1 text-xs" />
-                          Travel SEO
-                        </NavLink>
-                      </li>
-
-                      {[
-                        "education-seo",
-                        "jewelry-seo",
-                        "retail-seo",
-                        "hospitality-seo",
-                        "tree-service-seo",
-                        "photography-seo",
-                        "movers-seo",
-                        "cannabis-seo",
-                        "travel-seo",
-                      ].map((slug) => (
-                        <li key={slug}>
-                          <NavLink
-                            to={`/market/${slug}`}
-                            onClick={handleCloseMarket}
-                            className={({ isActive }) =>
-                              `flex gap-2 transition ${isActive
-                                ? "text-[#25baff] font-medium"
-                                : "text-gray-600 hover:text-[#25baff]"
-                              }`
-                            }
-                          >
-                            <FaAngleRight className="mt-1 text-xs" />
-                            {slug
-                              .replace(/-/g, " ")
-                              .replace(/\b\w/g, (l) => l.toUpperCase())}
-                          </NavLink>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-
-                </div>
-
-
-              </div>
-            </div>
+    </div>
+  </div>
+</div>
             {/* PLANS & PRICING */}
             <div className="relative group">
               <button
@@ -976,9 +784,10 @@ const Header = () => {
             <NavLink
               to="/portfolio"
               className={({ isActive }) =>
-                `font-medium transition ${isActive
-                  ? "text-[#25baff]"
-                  : "text-[#020202] hover:text-[#25baff]"
+                `font-medium transition ${
+                  isActive
+                    ? "text-[#25baff]"
+                    : "text-[#020202] hover:text-[#25baff]"
                 }`
               }
             >
@@ -988,9 +797,10 @@ const Header = () => {
             <NavLink
               to="/contact"
               className={({ isActive }) =>
-                `font-medium transition ${isActive
-                  ? "text-[#25baff]"
-                  : "text-[#020202] hover:text-[#25baff]"
+                `font-medium transition ${
+                  isActive
+                    ? "text-[#25baff]"
+                    : "text-[#020202] hover:text-[#25baff]"
                 }`
               }
             >
