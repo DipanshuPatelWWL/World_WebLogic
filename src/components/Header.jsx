@@ -34,6 +34,13 @@ const Header = () => {
     setMobileOpen(false);
     setOpenSubMenu(null);
   };
+
+  const navClass = ({ isActive }) =>
+    `flex gap-2 transition ${isActive
+      ? "text-[#25baff] font-medium"
+      : "text-gray-600 hover:text-[#25baff]"
+    }`;
+
   return (
     <header className="sticky top-0 z-50 bg-white border-b border-gray-200 shadow-sm">
       <div className="max-w-7xl mx-auto px-10">
@@ -701,54 +708,84 @@ const Header = () => {
     transition-all duration-300
     p-8 z-50"
               >
+
                 <div className="grid grid-cols-5 gap-8 text-sm">
+
                   {/* Popular Markets */}
                   <div>
                     <h4 className="flex items-center gap-2 font-semibold text-black mb-3">
                       <FaIndustry className="text-[#25baff]" />
                       Popular Markets
                     </h4>
+
                     <ul className="space-y-1.5">
-                     <NavLink to="/market/automotive-seo">
-                       <li className="flex gap-2 text-gray-600 hover:text-[#25baff] transition cursor-pointer">
-                        <FaAngleRight className="mt-1 text-[#25baff] text-xs" />
-                        Automotive SEO
+
+                      <li>
+                        <NavLink to="/market/automotive-seo" className={navClass}>
+                          <FaAngleRight className="mt-1 text-xs" />
+                          Automotive SEO
+                        </NavLink>
                       </li>
-                     </NavLink>
-                      <li className="flex gap-2 text-gray-600 hover:text-[#25baff] transition cursor-pointer">
-                        <FaAngleRight className="mt-1 text-[#25baff] text-xs" />
-                        Construction SEO
+
+                      <li>
+                        <NavLink to="/market/construction-seo" className={navClass}>
+                          <FaAngleRight className="mt-1 text-xs" />
+                          Construction SEO
+                        </NavLink>
                       </li>
-                      <li className="flex gap-2 text-gray-600 hover:text-[#25baff] transition cursor-pointer">
-                        <FaAngleRight className="mt-1 text-[#25baff] text-xs" />
-                        Dental SEO
+
+                      <li>
+                        <NavLink to="/market/dental-seo" className={navClass}>
+                          <FaAngleRight className="mt-1 text-xs" />
+                          Dental SEO
+                        </NavLink>
                       </li>
-                      <li className="flex gap-2 text-gray-600 hover:text-[#25baff] transition cursor-pointer">
-                        <FaAngleRight className="mt-1 text-[#25baff] text-xs" />
-                        HVAC SEO
+
+                      <li>
+                        <NavLink to="/market/hvac-seo" className={navClass}>
+                          <FaAngleRight className="mt-1 text-xs" />
+                          HVAC SEO
+                        </NavLink>
                       </li>
-                      <li className="flex gap-2 text-gray-600 hover:text-[#25baff] transition cursor-pointer">
-                        <FaAngleRight className="mt-1 text-[#25baff] text-xs" />
-                        Healthcare SEO
+
+                      <li>
+                        <NavLink to="/market/healthcare-seo" className={navClass}>
+                          <FaAngleRight className="mt-1 text-xs" />
+                          Healthcare SEO
+                        </NavLink>
                       </li>
-                      <li className="flex gap-2 text-gray-600 hover:text-[#25baff] transition cursor-pointer">
-                        <FaAngleRight className="mt-1 text-[#25baff] text-xs" />
-                        Insurance SEO
+
+                      <li>
+                        <NavLink to="/market/insurance-seo" className={navClass}>
+                          <FaAngleRight className="mt-1 text-xs" />
+                          Insurance SEO
+                        </NavLink>
                       </li>
-                      <li className="flex gap-2 text-gray-600 hover:text-[#25baff] transition cursor-pointer">
-                        <FaAngleRight className="mt-1 text-[#25baff] text-xs" />
-                        Lawyer SEO
+
+                      <li>
+                        <NavLink to="/market/lawyer-seo" className={navClass}>
+                          <FaAngleRight className="mt-1 text-xs" />
+                          Lawyer SEO
+                        </NavLink>
                       </li>
-                      <li className="flex gap-2 text-gray-600 hover:text-[#25baff] transition cursor-pointer">
-                        <FaAngleRight className="mt-1 text-[#25baff] text-xs" />
-                        Real Estate SEO
+
+                      <li>
+                        <NavLink to="/market/real-estate-seo" className={navClass}>
+                          <FaAngleRight className="mt-1 text-xs" />
+                          Real Estate SEO
+                        </NavLink>
                       </li>
-                      <li className="flex gap-2 text-gray-600 hover:text-[#25baff] transition cursor-pointer">
-                        <FaAngleRight className="mt-1 text-[#25baff] text-xs" />
-                        Plumber SEO
+
+                      <li>
+                        <NavLink to="/market/plumber-seo" className={navClass}>
+                          <FaAngleRight className="mt-1 text-xs" />
+                          Plumber SEO
+                        </NavLink>
                       </li>
+
                     </ul>
                   </div>
+
 
                   {/* Automobile & Home */}
                   <div>
@@ -756,37 +793,61 @@ const Header = () => {
                       <FaIndustry className="text-[#25baff]" />
                       Automobile & Home
                     </h4>
+
                     <ul className="space-y-1.5">
-                      <li className="flex gap-2 text-gray-600 hover:text-[#25baff] transition cursor-pointer">
-                        <FaAngleRight className="mt-1 text-[#25baff] text-xs" />
-                        Aviation SEO
+
+                      <li>
+                        <NavLink to="/market/aviation-seo" className={navClass}>
+                          <FaAngleRight className="mt-1 text-xs" />
+                          Aviation SEO
+                        </NavLink>
                       </li>
-                      <li className="flex gap-2 text-gray-600 hover:text-[#25baff] transition cursor-pointer">
-                        <FaAngleRight className="mt-1 text-[#25baff] text-xs" />
-                        Home Remodeling SEO
+
+                      <li>
+                        <NavLink to="/market/home-remodeling-seo" className={navClass}>
+                          <FaAngleRight className="mt-1 text-xs" />
+                          Home Remodeling SEO
+                        </NavLink>
                       </li>
-                      <li className="flex gap-2 text-gray-600 hover:text-[#25baff] transition cursor-pointer">
-                        <FaAngleRight className="mt-1 text-[#25baff] text-xs" />
-                        Cleaning SEO
+
+                      <li>
+                        <NavLink to="/market/cleaning-seo" className={navClass}>
+                          <FaAngleRight className="mt-1 text-xs" />
+                          Cleaning SEO
+                        </NavLink>
                       </li>
-                      <li className="flex gap-2 text-gray-600 hover:text-[#25baff] transition cursor-pointer">
-                        <FaAngleRight className="mt-1 text-[#25baff] text-xs" />
-                        Furniture SEO
+
+                      <li>
+                        <NavLink to="/market/furniture-seo" className={navClass}>
+                          <FaAngleRight className="mt-1 text-xs" />
+                          Furniture SEO
+                        </NavLink>
                       </li>
-                      <li className="flex gap-2 text-gray-600 hover:text-[#25baff] transition cursor-pointer">
-                        <FaAngleRight className="mt-1 text-[#25baff] text-xs" />
-                        Entertainment SEO
+
+                      <li>
+                        <NavLink to="/market/entertainment-seo" className={navClass}>
+                          <FaAngleRight className="mt-1 text-xs" />
+                          Entertainment SEO
+                        </NavLink>
                       </li>
-                      <li className="flex gap-2 text-gray-600 hover:text-[#25baff] transition cursor-pointer">
-                        <FaAngleRight className="mt-1 text-[#25baff] text-xs" />
-                        Logistic SEO
+
+                      <li>
+                        <NavLink to="/market/logistic-seo" className={navClass}>
+                          <FaAngleRight className="mt-1 text-xs" />
+                          Logistic SEO
+                        </NavLink>
                       </li>
-                      <li className="flex gap-2 text-gray-600 hover:text-[#25baff] transition cursor-pointer">
-                        <FaAngleRight className="mt-1 text-[#25baff] text-xs" />
-                        Appliance Repair SEO
+
+                      <li>
+                        <NavLink to="/market/appliance-repair-seo" className={navClass}>
+                          <FaAngleRight className="mt-1 text-xs" />
+                          Appliance Repair SEO
+                        </NavLink>
                       </li>
+
                     </ul>
                   </div>
+
 
                   {/* Food & Health */}
                   <div>
@@ -794,41 +855,47 @@ const Header = () => {
                       <FaIndustry className="text-[#25baff]" />
                       Food & Health
                     </h4>
+
                     <ul className="space-y-1.5">
-                      <li className="flex gap-2 text-gray-600 hover:text-[#25baff] transition cursor-pointer">
-                        <FaAngleRight className="mt-1 text-[#25baff] text-xs" />
-                        Restaurant SEO
+
+                      <li>
+                        <NavLink to="/market/restaurant-seo" className={navClass}>
+                          <FaAngleRight className="mt-1 text-xs" />
+                          Restaurant SEO
+                        </NavLink>
                       </li>
-                      <li className="flex gap-2 text-gray-600 hover:text-[#25baff] transition cursor-pointer">
-                        <FaAngleRight className="mt-1 text-[#25baff] text-xs" />
-                        Agriculture SEO
+
+                      <li>
+                        <NavLink to="/market/agriculture-seo" className={navClass}>
+                          <FaAngleRight className="mt-1 text-xs" />
+                          Agriculture SEO
+                        </NavLink>
                       </li>
-                      <li className="flex gap-2 text-gray-600 hover:text-[#25baff] transition cursor-pointer">
-                        <FaAngleRight className="mt-1 text-[#25baff] text-xs" />
-                        Fitness SEO
+
+                      <li>
+                        <NavLink to="/market/fitness-seo" className={navClass}>
+                          <FaAngleRight className="mt-1 text-xs" />
+                          Fitness SEO
+                        </NavLink>
                       </li>
-                      <li className="flex gap-2 text-gray-600 hover:text-[#25baff] transition cursor-pointer">
-                        <FaAngleRight className="mt-1 text-[#25baff] text-xs" />
-                        Kitchen Remodeler SEO
+
+                      <li>
+                        <NavLink to="/market/therapist-seo" className={navClass}>
+                          <FaAngleRight className="mt-1 text-xs" />
+                          Therapist SEO
+                        </NavLink>
                       </li>
-                      <li className="flex gap-2 text-gray-600 hover:text-[#25baff] transition cursor-pointer">
-                        <FaAngleRight className="mt-1 text-[#25baff] text-xs" />
-                        Therapist SEO
+
+                      <li>
+                        <NavLink to="/market/yoga-seo" className={navClass}>
+                          <FaAngleRight className="mt-1 text-xs" />
+                          Yoga SEO
+                        </NavLink>
                       </li>
-                      <li className="flex gap-2 text-gray-600 hover:text-[#25baff] transition cursor-pointer">
-                        <FaAngleRight className="mt-1 text-[#25baff] text-xs" />
-                        Catering SEO
-                      </li>
-                      <li className="flex gap-2 text-gray-600 hover:text-[#25baff] transition cursor-pointer">
-                        <FaAngleRight className="mt-1 text-[#25baff] text-xs" />
-                        Yoga SEO
-                      </li>
-                      <li className="flex gap-2 text-gray-600 hover:text-[#25baff] transition cursor-pointer">
-                        <FaAngleRight className="mt-1 text-[#25baff] text-xs" />
-                        Pharma SEO
-                      </li>
+
                     </ul>
                   </div>
+
 
                   {/* Service Sector */}
                   <div>
@@ -836,37 +903,33 @@ const Header = () => {
                       <FaIndustry className="text-[#25baff]" />
                       Service Sector
                     </h4>
+
                     <ul className="space-y-1.5">
-                      <li className="flex gap-2 text-gray-600 hover:text-[#25baff] transition cursor-pointer">
-                        <FaAngleRight className="mt-1 text-[#25baff] text-xs" />
-                        Daycare SEO
+
+                      <li>
+                        <NavLink to="/market/daycare-seo" className={navClass}>
+                          <FaAngleRight className="mt-1 text-xs" />
+                          Daycare SEO
+                        </NavLink>
                       </li>
-                      <li className="flex gap-2 text-gray-600 hover:text-[#25baff] transition cursor-pointer">
-                        <FaAngleRight className="mt-1 text-[#25baff] text-xs" />
-                        Contractors SEO
+
+                      <li>
+                        <NavLink to="/market/contractors-seo" className={navClass}>
+                          <FaAngleRight className="mt-1 text-xs" />
+                          Contractors SEO
+                        </NavLink>
                       </li>
-                      <li className="flex gap-2 text-gray-600 hover:text-[#25baff] transition cursor-pointer">
-                        <FaAngleRight className="mt-1 text-[#25baff] text-xs" />
-                        Fire Protection SEO
+
+                      <li>
+                        <NavLink to="/market/pest-control-seo" className={navClass}>
+                          <FaAngleRight className="mt-1 text-xs" />
+                          Pest Control SEO
+                        </NavLink>
                       </li>
-                      <li className="flex gap-2 text-gray-600 hover:text-[#25baff] transition cursor-pointer">
-                        <FaAngleRight className="mt-1 text-[#25baff] text-xs" />
-                        Financial SEO
-                      </li>
-                      <li className="flex gap-2 text-gray-600 hover:text-[#25baff] transition cursor-pointer">
-                        <FaAngleRight className="mt-1 text-[#25baff] text-xs" />
-                        Pest Control SEO
-                      </li>
-                      <li className="flex gap-2 text-gray-600 hover:text-[#25baff] transition cursor-pointer">
-                        <FaAngleRight className="mt-1 text-[#25baff] text-xs" />
-                        Salons SEO
-                      </li>
-                      <li className="flex gap-2 text-gray-600 hover:text-[#25baff] transition cursor-pointer">
-                        <FaAngleRight className="mt-1 text-[#25baff] text-xs" />
-                        Veterinary SEO
-                      </li>
+
                     </ul>
                   </div>
+
 
                   {/* Others */}
                   <div>
@@ -874,46 +937,36 @@ const Header = () => {
                       <FaIndustry className="text-[#25baff]" />
                       Others
                     </h4>
+
                     <ul className="space-y-1.5">
-                      <li className="flex gap-2 text-gray-600 hover:text-[#25baff] transition cursor-pointer">
-                        <FaAngleRight className="mt-1 text-[#25baff] text-xs" />
-                        Education SEO
+
+                      <li>
+                        <NavLink to="/market/education-seo" className={navClass}>
+                          <FaAngleRight className="mt-1 text-xs" />
+                          Education SEO
+                        </NavLink>
                       </li>
-                      <li className="flex gap-2 text-gray-600 hover:text-[#25baff] transition cursor-pointer">
-                        <FaAngleRight className="mt-1 text-[#25baff] text-xs" />
-                        Jewelry SEO
+
+                      <li>
+                        <NavLink to="/market/jewelry-seo" className={navClass}>
+                          <FaAngleRight className="mt-1 text-xs" />
+                          Jewelry SEO
+                        </NavLink>
                       </li>
-                      <li className="flex gap-2 text-gray-600 hover:text-[#25baff] transition cursor-pointer">
-                        <FaAngleRight className="mt-1 text-[#25baff] text-xs" />
-                        Retail SEO
+
+                      <li>
+                        <NavLink to="/market/travel-seo" className={navClass}>
+                          <FaAngleRight className="mt-1 text-xs" />
+                          Travel SEO
+                        </NavLink>
                       </li>
-                      <li className="flex gap-2 text-gray-600 hover:text-[#25baff] transition cursor-pointer">
-                        <FaAngleRight className="mt-1 text-[#25baff] text-xs" />
-                        Hospitality SEO
-                      </li>
-                      <li className="flex gap-2 text-gray-600 hover:text-[#25baff] transition cursor-pointer">
-                        <FaAngleRight className="mt-1 text-[#25baff] text-xs" />
-                        Tree Service SEO
-                      </li>
-                      <li className="flex gap-2 text-gray-600 hover:text-[#25baff] transition cursor-pointer">
-                        <FaAngleRight className="mt-1 text-[#25baff] text-xs" />
-                        Photography SEO
-                      </li>
-                      <li className="flex gap-2 text-gray-600 hover:text-[#25baff] transition cursor-pointer">
-                        <FaAngleRight className="mt-1 text-[#25baff] text-xs" />
-                        Movers SEO
-                      </li>
-                      <li className="flex gap-2 text-gray-600 hover:text-[#25baff] transition cursor-pointer">
-                        <FaAngleRight className="mt-1 text-[#25baff] text-xs" />
-                        Cannabis SEO
-                      </li>
-                      <li className="flex gap-2 text-gray-600 hover:text-[#25baff] transition cursor-pointer">
-                        <FaAngleRight className="mt-1 text-[#25baff] text-xs" />
-                        Travel SEO
-                      </li>
+
                     </ul>
                   </div>
+
                 </div>
+
+
               </div>
             </div>
 

@@ -74,6 +74,7 @@ import MobileAppDevelopment from "./pages/services/WebDesign&Development/MobileA
 import JoomlaDev from "./pages/services/WebDesign&Development/JoomlaDev";
 import WebsiteHosting from "./pages/services/WebDesign&Development/WebsiteHosting";
 import AutomotiveSeo from "./pages/market/popular-market/AutomotiveSeo";
+import RestaurantMarketing from "./pages/market/popular-market/Food&Health/RestaurantMarketing";
 
 
 function App() {
@@ -311,10 +312,19 @@ function App() {
             path="/services/website-hosting"
             element={<WebsiteHosting />}
           />
+
+
+          {/* market */}
           <Route
             path="/market/automotive-seo"
             element={<AutomotiveSeo />}
           />
+          <Route
+            path="/market/restaurant-seo"
+            element={<RestaurantMarketing />}
+          />
+
+
 
           {/* CONTACT */}
           <Route path="/contact" element={<ContactUs />} />
