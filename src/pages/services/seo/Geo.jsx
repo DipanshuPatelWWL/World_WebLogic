@@ -21,6 +21,7 @@ import {
 
 import Banner from "../../../assets/services/geo/banner.avif";
 import Img from "../../../assets/services/geo/img1.jpg";
+import { NavLink } from "react-router-dom";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -318,9 +319,11 @@ radial-gradient(circle_at_80%_80%,rgba(168,217,124,0.2),transparent_45%)]
             Talk to Our AI SEO Experts Now
           </h2>
 
-          <button className="bg-[#25baff] text-[#020202] px-6 py-3 rounded-full font-semibold hover:bg-[#a8d97c] transition">
-            Contact Now
-          </button>
+          <NavLink to="/contact">
+            <button className="bg-[#25baff] cursor-pointer text-[#020202] px-6 py-3 rounded-full font-semibold hover:bg-[#a8d97c] transition">
+              Contact Now
+            </button>
+          </NavLink>
         </div>
       </section>
 

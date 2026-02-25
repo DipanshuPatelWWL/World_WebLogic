@@ -1,5 +1,4 @@
 import { useLayoutEffect, useRef, useState } from "react";
-import { RiDoubleQuotesL } from "react-icons/ri";
 import { FaCheckCircle } from "react-icons/fa";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -15,6 +14,7 @@ import Img from "../../../assets/services/franchisedigital/img.avif";
 import Card1 from "../../../assets/services/franchisedigital/card1.avif";
 import Card2 from "../../../assets/services/franchisedigital/card2.avif";
 import Card3 from "../../../assets/services/franchisedigital/card3.jpg";
+import { NavLink } from "react-router-dom";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -92,39 +92,37 @@ const FranchiseDigitalMarketing = () => {
     return () => ctx.revert();
   }, []);
 
- const faqs = [
-  {
-    question:
-      "How do you rank multiple franchise locations without keyword cannibalization?",
-    answer:
-      "We implement a structured multi-location SEO architecture using geo-targeted landing pages, localized content, schema markup, and optimized Google Business Profiles. This ensures each location ranks independently without competing against sister branches.",
-  },
-  {
-    question:
-      "We already have a franchise website. Can you still improve performance?",
-    answer:
-      "Absolutely. We conduct a full technical, on-page, and conversion audit of your existing site. Then we optimize speed, structure, local landing pages, and conversion funnels to turn your current traffic into measurable growth.",
-  },
-  {
-    question:
-      "How do you manage Google Business Profiles across multiple locations?",
-    answer:
-      "We centralize and optimize every profile—ensuring NAP consistency, duplicate suppression, review strategy, regular posting, and geo-optimized updates. This strengthens local pack rankings across all franchise outlets.",
-  },
-  {
-    question:
-      "Is social media really necessary for franchise businesses?",
-    answer:
-      "Yes. Social media builds localized brand authority while maintaining a consistent brand identity. We create location-specific campaigns and paid ads that drive store visits, calls, bookings, and lead generation.",
-  },
-  {
-    question:
-      "Do you provide review and reputation management for franchises?",
-    answer:
-      "Yes. We implement automated review generation systems, respond strategically to feedback, and monitor platforms like Google, Yelp, and Facebook to improve trust, local rankings, and conversion rates.",
-  },
-];
-
+  const faqs = [
+    {
+      question:
+        "How do you rank multiple franchise locations without keyword cannibalization?",
+      answer:
+        "We implement a structured multi-location SEO architecture using geo-targeted landing pages, localized content, schema markup, and optimized Google Business Profiles. This ensures each location ranks independently without competing against sister branches.",
+    },
+    {
+      question:
+        "We already have a franchise website. Can you still improve performance?",
+      answer:
+        "Absolutely. We conduct a full technical, on-page, and conversion audit of your existing site. Then we optimize speed, structure, local landing pages, and conversion funnels to turn your current traffic into measurable growth.",
+    },
+    {
+      question:
+        "How do you manage Google Business Profiles across multiple locations?",
+      answer:
+        "We centralize and optimize every profile—ensuring NAP consistency, duplicate suppression, review strategy, regular posting, and geo-optimized updates. This strengthens local pack rankings across all franchise outlets.",
+    },
+    {
+      question: "Is social media really necessary for franchise businesses?",
+      answer:
+        "Yes. Social media builds localized brand authority while maintaining a consistent brand identity. We create location-specific campaigns and paid ads that drive store visits, calls, bookings, and lead generation.",
+    },
+    {
+      question:
+        "Do you provide review and reputation management for franchises?",
+      answer:
+        "Yes. We implement automated review generation systems, respond strategically to feedback, and monitor platforms like Google, Yelp, and Facebook to improve trust, local rankings, and conversion rates.",
+    },
+  ];
 
   return (
     <div ref={rootRef} className="bg-white text-black">
@@ -286,9 +284,11 @@ radial-gradient(circle_at_80%_80%,rgba(168,217,124,0.2),transparent_45%)]
             Scale Your Franchise Success — One Location at a Time
           </h2>
 
-          <button className="bg-[#25baff] text-[#020202] px-6 py-3 rounded-full font-semibold hover:bg-[#a8d97c] transition">
-            Contact Now
-          </button>
+          <NavLink to="/contact">
+            <button className="bg-[#25baff] cursor-pointer text-[#020202] px-6 py-3 rounded-full font-semibold hover:bg-[#a8d97c] transition">
+              Contact Now
+            </button>
+          </NavLink>
         </div>
       </section>
 
