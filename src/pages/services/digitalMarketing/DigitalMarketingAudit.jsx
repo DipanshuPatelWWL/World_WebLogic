@@ -17,6 +17,7 @@ import { MdOutlineAttachEmail } from "react-icons/md";
 
 import Banner from "../../../assets/services/digital-banner.avif";
 import Img from "../../../assets/services/digital-audit.avif";
+import { NavLink } from "react-router-dom";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -298,10 +299,11 @@ radial-gradient(circle_at_80%_80%,rgba(168,217,124,0.2),transparent_45%)]
           <h2 className="gsap-item text-white text-3xl font-extrabold max-w-4xl">
             Claim Your Free Website Audit Today!
           </h2>
-
-          <button className="bg-[#25baff] text-[#020202] px-6 py-3 rounded-full font-semibold hover:bg-[#a8d97c] transition">
-            Contact Now
-          </button>
+          <NavLink to="/contact">
+            <button className="bg-[#25baff] cursor-pointer text-[#020202] px-6 py-3 rounded-full font-semibold hover:bg-[#a8d97c] transition">
+              Contact Now
+            </button>
+          </NavLink>
         </div>
       </section>
 

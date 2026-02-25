@@ -30,7 +30,7 @@ import Ppc from "../../../assets/services/ppc.avif";
 import Web from "../../../assets/services/web-d-d.avif";
 import Email from "../../../assets/services/email.avif";
 import Cro from "../../../assets/services/cro.avif";
-
+import { NavLink } from "react-router-dom";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -91,34 +91,33 @@ const DigitalMarketingStrategy = () => {
     return () => ctx.revert();
   }, []);
 
-const faqs = [
-  {
-    question: "Can I select specific services based on my business needs?",
-    answer:
-      "Absolutely. We offer complete flexibility in our approach. Whether you require a comprehensive digital marketing strategy or support with a specific service like SEO, PPC, or social media, we create a customized plan aligned with your goals.",
-  },
-  {
-    question: "How do I track the progress of my campaigns?",
-    answer:
-      "We provide detailed monthly performance reports covering key metrics such as traffic, rankings, conversions, and ROI. Regular strategy reviews ensure you stay informed and aligned with campaign progress.",
-  },
-  {
-    question: "Do you offer multi-channel marketing solutions?",
-    answer:
-      "Yes. As a full-service digital marketing partner, we build integrated strategies that connect SEO, PPC, email marketing, social media, and more—ensuring all channels work together to maximize visibility and impact.",
-  },
-  {
-    question: "How soon can I expect to see results?",
-    answer:
-      "Timelines depend on your goals and chosen services. Paid campaigns like PPC can generate faster results, while SEO and content marketing build sustainable long-term growth. We set clear expectations and track measurable progress from the start.",
-  },
-  {
-    question: "Can you work with small businesses and limited budgets?",
-    answer:
-      "Definitely. Our strategies are scalable and designed to deliver maximum ROI, even with limited budgets. We focus on high-impact channels to ensure sustainable growth for businesses of all sizes.",
-  },
-];
-
+  const faqs = [
+    {
+      question: "Can I select specific services based on my business needs?",
+      answer:
+        "Absolutely. We offer complete flexibility in our approach. Whether you require a comprehensive digital marketing strategy or support with a specific service like SEO, PPC, or social media, we create a customized plan aligned with your goals.",
+    },
+    {
+      question: "How do I track the progress of my campaigns?",
+      answer:
+        "We provide detailed monthly performance reports covering key metrics such as traffic, rankings, conversions, and ROI. Regular strategy reviews ensure you stay informed and aligned with campaign progress.",
+    },
+    {
+      question: "Do you offer multi-channel marketing solutions?",
+      answer:
+        "Yes. As a full-service digital marketing partner, we build integrated strategies that connect SEO, PPC, email marketing, social media, and more—ensuring all channels work together to maximize visibility and impact.",
+    },
+    {
+      question: "How soon can I expect to see results?",
+      answer:
+        "Timelines depend on your goals and chosen services. Paid campaigns like PPC can generate faster results, while SEO and content marketing build sustainable long-term growth. We set clear expectations and track measurable progress from the start.",
+    },
+    {
+      question: "Can you work with small businesses and limited budgets?",
+      answer:
+        "Definitely. Our strategies are scalable and designed to deliver maximum ROI, even with limited budgets. We focus on high-impact channels to ensure sustainable growth for businesses of all sizes.",
+    },
+  ];
 
   return (
     <div ref={rootRef} className="bg-white text-gray-900">
@@ -336,7 +335,7 @@ const faqs = [
               <img
                 src={SEO}
                 alt="SEO Services"
-                 className="rounded-2xl shadow-2xl transition-transform duration-500 ease-out group-hover:scale-105"
+                className="rounded-2xl shadow-2xl transition-transform duration-500 ease-out group-hover:scale-105"
               />
             </div>
 
@@ -418,7 +417,7 @@ const faqs = [
               <img
                 src={LocalSEO}
                 alt="SEO Services"
-                 className="rounded-2xl shadow-2xl transition-transform duration-500 ease-out group-hover:scale-105"
+                className="rounded-2xl shadow-2xl transition-transform duration-500 ease-out group-hover:scale-105"
               />
             </div>
           </div>
@@ -433,7 +432,7 @@ const faqs = [
               <img
                 src={ContentMarketing}
                 alt="ContentMarketing"
-                 className="rounded-2xl shadow-2xl transition-transform duration-500 ease-out group-hover:scale-105"
+                className="rounded-2xl shadow-2xl transition-transform duration-500 ease-out group-hover:scale-105"
               />
             </div>
 
@@ -518,7 +517,7 @@ const faqs = [
               <img
                 src={LinkBuilding}
                 alt="LinkBuilding"
-                 className="rounded-2xl shadow-2xl transition-transform duration-500 ease-out group-hover:scale-105"
+                className="rounded-2xl shadow-2xl transition-transform duration-500 ease-out group-hover:scale-105"
               />
             </div>
           </div>
@@ -533,7 +532,7 @@ const faqs = [
               <img
                 src={SMO}
                 alt="SMO"
-                 className="rounded-2xl shadow-2xl transition-transform duration-500 ease-out group-hover:scale-105"
+                className="rounded-2xl shadow-2xl transition-transform duration-500 ease-out group-hover:scale-105"
               />
             </div>
 
@@ -618,7 +617,7 @@ const faqs = [
               <img
                 src={SMM}
                 alt="SMM Services"
-                 className="rounded-2xl shadow-2xl transition-transform duration-500 ease-out group-hover:scale-105"
+                className="rounded-2xl shadow-2xl transition-transform duration-500 ease-out group-hover:scale-105"
               />
             </div>
           </div>
@@ -633,7 +632,7 @@ const faqs = [
               <img
                 src={Fb}
                 alt="facebook Services"
-                 className="rounded-2xl shadow-2xl transition-transform duration-500 ease-out group-hover:scale-105"
+                className="rounded-2xl shadow-2xl transition-transform duration-500 ease-out group-hover:scale-105"
               />
             </div>
 
@@ -719,7 +718,7 @@ const faqs = [
               <img
                 src={Insta}
                 alt="Instagram"
-                 className="rounded-2xl shadow-2xl transition-transform duration-500 ease-out group-hover:scale-105"
+                className="rounded-2xl shadow-2xl transition-transform duration-500 ease-out group-hover:scale-105"
               />
             </div>
           </div>
@@ -734,7 +733,7 @@ const faqs = [
               <img
                 src={X}
                 alt="X"
-                 className="rounded-2xl shadow-2xl transition-transform duration-500 ease-out group-hover:scale-105"
+                className="rounded-2xl shadow-2xl transition-transform duration-500 ease-out group-hover:scale-105"
               />
             </div>
 
@@ -818,7 +817,7 @@ const faqs = [
               <img
                 src={Linkdin}
                 alt="Linkdin"
-                 className="rounded-2xl shadow-2xl transition-transform duration-500 ease-out group-hover:scale-105"
+                className="rounded-2xl shadow-2xl transition-transform duration-500 ease-out group-hover:scale-105"
               />
             </div>
           </div>
@@ -833,7 +832,7 @@ const faqs = [
               <img
                 src={Yt}
                 alt="Youtube"
-                 className="rounded-2xl shadow-2xl transition-transform duration-500 ease-out group-hover:scale-105"
+                className="rounded-2xl shadow-2xl transition-transform duration-500 ease-out group-hover:scale-105"
               />
             </div>
 
@@ -918,7 +917,7 @@ const faqs = [
               <img
                 src={Pinterest}
                 alt="pinterest"
-                 className="rounded-2xl shadow-2xl transition-transform duration-500 ease-out group-hover:scale-105"
+                className="rounded-2xl shadow-2xl transition-transform duration-500 ease-out group-hover:scale-105"
               />
             </div>
           </div>
@@ -933,7 +932,7 @@ const faqs = [
               <img
                 src={Ppc}
                 alt="ppc Services"
-                 className="rounded-2xl shadow-2xl transition-transform duration-500 ease-out group-hover:scale-105"
+                className="rounded-2xl shadow-2xl transition-transform duration-500 ease-out group-hover:scale-105"
               />
             </div>
 
@@ -1021,7 +1020,7 @@ const faqs = [
               <img
                 src={Web}
                 alt="web"
-                 className="rounded-2xl shadow-2xl transition-transform duration-500 ease-out group-hover:scale-105"
+                className="rounded-2xl shadow-2xl transition-transform duration-500 ease-out group-hover:scale-105"
               />
             </div>
           </div>
@@ -1036,7 +1035,7 @@ const faqs = [
               <img
                 src={Email}
                 alt="email marketing"
-                 className="rounded-2xl shadow-2xl transition-transform duration-500 ease-out group-hover:scale-105"
+                className="rounded-2xl shadow-2xl transition-transform duration-500 ease-out group-hover:scale-105"
               />
             </div>
 
@@ -1122,7 +1121,7 @@ const faqs = [
               <img
                 src={Cro}
                 alt="SRO Services"
-                 className="rounded-2xl shadow-2xl transition-transform duration-500 ease-out group-hover:scale-105"
+                className="rounded-2xl shadow-2xl transition-transform duration-500 ease-out group-hover:scale-105"
               />
             </div>
           </div>
@@ -1387,23 +1386,11 @@ radial-gradient(circle_at_80%_80%,rgba(168,217,124,0.2),transparent_45%)]
           </h2>
 
           {/* BUTTON */}
-          <button
-            className="
-    bg-[#25baff] text-[#020202]
-hover:bg-[#a8d97c]
-
-    px-6 py-3
-    text-sm md:text-base
-    font-semibold
-    rounded-full
-    shadow-md
-    hover: cursor-pointer
-    hover:shadow-lg
-    transition-all duration-300
-    whitespace-nowrap"
-          >
-            Contact Now
-          </button>
+          <NavLink to="/contact">
+            <button className="bg-[#25baff] cursor-pointer text-[#020202] px-6 py-3 rounded-full font-semibold hover:bg-[#a8d97c] transition">
+              Contact Now
+            </button>
+          </NavLink>
         </div>
       </section>
       <section ref={addSectionRef} className="bg-gray-50 py-28 px-6">

@@ -91,63 +91,6 @@ const Header = () => {
             </div>
 
             {/* SERVICES DROPDOWN */}
-            {/* <div className="relative group">
-                            <button
-                                type="button"
-                                className="cursor-pointer font-medium text-[#020202] hover:text-[#25baff] transition flex items-center gap-1"
-                            >
-                                Services
-                                <span className="inline-block mt-1 text-xs transition-transform duration-300 group-hover:rotate-180">
-                                    ▼
-                                </span>
-                            </button>
-
-                            <div className="absolute left-0 top-full mt-3 w-72 rounded-xl bg-white border border-gray-200 shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
-                                <NavLink
-                                    to="/services/web-design"
-                                    className="block px-5 py-3 text-[#020202] hover:text-[#25baff] hover:bg-[#25baff]/10 transition hover:rounded-xl"
-                                >
-                                    Web Designing
-                                </NavLink>
-
-                                <NavLink
-                                    to="/services/mobile-application-development"
-                                    className="block px-5 py-3 text-[#020202] hover:text-[#25baff] hover:bg-[#25baff]/10 transition hover:rounded-xl"
-                                >
-                                    App Development
-                                </NavLink>
-
-                                <NavLink
-                                    to="/services/web-development"
-                                    className="block px-5 py-3 text-[#020202] hover:text-[#25baff] hover:bg-[#25baff]/10 transition hover:rounded-xl"
-                                >
-                                    Web Development
-                                </NavLink>
-
-                                <NavLink
-                                    to="/services/social-media-marketing"
-                                    className="block px-5 py-3 text-[#020202] hover:text-[#25baff] hover:bg-[#25baff]/10 transition hover:rounded-xl"
-                                >
-                                    Social Media Marketing
-                                </NavLink>
-
-                                <NavLink
-                                    to="/services/seo"
-                                    className="block px-5 py-3 text-[#020202] hover:text-[#25baff] hover:bg-[#25baff]/10 transition hover:rounded-xl"
-                                >
-                                    Search Engine Optimization
-                                </NavLink>
-
-                                <NavLink
-                                    to="/services/online-reputation-management"
-                                    className="block px-5 py-3 text-[#020202] hover:text-[#25baff] hover:bg-[#25baff]/10 transition hover:rounded-xl"
-                                >
-                                    Online Reputation Management
-                                </NavLink>
-                            </div>
-                        </div> */}
-
-            {/* SERVICES DROPDOWN */}
             <div className="relative group">
               <button
                 type="button"
@@ -605,7 +548,7 @@ const Header = () => {
 
                       <li>
                         <NavLink
-                          to="/services/facebook"
+                          to="/services/facebook-advertising"
                           className={({ isActive }) =>
                             `flex gap-2 transition ${isActive ? "text-[#25baff] font-medium" : "text-gray-600 hover:text-[#25baff]"}`
                           }
@@ -617,7 +560,7 @@ const Header = () => {
 
                       <li>
                         <NavLink
-                          to="/services/instagram"
+                          to="/services/instagram-advertising"
                           className={({ isActive }) =>
                             `flex gap-2 transition ${isActive ? "text-[#25baff] font-medium" : "text-gray-600 hover:text-[#25baff]"}`
                           }
@@ -629,7 +572,7 @@ const Header = () => {
 
                       <li>
                         <NavLink
-                          to="/services/x"
+                          to="/services/x-marketing"
                           className={({ isActive }) =>
                             `flex gap-2 transition ${isActive ? "text-[#25baff] font-medium" : "text-gray-600 hover:text-[#25baff]"}`
                           }
@@ -640,7 +583,7 @@ const Header = () => {
 
                       <li>
                         <NavLink
-                          to="/services/linkedin"
+                          to="/services/linkedin-marketing"
                           className={({ isActive }) =>
                             `flex gap-2 transition ${isActive ? "text-[#25baff] font-medium" : "text-gray-600 hover:text-[#25baff]"}`
                           }
@@ -652,7 +595,7 @@ const Header = () => {
 
                       <li>
                         <NavLink
-                          to="/services/pinterest"
+                          to="/services/pinterest-marketing"
                           className={({ isActive }) =>
                             `flex gap-2 transition ${isActive ? "text-[#25baff] font-medium" : "text-gray-600 hover:text-[#25baff]"}`
                           }
@@ -766,10 +709,12 @@ const Header = () => {
                       Popular Markets
                     </h4>
                     <ul className="space-y-1.5">
-                      <li className="flex gap-2 text-gray-600 hover:text-[#25baff] transition cursor-pointer">
+                     <NavLink to="/market/automotive-seo">
+                       <li className="flex gap-2 text-gray-600 hover:text-[#25baff] transition cursor-pointer">
                         <FaAngleRight className="mt-1 text-[#25baff] text-xs" />
                         Automotive SEO
                       </li>
+                     </NavLink>
                       <li className="flex gap-2 text-gray-600 hover:text-[#25baff] transition cursor-pointer">
                         <FaAngleRight className="mt-1 text-[#25baff] text-xs" />
                         Construction SEO
@@ -1267,7 +1212,10 @@ const Header = () => {
             <div className="space-y-2 text-sm text-[#020202]">
               <div className="flex items-center gap-2">
                 <span className="text-[#25baff]">✉</span>
-                <a href="mailto:info@digitalwebguider.com" className="hover:text-[#a8d97c]">
+                <a
+                  href="mailto:info@digitalwebguider.com"
+                  className="hover:text-[#a8d97c]"
+                >
                   info@digitalwebguider.com
                 </a>
               </div>

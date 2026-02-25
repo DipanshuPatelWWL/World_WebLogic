@@ -56,6 +56,25 @@ import SocialMediaAdvertise from "./pages/services/socialMediaMarketing/SocialMe
 import ShopifyWebDev from "./pages/services/ecommerceDevelopment/ShopifyWebDev";
 import WoocommerceDev from "./pages/services/ecommerceDevelopment/WoocommerceDev";
 import PaymentGateway from "./pages/services/ecommerceDevelopment/PaymentGateway";
+import PPCServices from "./pages/services/digitalAdvertising/PPCServices";
+import FacebookAdvertising from "./pages/services/digitalAdvertising/FacebookAdvertising";
+import InstagramAdvertising from "./pages/services/digitalAdvertising/InstagramAdvertising";
+import XMarketing from "./pages/services/digitalAdvertising/XMarketing";
+import LinkedInMarketing from "./pages/services/digitalAdvertising/LinkedInMarketing";
+import PinterestMarketing from "./pages/services/digitalAdvertising/PinterestMarketing";
+import CRO from "./pages/services/digitalAdvertising/CRO/CRO";
+import AmazonPPC from "./pages/services/digitalAdvertising/AmazonPPCService/AmazonPPC";
+import TestimonialVideo from "./pages/services/videoSeo/TestimonialVideo";
+import VlogVideoProduction from "./pages/services/videoSeo/VlogVideoProduction";
+import WordPressDevelopment from "./pages/services/WebDesign&Development/WordPressDevelopment";
+import CustomWebsiteDesign from "./pages/services/WebDesign&Development/CustomWebsiteDesign";
+import WebsiteRedesign from "./pages/services/WebDesign&Development/WebsiteRedesign";
+import MagentoDevelopment from "./pages/services/WebDesign&Development/MagentoDevelopment";
+import MobileAppDevelopment from "./pages/services/WebDesign&Development/MobileAppDevelopment";
+import JoomlaDev from "./pages/services/WebDesign&Development/JoomlaDev";
+import WebsiteHosting from "./pages/services/WebDesign&Development/WebsiteHosting";
+import AutomotiveSeo from "./pages/market/popular-market/AutomotiveSeo";
+
 
 function App() {
   return (
@@ -196,6 +215,7 @@ function App() {
             path="/services/youtube-optimization"
             element={<YouTubeSeo />}
           />
+
           <Route
             path="/services/smo/social-media-optimization"
             element={<SocialMediaOptimization />}
@@ -219,6 +239,81 @@ function App() {
           <Route
             path="/services/payment-gateway-integration"
             element={<PaymentGateway />}
+          />
+
+
+          {/* Digital Advertising */}
+          <Route
+            path="/services/pay-per-click"
+            element={<PPCServices />}
+          />
+          <Route
+            path="/services/facebook-advertising"
+            element={<FacebookAdvertising />}
+          />
+          <Route
+            path="/services/instagram-advertising"
+            element={<InstagramAdvertising />}
+          />
+          <Route
+            path="/services/x-marketing"
+            element={<XMarketing />}
+          />
+          <Route
+            path="/services/linkedin-marketing"
+            element={<LinkedInMarketing />}
+          />
+          <Route
+            path="/services/pinterest-marketing"
+            element={<PinterestMarketing />}
+          />
+          <Route
+            path="/services/conversion-rate-optimization"
+            element={<CRO />}
+          />
+          <Route
+            path="/services/amazon-ppc-services"
+            element={<AmazonPPC />}
+          />
+          <Route
+            path="/services/customer-testimonial-videos"
+            element={<TestimonialVideo />}
+          />
+          <Route
+            path="/services/vlog-video-production"
+            element={<VlogVideoProduction />}
+          />
+          <Route
+            path="/services/wordpress-development"
+            element={<WordPressDevelopment />}
+          />
+          <Route
+            path="/services/custom-website-design"
+            element={<CustomWebsiteDesign />}
+          />
+          <Route
+            path="/services/website-redesign"
+            element={<WebsiteRedesign />}
+          />
+          <Route
+            path="/services/magento-development"
+            element={<MagentoDevelopment />}
+          />
+          <Route
+            path="/services/mobile-app-development"
+            element={<MobileAppDevelopment />}
+          />
+          <Route
+            path="/services/joomla-development"
+            element={<JoomlaDev />}
+          />
+          <Route
+            path="/services/website-hosting"
+            element={<WebsiteHosting />}
+          />
+          <Route
+            path="/market/automotive-seo"
+            element={<AutomotiveSeo />}
           />
 
           {/* CONTACT */}
