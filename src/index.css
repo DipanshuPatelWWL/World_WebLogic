@@ -1,1 +1,37 @@
 @import "tailwindcss";
+@import "@fortawesome/fontawesome-free/css/all.min.css";
+
+.custom-pagination .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    background: #cbd5e1;
+    opacity: 1;
+    transition: all 0.4s ease;
+}
+
+.custom-pagination .swiper-pagination-bullet-active {
+    background: #25baff;
+    width: 28px;
+    border-radius: 10px;
+}
+
+.custom-scroll::-webkit-scrollbar {
+    width: 6px;
+}
+
+.custom-scroll::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.custom-scroll::-webkit-scrollbar-thumb {
+    background: #25baff;
+    border-radius: 10px;
+}
+
+.custom-scroll::-webkit-scrollbar-thumb:hover {
+    background: #1aa3e0;
+}
+
+.slider-track {
+    width: max-content;
+}

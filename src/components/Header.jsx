@@ -52,10 +52,9 @@ const Header = () => {
             <NavLink
               to="/"
               className={({ isActive }) =>
-                `font-medium transition ${
-                  isActive
-                    ? "text-[#25baff]"
-                    : "text-[#020202] hover:text-[#25baff]"
+                `font-medium transition ${isActive
+                  ? "text-[#25baff]"
+                  : "text-[#020202] hover:text-[#25baff]"
                 }`
               }
             >
@@ -606,7 +605,7 @@ const Header = () => {
 
                       <li>
                         <NavLink
-                          to="/services/facebook"
+                          to="/services/facebook-advertising"
                           className={({ isActive }) =>
                             `flex gap-2 transition ${isActive ? "text-[#25baff] font-medium" : "text-gray-600 hover:text-[#25baff]"}`
                           }
@@ -618,7 +617,7 @@ const Header = () => {
 
                       <li>
                         <NavLink
-                          to="/services/instagram"
+                          to="/services/instagram-advertising"
                           className={({ isActive }) =>
                             `flex gap-2 transition ${isActive ? "text-[#25baff] font-medium" : "text-gray-600 hover:text-[#25baff]"}`
                           }
@@ -630,7 +629,7 @@ const Header = () => {
 
                       <li>
                         <NavLink
-                          to="/services/x"
+                          to="/services/x-marketing"
                           className={({ isActive }) =>
                             `flex gap-2 transition ${isActive ? "text-[#25baff] font-medium" : "text-gray-600 hover:text-[#25baff]"}`
                           }
@@ -641,7 +640,7 @@ const Header = () => {
 
                       <li>
                         <NavLink
-                          to="/services/linkedin"
+                          to="/services/linkedin-marketing"
                           className={({ isActive }) =>
                             `flex gap-2 transition ${isActive ? "text-[#25baff] font-medium" : "text-gray-600 hover:text-[#25baff]"}`
                           }
@@ -653,7 +652,7 @@ const Header = () => {
 
                       <li>
                         <NavLink
-                          to="/services/pinterest"
+                          to="/services/pinterest-marketing"
                           className={({ isActive }) =>
                             `flex gap-2 transition ${isActive ? "text-[#25baff] font-medium" : "text-gray-600 hover:text-[#25baff]"}`
                           }
@@ -1030,10 +1029,9 @@ const Header = () => {
             <NavLink
               to="/portfolio"
               className={({ isActive }) =>
-                `font-medium transition ${
-                  isActive
-                    ? "text-[#25baff]"
-                    : "text-[#020202] hover:text-[#25baff]"
+                `font-medium transition ${isActive
+                  ? "text-[#25baff]"
+                  : "text-[#020202] hover:text-[#25baff]"
                 }`
               }
             >
@@ -1043,10 +1041,9 @@ const Header = () => {
             <NavLink
               to="/contact"
               className={({ isActive }) =>
-                `font-medium transition ${
-                  isActive
-                    ? "text-[#25baff]"
-                    : "text-[#020202] hover:text-[#25baff]"
+                `font-medium transition ${isActive
+                  ? "text-[#25baff]"
+                  : "text-[#020202] hover:text-[#25baff]"
                 }`
               }
             >

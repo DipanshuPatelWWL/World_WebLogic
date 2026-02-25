@@ -50,12 +50,20 @@ import WhiteLabelSeo from "./pages/services/seo/WhiteLabelSeo";
 import Geo from "./pages/services/seo/Geo";
 import Aeo from "./pages/services/seo/Aeo";
 import YouTubeSeo from "./pages/services/videoSeo/YouTubeSeo";
+import PPCServices from "./pages/services/digitalAdvertising/PPCServices";
+import FacebookAdvertising from "./pages/services/digitalAdvertising/FacebookAdvertising";
+import InstagramAdvertising from "./pages/services/digitalAdvertising/InstagramAdvertising";
+import XMarketing from "./pages/services/digitalAdvertising/XMarketing";
+import LinkedInMarketing from "./pages/services/digitalAdvertising/LinkedInMarketing";
+import PinterestMarketing from "./pages/services/digitalAdvertising/PinterestMarketing";
+import CRO from "./pages/services/digitalAdvertising/CRO/CRO";
+import AmazonPPC from "./pages/services/digitalAdvertising/AmazonPPCService/AmazonPPC";
 
 function App() {
   return (
     <Router>
       <ScrollToTop />
-      <SplashCursor />
+      {/* <SplashCursor /> */}
       <div className="fixed inset-0 -z-10">
         <video
           autoPlay
@@ -180,15 +188,49 @@ function App() {
           />
           <Route
             path="/services/seo/generative-engine-optimization"
-            element={<Geo/>}
+            element={<Geo />}
           />
           <Route
             path="/services/seo/answer-engine-optimization"
-            element={<Aeo/>}
+            element={<Aeo />}
           />
           <Route
             path="/services/youtube-optimization"
-            element={<YouTubeSeo/>}
+            element={<YouTubeSeo />}
+          />
+
+          {/* Digital Advertising */}
+          <Route
+            path="/services/pay-per-click"
+            element={<PPCServices />}
+          />
+          <Route
+            path="/services/facebook-advertising"
+            element={<FacebookAdvertising />}
+          />
+          <Route
+            path="/services/instagram-advertising"
+            element={<InstagramAdvertising />}
+          />
+          <Route
+            path="/services/x-marketing"
+            element={<XMarketing />}
+          />
+          <Route
+            path="/services/linkedin-marketing"
+            element={<LinkedInMarketing />}
+          />
+          <Route
+            path="/services/pinterest-marketing"
+            element={<PinterestMarketing />}
+          />
+          <Route
+            path="/services/conversion-rate-optimization"
+            element={<CRO />}
+          />
+          <Route
+            path="/services/amazon-ppc-services"
+            element={<AmazonPPC />}
           />
 
           {/* CONTACT */}
