@@ -50,6 +50,14 @@ import WhiteLabelSeo from "./pages/services/seo/WhiteLabelSeo";
 import Geo from "./pages/services/seo/Geo";
 import Aeo from "./pages/services/seo/Aeo";
 import YouTubeSeo from "./pages/services/videoSeo/YouTubeSeo";
+import PPCServices from "./pages/services/digitalAdvertising/PPCServices";
+import FacebookAdvertising from "./pages/services/digitalAdvertising/FacebookAdvertising";
+import InstagramAdvertising from "./pages/services/digitalAdvertising/InstagramAdvertising";
+import XMarketing from "./pages/services/digitalAdvertising/XMarketing";
+import LinkedInMarketing from "./pages/services/digitalAdvertising/LinkedInMarketing";
+import PinterestMarketing from "./pages/services/digitalAdvertising/PinterestMarketing";
+import CRO from "./pages/services/digitalAdvertising/CRO/CRO";
+import AmazonPPC from "./pages/services/digitalAdvertising/AmazonPPCService/AmazonPPC";
 import TestimonialVideo from "./pages/services/videoSeo/TestimonialVideo";
 import VlogVideoProduction from "./pages/services/videoSeo/VlogVideoProduction";
 import WordPressDevelopment from "./pages/services/WebDesign&Development/WordPressDevelopment";
@@ -65,7 +73,7 @@ function App() {
   return (
     <Router>
       <ScrollToTop />
-      <SplashCursor />
+      {/* <SplashCursor /> */}
       <div className="fixed inset-0 -z-10">
         <video
           autoPlay
@@ -200,6 +208,40 @@ function App() {
             path="/services/youtube-optimization"
             element={<YouTubeSeo />}
           />
+
+          {/* Digital Advertising */}
+          <Route
+            path="/services/pay-per-click"
+            element={<PPCServices />}
+          />
+          <Route
+            path="/services/facebook-advertising"
+            element={<FacebookAdvertising />}
+          />
+          <Route
+            path="/services/instagram-advertising"
+            element={<InstagramAdvertising />}
+          />
+          <Route
+            path="/services/x-marketing"
+            element={<XMarketing />}
+          />
+          <Route
+            path="/services/linkedin-marketing"
+            element={<LinkedInMarketing />}
+          />
+          <Route
+            path="/services/pinterest-marketing"
+            element={<PinterestMarketing />}
+          />
+          <Route
+            path="/services/conversion-rate-optimization"
+            element={<CRO />}
+          />
+          <Route
+            path="/services/amazon-ppc-services"
+            element={<AmazonPPC />}
+          />
           <Route
             path="/services/customer-testimonial-videos"
             element={<TestimonialVideo />}
@@ -230,15 +272,15 @@ function App() {
           />
           <Route
             path="/services/joomla-development"
-            element={<JoomlaDev/>}
+            element={<JoomlaDev />}
           />
           <Route
             path="/services/website-hosting"
-            element={<WebsiteHosting/>}
+            element={<WebsiteHosting />}
           />
           <Route
             path="/market/automotive-seo"
-            element={<AutomotiveSeo/>}
+            element={<AutomotiveSeo />}
           />
 
           {/* CONTACT */}
