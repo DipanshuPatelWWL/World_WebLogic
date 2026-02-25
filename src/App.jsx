@@ -58,6 +58,16 @@ import LinkedInMarketing from "./pages/services/digitalAdvertising/LinkedInMarke
 import PinterestMarketing from "./pages/services/digitalAdvertising/PinterestMarketing";
 import CRO from "./pages/services/digitalAdvertising/CRO/CRO";
 import AmazonPPC from "./pages/services/digitalAdvertising/AmazonPPCService/AmazonPPC";
+import TestimonialVideo from "./pages/services/videoSeo/TestimonialVideo";
+import VlogVideoProduction from "./pages/services/videoSeo/VlogVideoProduction";
+import WordPressDevelopment from "./pages/services/WebDesign&Development/WordPressDevelopment";
+import CustomWebsiteDesign from "./pages/services/WebDesign&Development/CustomWebsiteDesign";
+import WebsiteRedesign from "./pages/services/WebDesign&Development/WebsiteRedesign";
+import MagentoDevelopment from "./pages/services/WebDesign&Development/MagentoDevelopment";
+import MobileAppDevelopment from "./pages/services/WebDesign&Development/MobileAppDevelopment";
+import JoomlaDev from "./pages/services/WebDesign&Development/JoomlaDev";
+import WebsiteHosting from "./pages/services/WebDesign&Development/WebsiteHosting";
+import AutomotiveSeo from "./pages/market/popular-market/AutomotiveSeo";
 
 function App() {
   return (
@@ -231,6 +241,46 @@ function App() {
           <Route
             path="/services/amazon-ppc-services"
             element={<AmazonPPC />}
+          />
+          <Route
+            path="/services/customer-testimonial-videos"
+            element={<TestimonialVideo />}
+          />
+          <Route
+            path="/services/vlog-video-production"
+            element={<VlogVideoProduction />}
+          />
+          <Route
+            path="/services/wordpress-development"
+            element={<WordPressDevelopment />}
+          />
+          <Route
+            path="/services/custom-website-design"
+            element={<CustomWebsiteDesign />}
+          />
+          <Route
+            path="/services/website-redesign"
+            element={<WebsiteRedesign />}
+          />
+          <Route
+            path="/services/magento-development"
+            element={<MagentoDevelopment />}
+          />
+          <Route
+            path="/services/mobile-app-development"
+            element={<MobileAppDevelopment />}
+          />
+          <Route
+            path="/services/joomla-development"
+            element={<JoomlaDev />}
+          />
+          <Route
+            path="/services/website-hosting"
+            element={<WebsiteHosting />}
+          />
+          <Route
+            path="/market/automotive-seo"
+            element={<AutomotiveSeo />}
           />
 
           {/* CONTACT */}

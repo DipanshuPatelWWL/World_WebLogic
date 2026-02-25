@@ -21,6 +21,7 @@ import Img7 from "../../../assets/services/appStoreOptimization/img7.avif";
 import Img8 from "../../../assets/services/appStoreOptimization/img8.avif";
 import Img9 from "../../../assets/services/appStoreOptimization/img9.avif";
 import Img10 from "../../../assets/services/appStoreOptimization/img10.avif";
+import { NavLink } from "react-router-dom";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -416,9 +417,11 @@ radial-gradient(circle_at_80%_80%,rgba(168,217,124,0.2),transparent_45%)]
             Talk To Our Experts Now
           </h2>
 
-          <button className="bg-[#25baff] text-[#020202] px-6 py-3 rounded-full font-semibold hover:bg-[#a8d97c] transition">
-            Contact Now
-          </button>
+          <NavLink to="/contact">
+            <button className="bg-[#25baff] cursor-pointer text-[#020202] px-6 py-3 rounded-full font-semibold hover:bg-[#a8d97c] transition">
+              Contact Now
+            </button>
+          </NavLink>
         </div>
       </section>
 
