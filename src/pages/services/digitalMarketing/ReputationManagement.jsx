@@ -19,6 +19,7 @@ import Positive from "../../../assets/services/orm/positive.jpg";
 import Promote from "../../../assets/services/orm/promote.avif";
 import Remove from "../../../assets/services/orm/remove.avif";
 import Strategy from "../../../assets/services/orm/strategy.avif";
+import { NavLink } from "react-router-dom";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -98,43 +99,43 @@ const ReputationManagement = () => {
     return () => ctx.revert();
   }, []);
 
- const faqs = [
-  {
-    question: "What is online reputation management (ORM)?",
-    answer:
-      "Online Reputation Management (ORM) is the practice of monitoring, influencing, and improving how your brand is perceived online. It combines SEO, public relations, and content strategies to highlight positive mentions and minimize the impact of negative ones.",
-  },
-  {
-    question: "Why do businesses and individuals need ORM?",
-    answer:
-      "Most customers research a brand online before making decisions. Negative reviews or mentions can directly impact trust and sales. ORM helps maintain a positive image and builds confidence among potential clients.",
-  },
-  {
-    question: "What does an online reputation management service include?",
-    answer:
-      "ORM services involve tracking brand mentions, managing reviews, improving search results, responding to feedback, and promoting positive content to strengthen your overall online presence.",
-  },
-  {
-    question: "What are the benefits of ORM services?",
-    answer:
-      "ORM services protect your brand image, prevent revenue loss from negative publicity, improve credibility, and save time by professionally managing reviews, social media, and online crises.",
-  },
-  {
-    question: "What does an ORM service typically cover?",
-    answer:
-      "It includes monitoring online sentiment, addressing negative feedback, promoting positive content, optimizing search results, and safeguarding your brand’s reputation across digital platforms.",
-  },
-  {
-    question: "How long does it take to see ORM results?",
-    answer:
-      "Results vary depending on your current online reputation and competition. Some improvements can be seen within weeks, while more complex cases may take several months for noticeable impact.",
-  },
-  {
-    question: "How do you choose the right ORM agency?",
-    answer:
-      "Look for an agency with proven experience, strong client testimonials, transparent strategies, and expertise in SEO and reputation management to effectively protect and enhance your brand image.",
-  },
-];
+  const faqs = [
+    {
+      question: "What is online reputation management (ORM)?",
+      answer:
+        "Online Reputation Management (ORM) is the practice of monitoring, influencing, and improving how your brand is perceived online. It combines SEO, public relations, and content strategies to highlight positive mentions and minimize the impact of negative ones.",
+    },
+    {
+      question: "Why do businesses and individuals need ORM?",
+      answer:
+        "Most customers research a brand online before making decisions. Negative reviews or mentions can directly impact trust and sales. ORM helps maintain a positive image and builds confidence among potential clients.",
+    },
+    {
+      question: "What does an online reputation management service include?",
+      answer:
+        "ORM services involve tracking brand mentions, managing reviews, improving search results, responding to feedback, and promoting positive content to strengthen your overall online presence.",
+    },
+    {
+      question: "What are the benefits of ORM services?",
+      answer:
+        "ORM services protect your brand image, prevent revenue loss from negative publicity, improve credibility, and save time by professionally managing reviews, social media, and online crises.",
+    },
+    {
+      question: "What does an ORM service typically cover?",
+      answer:
+        "It includes monitoring online sentiment, addressing negative feedback, promoting positive content, optimizing search results, and safeguarding your brand’s reputation across digital platforms.",
+    },
+    {
+      question: "How long does it take to see ORM results?",
+      answer:
+        "Results vary depending on your current online reputation and competition. Some improvements can be seen within weeks, while more complex cases may take several months for noticeable impact.",
+    },
+    {
+      question: "How do you choose the right ORM agency?",
+      answer:
+        "Look for an agency with proven experience, strong client testimonials, transparent strategies, and expertise in SEO and reputation management to effectively protect and enhance your brand image.",
+    },
+  ];
 
   const accordionData = [
     {
@@ -416,9 +417,11 @@ radial-gradient(circle_at_80%_80%,rgba(168,217,124,0.2),transparent_45%)]
             Talk To Our ORM Experts Now
           </h2>
 
-          <button className="bg-[#25baff] text-[#020202] px-6 py-3 rounded-full font-semibold hover:bg-[#a8d97c] transition">
-            Contact Now
-          </button>
+          <NavLink to="/contact">
+            <button className="bg-[#25baff] cursor-pointer text-[#020202] px-6 py-3 rounded-full font-semibold hover:bg-[#a8d97c] transition">
+              Contact Now
+            </button>
+          </NavLink>
         </div>
       </section>
 

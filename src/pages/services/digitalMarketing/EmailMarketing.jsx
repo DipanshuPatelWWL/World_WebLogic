@@ -17,6 +17,7 @@ import EmailCompaign from "../../../assets/services/emailMarketing/email-compaig
 import EmailManage from "../../../assets/services/emailMarketing/email-manage.jpg";
 import Plan from "../../../assets/services/emailMarketing/plan-strategy.avif";
 import Testing from "../../../assets/services/emailMarketing/testing.avif";
+import { NavLink } from "react-router-dom";
 
 
 
@@ -572,9 +573,11 @@ radial-gradient(circle_at_80%_80%,rgba(168,217,124,0.2),transparent_45%)]
            Claim Your Free Email Marketing Strategy Session Today!
           </h2>
 
-          <button className="bg-[#25baff] text-[#020202] px-6 py-3 rounded-full font-semibold hover:bg-[#a8d97c] transition">
+         <NavLink to="/contact">
+             <button className="bg-[#25baff] cursor-pointer text-[#020202] px-6 py-3 rounded-full font-semibold hover:bg-[#a8d97c] transition">
             Contact Now
           </button>
+         </NavLink>
         </div>
       </section>
 

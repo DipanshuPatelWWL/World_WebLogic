@@ -50,6 +50,16 @@ import WhiteLabelSeo from "./pages/services/seo/WhiteLabelSeo";
 import Geo from "./pages/services/seo/Geo";
 import Aeo from "./pages/services/seo/Aeo";
 import YouTubeSeo from "./pages/services/videoSeo/YouTubeSeo";
+import TestimonialVideo from "./pages/services/videoSeo/TestimonialVideo";
+import VlogVideoProduction from "./pages/services/videoSeo/VlogVideoProduction";
+import WordPressDevelopment from "./pages/services/WebDesign&Development/WordPressDevelopment";
+import CustomWebsiteDesign from "./pages/services/WebDesign&Development/CustomWebsiteDesign";
+import WebsiteRedesign from "./pages/services/WebDesign&Development/WebsiteRedesign";
+import MagentoDevelopment from "./pages/services/WebDesign&Development/MagentoDevelopment";
+import MobileAppDevelopment from "./pages/services/WebDesign&Development/MobileAppDevelopment";
+import JoomlaDev from "./pages/services/WebDesign&Development/JoomlaDev";
+import WebsiteHosting from "./pages/services/WebDesign&Development/WebsiteHosting";
+import AutomotiveSeo from "./pages/market/popular-market/AutomotiveSeo";
 
 function App() {
   return (
@@ -180,15 +190,55 @@ function App() {
           />
           <Route
             path="/services/seo/generative-engine-optimization"
-            element={<Geo/>}
+            element={<Geo />}
           />
           <Route
             path="/services/seo/answer-engine-optimization"
-            element={<Aeo/>}
+            element={<Aeo />}
           />
           <Route
             path="/services/youtube-optimization"
-            element={<YouTubeSeo/>}
+            element={<YouTubeSeo />}
+          />
+          <Route
+            path="/services/customer-testimonial-videos"
+            element={<TestimonialVideo />}
+          />
+          <Route
+            path="/services/vlog-video-production"
+            element={<VlogVideoProduction />}
+          />
+          <Route
+            path="/services/wordpress-development"
+            element={<WordPressDevelopment />}
+          />
+          <Route
+            path="/services/custom-website-design"
+            element={<CustomWebsiteDesign />}
+          />
+          <Route
+            path="/services/website-redesign"
+            element={<WebsiteRedesign />}
+          />
+          <Route
+            path="/services/magento-development"
+            element={<MagentoDevelopment />}
+          />
+          <Route
+            path="/services/mobile-app-development"
+            element={<MobileAppDevelopment />}
+          />
+          <Route
+            path="/services/joomla-development"
+            element={<JoomlaDev/>}
+          />
+          <Route
+            path="/services/website-hosting"
+            element={<WebsiteHosting/>}
+          />
+          <Route
+            path="/market/automotive-seo"
+            element={<AutomotiveSeo/>}
           />
 
           {/* CONTACT */}
