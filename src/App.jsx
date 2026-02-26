@@ -75,6 +75,9 @@ import JoomlaDev from "./pages/services/WebDesign&Development/JoomlaDev";
 import WebsiteHosting from "./pages/services/WebDesign&Development/WebsiteHosting";
 import AutomotiveSeo from "./pages/market/popular-market/AutomotiveSeo";
 import RestaurantMarketing from "./pages/market/popular-market/Food&Health/RestaurantMarketing";
+import ConstructionSeo from "./pages/market/popular-market/ConstructionSeo";
+import DentalSeo from "./pages/market/popular-market/DentalSeo";
+import HvacSeo from "./pages/market/popular-market/HvacSeo";
 
 
 function App() {
@@ -318,6 +321,18 @@ function App() {
           <Route
             path="/market/automotive-seo"
             element={<AutomotiveSeo />}
+          />
+          <Route
+            path="/market/construction-seo"
+            element={<ConstructionSeo/>}
+          />
+          <Route
+            path="/market/dental-seo"
+            element={<DentalSeo/>}
+          />
+          <Route
+            path="/market/hvac-seo"
+            element={<HvacSeo/>}
           />
           <Route
             path="/market/restaurant-seo"
