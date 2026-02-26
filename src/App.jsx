@@ -78,6 +78,7 @@ import RestaurantMarketing from "./pages/market/popular-market/Food&Health/Resta
 import ConstructionSeo from "./pages/market/popular-market/ConstructionSeo";
 import DentalSeo from "./pages/market/popular-market/DentalSeo";
 import HvacSeo from "./pages/market/popular-market/HvacSeo";
+import HealthcareSeo from "./pages/market/popular-market/HealthcareSeo";
 
 
 function App() {
@@ -333,6 +334,10 @@ function App() {
           <Route
             path="/market/hvac-seo"
             element={<HvacSeo/>}
+          />
+          <Route
+            path="/market/healthcare-seo"
+            element={<HealthcareSeo/>}
           />
           <Route
             path="/market/restaurant-seo"
