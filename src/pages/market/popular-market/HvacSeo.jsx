@@ -477,7 +477,7 @@ export default function HvacSeo() {
           Get your FREE HVAC SEO Audit + competitor analysis today.
         </p>
         <NavLink to="/contact">
-          <button className="px-10 py-4 md:px-12 md:py-5 rounded-full bg-[#0ea5e9] text-black font-semibold text-base md:text-lg shadow-xl hover:shadow-[#0ea5e9]/70 transition transform hover:-translate-y-1">
+          <button className="px-10 py-4 md:px-12 md:py-5 cursor-pointer rounded-full bg-[#0ea5e9] text-black font-semibold text-base md:text-lg shadow-xl hover:shadow-[#0ea5e9]/70 transition transform hover:-translate-y-1">
             Contact Us
           </button>
         </NavLink>

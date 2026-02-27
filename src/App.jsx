@@ -82,6 +82,7 @@ import HealthcareSeo from "./pages/market/popular-market/HealthcareSeo";
 import InsuranceSeo from "./pages/market/popular-market/InsuranceSeo";
 import LawyerSeo from "./pages/market/popular-market/LawyerSeo";
 import RealEstateSeo from "./pages/market/popular-market/RealEstateSeo";
+import PlumberSeo from "./pages/market/popular-market/PlumberSeo";
 
 
 function App() {
@@ -353,6 +354,10 @@ function App() {
           <Route
             path="/market/real-estate-seo"
             element={<RealEstateSeo/>}
+          />
+          <Route
+            path="/market/plumber-seo"
+            element={<PlumberSeo/>}
           />
           <Route
             path="/market/restaurant-seo"
