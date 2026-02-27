@@ -383,7 +383,7 @@ export default function HealthcareSeo() {
           Get your FREE Healthcare SEO Audit today.
         </p>
         <NavLink to="/contact">
-          <button className="px-12 py-6 rounded-full bg-[#25baff] text-black font-bold text-xl shadow-xl hover:shadow-[#25baff]/70 transition transform hover:-translate-y-2">
+          <button className="px-12 py-6 rounded-full cursor-pointer bg-[#25baff] text-black font-bold text-xl shadow-xl hover:shadow-[#25baff]/70 transition transform hover:-translate-y-2">
             Contact Us Now
           </button>
         </NavLink>

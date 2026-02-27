@@ -353,7 +353,7 @@ export default function DentalSeo() {
           Claim your FREE comprehensive Dental SEO Audit + competitor gap report today.
         </p>
         <NavLink to="/contact">
-          <button className="px-10 py-4 md:px-12 md:py-5 rounded-full bg-[#25baff] text-black font-semibold text-base md:text-lg shadow-xl hover:shadow-[#25baff]/70 transition transform hover:-translate-y-1">
+          <button className="px-10 py-4 md:px-12 md:py-5 cursor-pointer rounded-full bg-[#25baff] text-black font-semibold text-base md:text-lg shadow-xl hover:shadow-[#25baff]/70 transition transform hover:-translate-y-1">
             Contact Us
           </button>
         </NavLink>

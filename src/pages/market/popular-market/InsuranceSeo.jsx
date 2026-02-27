@@ -404,7 +404,7 @@ const InsuranceSeo = () => {
           </h2>
 
           <NavLink to="/contact">
-            <button className="bg-[#25baff] text-[#020202] px-8 py-4 rounded-full font-semibold hover:bg-[#a8d97c] transition shadow-lg">
+            <button className="bg-[#25baff] text-[#020202] cursor-pointer px-8 py-4 rounded-full font-semibold hover:bg-[#a8d97c] transition shadow-lg">
               Contact Us
             </button>
           </NavLink>

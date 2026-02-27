@@ -560,7 +560,7 @@ export default function RealEstateSeo() {
           Claim your FREE Real Estate SEO Audit and unlock growth potential.
         </p>
         <NavLink to="/contact">
-          <button className="px-12 py-6 rounded-full bg-[#25baff] text-white font-bold text-xl shadow-xl hover:shadow-[#a8d97c]/70 transition transform hover:-translate-y-2">
+          <button className="px-12 py-6 rounded-full cursor-pointer bg-[#25baff] text-white font-bold text-xl shadow-xl hover:shadow-[#a8d97c]/70 transition transform hover:-translate-y-2">
             Contact Us
           </button>
         </NavLink>
