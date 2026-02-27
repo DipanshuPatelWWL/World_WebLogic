@@ -80,6 +80,8 @@ import DentalSeo from "./pages/market/popular-market/DentalSeo";
 import HvacSeo from "./pages/market/popular-market/HvacSeo";
 import HealthcareSeo from "./pages/market/popular-market/HealthcareSeo";
 import InsuranceSeo from "./pages/market/popular-market/InsuranceSeo";
+import LawyerSeo from "./pages/market/popular-market/LawyerSeo";
+import RealEstateSeo from "./pages/market/popular-market/RealEstateSeo";
 
 
 function App() {
@@ -343,6 +345,14 @@ function App() {
           <Route
             path="/market/insurance-seo"
             element={<InsuranceSeo/>}
+          />
+          <Route
+            path="/market/lawyer-seo"
+            element={<LawyerSeo/>}
+          />
+          <Route
+            path="/market/real-estate-seo"
+            element={<RealEstateSeo/>}
           />
           <Route
             path="/market/restaurant-seo"
