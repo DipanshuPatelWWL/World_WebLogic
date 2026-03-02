@@ -305,13 +305,6 @@ const SmallBusinessSeo = () => {
                 </ul>
               </div>
             </div>
-
-            {/* CTA Button */}
-            <div className="text-center mt-12">
-              <button className="bg-[#a8d97c] text-[#020202] font-semibold px-8 py-3 rounded-md hover:bg-[#25baff] hover:text-white transition duration-300">
-                Check Out Our Affordable SEO Plans
-              </button>
-            </div>
           </div>
         </section>
 
@@ -457,11 +450,10 @@ const SmallBusinessSeo = () => {
                       </button>
 
                       <div
-                        className={`transition-all duration-300 ease-in-out overflow-hidden ${
-                          openIndex === index
+                        className={`transition-all duration-300 ease-in-out overflow-hidden ${openIndex === index
                             ? "max-h-40 p-5 bg-white"
                             : "max-h-0"
-                        }`}
+                          }`}
                       >
                         <p className="text-gray-600">{item.content}</p>
                       </div>
@@ -1358,11 +1350,10 @@ const SmallBusinessSeo = () => {
             px-6 py-5 text-left font-semibold text-[#020202]"
                   >
                     <span
-                      className={`${
-                        activeFaq === index
+                      className={`${activeFaq === index
                           ? "text-[#25baff]"
                           : "text-[#020202]"
-                      } transition-colors duration-300`}
+                        } transition-colors duration-300`}
                     >
                       {faq.question}
                     </span>

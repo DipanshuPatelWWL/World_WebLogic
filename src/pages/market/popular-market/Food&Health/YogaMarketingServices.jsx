@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { motion } from "framer-motion";
 import {
     FaSearch,
@@ -7,16 +8,20 @@ import {
     FaStar,
     FaUsers,
     FaBullhorn,
-    FaCheckCircle
+    FaHeart,          // Changed from FaTractor → more fitting for yoga/wellness
+    FaCheckCircle,
+    FaLeaf,           // Changed from FaSeedling → nature/wellness vibe
+    FaPlus, FaMinus
 } from "react-icons/fa";
 
-import HeroImg from "../../../../assets/services/RestorentMarketing/banner.avif";
-import SeoImg from "../../../../assets/services/RestorentMarketing/img1.avif";
-import LocalImg from "../../../../assets/services/RestorentMarketing/img2.avif";
-import OrdersImg from "../../../../assets/services/RestorentMarketing/img3.avif";
-import OrdersImg2 from "../../../../assets/services/RestorentMarketing/img4.avif";
+import HeroImg from "../../../../assets/services/YogaSEO/banner.avif";          // ← Replace with your yoga hero banner
+import SeoImg from "../../../../assets/services/YogaSEO/img1.avif";           // ← e.g. peaceful studio or meditation
+import LocalImg from "../../../../assets/services/YogaSEO/img4.avif";         // ← e.g. group class or local map pin feel
+import OrdersImg from "../../../../assets/services/YogaSEO/img2.avif";        // ← e.g. happy students signing up
+import OrdersImg2 from "../../../../assets/services/YogaSEO/img3.avif";       // ← e.g. growth / success visual
 
-export default function RestaurantMarketing() {
+export default function YogaMarketingServices() {
+    const [openIndex, setOpenIndex] = useState(0);
 
     const fadeUp = {
         hidden: { opacity: 0, y: 60 },
@@ -53,10 +58,10 @@ export default function RestaurantMarketing() {
 
 
     const questions = [
-        "Want more customers finding your restaurant online?",
-        "Ready to increase reservations and food orders?",
-        "Want your restaurant to dominate Google search?",
-        "Looking to grow your restaurant brand visibility?"
+        "Want more students finding your yoga studio online?",
+        "Ready to fill classes consistently and grow membership?",
+        "Want your yoga studio to dominate Google search results?",
+        "Looking to grow your yoga brand visibility and community?"
     ];
 
 
@@ -64,39 +69,74 @@ export default function RestaurantMarketing() {
         {
             icon: <FaSearch />,
             title: "Higher Google Rankings",
-            text: "Appear on the first page where customers are actively searching."
+            text: "Appear on the first page where people search for yoga classes & wellness services."
         },
         {
             icon: <FaMapMarkerAlt />,
-            title: "Local Search Visibility",
-            text: "Dominate 'near me' searches and attract nearby customers."
+            title: "Local & Regional Visibility",
+            text: "Dominate 'near me' and local searches to attract nearby students."
         },
         {
             icon: <FaShoppingCart />,
-            title: "More Online Orders",
-            text: "Turn website visitors into paying customers."
+            title: "More Sign-ups & Inquiries",
+            text: "Convert search visitors into trial bookings and memberships."
         },
         {
             icon: <FaStar />,
-            title: "Stronger Brand Reputation",
-            text: "Build trust with positive reviews and online presence."
+            title: "Stronger Brand Trust",
+            text: "Build credibility with expertise in yoga & wellness teaching."
         },
         {
             icon: <FaUsers />,
-            title: "Customer Growth",
-            text: "Attract new and repeat customers consistently."
+            title: "Student & Community Growth",
+            text: "Attract consistent new students, retain members, and gain referrals."
         },
         {
             icon: <FaChartLine />,
-            title: "Revenue Increase",
-            text: "Boost profits with data-driven strategies."
+            title: "Revenue & Studio Growth",
+            text: "Boost profits with targeted, data-driven digital strategies."
+        }
+    ];
+
+
+    const faqs = [
+        {
+            question: "What is yoga studio SEO?",
+            answer: "Yoga studio SEO is a digital marketing strategy that helps yoga businesses improve their visibility on search engines like Google. It involves optimizing your website, content, and local listings so potential students can easily find your classes when searching online."
+        },
+        {
+            question: "How can SEO increase yoga class bookings?",
+            answer: "SEO helps your studio rank higher for search terms like “yoga classes near me” or “beginner yoga [city]”. When your website appears at the top, more potential students visit your site, leading to increased inquiries, trials, and memberships."
+        },
+        {
+            question: "How long does yoga SEO take to work?",
+            answer: "SEO is a gradual process. Most yoga studios begin seeing improvements in rankings and traffic within 3 to 6 months, while significant growth in sign-ups and visibility typically occurs within 6 to 12 months."
+        },
+        {
+            question: "Why is local SEO important for yoga studios?",
+            answer: "Local SEO helps your studio appear in Google Maps and local search results. This makes it easier for nearby people looking for yoga, meditation, or wellness classes to find and join you."
+        },
+        {
+            question: "What keywords should yoga studios target?",
+            answer: "Important keywords include: yoga classes near me, beginner yoga classes, hot yoga studio, prenatal yoga near me, vinyasa yoga [city]. Targeting these helps attract students actively looking for yoga services."
+        },
+        {
+            question: "Does my yoga website need SEO optimization?",
+            answer: "Yes. Without SEO, your website may not appear in search results. Proper optimization improves your rankings, increases website traffic, and helps convert visitors into students."
+        },
+        {
+            question: "Can SEO help small yoga studios compete with bigger ones?",
+            answer: "Yes. SEO allows small studios or independent teachers to target local students and niche styles (prenatal, yin, power), helping them compete effectively and attract more qualified leads."
+        },
+        {
+            question: "Why should I hire a professional yoga marketing agency?",
+            answer: "A professional yoga marketing agency has the expertise and tools to improve your search rankings, optimize your website, and generate more leads. They create customized strategies to help your studio grow faster and achieve long-term success."
         }
     ];
 
 
     return (
         <div className="bg-[#020202] text-white overflow-hidden">
-
 
             {/* HERO */}
             <section className="relative h-[50vh] md:h-[55vh] flex items-center justify-center">
@@ -121,18 +161,12 @@ export default function RestaurantMarketing() {
                     {/* Heading */}
                     <h1 className="text-3xl md:text-5xl font-bold mb-4 leading-tight">
 
-                        Restaurant Marketing Agency
-
-                        <span className="text-[#25baff] block mt-2">
-                            That Drives Real Growth
-                        </span>
-
+                        Yoga Marketing Services Agency
                     </h1>
 
                     {/* Description */}
-                    <p className="text-gray-400 text-base md:text-lg mb-6">
-                        Increase traffic, boost online orders, and grow your restaurant
-                        with proven digital marketing strategies.
+                    <p className="text-gray-300 text-base md:text-lg mb-6">
+                        Fill your classes consistently, attract high-intent students, and grow your yoga studio with proven SEO & digital strategies tailored for yoga teachers and wellness spaces.
                     </p>
 
                 </motion.div>
@@ -152,11 +186,11 @@ export default function RestaurantMarketing() {
                         className="text-center mb-16"
                     >
                         <h2 className="text-4xl font-bold mb-4">
-                            Our Restaurant Marketing Services
+                            Our Yoga Marketing Services
                         </h2>
 
                         <p className="text-gray-400 max-w-2xl mx-auto">
-                            We provide complete digital marketing solutions to grow your restaurant visibility, traffic, and revenue.
+                            Complete digital visibility solutions to help yoga studios, instructors, wellness centers and online yoga teachers rank higher, attract more students, and fill classes sustainably.
                         </p>
                     </motion.div>
 
@@ -165,34 +199,34 @@ export default function RestaurantMarketing() {
 
                         {[
                             {
-                                icon: <FaSearch />,
-                                title: "Restaurant SEO",
-                                desc: "Rank higher on Google and attract customers searching for restaurants in your city."
+                                icon: <FaHeart />,
+                                title: "Yoga SEO",
+                                desc: "Rank higher on Google for yoga classes, meditation, and wellness searches."
                             },
                             {
                                 icon: <FaBullhorn />,
-                                title: "Paid Advertising",
-                                desc: "Run profitable Google Ads and social media ads to drive instant traffic."
+                                title: "Paid Advertising (PPC)",
+                                desc: "Run targeted Google & social ads for instant sign-ups during peak seasons."
                             },
                             {
                                 icon: <FaMapMarkerAlt />,
-                                title: "Local SEO Optimization",
-                                desc: "Appear in Google Maps and dominate near-me searches."
+                                title: "Local & Regional SEO",
+                                desc: "Dominate local yoga searches, Google Maps, and 'near me' student queries."
                             },
                             {
                                 icon: <FaStar />,
-                                title: "Review Management",
-                                desc: "Improve ratings and build customer trust."
+                                title: "Review & Reputation Management",
+                                desc: "Build trust with glowing reviews from happy students."
                             },
                             {
-                                icon: <FaShoppingCart />,
+                                icon: <FaLeaf />,
                                 title: "Conversion Optimization",
-                                desc: "Turn visitors into customers and increase orders."
+                                desc: "Turn website visitors into trial sign-ups and memberships."
                             },
                             {
                                 icon: <FaUsers />,
-                                title: "Social Media Marketing",
-                                desc: "Grow your audience and attract loyal customers."
+                                title: "Content & Authority Building",
+                                desc: "Create expert content on yoga styles, benefits, and wellness practices."
                             }
                         ].map((service, index) => (
 
@@ -244,19 +278,18 @@ export default function RestaurantMarketing() {
                     >
 
                         <p className="text-[#25baff] font-semibold mb-3">
-                            RESTAURANT GROWTH CHECK
+                            YOGA STUDIO GROWTH CHECK
                         </p>
 
                         <h2 className="text-3xl md:text-5xl font-bold text-[#020202] mb-6 leading-tight">
-                            Is Your Restaurant
+                            Is Your Yoga Studio
                             <span className="block text-[#25baff]">
                                 Reaching Its Full Potential?
                             </span>
                         </h2>
 
                         <p className="text-gray-600 text-lg mb-8">
-                            Most restaurants lose customers simply because they aren't visible
-                            where customers are searching. Let's identify your growth opportunities.
+                            Many yoga studios lose students because they're not visible where people search. Let's uncover your growth gaps.
                         </p>
 
 
@@ -264,10 +297,10 @@ export default function RestaurantMarketing() {
                         <div className="space-y-4">
 
                             {[
-                                "Increase online visibility",
-                                "Attract ready-to-buy customers",
-                                "Boost reservations and orders",
-                                "Grow consistent monthly revenue"
+                                "Increase online & local visibility",
+                                "Attract high-intent students & wellness seekers",
+                                "Boost sign-ups, trials, and memberships",
+                                "Grow consistent revenue"
                             ].map((item, i) => (
 
                                 <motion.div
@@ -355,7 +388,7 @@ export default function RestaurantMarketing() {
                         variants={fadeUp}
                     >
                         <h2 className="text-4xl font-bold">
-                            Our Proven Growth Process
+                            Our Proven Yoga Studio Growth Process
                         </h2>
                     </motion.div>
 
@@ -366,22 +399,22 @@ export default function RestaurantMarketing() {
                             {
                                 step: "01",
                                 title: "Audit & Research",
-                                desc: "We analyze your restaurant, competitors, and opportunities."
+                                desc: "Analyze your site, competitors, keywords, and yoga market opportunities."
                             },
                             {
                                 step: "02",
                                 title: "Strategy Creation",
-                                desc: "We build a custom marketing plan for your growth."
+                                desc: "Build custom SEO plan for your yoga studio or wellness brand."
                             },
                             {
                                 step: "03",
                                 title: "Implementation",
-                                desc: "We execute SEO, ads, and optimization."
+                                desc: "Execute on-page, technical SEO, content, and local optimizations."
                             },
                             {
                                 step: "04",
                                 title: "Growth & Scaling",
-                                desc: "We continuously improve and scale results."
+                                desc: "Monitor, refine, and scale results for long-term visibility."
                             }
                         ].map((item, index) => (
 
@@ -414,7 +447,7 @@ export default function RestaurantMarketing() {
             </section>
 
 
-            {/* WHAT IS RESTAURANT MARKETING */}
+            {/* WHAT IS ... */}
             <section className="relative py-32 px-6 bg-gradient-to-b from-[#ffffff] via-[#f7fbff] to-[#eef6ff] overflow-hidden">
 
                 {/* Background glow effects */}
@@ -443,8 +476,9 @@ export default function RestaurantMarketing() {
                             <img
                                 src={SeoImg}
                                 className="rounded-xl w-full h-[400px] object-cover"
-                                alt="Restaurant Marketing"
+                                alt="Yoga Marketing"
                             />
+
                         </div>
 
                     </motion.div>
@@ -461,7 +495,7 @@ export default function RestaurantMarketing() {
 
                         {/* Label */}
                         <p className="text-[#25baff] font-semibold mb-3 tracking-wide">
-                            RESTAURANT DIGITAL GROWTH
+                            YOGA DIGITAL GROWTH
                         </p>
 
 
@@ -471,23 +505,20 @@ export default function RestaurantMarketing() {
                             What Is
 
                             <span className="block text-[#25baff]">
-                                Restaurant Marketing?
+                                Yoga Marketing?
                             </span>
 
                         </h2>
 
 
-                        {/* Description FIXED color */}
+                        {/* Description */}
                         <p className="text-gray-600 mb-6 text-lg">
-                            Restaurant marketing is the strategic process of promoting your restaurant
-                            across search engines, maps, and digital platforms to attract customers,
-                            increase orders, and build a strong brand presence.
+                            Yoga marketing is a specialized digital strategy that helps yoga studios, instructors, and wellness brands improve visibility on search engines like Google. It ensures your studio appears when people search for services such as “yoga classes near me”, “beginner yoga classes”, “hot yoga studio”, or “prenatal yoga near me”.
                         </p>
 
 
                         <p className="text-gray-600 mb-8">
-                            We ensure your restaurant becomes the top choice when customers search
-                            for places to eat in your area.
+                            We make your studio the go-to choice when students search for yoga and wellness solutions in your area.
                         </p>
 
 
@@ -496,10 +527,10 @@ export default function RestaurantMarketing() {
                         <div className="space-y-4">
 
                             {[
-                                "Rank higher on Google search results",
-                                "Appear in local and near-me searches",
-                                "Increase online orders and reservations",
-                                "Build trust and brand authority"
+                                "Rank higher for yoga & wellness searches",
+                                "Dominate local and 'near me' yoga queries",
+                                "Increase class sign-ups and inquiries",
+                                "Establish expertise in yoga teaching & wellness"
                             ].map((item, index) => (
 
                                 <motion.div
@@ -508,14 +539,12 @@ export default function RestaurantMarketing() {
                                     className="flex items-center gap-3 group"
                                 >
 
-                                    {/* FIXED icon background */}
                                     <div className="w-6 h-6 rounded-full bg-[#25baff]/10 flex items-center justify-center group-hover:bg-[#25baff] transition">
 
                                         <FaCheckCircle className="text-[#25baff] group-hover:text-white text-sm transition" />
 
                                     </div>
 
-                                    {/* FIXED text color */}
                                     <span className="text-gray-700 font-medium">
                                         {item}
                                     </span>
@@ -525,6 +554,7 @@ export default function RestaurantMarketing() {
                             ))}
 
                         </div>
+
                     </motion.div>
 
                 </div>
@@ -585,7 +615,7 @@ export default function RestaurantMarketing() {
                             Case Study:
 
                             <span className="block text-[#25baff]">
-                                300% Growth in 6 Months
+                                320% Growth in 6 Months
                             </span>
 
                         </h2>
@@ -593,9 +623,7 @@ export default function RestaurantMarketing() {
 
                         {/* Description */}
                         <p className="text-gray-600 mb-8 text-lg">
-                            Our strategic SEO and conversion optimization helped this restaurant
-                            dramatically increase traffic, improve search rankings, and boost
-                            online orders consistently.
+                            Our targeted yoga marketing and local SEO strategy helped this studio dramatically increase visibility, class enrollments, and student inquiries.
                         </p>
 
 
@@ -605,8 +633,8 @@ export default function RestaurantMarketing() {
 
                             {[
                                 { value: "320%", label: "Traffic Growth" },
-                                { value: "210%", label: "Order Increase" },
-                                { value: "4X", label: "ROI" }
+                                { value: "240%", label: "Enrollment Increase" },
+                                { value: "4.1X", label: "ROI" }
                             ].map((stat, index) => (
 
                                 <motion.div
@@ -635,10 +663,10 @@ export default function RestaurantMarketing() {
                         <div className="space-y-4">
 
                             {[
-                                "Higher Google rankings",
-                                "More daily online orders",
-                                "Stronger brand visibility",
-                                "Consistent monthly growth"
+                                "Higher rankings for yoga keywords",
+                                "More trial requests & memberships",
+                                "Stronger local presence",
+                                "Sustainable monthly growth"
                             ].map((point, index) => (
 
                                 <motion.div
@@ -691,7 +719,7 @@ export default function RestaurantMarketing() {
 
                         {/* Label */}
                         <p className="text-[#25baff] font-semibold mb-3 tracking-wide">
-                            LOCAL SEO OPTIMIZATION
+                            LOCAL & REGIONAL SEO
                         </p>
 
 
@@ -701,7 +729,7 @@ export default function RestaurantMarketing() {
                             Dominate
 
                             <span className="block text-[#25baff]">
-                                Local Search Results
+                                Local Yoga Searches
                             </span>
 
                         </h2>
@@ -709,8 +737,7 @@ export default function RestaurantMarketing() {
 
                         {/* Description */}
                         <p className="text-gray-600 mb-8 text-lg">
-                            We optimize your Google Business Profile and website so customers
-                            find your restaurant instantly when searching nearby.
+                            We optimize your Google Business Profile, website, and content so students find your yoga studio instantly in local and “near me” searches.
                         </p>
 
 
@@ -719,9 +746,9 @@ export default function RestaurantMarketing() {
                         <div className="grid grid-cols-3 gap-4 mb-8">
 
                             {[
-                                { value: "500%", label: "Local Visibility" },
-                                { value: "3X", label: "More Walk-ins" },
-                                { value: "220%", label: "Calls Increase" }
+                                { value: "480%", label: "Local Visibility" },
+                                { value: "3.1X", label: "More Sign-ups" },
+                                { value: "260%", label: "Local Inquiries" }
                             ].map((stat, index) => (
 
                                 <motion.div
@@ -751,9 +778,9 @@ export default function RestaurantMarketing() {
 
                             {[
                                 "Appear in Google Maps top results",
-                                "Rank for near-me searches",
-                                "Increase phone calls and bookings",
-                                "Attract high-intent local customers"
+                                "Rank for 'yoga near me' searches",
+                                "Increase calls, trials, and memberships",
+                                "Attract local high-intent students"
                             ].map((point, index) => (
 
                                 <motion.div
@@ -778,6 +805,8 @@ export default function RestaurantMarketing() {
                             ))}
 
                         </div>
+
+
                     </motion.div>
 
 
@@ -811,7 +840,7 @@ export default function RestaurantMarketing() {
             </section>
 
 
-            {/* ONLINE ORDERS */}
+            {/* ONLINE BOOKINGS / LEADS */}
             <section className="relative py-32 px-6 bg-gradient-to-b from-[#ffffff] via-[#f8fbff] to-[#eef6ff] overflow-hidden">
 
                 {/* Background glow effects */}
@@ -857,7 +886,7 @@ export default function RestaurantMarketing() {
 
                         {/* Label */}
                         <p className="text-[#25baff] font-semibold mb-3 tracking-wide">
-                            ORDER GROWTH OPTIMIZATION
+                            SIGN-UP & LEAD OPTIMIZATION
                         </p>
 
 
@@ -867,7 +896,7 @@ export default function RestaurantMarketing() {
                             Increase
 
                             <span className="block text-[#25baff]">
-                                Online Orders & Revenue
+                                Class Sign-ups & Studio Revenue
                             </span>
 
                         </h2>
@@ -875,8 +904,7 @@ export default function RestaurantMarketing() {
 
                         {/* Description */}
                         <p className="text-gray-600 mb-8 text-lg">
-                            We optimize your website, ordering flow, and conversion funnel so
-                            visitors become paying customers quickly and easily.
+                            We optimize your site, booking forms, and conversion paths so visitors easily become trial students, members, or class bookings.
                         </p>
 
 
@@ -885,9 +913,9 @@ export default function RestaurantMarketing() {
                         <div className="grid grid-cols-3 gap-4 mb-8">
 
                             {[
-                                { value: "240%", label: "Orders Growth" },
-                                { value: "180%", label: "Conversion Boost" },
-                                { value: "3.5X", label: "Revenue Increase" }
+                                { value: "280%", label: "Sign-up Growth" },
+                                { value: "185%", label: "Conversion Boost" },
+                                { value: "3.7X", label: "Revenue Uplift" }
                             ].map((stat, index) => (
 
                                 <motion.div
@@ -916,10 +944,10 @@ export default function RestaurantMarketing() {
                         <div className="space-y-4">
 
                             {[
-                                "Optimized online ordering experience",
-                                "Mobile-friendly ordering system",
-                                "Faster checkout and payment flow",
-                                "Higher conversion rates"
+                                "Optimized online booking & contact forms",
+                                "Mobile-friendly studio website experience",
+                                "Faster inquiry & sign-up flows",
+                                "Higher conversion from high-intent traffic"
                             ].map((point, index) => (
 
                                 <motion.div
@@ -944,6 +972,7 @@ export default function RestaurantMarketing() {
                             ))}
 
                         </div>
+
                     </motion.div>
 
 
@@ -963,7 +992,7 @@ export default function RestaurantMarketing() {
                 >
 
                     <h2 className="text-4xl font-bold text-center mb-16">
-                        Benefits of Restaurant Marketing
+                        Benefits of Yoga Marketing
                     </h2>
 
                     <div className="grid md:grid-cols-3 gap-8">
@@ -1018,12 +1047,11 @@ export default function RestaurantMarketing() {
 
                     {/* Heading */}
                     <h2 className="text-3xl md:text-4xl font-bold text-[#020202] mb-4">
-                        Proven Restaurant Growth Results
+                        Proven Yoga Studio Growth Results
                     </h2>
 
                     <p className="text-gray-600 mb-16 max-w-2xl mx-auto">
-                        Our digital marketing strategies consistently deliver measurable growth
-                        in traffic, customers, and restaurant revenue.
+                        Our marketing strategies deliver measurable increases in visibility, enrollments, and revenue for yoga studios and wellness teachers.
                     </p>
 
 
@@ -1032,9 +1060,9 @@ export default function RestaurantMarketing() {
 
                         {[
                             { number: "320%", label: "Traffic Growth" },
-                            { number: "210%", label: "Order Increase" },
-                            { number: "180%", label: "Customer Growth" },
-                            { number: "4X", label: "Return on Investment" }
+                            { number: "240%", label: "Enrollment Increase" },
+                            { number: "210%", label: "Student Growth" },
+                            { number: "4.1X", label: "Return on Investment" }
                         ].map((stat, index) => (
 
                             <motion.div
@@ -1074,6 +1102,91 @@ export default function RestaurantMarketing() {
                     </div>
 
                 </motion.div>
+
+            </section>
+
+
+            {/* FAQ SECTION - NEW ADDED */}
+            <section className="py-16 px-4 bg-[#111]">
+
+                <div className="max-w-5xl mx-auto">
+
+                    <motion.div
+                        initial="hidden"
+                        whileInView="visible"
+                        variants={fadeUp}
+                        viewport={{ once: true }}
+                        className="text-center mb-10"
+                    >
+                        <h2 className="text-2xl md:text-3xl font-bold mb-2">
+                            Yoga Marketing Services FAQs
+                        </h2>
+
+                        <p className="text-gray-400 text-sm max-w-xl mx-auto">
+                            Common questions about how our yoga marketing and SEO services can help grow your studio.
+                        </p>
+                    </motion.div>
+
+
+                    {/* Grid */}
+                    <div className="grid md:grid-cols-2 gap-4">
+
+                        {faqs.map((faq, index) => {
+
+                            const isOpen = openIndex === index;
+
+                            const toggleFaq = () => {
+                                setOpenIndex(isOpen ? null : index);
+                            };
+
+                            return (
+                                <motion.div
+                                    key={index}
+                                    initial="hidden"
+                                    whileInView="visible"
+                                    variants={fadeUp}
+                                    viewport={{ once: true }}
+                                    className="bg-black border border-white/10 rounded-lg overflow-hidden"
+                                >
+                                    <button
+                                        onClick={() => setOpenIndex(openIndex === index ? null : index)}
+                                        className="w-full flex justify-between items-center px-5 py-4 text-left hover:bg-white/5 transition"
+                                    >
+                                        <h3 className="text-sm md:text-base font-semibold text-[#25baff] pr-4">
+                                            {faq.question}
+                                        </h3>
+
+                                        <span className="text-[#25baff] text-xs">
+                                            {openIndex === index ? <FaMinus /> : <FaPlus />}
+                                        </span>
+                                    </button>
+
+                                    <motion.div
+                                        initial={false}
+                                        animate={{
+                                            height: openIndex === index ? "auto" : 0,
+                                            opacity: openIndex === index ? 1 : 0
+                                        }}
+                                        transition={{
+                                            duration: 0.35,
+                                            ease: "easeInOut"
+                                        }}
+                                        className="overflow-hidden"
+                                    >
+                                        <div className="px-5 pb-4">
+                                            <p className="text-gray-400 text-sm leading-relaxed">
+                                                {faq.answer}
+                                            </p>
+                                        </div>
+                                    </motion.div>
+
+                                </motion.div>
+                            );
+                        })}
+
+                    </div>
+
+                </div>
 
             </section>
 

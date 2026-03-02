@@ -7,16 +7,18 @@ import {
     FaStar,
     FaUsers,
     FaBullhorn,
-    FaCheckCircle
+    FaTractor,
+    FaCheckCircle,
+    FaSeedling
 } from "react-icons/fa";
 
-import HeroImg from "../../../../assets/services/RestorentMarketing/banner.avif";
-import SeoImg from "../../../../assets/services/RestorentMarketing/img1.avif";
-import LocalImg from "../../../../assets/services/RestorentMarketing/img2.avif";
-import OrdersImg from "../../../../assets/services/RestorentMarketing/img3.avif";
-import OrdersImg2 from "../../../../assets/services/RestorentMarketing/img4.avif";
+import HeroImg from "../../../../assets/services/KitchenSEO/banner.avif";
+import SeoImg from "../../../../assets/services/KitchenSEO/img1.avif";
+import LocalImg from "../../../../assets/services/KitchenSEO/img2.avif";
+import OrdersImg from "../../../../assets/services/KitchenSEO/img3.avif";
+import OrdersImg2 from "../../../../assets/services/KitchenSEO/img4.avif";
 
-export default function RestaurantMarketing() {
+export default function KitchenRemodelerSEO() {
 
     const fadeUp = {
         hidden: { opacity: 0, y: 60 },
@@ -53,10 +55,10 @@ export default function RestaurantMarketing() {
 
 
     const questions = [
-        "Want more customers finding your restaurant online?",
-        "Ready to increase reservations and food orders?",
-        "Want your restaurant to dominate Google search?",
-        "Looking to grow your restaurant brand visibility?"
+        "Want more homeowners finding your kitchen design business online?",
+        "Ready to increase consultation bookings and remodeling projects?",
+        "Want your kitchen remodeling company to dominate Google search?",
+        "Looking to grow your kitchen design brand visibility?"
     ];
 
 
@@ -64,39 +66,38 @@ export default function RestaurantMarketing() {
         {
             icon: <FaSearch />,
             title: "Higher Google Rankings",
-            text: "Appear on the first page where customers are actively searching."
+            text: "Appear on the first page where homeowners search for kitchen design & remodeling services."
         },
         {
             icon: <FaMapMarkerAlt />,
-            title: "Local Search Visibility",
-            text: "Dominate 'near me' searches and attract nearby customers."
+            title: "Local & Regional Visibility",
+            text: "Dominate 'near me' and local searches to attract nearby clients."
         },
         {
             icon: <FaShoppingCart />,
-            title: "More Online Orders",
-            text: "Turn website visitors into paying customers."
+            title: "More Qualified Leads & Bookings",
+            text: "Convert search visitors into consultation requests, quotes, and signed projects."
         },
         {
             icon: <FaStar />,
-            title: "Stronger Brand Reputation",
-            text: "Build trust with positive reviews and online presence."
+            title: "Stronger Industry Authority",
+            text: "Build trust with expertise in modern kitchen design & renovations."
         },
         {
             icon: <FaUsers />,
-            title: "Customer Growth",
-            text: "Attract new and repeat customers consistently."
+            title: "Client & Project Growth",
+            text: "Attract consistent new homeowners, referrals, and repeat business."
         },
         {
             icon: <FaChartLine />,
-            title: "Revenue Increase",
-            text: "Boost profits with data-driven strategies."
+            title: "Revenue & Efficiency Increase",
+            text: "Boost profits with targeted, data-driven digital strategies."
         }
     ];
 
 
     return (
         <div className="bg-[#020202] text-white overflow-hidden">
-
 
             {/* HERO */}
             <section className="relative h-[50vh] md:h-[55vh] flex items-center justify-center">
@@ -121,18 +122,18 @@ export default function RestaurantMarketing() {
                     {/* Heading */}
                     <h1 className="text-3xl md:text-5xl font-bold mb-4 leading-tight">
 
-                        Restaurant Marketing Agency
+                        Kitchen Designer SEO Agency
 
                         <span className="text-[#25baff] block mt-2">
-                            That Drives Real Growth
+                            That Drives Real Remodeling Growth
                         </span>
 
                     </h1>
 
                     {/* Description */}
                     <p className="text-gray-400 text-base md:text-lg mb-6">
-                        Increase traffic, boost online orders, and grow your restaurant
-                        with proven digital marketing strategies.
+                        Increase visibility, attract high-intent homeowners, and grow your kitchen design or remodeling business
+                        with proven SEO & digital strategies tailored for kitchen professionals.
                     </p>
 
                 </motion.div>
@@ -152,11 +153,11 @@ export default function RestaurantMarketing() {
                         className="text-center mb-16"
                     >
                         <h2 className="text-4xl font-bold mb-4">
-                            Our Restaurant Marketing Services
+                            Our Kitchen Designer SEO Services
                         </h2>
 
                         <p className="text-gray-400 max-w-2xl mx-auto">
-                            We provide complete digital marketing solutions to grow your restaurant visibility, traffic, and revenue.
+                            Complete digital visibility solutions to help kitchen designers, remodelers, and cabinetry companies rank higher, attract serious clients, and scale revenue.
                         </p>
                     </motion.div>
 
@@ -165,34 +166,34 @@ export default function RestaurantMarketing() {
 
                         {[
                             {
-                                icon: <FaSearch />,
-                                title: "Restaurant SEO",
-                                desc: "Rank higher on Google and attract customers searching for restaurants in your city."
+                                icon: <FaTractor />,
+                                title: "Kitchen Design SEO",
+                                desc: "Rank higher on Google for kitchen remodeling, custom design, and renovation searches."
                             },
                             {
                                 icon: <FaBullhorn />,
-                                title: "Paid Advertising",
-                                desc: "Run profitable Google Ads and social media ads to drive instant traffic."
+                                title: "Paid Advertising (PPC)",
+                                desc: "Run targeted Google & social ads for instant leads during peak remodeling seasons."
                             },
                             {
                                 icon: <FaMapMarkerAlt />,
-                                title: "Local SEO Optimization",
-                                desc: "Appear in Google Maps and dominate near-me searches."
+                                title: "Local & Regional SEO",
+                                desc: "Dominate local kitchen searches, Google Maps, and area-specific client queries."
                             },
                             {
                                 icon: <FaStar />,
-                                title: "Review Management",
-                                desc: "Improve ratings and build customer trust."
+                                title: "Review & Reputation Management",
+                                desc: "Build trust with strong reviews from happy homeowners and clients."
                             },
                             {
-                                icon: <FaShoppingCart />,
+                                icon: <FaSeedling />,
                                 title: "Conversion Optimization",
-                                desc: "Turn visitors into customers and increase orders."
+                                desc: "Turn website visitors into consultation bookings, quotes, and signed projects."
                             },
                             {
                                 icon: <FaUsers />,
-                                title: "Social Media Marketing",
-                                desc: "Grow your audience and attract loyal customers."
+                                title: "Content & Authority Building",
+                                desc: "Create expert content on kitchen trends, remodeling tips, and design inspiration."
                             }
                         ].map((service, index) => (
 
@@ -244,19 +245,18 @@ export default function RestaurantMarketing() {
                     >
 
                         <p className="text-[#25baff] font-semibold mb-3">
-                            RESTAURANT GROWTH CHECK
+                            KITCHEN BUSINESS GROWTH CHECK
                         </p>
 
                         <h2 className="text-3xl md:text-5xl font-bold text-[#020202] mb-6 leading-tight">
-                            Is Your Restaurant
+                            Is Your Kitchen Design Business
                             <span className="block text-[#25baff]">
                                 Reaching Its Full Potential?
                             </span>
                         </h2>
 
                         <p className="text-gray-600 text-lg mb-8">
-                            Most restaurants lose customers simply because they aren't visible
-                            where customers are searching. Let's identify your growth opportunities.
+                            Many kitchen designers and remodelers lose opportunities because they're not visible where homeowners search. Let's uncover your growth gaps.
                         </p>
 
 
@@ -264,10 +264,10 @@ export default function RestaurantMarketing() {
                         <div className="space-y-4">
 
                             {[
-                                "Increase online visibility",
-                                "Attract ready-to-buy customers",
-                                "Boost reservations and orders",
-                                "Grow consistent monthly revenue"
+                                "Increase online & local visibility",
+                                "Attract high-intent homeowners & clients",
+                                "Boost consultation requests & signed projects",
+                                "Grow consistent project revenue"
                             ].map((item, i) => (
 
                                 <motion.div
@@ -355,7 +355,7 @@ export default function RestaurantMarketing() {
                         variants={fadeUp}
                     >
                         <h2 className="text-4xl font-bold">
-                            Our Proven Growth Process
+                            Our Proven Kitchen Growth Process
                         </h2>
                     </motion.div>
 
@@ -366,22 +366,22 @@ export default function RestaurantMarketing() {
                             {
                                 step: "01",
                                 title: "Audit & Research",
-                                desc: "We analyze your restaurant, competitors, and opportunities."
+                                desc: "Analyze your site, competitors, keywords, and kitchen remodeling market opportunities."
                             },
                             {
                                 step: "02",
                                 title: "Strategy Creation",
-                                desc: "We build a custom marketing plan for your growth."
+                                desc: "Build custom SEO plan for your kitchen design or remodeling business."
                             },
                             {
                                 step: "03",
                                 title: "Implementation",
-                                desc: "We execute SEO, ads, and optimization."
+                                desc: "Execute on-page, technical SEO, content, and local optimizations."
                             },
                             {
                                 step: "04",
                                 title: "Growth & Scaling",
-                                desc: "We continuously improve and scale results."
+                                desc: "Monitor, refine, and scale results for long-term visibility."
                             }
                         ].map((item, index) => (
 
@@ -414,7 +414,7 @@ export default function RestaurantMarketing() {
             </section>
 
 
-            {/* WHAT IS RESTAURANT MARKETING */}
+            {/* WHAT IS ... SEO */}
             <section className="relative py-32 px-6 bg-gradient-to-b from-[#ffffff] via-[#f7fbff] to-[#eef6ff] overflow-hidden">
 
                 {/* Background glow effects */}
@@ -443,8 +443,9 @@ export default function RestaurantMarketing() {
                             <img
                                 src={SeoImg}
                                 className="rounded-xl w-full h-[400px] object-cover"
-                                alt="Restaurant Marketing"
+                                alt="Kitchen Designer SEO"
                             />
+
                         </div>
 
                     </motion.div>
@@ -461,7 +462,7 @@ export default function RestaurantMarketing() {
 
                         {/* Label */}
                         <p className="text-[#25baff] font-semibold mb-3 tracking-wide">
-                            RESTAURANT DIGITAL GROWTH
+                            KITCHEN DESIGN DIGITAL GROWTH
                         </p>
 
 
@@ -471,23 +472,20 @@ export default function RestaurantMarketing() {
                             What Is
 
                             <span className="block text-[#25baff]">
-                                Restaurant Marketing?
+                                SEO for Kitchen Designers?
                             </span>
 
                         </h2>
 
 
-                        {/* Description FIXED color */}
+                        {/* Description */}
                         <p className="text-gray-600 mb-6 text-lg">
-                            Restaurant marketing is the strategic process of promoting your restaurant
-                            across search engines, maps, and digital platforms to attract customers,
-                            increase orders, and build a strong brand presence.
+                            SEO for kitchen designers is a specialized digital marketing strategy that helps kitchen design and remodeling businesses improve their visibility on search engines like Google, Bing, and Yahoo. It ensures your business appears when homeowners search for services such as “kitchen designer near me,” “custom kitchen design,” “kitchen renovation experts,” or “modular kitchen designers.”
                         </p>
 
 
                         <p className="text-gray-600 mb-8">
-                            We ensure your restaurant becomes the top choice when customers search
-                            for places to eat in your area.
+                            We make your business the go-to choice when homeowners search for kitchen remodeling and design solutions in your region or style.
                         </p>
 
 
@@ -496,10 +494,10 @@ export default function RestaurantMarketing() {
                         <div className="space-y-4">
 
                             {[
-                                "Rank higher on Google search results",
-                                "Appear in local and near-me searches",
-                                "Increase online orders and reservations",
-                                "Build trust and brand authority"
+                                "Rank higher for kitchen-specific searches",
+                                "Dominate local and regional remodeling queries",
+                                "Increase consultation bookings and project inquiries",
+                                "Establish expertise in modern & luxury kitchen design"
                             ].map((item, index) => (
 
                                 <motion.div
@@ -508,14 +506,12 @@ export default function RestaurantMarketing() {
                                     className="flex items-center gap-3 group"
                                 >
 
-                                    {/* FIXED icon background */}
                                     <div className="w-6 h-6 rounded-full bg-[#25baff]/10 flex items-center justify-center group-hover:bg-[#25baff] transition">
 
                                         <FaCheckCircle className="text-[#25baff] group-hover:text-white text-sm transition" />
 
                                     </div>
 
-                                    {/* FIXED text color */}
                                     <span className="text-gray-700 font-medium">
                                         {item}
                                     </span>
@@ -525,6 +521,7 @@ export default function RestaurantMarketing() {
                             ))}
 
                         </div>
+
                     </motion.div>
 
                 </div>
@@ -585,7 +582,7 @@ export default function RestaurantMarketing() {
                             Case Study:
 
                             <span className="block text-[#25baff]">
-                                300% Growth in 6 Months
+                                260% Growth in 6 Months
                             </span>
 
                         </h2>
@@ -593,9 +590,7 @@ export default function RestaurantMarketing() {
 
                         {/* Description */}
                         <p className="text-gray-600 mb-8 text-lg">
-                            Our strategic SEO and conversion optimization helped this restaurant
-                            dramatically increase traffic, improve search rankings, and boost
-                            online orders consistently.
+                            Our targeted kitchen designer SEO and content strategy helped this remodeling company dramatically increase visibility, consultation requests, and signed projects.
                         </p>
 
 
@@ -604,9 +599,9 @@ export default function RestaurantMarketing() {
                         <div className="grid grid-cols-3 gap-4 mb-8">
 
                             {[
-                                { value: "320%", label: "Traffic Growth" },
-                                { value: "210%", label: "Order Increase" },
-                                { value: "4X", label: "ROI" }
+                                { value: "260%", label: "Traffic Growth" },
+                                { value: "195%", label: "Lead Increase" },
+                                { value: "3.6X", label: "ROI" }
                             ].map((stat, index) => (
 
                                 <motion.div
@@ -635,10 +630,10 @@ export default function RestaurantMarketing() {
                         <div className="space-y-4">
 
                             {[
-                                "Higher Google rankings",
-                                "More daily online orders",
-                                "Stronger brand visibility",
-                                "Consistent monthly growth"
+                                "Higher rankings for kitchen keywords",
+                                "More consultation inquiries & projects",
+                                "Stronger local presence",
+                                "Sustainable monthly growth"
                             ].map((point, index) => (
 
                                 <motion.div
@@ -691,7 +686,7 @@ export default function RestaurantMarketing() {
 
                         {/* Label */}
                         <p className="text-[#25baff] font-semibold mb-3 tracking-wide">
-                            LOCAL SEO OPTIMIZATION
+                            LOCAL & REGIONAL SEO
                         </p>
 
 
@@ -701,7 +696,7 @@ export default function RestaurantMarketing() {
                             Dominate
 
                             <span className="block text-[#25baff]">
-                                Local Search Results
+                                Local Kitchen Searches
                             </span>
 
                         </h2>
@@ -709,8 +704,7 @@ export default function RestaurantMarketing() {
 
                         {/* Description */}
                         <p className="text-gray-600 mb-8 text-lg">
-                            We optimize your Google Business Profile and website so customers
-                            find your restaurant instantly when searching nearby.
+                            We optimize your Google Business Profile, website, and content so homeowners find your kitchen design or remodeling business instantly in local searches.
                         </p>
 
 
@@ -719,9 +713,9 @@ export default function RestaurantMarketing() {
                         <div className="grid grid-cols-3 gap-4 mb-8">
 
                             {[
-                                { value: "500%", label: "Local Visibility" },
-                                { value: "3X", label: "More Walk-ins" },
-                                { value: "220%", label: "Calls Increase" }
+                                { value: "420%", label: "Local Visibility" },
+                                { value: "2.7X", label: "More Inquiries" },
+                                { value: "215%", label: "Local Leads" }
                             ].map((stat, index) => (
 
                                 <motion.div
@@ -751,9 +745,9 @@ export default function RestaurantMarketing() {
 
                             {[
                                 "Appear in Google Maps top results",
-                                "Rank for near-me searches",
-                                "Increase phone calls and bookings",
-                                "Attract high-intent local customers"
+                                "Rank for 'kitchen designer near me' searches",
+                                "Increase calls, quotes, and site visits",
+                                "Attract local high-intent homeowners"
                             ].map((point, index) => (
 
                                 <motion.div
@@ -778,6 +772,8 @@ export default function RestaurantMarketing() {
                             ))}
 
                         </div>
+
+
                     </motion.div>
 
 
@@ -811,7 +807,7 @@ export default function RestaurantMarketing() {
             </section>
 
 
-            {/* ONLINE ORDERS */}
+            {/* ONLINE ORDERS / LEADS */}
             <section className="relative py-32 px-6 bg-gradient-to-b from-[#ffffff] via-[#f8fbff] to-[#eef6ff] overflow-hidden">
 
                 {/* Background glow effects */}
@@ -857,7 +853,7 @@ export default function RestaurantMarketing() {
 
                         {/* Label */}
                         <p className="text-[#25baff] font-semibold mb-3 tracking-wide">
-                            ORDER GROWTH OPTIMIZATION
+                            LEAD & BOOKING OPTIMIZATION
                         </p>
 
 
@@ -867,7 +863,7 @@ export default function RestaurantMarketing() {
                             Increase
 
                             <span className="block text-[#25baff]">
-                                Online Orders & Revenue
+                                Leads & Project Revenue
                             </span>
 
                         </h2>
@@ -875,8 +871,7 @@ export default function RestaurantMarketing() {
 
                         {/* Description */}
                         <p className="text-gray-600 mb-8 text-lg">
-                            We optimize your website, ordering flow, and conversion funnel so
-                            visitors become paying customers quickly and easily.
+                            We optimize your site, lead forms, and conversion paths so visitors become consultation bookings, detailed quotes, or signed remodeling contracts easily.
                         </p>
 
 
@@ -885,9 +880,9 @@ export default function RestaurantMarketing() {
                         <div className="grid grid-cols-3 gap-4 mb-8">
 
                             {[
-                                { value: "240%", label: "Orders Growth" },
-                                { value: "180%", label: "Conversion Boost" },
-                                { value: "3.5X", label: "Revenue Increase" }
+                                { value: "235%", label: "Lead Growth" },
+                                { value: "170%", label: "Conversion Boost" },
+                                { value: "3.4X", label: "Revenue Uplift" }
                             ].map((stat, index) => (
 
                                 <motion.div
@@ -916,10 +911,10 @@ export default function RestaurantMarketing() {
                         <div className="space-y-4">
 
                             {[
-                                "Optimized online ordering experience",
-                                "Mobile-friendly ordering system",
-                                "Faster checkout and payment flow",
-                                "Higher conversion rates"
+                                "Optimized consultation & quote forms",
+                                "Mobile-friendly kitchen portfolio experience",
+                                "Faster quote & booking flows",
+                                "Higher conversion from high-intent traffic"
                             ].map((point, index) => (
 
                                 <motion.div
@@ -944,6 +939,7 @@ export default function RestaurantMarketing() {
                             ))}
 
                         </div>
+
                     </motion.div>
 
 
@@ -963,7 +959,7 @@ export default function RestaurantMarketing() {
                 >
 
                     <h2 className="text-4xl font-bold text-center mb-16">
-                        Benefits of Restaurant Marketing
+                        Benefits of Kitchen Designer SEO
                     </h2>
 
                     <div className="grid md:grid-cols-3 gap-8">
@@ -1018,12 +1014,11 @@ export default function RestaurantMarketing() {
 
                     {/* Heading */}
                     <h2 className="text-3xl md:text-4xl font-bold text-[#020202] mb-4">
-                        Proven Restaurant Growth Results
+                        Proven Kitchen Remodeling Growth Results
                     </h2>
 
                     <p className="text-gray-600 mb-16 max-w-2xl mx-auto">
-                        Our digital marketing strategies consistently deliver measurable growth
-                        in traffic, customers, and restaurant revenue.
+                        Our SEO strategies deliver measurable increases in visibility, leads, and revenue for kitchen designers and remodeling companies.
                     </p>
 
 
@@ -1031,10 +1026,10 @@ export default function RestaurantMarketing() {
                     <div className="grid md:grid-cols-4 gap-8">
 
                         {[
-                            { number: "320%", label: "Traffic Growth" },
-                            { number: "210%", label: "Order Increase" },
-                            { number: "180%", label: "Customer Growth" },
-                            { number: "4X", label: "Return on Investment" }
+                            { number: "260%", label: "Traffic Growth" },
+                            { number: "195%", label: "Lead Increase" },
+                            { number: "175%", label: "Client Growth" },
+                            { number: "3.6X", label: "Return on Investment" }
                         ].map((stat, index) => (
 
                             <motion.div
