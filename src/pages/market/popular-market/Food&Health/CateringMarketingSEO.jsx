@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { motion } from "framer-motion";
 import {
     FaSearch,
@@ -7,16 +8,20 @@ import {
     FaStar,
     FaUsers,
     FaBullhorn,
-    FaCheckCircle
+    FaTractor,
+    FaCheckCircle,
+    FaSeedling,
+    FaPlus, FaMinus
 } from "react-icons/fa";
 
-import HeroImg from "../../../../assets/services/RestorentMarketing/banner.avif";
-import SeoImg from "../../../../assets/services/RestorentMarketing/img1.avif";
-import LocalImg from "../../../../assets/services/RestorentMarketing/img2.avif";
-import OrdersImg from "../../../../assets/services/RestorentMarketing/img3.avif";
-import OrdersImg2 from "../../../../assets/services/RestorentMarketing/img4.avif";
+import HeroImg from "../../../../assets/services/CateringMarketingSEO/banner.jpg";
+import SeoImg from "../../../../assets/services/CateringMarketingSEO/img1.avif";
+import LocalImg from "../../../../assets/services/CateringMarketingSEO/img2.avif";
+import OrdersImg from "../../../../assets/services/CateringMarketingSEO/img3.avif";
+import OrdersImg2 from "../../../../assets/services/CateringMarketingSEO/img4.avif";
 
-export default function RestaurantMarketing() {
+export default function CateringMarketingSEO() {
+    const [openIndex, setOpenIndex] = useState(0);
 
     const fadeUp = {
         hidden: { opacity: 0, y: 60 },
@@ -53,10 +58,10 @@ export default function RestaurantMarketing() {
 
 
     const questions = [
-        "Want more customers finding your restaurant online?",
-        "Ready to increase reservations and food orders?",
-        "Want your restaurant to dominate Google search?",
-        "Looking to grow your restaurant brand visibility?"
+        "Want more clients finding your catering service online?",
+        "Ready to increase bookings, events, and revenue?",
+        "Want your catering business to dominate Google search results?",
+        "Looking to grow your catering brand visibility and reputation?"
     ];
 
 
@@ -64,39 +69,78 @@ export default function RestaurantMarketing() {
         {
             icon: <FaSearch />,
             title: "Higher Google Rankings",
-            text: "Appear on the first page where customers are actively searching."
+            text: "Appear on the first page where people search for catering & event services."
         },
         {
             icon: <FaMapMarkerAlt />,
-            title: "Local Search Visibility",
-            text: "Dominate 'near me' searches and attract nearby customers."
+            title: "Local & Regional Visibility",
+            text: "Dominate 'near me' and local searches to attract nearby clients."
         },
         {
             icon: <FaShoppingCart />,
-            title: "More Online Orders",
-            text: "Turn website visitors into paying customers."
+            title: "More Bookings & Inquiries",
+            text: "Convert search visitors into event requests and bookings."
         },
         {
             icon: <FaStar />,
-            title: "Stronger Brand Reputation",
-            text: "Build trust with positive reviews and online presence."
+            title: "Stronger Brand Trust",
+            text: "Build credibility with expertise in catering & event services."
         },
         {
             icon: <FaUsers />,
-            title: "Customer Growth",
-            text: "Attract new and repeat customers consistently."
+            title: "Client & Loyalty Growth",
+            text: "Attract consistent new clients, repeat business, and referrals."
         },
         {
             icon: <FaChartLine />,
-            title: "Revenue Increase",
-            text: "Boost profits with data-driven strategies."
+            title: "Revenue & Business Growth",
+            text: "Boost profits with targeted, data-driven digital strategies."
+        }
+    ];
+
+
+    const faqs = [
+        {
+            question: "What is catering SEO?",
+            answer: "Catering SEO is a digital marketing strategy that helps catering companies improve their visibility on search engines like Google. It involves optimizing your website, content, and local listings so potential clients can easily find your catering services when searching online."
+        },
+        {
+            question: "How can SEO increase catering bookings?",
+            answer: "SEO helps your catering business rank higher for search terms like “wedding catering near me” or “event catering services.” When your website appears at the top, more potential clients visit your site, leading to increased inquiries and confirmed bookings."
+        },
+        {
+            question: "How long does catering SEO take to work?",
+            answer: "SEO is a gradual process. Most catering businesses begin seeing improvements in rankings and traffic within 3 to 6 months, while significant growth in bookings and visibility typically occurs within 6 to 12 months."
+        },
+        {
+            question: "Why is local SEO important for catering businesses?",
+            answer: "Local SEO helps your catering business appear in Google Maps and local search results. This makes it easier for nearby customers planning events, weddings, or corporate functions to find and contact you."
+        },
+        {
+            question: "What keywords should catering businesses target?",
+            answer: "Important keywords include: catering services near me, wedding catering services, corporate catering company, event catering near me, party catering services. Targeting these keywords helps attract clients actively looking for catering services."
+        },
+        {
+            question: "Does my catering website need SEO optimization?",
+            answer: "Yes. Without SEO, your website may not appear in search results. Proper optimization improves your rankings, increases website traffic, and helps convert visitors into customers."
+        },
+        {
+            question: "How do customer reviews impact catering SEO?",
+            answer: "Customer reviews improve your credibility and help your business rank higher in local search results. Positive reviews also encourage new customers to trust your services and book your catering."
+        },
+        {
+            question: "Can SEO help small catering businesses compete with larger companies?",
+            answer: "Yes. SEO allows small catering businesses to target local customers and niche services, helping them compete effectively with larger catering companies and attract more qualified leads."
+        },
+        {
+            question: "Why should I hire a professional catering SEO agency?",
+            answer: "A professional catering SEO agency has the expertise and tools to improve your search rankings, optimize your website, and generate more leads. They create customized strategies to help your catering business grow faster and achieve long-term success."
         }
     ];
 
 
     return (
         <div className="bg-[#020202] text-white overflow-hidden">
-
 
             {/* HERO */}
             <section className="relative h-[50vh] md:h-[55vh] flex items-center justify-center">
@@ -121,18 +165,13 @@ export default function RestaurantMarketing() {
                     {/* Heading */}
                     <h1 className="text-3xl md:text-5xl font-bold mb-4 leading-tight">
 
-                        Restaurant Marketing Agency
-
-                        <span className="text-[#25baff] block mt-2">
-                            That Drives Real Growth
-                        </span>
-
+                        Catering Marketing SEO Agency
                     </h1>
 
                     {/* Description */}
-                    <p className="text-gray-400 text-base md:text-lg mb-6">
-                        Increase traffic, boost online orders, and grow your restaurant
-                        with proven digital marketing strategies.
+                    <p className="text-gray-300 text-base md:text-lg mb-6">
+                        Increase visibility, attract high-intent clients, and grow your catering business
+                        with proven SEO & digital strategies tailored for catering and event services.
                     </p>
 
                 </motion.div>
@@ -152,11 +191,11 @@ export default function RestaurantMarketing() {
                         className="text-center mb-16"
                     >
                         <h2 className="text-4xl font-bold mb-4">
-                            Our Restaurant Marketing Services
+                            Our Catering Marketing Services
                         </h2>
 
                         <p className="text-gray-400 max-w-2xl mx-auto">
-                            We provide complete digital marketing solutions to grow your restaurant visibility, traffic, and revenue.
+                            Complete digital visibility solutions to help catering companies, event planners, wedding caterers and corporate catering services rank higher, attract more clients, and scale bookings.
                         </p>
                     </motion.div>
 
@@ -165,34 +204,34 @@ export default function RestaurantMarketing() {
 
                         {[
                             {
-                                icon: <FaSearch />,
-                                title: "Restaurant SEO",
-                                desc: "Rank higher on Google and attract customers searching for restaurants in your city."
+                                icon: <FaTractor />,
+                                title: "Catering SEO",
+                                desc: "Rank higher on Google for catering, event, wedding, and corporate searches."
                             },
                             {
                                 icon: <FaBullhorn />,
-                                title: "Paid Advertising",
-                                desc: "Run profitable Google Ads and social media ads to drive instant traffic."
+                                title: "Paid Advertising (PPC)",
+                                desc: "Run targeted Google & social ads for instant bookings during peak seasons."
                             },
                             {
                                 icon: <FaMapMarkerAlt />,
-                                title: "Local SEO Optimization",
-                                desc: "Appear in Google Maps and dominate near-me searches."
+                                title: "Local & Regional SEO",
+                                desc: "Dominate local catering searches, Google Maps, and 'near me' client queries."
                             },
                             {
                                 icon: <FaStar />,
-                                title: "Review Management",
-                                desc: "Improve ratings and build customer trust."
+                                title: "Review & Reputation Management",
+                                desc: "Build trust with strong reviews from satisfied clients."
                             },
                             {
-                                icon: <FaShoppingCart />,
+                                icon: <FaSeedling />,
                                 title: "Conversion Optimization",
-                                desc: "Turn visitors into customers and increase orders."
+                                desc: "Turn website visitors into event bookings and inquiries."
                             },
                             {
                                 icon: <FaUsers />,
-                                title: "Social Media Marketing",
-                                desc: "Grow your audience and attract loyal customers."
+                                title: "Content & Authority Building",
+                                desc: "Create expert content on event planning, menus, and catering services."
                             }
                         ].map((service, index) => (
 
@@ -244,19 +283,18 @@ export default function RestaurantMarketing() {
                     >
 
                         <p className="text-[#25baff] font-semibold mb-3">
-                            RESTAURANT GROWTH CHECK
+                            CATERING BUSINESS GROWTH CHECK
                         </p>
 
                         <h2 className="text-3xl md:text-5xl font-bold text-[#020202] mb-6 leading-tight">
-                            Is Your Restaurant
+                            Is Your Catering Business
                             <span className="block text-[#25baff]">
                                 Reaching Its Full Potential?
                             </span>
                         </h2>
 
                         <p className="text-gray-600 text-lg mb-8">
-                            Most restaurants lose customers simply because they aren't visible
-                            where customers are searching. Let's identify your growth opportunities.
+                            Many catering companies lose clients because they're not visible where people search. Let's uncover your growth gaps.
                         </p>
 
 
@@ -264,10 +302,10 @@ export default function RestaurantMarketing() {
                         <div className="space-y-4">
 
                             {[
-                                "Increase online visibility",
-                                "Attract ready-to-buy customers",
-                                "Boost reservations and orders",
-                                "Grow consistent monthly revenue"
+                                "Increase online & local visibility",
+                                "Attract high-intent clients & event planners",
+                                "Boost bookings, calls, and inquiries",
+                                "Grow consistent revenue"
                             ].map((item, i) => (
 
                                 <motion.div
@@ -355,7 +393,7 @@ export default function RestaurantMarketing() {
                         variants={fadeUp}
                     >
                         <h2 className="text-4xl font-bold">
-                            Our Proven Growth Process
+                            Our Proven Catering Growth Process
                         </h2>
                     </motion.div>
 
@@ -366,22 +404,22 @@ export default function RestaurantMarketing() {
                             {
                                 step: "01",
                                 title: "Audit & Research",
-                                desc: "We analyze your restaurant, competitors, and opportunities."
+                                desc: "Analyze your site, competitors, keywords, and catering market opportunities."
                             },
                             {
                                 step: "02",
                                 title: "Strategy Creation",
-                                desc: "We build a custom marketing plan for your growth."
+                                desc: "Build custom SEO plan for your catering or event business."
                             },
                             {
                                 step: "03",
                                 title: "Implementation",
-                                desc: "We execute SEO, ads, and optimization."
+                                desc: "Execute on-page, technical SEO, content, and local optimizations."
                             },
                             {
                                 step: "04",
                                 title: "Growth & Scaling",
-                                desc: "We continuously improve and scale results."
+                                desc: "Monitor, refine, and scale results for long-term visibility."
                             }
                         ].map((item, index) => (
 
@@ -414,7 +452,7 @@ export default function RestaurantMarketing() {
             </section>
 
 
-            {/* WHAT IS RESTAURANT MARKETING */}
+            {/* WHAT IS ... */}
             <section className="relative py-32 px-6 bg-gradient-to-b from-[#ffffff] via-[#f7fbff] to-[#eef6ff] overflow-hidden">
 
                 {/* Background glow effects */}
@@ -443,8 +481,9 @@ export default function RestaurantMarketing() {
                             <img
                                 src={SeoImg}
                                 className="rounded-xl w-full h-[400px] object-cover"
-                                alt="Restaurant Marketing"
+                                alt="Catering Marketing"
                             />
+
                         </div>
 
                     </motion.div>
@@ -461,7 +500,7 @@ export default function RestaurantMarketing() {
 
                         {/* Label */}
                         <p className="text-[#25baff] font-semibold mb-3 tracking-wide">
-                            RESTAURANT DIGITAL GROWTH
+                            CATERING DIGITAL GROWTH
                         </p>
 
 
@@ -471,23 +510,20 @@ export default function RestaurantMarketing() {
                             What Is
 
                             <span className="block text-[#25baff]">
-                                Restaurant Marketing?
+                                Catering Marketing?
                             </span>
 
                         </h2>
 
 
-                        {/* Description FIXED color */}
+                        {/* Description */}
                         <p className="text-gray-600 mb-6 text-lg">
-                            Restaurant marketing is the strategic process of promoting your restaurant
-                            across search engines, maps, and digital platforms to attract customers,
-                            increase orders, and build a strong brand presence.
+                            Catering marketing is a specialized digital strategy that helps catering companies, event planners, and food service businesses improve visibility on search engines like Google. It ensures your catering business appears when people search for services such as “catering services near me”, “wedding catering services”, “corporate catering company”, or “event catering near me”.
                         </p>
 
 
                         <p className="text-gray-600 mb-8">
-                            We ensure your restaurant becomes the top choice when customers search
-                            for places to eat in your area.
+                            We make your business the go-to choice when clients search for event and catering solutions in your area.
                         </p>
 
 
@@ -496,10 +532,10 @@ export default function RestaurantMarketing() {
                         <div className="space-y-4">
 
                             {[
-                                "Rank higher on Google search results",
-                                "Appear in local and near-me searches",
-                                "Increase online orders and reservations",
-                                "Build trust and brand authority"
+                                "Rank higher for catering & event searches",
+                                "Dominate local and 'near me' catering queries",
+                                "Increase event bookings and inquiries",
+                                "Establish expertise in event planning & catering"
                             ].map((item, index) => (
 
                                 <motion.div
@@ -508,14 +544,12 @@ export default function RestaurantMarketing() {
                                     className="flex items-center gap-3 group"
                                 >
 
-                                    {/* FIXED icon background */}
                                     <div className="w-6 h-6 rounded-full bg-[#25baff]/10 flex items-center justify-center group-hover:bg-[#25baff] transition">
 
                                         <FaCheckCircle className="text-[#25baff] group-hover:text-white text-sm transition" />
 
                                     </div>
 
-                                    {/* FIXED text color */}
                                     <span className="text-gray-700 font-medium">
                                         {item}
                                     </span>
@@ -525,6 +559,7 @@ export default function RestaurantMarketing() {
                             ))}
 
                         </div>
+
                     </motion.div>
 
                 </div>
@@ -585,7 +620,7 @@ export default function RestaurantMarketing() {
                             Case Study:
 
                             <span className="block text-[#25baff]">
-                                300% Growth in 6 Months
+                                320% Growth in 6 Months
                             </span>
 
                         </h2>
@@ -593,9 +628,7 @@ export default function RestaurantMarketing() {
 
                         {/* Description */}
                         <p className="text-gray-600 mb-8 text-lg">
-                            Our strategic SEO and conversion optimization helped this restaurant
-                            dramatically increase traffic, improve search rankings, and boost
-                            online orders consistently.
+                            Our targeted catering marketing and local SEO strategy helped this event catering company dramatically increase visibility, event bookings, and client inquiries.
                         </p>
 
 
@@ -605,8 +638,8 @@ export default function RestaurantMarketing() {
 
                             {[
                                 { value: "320%", label: "Traffic Growth" },
-                                { value: "210%", label: "Order Increase" },
-                                { value: "4X", label: "ROI" }
+                                { value: "240%", label: "Booking Increase" },
+                                { value: "4.1X", label: "ROI" }
                             ].map((stat, index) => (
 
                                 <motion.div
@@ -635,10 +668,10 @@ export default function RestaurantMarketing() {
                         <div className="space-y-4">
 
                             {[
-                                "Higher Google rankings",
-                                "More daily online orders",
-                                "Stronger brand visibility",
-                                "Consistent monthly growth"
+                                "Higher rankings for catering keywords",
+                                "More event requests & bookings",
+                                "Stronger local presence",
+                                "Sustainable monthly growth"
                             ].map((point, index) => (
 
                                 <motion.div
@@ -691,7 +724,7 @@ export default function RestaurantMarketing() {
 
                         {/* Label */}
                         <p className="text-[#25baff] font-semibold mb-3 tracking-wide">
-                            LOCAL SEO OPTIMIZATION
+                            LOCAL & REGIONAL SEO
                         </p>
 
 
@@ -701,7 +734,7 @@ export default function RestaurantMarketing() {
                             Dominate
 
                             <span className="block text-[#25baff]">
-                                Local Search Results
+                                Local Catering Searches
                             </span>
 
                         </h2>
@@ -709,8 +742,7 @@ export default function RestaurantMarketing() {
 
                         {/* Description */}
                         <p className="text-gray-600 mb-8 text-lg">
-                            We optimize your Google Business Profile and website so customers
-                            find your restaurant instantly when searching nearby.
+                            We optimize your Google Business Profile, website, and content so clients find your catering business instantly in local and “near me” searches.
                         </p>
 
 
@@ -719,9 +751,9 @@ export default function RestaurantMarketing() {
                         <div className="grid grid-cols-3 gap-4 mb-8">
 
                             {[
-                                { value: "500%", label: "Local Visibility" },
-                                { value: "3X", label: "More Walk-ins" },
-                                { value: "220%", label: "Calls Increase" }
+                                { value: "480%", label: "Local Visibility" },
+                                { value: "3.1X", label: "More Bookings" },
+                                { value: "260%", label: "Local Inquiries" }
                             ].map((stat, index) => (
 
                                 <motion.div
@@ -751,9 +783,9 @@ export default function RestaurantMarketing() {
 
                             {[
                                 "Appear in Google Maps top results",
-                                "Rank for near-me searches",
-                                "Increase phone calls and bookings",
-                                "Attract high-intent local customers"
+                                "Rank for 'catering near me' searches",
+                                "Increase calls, bookings, and inquiries",
+                                "Attract local high-intent clients"
                             ].map((point, index) => (
 
                                 <motion.div
@@ -778,6 +810,8 @@ export default function RestaurantMarketing() {
                             ))}
 
                         </div>
+
+
                     </motion.div>
 
 
@@ -811,7 +845,7 @@ export default function RestaurantMarketing() {
             </section>
 
 
-            {/* ONLINE ORDERS */}
+            {/* ONLINE BOOKINGS / LEADS */}
             <section className="relative py-32 px-6 bg-gradient-to-b from-[#ffffff] via-[#f8fbff] to-[#eef6ff] overflow-hidden">
 
                 {/* Background glow effects */}
@@ -857,7 +891,7 @@ export default function RestaurantMarketing() {
 
                         {/* Label */}
                         <p className="text-[#25baff] font-semibold mb-3 tracking-wide">
-                            ORDER GROWTH OPTIMIZATION
+                            BOOKING & LEAD OPTIMIZATION
                         </p>
 
 
@@ -867,7 +901,7 @@ export default function RestaurantMarketing() {
                             Increase
 
                             <span className="block text-[#25baff]">
-                                Online Orders & Revenue
+                                Bookings & Catering Revenue
                             </span>
 
                         </h2>
@@ -875,8 +909,7 @@ export default function RestaurantMarketing() {
 
                         {/* Description */}
                         <p className="text-gray-600 mb-8 text-lg">
-                            We optimize your website, ordering flow, and conversion funnel so
-                            visitors become paying customers quickly and easily.
+                            We optimize your site, booking forms, and conversion paths so visitors easily become event bookings, inquiries, or service requests.
                         </p>
 
 
@@ -885,9 +918,9 @@ export default function RestaurantMarketing() {
                         <div className="grid grid-cols-3 gap-4 mb-8">
 
                             {[
-                                { value: "240%", label: "Orders Growth" },
-                                { value: "180%", label: "Conversion Boost" },
-                                { value: "3.5X", label: "Revenue Increase" }
+                                { value: "280%", label: "Booking Growth" },
+                                { value: "185%", label: "Conversion Boost" },
+                                { value: "3.7X", label: "Revenue Uplift" }
                             ].map((stat, index) => (
 
                                 <motion.div
@@ -916,10 +949,10 @@ export default function RestaurantMarketing() {
                         <div className="space-y-4">
 
                             {[
-                                "Optimized online ordering experience",
-                                "Mobile-friendly ordering system",
-                                "Faster checkout and payment flow",
-                                "Higher conversion rates"
+                                "Optimized online booking & contact forms",
+                                "Mobile-friendly catering website experience",
+                                "Faster inquiry & booking flows",
+                                "Higher conversion from high-intent traffic"
                             ].map((point, index) => (
 
                                 <motion.div
@@ -944,6 +977,7 @@ export default function RestaurantMarketing() {
                             ))}
 
                         </div>
+
                     </motion.div>
 
 
@@ -963,7 +997,7 @@ export default function RestaurantMarketing() {
                 >
 
                     <h2 className="text-4xl font-bold text-center mb-16">
-                        Benefits of Restaurant Marketing
+                        Benefits of Catering Marketing
                     </h2>
 
                     <div className="grid md:grid-cols-3 gap-8">
@@ -1018,12 +1052,11 @@ export default function RestaurantMarketing() {
 
                     {/* Heading */}
                     <h2 className="text-3xl md:text-4xl font-bold text-[#020202] mb-4">
-                        Proven Restaurant Growth Results
+                        Proven Catering Business Growth Results
                     </h2>
 
                     <p className="text-gray-600 mb-16 max-w-2xl mx-auto">
-                        Our digital marketing strategies consistently deliver measurable growth
-                        in traffic, customers, and restaurant revenue.
+                        Our marketing strategies deliver measurable increases in visibility, bookings, and revenue for catering companies and event services.
                     </p>
 
 
@@ -1032,9 +1065,9 @@ export default function RestaurantMarketing() {
 
                         {[
                             { number: "320%", label: "Traffic Growth" },
-                            { number: "210%", label: "Order Increase" },
-                            { number: "180%", label: "Customer Growth" },
-                            { number: "4X", label: "Return on Investment" }
+                            { number: "240%", label: "Booking Increase" },
+                            { number: "210%", label: "Client Growth" },
+                            { number: "4.1X", label: "Return on Investment" }
                         ].map((stat, index) => (
 
                             <motion.div
@@ -1074,6 +1107,91 @@ export default function RestaurantMarketing() {
                     </div>
 
                 </motion.div>
+
+            </section>
+
+
+            {/* FAQ SECTION - NEW ADDED */}
+            <section className="py-16 px-4 bg-[#111]">
+
+                <div className="max-w-5xl mx-auto">
+
+                    <motion.div
+                        initial="hidden"
+                        whileInView="visible"
+                        variants={fadeUp}
+                        viewport={{ once: true }}
+                        className="text-center mb-10"
+                    >
+                        <h2 className="text-2xl md:text-3xl font-bold mb-2">
+                            Catering Marketing Services FAQs
+                        </h2>
+
+                        <p className="text-gray-400 text-sm max-w-xl mx-auto">
+                            Common questions about how our catering marketing and SEO services can help grow your business.
+                        </p>
+                    </motion.div>
+
+
+                    {/* Grid */}
+                    <div className="grid md:grid-cols-2 gap-4">
+
+                        {faqs.map((faq, index) => {
+
+                            const isOpen = openIndex === index;
+
+                            const toggleFaq = () => {
+                                setOpenIndex(isOpen ? null : index);
+                            };
+
+                            return (
+                                <motion.div
+                                    key={index}
+                                    initial="hidden"
+                                    whileInView="visible"
+                                    variants={fadeUp}
+                                    viewport={{ once: true }}
+                                    className="bg-black border border-white/10 rounded-lg overflow-hidden"
+                                >
+                                    <button
+                                        onClick={() => setOpenIndex(openIndex === index ? null : index)}
+                                        className="w-full flex justify-between items-center px-5 py-4 text-left hover:bg-white/5 transition"
+                                    >
+                                        <h3 className="text-sm md:text-base font-semibold text-[#25baff] pr-4">
+                                            {faq.question}
+                                        </h3>
+
+                                        <span className="text-[#25baff] text-xs">
+                                            {openIndex === index ? <FaMinus /> : <FaPlus />}
+                                        </span>
+                                    </button>
+
+                                    <motion.div
+                                        initial={false}
+                                        animate={{
+                                            height: openIndex === index ? "auto" : 0,
+                                            opacity: openIndex === index ? 1 : 0
+                                        }}
+                                        transition={{
+                                            duration: 0.35,
+                                            ease: "easeInOut"
+                                        }}
+                                        className="overflow-hidden"
+                                    >
+                                        <div className="px-5 pb-4">
+                                            <p className="text-gray-400 text-sm leading-relaxed">
+                                                {faq.answer}
+                                            </p>
+                                        </div>
+                                    </motion.div>
+
+                                </motion.div>
+                            );
+                        })}
+
+                    </div>
+
+                </div>
 
             </section>
 

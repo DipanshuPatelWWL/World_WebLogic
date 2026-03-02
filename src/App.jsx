@@ -75,6 +75,14 @@ import JoomlaDev from "./pages/services/WebDesign&Development/JoomlaDev";
 import WebsiteHosting from "./pages/services/WebDesign&Development/WebsiteHosting";
 import AutomotiveSeo from "./pages/market/popular-market/AutomotiveSeo";
 import RestaurantMarketing from "./pages/market/popular-market/Food&Health/RestaurantMarketing";
+import AgricultureSEO from "./pages/market/popular-market/Food&Health/AgricultureSEO";
+import FitnessSEO from "./pages/market/popular-market/Food&Health/FitnessSEO";
+import KitchenRemodelerSEO from "./pages/market/popular-market/Food&Health/KitchenSeo";
+import TherapistSEO from "./pages/market/popular-market/Food&Health/TherapistSEO";
+import CateringMarketingSEO from "./pages/market/popular-market/Food&Health/CateringMarketingSEO";
+import YogaMarketingServices from "./pages/market/popular-market/Food&Health/YogaMarketingServices";
+import PharmaMarketingSEO from "./pages/market/popular-market/Food&Health/PharmaMarketingSEO";
+import DaycareSEOPage from "./pages/market/Service-Sector/DaycareSEO";
 import AviationSeo from "./pages/market/autoMobileAndHome/AviationSeo";
 import HomeRemodelingSeo from "./pages/market/autoMobileAndHome/HomeRemodlingSeo";
 import CleaningSEOMarketing from "./pages/market/autoMobileAndHome/CleaningSEOMarketing";
@@ -371,6 +379,39 @@ function App() {
             element={<RestaurantMarketing />}
           />
           <Route
+            path="/market/agriculture-seo"
+            element={<AgricultureSEO />}
+          />
+          <Route
+            path="/market/fitness-seo"
+            element={<FitnessSEO />}
+          />
+          <Route
+            path="/market/kitchen-remodeler-seo"
+            element={<KitchenRemodelerSEO />}
+          />
+          <Route
+            path="/market/therapist-seo"
+            element={<TherapistSEO />}
+          />
+          <Route
+            path="/market/catering-seo"
+            element={<CateringMarketingSEO />}
+          />
+          <Route
+            path="/market/yoga-seo"
+            element={<YogaMarketingServices />}
+          />
+          <Route
+            path="/market/pharma-seo"
+            element={<PharmaMarketingSEO />}
+          />
+          <Route
+            path="/market/daycare-seo"
+            element={<DaycareSEOPage />}
+          />
+
+          <Route
             path="/market/aviation-seo"
             element={<AviationSeo />}
           />
@@ -398,8 +439,6 @@ function App() {
             path="/market/appliance-repair-seo"
             element={<ApplianceSeo />}
           />
-
-
 
           {/* CONTACT */}
           <Route path="/contact" element={<ContactUs />} />
