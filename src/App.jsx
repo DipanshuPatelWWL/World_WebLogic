@@ -75,6 +75,13 @@ import JoomlaDev from "./pages/services/WebDesign&Development/JoomlaDev";
 import WebsiteHosting from "./pages/services/WebDesign&Development/WebsiteHosting";
 import AutomotiveSeo from "./pages/market/popular-market/AutomotiveSeo";
 import RestaurantMarketing from "./pages/market/popular-market/Food&Health/RestaurantMarketing";
+import AviationSeo from "./pages/market/autoMobileAndHome/AviationSeo";
+import HomeRemodelingSeo from "./pages/market/autoMobileAndHome/HomeRemodlingSeo";
+import CleaningSEOMarketing from "./pages/market/autoMobileAndHome/CleaningSEOMarketing";
+import FurnitureSeoMarketing from "./pages/market/autoMobileAndHome/FurnitureStore";
+import EntertainmentSEO from "./pages/market/autoMobileAndHome/EntertainmentSeo";
+import LogisticsSeo from "./pages/market/autoMobileAndHome/LogisticsSeo";
+import ApplianceSeo from "./pages/market/autoMobileAndHome/ApplianceSeo";
 
 
 function App() {
@@ -322,6 +329,34 @@ function App() {
           <Route
             path="/market/restaurant-seo"
             element={<RestaurantMarketing />}
+          />
+          <Route
+            path="/market/aviation-seo"
+            element={<AviationSeo />}
+          />
+          <Route
+            path="/market/home-remodeling-seo"
+            element={<HomeRemodelingSeo />}
+          />
+          <Route
+            path="/market/cleaning-seo"
+            element={<CleaningSEOMarketing />}
+          />
+          <Route
+            path="/market/furniture-seo"
+            element={<FurnitureSeoMarketing />}
+          />
+          <Route
+            path="/market/entertainment-seo"
+            element={<EntertainmentSEO />}
+          />
+          <Route
+            path="/market/logistic-seo"
+            element={<LogisticsSeo />}
+          />
+          <Route
+            path="/market/appliance-repair-seo"
+            element={<ApplianceSeo />}
           />
 
 
