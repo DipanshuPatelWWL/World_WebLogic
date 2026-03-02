@@ -82,6 +82,14 @@ import FurnitureSeoMarketing from "./pages/market/autoMobileAndHome/FurnitureSto
 import EntertainmentSEO from "./pages/market/autoMobileAndHome/EntertainmentSeo";
 import LogisticsSeo from "./pages/market/autoMobileAndHome/LogisticsSeo";
 import ApplianceSeo from "./pages/market/autoMobileAndHome/ApplianceSeo";
+import ConstructionSeo from "./pages/market/popular-market/ConstructionSeo";
+import DentalSeo from "./pages/market/popular-market/DentalSeo";
+import HvacSeo from "./pages/market/popular-market/HvacSeo";
+import HealthcareSeo from "./pages/market/popular-market/HealthcareSeo";
+import InsuranceSeo from "./pages/market/popular-market/InsuranceSeo";
+import LawyerSeo from "./pages/market/popular-market/LawyerSeo";
+import RealEstateSeo from "./pages/market/popular-market/RealEstateSeo";
+import PlumberSeo from "./pages/market/popular-market/PlumberSeo";
 
 
 function App() {
@@ -325,6 +333,38 @@ function App() {
           <Route
             path="/market/automotive-seo"
             element={<AutomotiveSeo />}
+          />
+          <Route
+            path="/market/construction-seo"
+            element={<ConstructionSeo />}
+          />
+          <Route
+            path="/market/dental-seo"
+            element={<DentalSeo />}
+          />
+          <Route
+            path="/market/hvac-seo"
+            element={<HvacSeo />}
+          />
+          <Route
+            path="/market/healthcare-seo"
+            element={<HealthcareSeo />}
+          />
+          <Route
+            path="/market/insurance-seo"
+            element={<InsuranceSeo />}
+          />
+          <Route
+            path="/market/lawyer-seo"
+            element={<LawyerSeo />}
+          />
+          <Route
+            path="/market/real-estate-seo"
+            element={<RealEstateSeo />}
+          />
+          <Route
+            path="/market/plumber-seo"
+            element={<PlumberSeo />}
           />
           <Route
             path="/market/restaurant-seo"
