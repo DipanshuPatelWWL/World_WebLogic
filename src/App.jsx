@@ -111,6 +111,7 @@ import PestControlMarketing from "./pages/market/Service-Sector/PestControlMarke
 import ScrollProgress from "./components/ScrollProgress";
 import SalonSEO from "./pages/market/Service-Sector/SalonSEO";
 import VeterinaryMarketing from "./pages/market/Service-Sector/VeterinaryMarketing";
+import MoversSEO from "./pages/market/Others/MoversSeo";
 
 
 function App() {
@@ -501,6 +502,10 @@ function App() {
           <Route
             path="/market/veterinary-seo"
             element={<VeterinaryMarketing />}
+          />
+          <Route
+            path="/market/movers-seo"
+            element={<MoversSEO />}
           />
 
           {/* CONTACT */}
