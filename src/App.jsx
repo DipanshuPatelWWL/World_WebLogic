@@ -83,12 +83,35 @@ import CateringMarketingSEO from "./pages/market/popular-market/Food&Health/Cate
 import YogaMarketingServices from "./pages/market/popular-market/Food&Health/YogaMarketingServices";
 import PharmaMarketingSEO from "./pages/market/popular-market/Food&Health/PharmaMarketingSEO";
 import DaycareSEOPage from "./pages/market/Service-Sector/DaycareSEO";
+import AviationSeo from "./pages/market/autoMobileAndHome/AviationSeo";
+import HomeRemodelingSeo from "./pages/market/autoMobileAndHome/HomeRemodlingSeo";
+import CleaningSEOMarketing from "./pages/market/autoMobileAndHome/CleaningSEOMarketing";
+import FurnitureSeoMarketing from "./pages/market/autoMobileAndHome/FurnitureStore";
+import EntertainmentSEO from "./pages/market/autoMobileAndHome/EntertainmentSeo";
+import LogisticsSeo from "./pages/market/autoMobileAndHome/LogisticsSeo";
+import ApplianceSeo from "./pages/market/autoMobileAndHome/ApplianceSeo";
+import ConstructionSeo from "./pages/market/popular-market/ConstructionSeo";
+import DentalSeo from "./pages/market/popular-market/DentalSeo";
+import HvacSeo from "./pages/market/popular-market/HvacSeo";
+import HealthcareSeo from "./pages/market/popular-market/HealthcareSeo";
+import InsuranceSeo from "./pages/market/popular-market/InsuranceSeo";
+import LawyerSeo from "./pages/market/popular-market/LawyerSeo";
+import RealEstateSeo from "./pages/market/popular-market/RealEstateSeo";
+import PlumberSeo from "./pages/market/popular-market/PlumberSeo";
+import ContractorSEO from "./pages/market/Service-Sector/ContractorSEO";
+import FireProtectionSEO from "./pages/market/Service-Sector/FireProtectionSEO";
+import FinancialSEO from "./pages/market/Service-Sector/FinancialSEO";
+import PestControlMarketing from "./pages/market/Service-Sector/PestControlMarketing";
+import ScrollProgress from "./components/ScrollProgress";
+import SalonSEO from "./pages/market/Service-Sector/SalonSEO";
+import VeterinaryMarketing from "./pages/market/Service-Sector/VeterinaryMarketing";
 
 
 function App() {
   return (
     <Router>
       <ScrollToTop />
+      <ScrollProgress />
       {/* <SplashCursor /> */}
       <div className="fixed inset-0 -z-10">
         <video
@@ -328,6 +351,38 @@ function App() {
             element={<AutomotiveSeo />}
           />
           <Route
+            path="/market/construction-seo"
+            element={<ConstructionSeo />}
+          />
+          <Route
+            path="/market/dental-seo"
+            element={<DentalSeo />}
+          />
+          <Route
+            path="/market/hvac-seo"
+            element={<HvacSeo />}
+          />
+          <Route
+            path="/market/healthcare-seo"
+            element={<HealthcareSeo />}
+          />
+          <Route
+            path="/market/insurance-seo"
+            element={<InsuranceSeo />}
+          />
+          <Route
+            path="/market/lawyer-seo"
+            element={<LawyerSeo />}
+          />
+          <Route
+            path="/market/real-estate-seo"
+            element={<RealEstateSeo />}
+          />
+          <Route
+            path="/market/plumber-seo"
+            element={<PlumberSeo />}
+          />
+          <Route
             path="/market/restaurant-seo"
             element={<RestaurantMarketing />}
           />
@@ -364,7 +419,59 @@ function App() {
             element={<DaycareSEOPage />}
           />
 
+          <Route
+            path="/market/aviation-seo"
+            element={<AviationSeo />}
+          />
+          <Route
+            path="/market/home-remodeling-seo"
+            element={<HomeRemodelingSeo />}
+          />
+          <Route
+            path="/market/cleaning-seo"
+            element={<CleaningSEOMarketing />}
+          />
+          <Route
+            path="/market/furniture-seo"
+            element={<FurnitureSeoMarketing />}
+          />
+          <Route
+            path="/market/entertainment-seo"
+            element={<EntertainmentSEO />}
+          />
+          <Route
+            path="/market/logistic-seo"
+            element={<LogisticsSeo />}
+          />
+          <Route
+            path="/market/appliance-repair-seo"
+            element={<ApplianceSeo />}
+          />
+          <Route
+            path="/market/contractors-seo"
+            element={<ContractorSEO />}
+          />
 
+          <Route
+            path="/market/fire-protection-seo"
+            element={<FireProtectionSEO />}
+          />
+          <Route
+            path="/market/financial-seo"
+            element={<FinancialSEO />}
+          />
+          <Route
+            path="/market/pest-control-seo"
+            element={<PestControlMarketing />}
+          />
+          <Route
+            path="/market/salons-seo"
+            element={<SalonSEO />}
+          />
+          <Route
+            path="/market/veterinary-seo"
+            element={<VeterinaryMarketing />}
+          />
 
           {/* CONTACT */}
           <Route path="/contact" element={<ContactUs />} />

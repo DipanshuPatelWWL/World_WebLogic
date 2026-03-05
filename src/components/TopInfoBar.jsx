@@ -1,6 +1,7 @@
 import { HiOutlineMail } from "react-icons/hi";
 import { BiTimeFive } from "react-icons/bi";
 import { HiArrowRight } from "react-icons/hi2";
+import { Link } from "react-router-dom";
 
 const TopInfoBar = () => {
   return (
@@ -36,8 +37,9 @@ const TopInfoBar = () => {
 
 
         {/* RIGHT CTA */}
-        <button
-          className="
+        <Link to="/contact">
+          <button
+            className="
             flex items-center justify-center gap-2
             bg-[#25baff] text-white
             px-5 py-2.5
@@ -48,10 +50,11 @@ const TopInfoBar = () => {
             w-full sm:w-auto
             hover:cursor-pointer
           "
-        >
-          Request a Quote
-          <HiArrowRight className="text-sm" />
-        </button>
+          >
+            Request a Quote
+            <HiArrowRight className="text-sm" />
+          </button>
+        </Link>
 
       </div>
     </div>
