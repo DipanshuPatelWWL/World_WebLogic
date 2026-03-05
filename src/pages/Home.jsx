@@ -387,7 +387,7 @@ export default function Home() {
 
                     {/* Header */}
                     <div className="text-center max-w-3xl mx-auto mb-4 sm:mb-16">
-                        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-black">
+                        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white">
                             Let’s Start a Conversation
                         </h2>
                         <p className="mt-3 sm:mt-4 text-sm sm:text-base text-white leading-relaxed">
@@ -418,7 +418,7 @@ export default function Home() {
                                     <h4 className="font-semibold text-black text-md sm:text-base">
                                         Office Address
                                     </h4>
-                                    <p className="text-black text-sm mt-1 leading-relaxed">
+                                    <p className="text- text-sm mt-1 leading-relaxed">
                                         B 108, 1st Floor, Office No. 2nd, Sector 63,<br />
                                         Noida - 201301
                                     </p>
@@ -475,7 +475,6 @@ export default function Home() {
                             <h3 className="text-xl sm:text-2xl font-semibold text-[#020202] mb-6 sm:mb-8">
                                 Send Us a Message
                             </h3>
-
                             <form className="grid gap-5 sm:gap-6 md:grid-cols-2">
 
                                 <input
@@ -521,6 +520,7 @@ export default function Home() {
             bg-[#25baff] text-white font-semibold
             hover:bg-[#020202]
             transition
+            hover:cursor-pointer
           "
                                 >
                                     Send Message

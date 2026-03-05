@@ -35,7 +35,7 @@ const SEO_Starter_Pack = () => {
           <div className="grid md:grid-cols-3 gap-14">
             {/* ================= LEFT CARD ================= */}
             <div>
-              <div className="border border-[#25baff] rounded-xl sticky top-10">
+              <div className="border border-[#25baff] rounded-xl sticky top-28">
                 <h2 className="font-bold text-2xl text-black mt-4 text-center">
                   STARTER
                 </h2>

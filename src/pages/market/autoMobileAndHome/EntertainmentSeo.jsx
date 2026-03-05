@@ -308,7 +308,7 @@ const EntertainmentSEO = () => {
                         </div>
 
                         {/* Right Content */}
-                        <div className="bg-gradient-to-br from-[#25baff]/10 via-white/5 to-[#a8d97c]/10 backdrop-blur-2xl border border-white/10 rounded-3xl p-10">
+                        <div className="bg-gradient-to-br from-[#25baff]/10 via-white/5 to-[#a8d97c]/10 backdrop-blur-2xl border border-white/10 rounded-3xl mt-15 p-10">
                             <h3 className="text-3xl font-bold mb-6">
                                 Why It Matters
                             </h3>

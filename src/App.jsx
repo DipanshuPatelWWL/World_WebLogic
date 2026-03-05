@@ -98,12 +98,23 @@ import InsuranceSeo from "./pages/market/popular-market/InsuranceSeo";
 import LawyerSeo from "./pages/market/popular-market/LawyerSeo";
 import RealEstateSeo from "./pages/market/popular-market/RealEstateSeo";
 import PlumberSeo from "./pages/market/popular-market/PlumberSeo";
+<<<<<<< HEAD
+import ContractorSEO from "./pages/market/Service-Sector/ContractorSEO";
+import FireProtectionSEO from "./pages/market/Service-Sector/FireProtectionSEO";
+import FinancialSEO from "./pages/market/Service-Sector/FinancialSEO";
+import PestControlMarketing from "./pages/market/Service-Sector/PestControlMarketing";
+import ScrollProgress from "./components/ScrollProgress";
+import SalonSEO from "./pages/market/Service-Sector/SalonSEO";
+import VeterinaryMarketing from "./pages/market/Service-Sector/VeterinaryMarketing";
+=======
+>>>>>>> 6c0373c0a5108b9b4bc7c47162a6115a12eddc08
 
 
 function App() {
   return (
     <Router>
       <ScrollToTop />
+      <ScrollProgress />
       {/* <SplashCursor /> */}
       <div className="fixed inset-0 -z-10">
         <video
@@ -439,6 +450,34 @@ function App() {
             path="/market/appliance-repair-seo"
             element={<ApplianceSeo />}
           />
+<<<<<<< HEAD
+          <Route
+            path="/market/contractors-seo"
+            element={<ContractorSEO />}
+          />
+
+          <Route
+            path="/market/fire-protection-seo"
+            element={<FireProtectionSEO />}
+          />
+          <Route
+            path="/market/financial-seo"
+            element={<FinancialSEO />}
+          />
+          <Route
+            path="/market/pest-control-seo"
+            element={<PestControlMarketing />}
+          />
+          <Route
+            path="/market/salons-seo"
+            element={<SalonSEO />}
+          />
+          <Route
+            path="/market/veterinary-seo"
+            element={<VeterinaryMarketing />}
+          />
+=======
+>>>>>>> 6c0373c0a5108b9b4bc7c47162a6115a12eddc08
 
           {/* CONTACT */}
           <Route path="/contact" element={<ContactUs />} />
