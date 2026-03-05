@@ -9,46 +9,50 @@ import {
     FaTools,
 } from "react-icons/fa";
 
-import logo from "../assets/about/about1.jpg";
-import logo1 from "../assets/about/about2.jpg";
-import logo2 from "../assets/about/about3.jpg";
+import requirementsAnalysis from "../assets/developmentProcess/requirementsAnalysis.avif";
+import projectPlanning from "../assets/developmentProcess/projectPlanning.avif";
+import design from "../assets/developmentProcess/design.avif";
+import coding from "../assets/developmentProcess/coding.avif";
+import testing from "../assets/developmentProcess/testing.avif";
+import deployment from "../assets/developmentProcess/deployment.avif";
+import maintenance from "../assets/developmentProcess/maintenance.avif";
 
 /* ================= PROCESS STEPS ================= */
 const processSteps = [
     {
         title: "Requirements & Analysis",
         icon: FaSearch,
-        image: logo,
+        image: requirementsAnalysis,
     },
     {
         title: "Project Planning",
         icon: FaProjectDiagram,
-        image: logo2,
+        image: projectPlanning,
     },
     {
         title: "Design",
         icon: FaPalette,
-        image: logo1,
+        image: design,
     },
     {
         title: "Coding & Implementation",
         icon: FaCode,
-        image: logo,
+        image: coding,
     },
     {
         title: "Testing",
         icon: FaVial,
-        image: logo2,
+        image: testing,
     },
     {
         title: "Deployment",
         icon: FaRocket,
-        image: logo1,
+        image: deployment,
     },
     {
         title: "Maintenance",
         icon: FaTools,
-        image: logo,
+        image: maintenance,
     },
 ];
 
@@ -66,7 +70,7 @@ const DevelopmentProcess = () => {
                         backgroundImage: `url(${processSteps[activeStep].image})`,
                     }}
                 />
-                <div className="absolute inset-0 bg-black/80 backdrop-blur-sm" />
+                <div className="absolute inset-0 bg-black/50 backdrop-blur-sm" />
             </div>
 
             {/* ================= Content ================= */}
