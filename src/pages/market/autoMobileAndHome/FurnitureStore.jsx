@@ -672,8 +672,8 @@ const FurnitureSeoMarketing = () => {
             <section className="bg-[#a8d97c] py-28">
                 <div className="text-center mb-16">
                     <h2 className="text-3xl md:text-4xl font-extrabold text-[#020202] mb-3">
-                        Furniture SEO
-                        <span className="text-[#272aff]"> Strategies We Execute</span>
+                        Furniture SEO  Strategies We Execute
+
                     </h2>
 
                     <p className="font-semibold text-gray-600 mb-3 px-6">
@@ -867,7 +867,7 @@ const FurnitureSeoMarketing = () => {
 
 
             {/* ================= why choose us ================= */}
-            <section className="relative py-24 px-6 overflow-hidden bg-gradient-to-br from-[#020202] via-[#020202] to-[#25baff]/20">
+            <section className="relative py-24 px-6 overflow-hidden bg-gradient-to-br from-[#020202] via-[#020202] to-[#25baff]/80">
 
                 {/* Soft Glow */}
                 <div className="absolute top-0 right-0 w-96 h-96 bg-[#25baff]/20 blur-3xl rounded-full"></div>

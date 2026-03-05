@@ -391,7 +391,7 @@ const AviationSeo = () => {
 
 
             {/* ================= WHY SEO? ================= */}
-            <section className="py-28 bg-gradient-to-br from-[#020202] via-[#25baff] to-[#a8d97c]">
+            <section className="py-28 bg-gradient-to-br from-[#020202] to-[#25baff]">
                 <div className="text-center mb-16">
                     <h2 className="text-3xl md:text-4xl font-extrabold text-white mb-3">
                         Why Aviation Businesses Need
