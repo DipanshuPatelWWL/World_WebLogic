@@ -48,13 +48,13 @@ const Header = () => {
   return (
     <header className="sticky top-0 z-50 bg-white border-b border-gray-200 shadow-sm">
       <div className="max-w-7xl mx-auto px-10">
-        <div className="h-24 flex items-center justify-between">
+        <div className="h-22 flex items-center justify-between">
           {/* LOGO */}
           <NavLink to="/" className="flex items-center">
             <img
               src={logo}
               alt="Digital WebGuider Logo"
-              className="h-54 w-auto object-cover pt-2 mt-6"
+              className="h-21 w-auto object-cover"
             />
           </NavLink>
 

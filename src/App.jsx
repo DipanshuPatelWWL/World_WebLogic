@@ -104,12 +104,20 @@ import RetailSEO from "./pages/market/Others/RetailSeo";
 import HospitalitySeo from "./pages/market/Others/HospitalitySeo";
 import TreeServiceSeo from "./pages/market/Others/TreeServiceSeo";
 import PhotographySEO from "./pages/market/Others/PhotographySeo";
+import ContractorSEO from "./pages/market/Service-Sector/ContractorSEO";
+import FireProtectionSEO from "./pages/market/Service-Sector/FireProtectionSEO";
+import FinancialSEO from "./pages/market/Service-Sector/FinancialSEO";
+import PestControlMarketing from "./pages/market/Service-Sector/PestControlMarketing";
+import ScrollProgress from "./components/ScrollProgress";
+import SalonSEO from "./pages/market/Service-Sector/SalonSEO";
+import VeterinaryMarketing from "./pages/market/Service-Sector/VeterinaryMarketing";
 
 
 function App() {
   return (
     <Router>
       <ScrollToTop />
+      <ScrollProgress />
       {/* <SplashCursor /> */}
       <div className="fixed inset-0 -z-10">
         <video
@@ -468,6 +476,31 @@ function App() {
           <Route
             path="/market/photography-seo"
             element={<PhotographySEO />}
+          />
+          <Route
+            path="/market/contractors-seo"
+            element={<ContractorSEO />}
+          />
+
+          <Route
+            path="/market/fire-protection-seo"
+            element={<FireProtectionSEO />}
+          />
+          <Route
+            path="/market/financial-seo"
+            element={<FinancialSEO />}
+          />
+          <Route
+            path="/market/pest-control-seo"
+            element={<PestControlMarketing />}
+          />
+          <Route
+            path="/market/salons-seo"
+            element={<SalonSEO />}
+          />
+          <Route
+            path="/market/veterinary-seo"
+            element={<VeterinaryMarketing />}
           />
 
           {/* CONTACT */}
