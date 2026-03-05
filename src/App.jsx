@@ -111,6 +111,8 @@ import PestControlMarketing from "./pages/market/Service-Sector/PestControlMarke
 import ScrollProgress from "./components/ScrollProgress";
 import SalonSEO from "./pages/market/Service-Sector/SalonSEO";
 import VeterinaryMarketing from "./pages/market/Service-Sector/VeterinaryMarketing";
+import CannabisSEO from "./pages/market/Others/CannabisSEO";
+import TravelMarketing from "./pages/market/Others/TravelMarketing";
 
 
 function App() {
@@ -501,6 +503,14 @@ function App() {
           <Route
             path="/market/veterinary-seo"
             element={<VeterinaryMarketing />}
+          />
+          <Route
+            path="/market/cannabis-seo"
+            element={<CannabisSEO />}
+          />
+          <Route
+            path="/market/travel-seo"
+            element={<TravelMarketing />}
           />
 
           {/* CONTACT */}

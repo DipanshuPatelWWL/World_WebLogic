@@ -11,12 +11,10 @@ import { FaPlaneDeparture, FaBullseye, FaRoute, FaGlobe, FaShieldAlt, FaChartLin
 import { FaFileAlt, FaTools, FaDatabase, FaTachometerAlt, FaMapMarkedAlt, FaLink, } from "react-icons/fa";
 import { FaAward, FaUsers, FaGoogle, FaCogs, FaChartBar, FaCheckCircle } from "react-icons/fa";
 
-
 import Aviation from "../../../assets/market/automobileHome/aviation.avif";
 
 
 gsap.registerPlugin(ScrollTrigger);
-
 const AviationSeo = () => {
     const rootRef = useRef(null);
     const heroRef = useRef(null);
