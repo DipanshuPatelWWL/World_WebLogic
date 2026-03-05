@@ -98,7 +98,6 @@ import InsuranceSeo from "./pages/market/popular-market/InsuranceSeo";
 import LawyerSeo from "./pages/market/popular-market/LawyerSeo";
 import RealEstateSeo from "./pages/market/popular-market/RealEstateSeo";
 import PlumberSeo from "./pages/market/popular-market/PlumberSeo";
-<<<<<<< HEAD
 import ContractorSEO from "./pages/market/Service-Sector/ContractorSEO";
 import FireProtectionSEO from "./pages/market/Service-Sector/FireProtectionSEO";
 import FinancialSEO from "./pages/market/Service-Sector/FinancialSEO";
@@ -106,8 +105,6 @@ import PestControlMarketing from "./pages/market/Service-Sector/PestControlMarke
 import ScrollProgress from "./components/ScrollProgress";
 import SalonSEO from "./pages/market/Service-Sector/SalonSEO";
 import VeterinaryMarketing from "./pages/market/Service-Sector/VeterinaryMarketing";
-=======
->>>>>>> 6c0373c0a5108b9b4bc7c47162a6115a12eddc08
 
 
 function App() {
@@ -450,7 +447,6 @@ function App() {
             path="/market/appliance-repair-seo"
             element={<ApplianceSeo />}
           />
-<<<<<<< HEAD
           <Route
             path="/market/contractors-seo"
             element={<ContractorSEO />}
@@ -476,8 +472,6 @@ function App() {
             path="/market/veterinary-seo"
             element={<VeterinaryMarketing />}
           />
-=======
->>>>>>> 6c0373c0a5108b9b4bc7c47162a6115a12eddc08
 
           {/* CONTACT */}
           <Route path="/contact" element={<ContactUs />} />
