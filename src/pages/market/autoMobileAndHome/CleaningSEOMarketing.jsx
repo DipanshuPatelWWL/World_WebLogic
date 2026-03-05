@@ -412,7 +412,7 @@ const CleaningSEOMarketing = () => {
 
 
             {/* ================= WHY SEO? ================= */}
-            <section className="py-28 bg-gradient-to-br from-[#020202] via-[#25baff] to-[#a8d97c]">
+            <section className="py-28 bg-gradient-to-br from-[#020202] to-[#25baff]">
                 <div className="max-w-7xl mx-auto">
                     <h2 className="text-4xl font-bold text-center mb-16 text-white">
                         Why Your Cleaning Business <span className="text-[#020202]">Needs SEO</span>

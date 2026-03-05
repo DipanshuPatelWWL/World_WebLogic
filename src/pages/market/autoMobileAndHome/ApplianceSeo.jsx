@@ -313,51 +313,128 @@ const ApplianceRepairSeo = () => {
             </section>
 
             {/* ================= WHY CHOOSE / GROWTH ================= */}
-            <section
-                className="relative py-20 px-6 overflow-hidden bg-white"
-            >
+            <section className="relative py-20 px-6 overflow-hidden bg-white">
+
                 <div className="relative max-w-7xl mx-auto">
 
-                    <h2 className="text-4xl md:text-5xl font-extrabold text-center mb-12">
+                    <motion.h2
+                        initial={{ opacity: 0, y: 40 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6 }}
+                        viewport={{ once: true }}
+                        className="text-4xl md:text-4xl font-extrabold text-center mb-12"
+                    >
                         How Appliance Repair Marketing <span className="text-[#25baff]">Grows Your Business</span>
-                    </h2>
+                    </motion.h2>
 
                     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        <div className="bg-gray-50 p-8 rounded-2xl shadow-md">
+
+                        <motion.div
+                            initial={{ opacity: 0, y: 40 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            whileHover={{ y: -10, scale: 1.03 }}
+                            transition={{ duration: 0.4 }}
+                            className="bg-gray-50 p-8 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300"
+                        >
                             <h3 className="text-2xl font-bold mb-4 text-[#25baff]">1. Dominate Local Search Results</h3>
                             <p>Optimize website & Google Business Profile for Maps, “near me”, emergency, and city-specific queries → more local calls.</p>
-                        </div>
-                        <div className="bg-gray-50 p-8 rounded-2xl shadow-md">
+                        </motion.div>
+
+                        <motion.div
+                            initial={{ opacity: 0, y: 40 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            whileHover={{ y: -10, scale: 1.03 }}
+                            transition={{ duration: 0.4, delay: 0.1 }}
+                            className="bg-gray-50 p-8 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300"
+                        >
                             <h3 className="text-2xl font-bold mb-4 text-[#25baff]">2. Generate High-Intent Leads</h3>
                             <p>Target keywords like “same day appliance repair”, “dishwasher repair technician”, “oven repair company near me” — ready-to-book customers.</p>
-                        </div>
-                        <div className="bg-gray-50 p-8 rounded-2xl shadow-md">
+                        </motion.div>
+
+                        <motion.div
+                            initial={{ opacity: 0, y: 40 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            whileHover={{ y: -10, scale: 1.03 }}
+                            transition={{ duration: 0.4, delay: 0.2 }}
+                            className="bg-gray-50 p-8 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300"
+                        >
                             <h3 className="text-2xl font-bold mb-4 text-[#25baff]">3. Build Trust & Authority</h3>
                             <p>Top rankings + reviews + optimized pages + educational content + guarantees = instant credibility.</p>
-                        </div>
-                        <div className="bg-gray-50 p-8 rounded-2xl shadow-md">
+                        </motion.div>
+
+                        <motion.div
+                            initial={{ opacity: 0, y: 40 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            whileHover={{ y: -10, scale: 1.03 }}
+                            transition={{ duration: 0.4, delay: 0.3 }}
+                            className="bg-gray-50 p-8 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300"
+                        >
                             <h3 className="text-2xl font-bold mb-4 text-[#25baff]">4. Improve Website Performance</h3>
                             <p>Fast, mobile-friendly site with click-to-call, easy contact, strong CTAs → higher conversions on emergency searches.</p>
-                        </div>
-                        <div className="bg-gray-50 p-8 rounded-2xl shadow-md">
+                        </motion.div>
+
+                        <motion.div
+                            initial={{ opacity: 0, y: 40 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            whileHover={{ y: -10, scale: 1.03 }}
+                            transition={{ duration: 0.4, delay: 0.4 }}
+                            className="bg-gray-50 p-8 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300"
+                        >
                             <h3 className="text-2xl font-bold mb-4 text-[#25baff]">5. Outrank Local Competitors</h3>
                             <p>Competitor analysis, keyword targeting, on-page/tech SEO, citations → stay ahead in rankings.</p>
-                        </div>
+                        </motion.div>
+
+                        <motion.div
+                            initial={{ opacity: 0, y: 40 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            whileHover={{ y: -10, scale: 1.03 }}
+                            transition={{ duration: 0.4, delay: 0.5 }}
+                            className="bg-gray-50 p-8 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300"
+                        >
+                            <h3 className="text-2xl font-bold mb-4 text-[#25baff]">6. Increase Repeat Customers</h3>
+                            <p>Customer follow-ups, review generation, and remarketing campaigns bring repeat appliance repair bookings.</p>
+                        </motion.div>
+
                     </div>
 
-                    <div className="mt-16 text-center">
+                    <motion.div
+                        initial={{ opacity: 0, y: 50 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.7 }}
+                        viewport={{ once: true }}
+                        className="mt-16 text-center"
+                    >
+
                         <h3 className="text-3xl font-bold mb-6">Benefits</h3>
+
                         <ul className="inline-grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
-                            <li className="flex items-center gap-3"><FaStar className="text-[#25baff]" /> Fully booked technician schedules</li>
-                            <li className="flex items-center gap-3"><FaStar className="text-[#25baff]" /> More emergency service calls</li>
-                            <li className="flex items-center gap-3"><FaStar className="text-[#25baff]" /> Higher visibility in your city</li>
-                            <li className="flex items-center gap-3"><FaStar className="text-[#25baff]" /> Increased revenue from local jobs</li>
-                            <li className="flex items-center gap-3"><FaStar className="text-[#25baff]" /> Consistent lead flow</li>
-                            <li className="flex items-center gap-3"><FaStar className="text-[#25baff]" /> Stronger brand recognition</li>
+
+                            {[
+                                "Fully booked technician schedules",
+                                "More emergency service calls",
+                                "Higher visibility in your city",
+                                "Increased revenue from local jobs",
+                                "Consistent lead flow",
+                                "Stronger brand recognition"
+                            ].map((item, i) => (
+
+                                <motion.li
+                                    key={i}
+                                    whileHover={{ x: 6 }}
+                                    className="flex items-center gap-3 bg-gray-50 px-5 py-4 rounded-xl shadow-sm hover:shadow-md transition"
+                                >
+                                    <FaStar className="text-[#25baff]" />
+                                    {item}
+                                </motion.li>
+
+                            ))}
+
                         </ul>
-                    </div>
+
+                    </motion.div>
 
                 </div>
+
             </section>
 
             {/* SERVICES SECTION */}
@@ -449,7 +526,8 @@ const ApplianceRepairSeo = () => {
             </section>
 
             {/* FAQ SECTION */}
-            <section className="py-24 px-6 bg-gray-50">
+            <section className="py-24 px-6 bg-[#020617] relative overflow-hidden">
+
                 <div className="max-w-7xl mx-auto">
 
                     <motion.div
@@ -459,13 +537,14 @@ const ApplianceRepairSeo = () => {
                         viewport={{ once: true }}
                         className="text-center mb-16"
                     >
-                        <h2 className="text-4xl md:text-5xl font-bold text-[#020202] mb-4 flex items-center justify-center gap-4">
+                        <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 flex items-center justify-center gap-4">
                             <MdQuestionAnswer className="text-[#25baff]" size={40} />
                             Appliance Repair Marketing FAQs
                         </h2>
                     </motion.div>
 
                     <div className="grid md:grid-cols-2 gap-8">
+
                         {faqs.map((faq, index) => (
                             <motion.div
                                 key={index}
@@ -473,14 +552,23 @@ const ApplianceRepairSeo = () => {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 0.5, delay: index * 0.1 }}
                                 viewport={{ once: true }}
-                                className="bg-white p-8 rounded-2xl shadow-md border border-gray-100"
+                                whileHover={{ y: -6 }}
+                                className="group backdrop-blur-xl bg-white/5 p-8 rounded-2xl shadow-xl border border-white/10 hover:border-[#25baff] transition-all duration-300"
                             >
-                                <h3 className="text-xl font-semibold mb-4 text-[#25baff]">{faq.question}</h3>
-                                <p className="text-gray-700 leading-relaxed">{faq.answer}</p>
+                                <h3 className="text-xl font-semibold mb-4 text-[#25baff] group-hover:text-white transition">
+                                    {faq.question}
+                                </h3>
+
+                                <p className="text-gray-300 leading-relaxed">
+                                    {faq.answer}
+                                </p>
                             </motion.div>
                         ))}
+
                     </div>
+
                 </div>
+
             </section>
 
             <section className="py-20 bg-white text-center px-6">
