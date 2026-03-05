@@ -98,6 +98,12 @@ import InsuranceSeo from "./pages/market/popular-market/InsuranceSeo";
 import LawyerSeo from "./pages/market/popular-market/LawyerSeo";
 import RealEstateSeo from "./pages/market/popular-market/RealEstateSeo";
 import PlumberSeo from "./pages/market/popular-market/PlumberSeo";
+import EducationSEO from "./pages/market/Others/EducationSeo";
+import JewelrySEO from "./pages/market/Others/JewelrySeo";
+import RetailSEO from "./pages/market/Others/RetailSeo";
+import HospitalitySeo from "./pages/market/Others/HospitalitySeo";
+import TreeServiceSeo from "./pages/market/Others/TreeServiceSeo";
+import PhotographySEO from "./pages/market/Others/PhotographySeo";
 
 
 function App() {
@@ -438,6 +444,30 @@ function App() {
           <Route
             path="/market/appliance-repair-seo"
             element={<ApplianceSeo />}
+          />
+          <Route
+            path="/market/education-seo"
+            element={<EducationSEO />}
+          />
+          <Route
+            path="/market/jewelry-seo"
+            element={<JewelrySEO />}
+          />
+          <Route
+            path="/market/retail-seo"
+            element={<RetailSEO />}
+          />
+          <Route
+            path="/market/hospitality-seo"
+            element={<HospitalitySeo />}
+          />
+          <Route
+            path="/market/tree-service-seo"
+            element={<TreeServiceSeo />}
+          />
+          <Route
+            path="/market/photography-seo"
+            element={<PhotographySEO />}
           />
 
           {/* CONTACT */}
