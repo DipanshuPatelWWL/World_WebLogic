@@ -114,6 +114,7 @@ import VeterinaryMarketing from "./pages/market/Service-Sector/VeterinaryMarketi
 import CannabisSEO from "./pages/market/Others/CannabisSEO";
 import TravelMarketing from "./pages/market/Others/TravelMarketing";
 import MoversSEO from "./pages/market/Others/MoversSeo";
+import Portfolio from "./components/Portfolio";
 
 
 function App() {
@@ -204,54 +205,67 @@ function App() {
             path="/services/digitalMarketing/content-marketing"
             element={<ContentMarketing />}
           />
+
           <Route
             path="/services/digitalMarketing/email-marketing"
             element={<EmailMarketing />}
           />
+
           <Route
             path="/services/digitalMarketing/reputation-management"
             element={<ReputationManagement />}
           />
+
           <Route
             path="/services/digitalMarketing/franchise-digital-marketing"
             element={<FranchiseDigitalMarketing />}
           />
+
           <Route
             path="/services/seo/ecommerce-seo-services"
             element={<EcommerceSeoServices />}
           />
+
           <Route
             path="/services/seo/link-building-services"
             element={<LinkBuildingServices />}
           />
+
           <Route
             path="/services/seo/technical-seo-services"
             element={<TechnicalSeoServices />}
           />
+
           <Route
             path="/services/seo/franchise-seo-services"
             element={<FranchisSeoServices />}
           />
+
           <Route
             path="/services/seo/voice-search-optimization"
             element={<VoiceSearchOptimization />}
           />
+
           <Route
             path="/services/seo/app-store-optimization"
             element={<AppStoreOptimization />}
           />
+
           <Route
             path="/services/seo/white-label-seo"
             element={<WhiteLabelSeo />}
           />
+
           <Route
             path="/services/seo/generative-engine-optimization"
             element={<Geo />}
           />
+
           <Route
             path="/services/seo/answer-engine-optimization"
             element={<Aeo />}
           />
+
           <Route
             path="/services/youtube-optimization"
             element={<YouTubeSeo />}
@@ -261,22 +275,27 @@ function App() {
             path="/services/smo/social-media-optimization"
             element={<SocialMediaOptimization />}
           />
+
           <Route
             path="/services/smo/social-media-management"
             element={<SocialMediaManagement />}
           />
+
           <Route
             path="/services/smo/social-media-advertise"
             element={<SocialMediaAdvertise />}
           />
+
           <Route
             path="/services/shopify-web-development"
             element={<ShopifyWebDev />}
           />
+
           <Route
             path="/services/woocommerce-web-development"
             element={<WoocommerceDev />}
           />
+
           <Route
             path="/services/payment-gateway-integration"
             element={<PaymentGateway />}
@@ -288,66 +307,82 @@ function App() {
             path="/services/pay-per-click"
             element={<PPCServices />}
           />
+
           <Route
             path="/services/facebook-advertising"
             element={<FacebookAdvertising />}
           />
+
           <Route
             path="/services/instagram-advertising"
             element={<InstagramAdvertising />}
           />
+
           <Route
             path="/services/x-marketing"
             element={<XMarketing />}
           />
+
           <Route
             path="/services/linkedin-marketing"
             element={<LinkedInMarketing />}
           />
+
           <Route
             path="/services/pinterest-marketing"
             element={<PinterestMarketing />}
           />
+
           <Route
             path="/services/conversion-rate-optimization"
             element={<CRO />}
           />
+
           <Route
             path="/services/amazon-ppc-services"
             element={<AmazonPPC />}
           />
+
           <Route
             path="/services/customer-testimonial-videos"
             element={<TestimonialVideo />}
           />
+
           <Route
             path="/services/vlog-video-production"
             element={<VlogVideoProduction />}
           />
+
           <Route
             path="/services/wordpress-development"
             element={<WordPressDevelopment />}
           />
+
           <Route
             path="/services/custom-website-design"
             element={<CustomWebsiteDesign />}
           />
+
           <Route
             path="/services/website-redesign"
             element={<WebsiteRedesign />}
           />
+
           <Route
             path="/services/magento-development"
             element={<MagentoDevelopment />}
           />
+
           <Route
             path="/services/mobile-app-development"
             element={<MobileAppDevelopment />}
           />
+
           <Route
             path="/services/joomla-development"
             element={<JoomlaDev />}
           />
+
           <Route
             path="/services/website-hosting"
             element={<WebsiteHosting />}
@@ -359,58 +394,72 @@ function App() {
             path="/market/automotive-seo"
             element={<AutomotiveSeo />}
           />
+
           <Route
             path="/market/construction-seo"
             element={<ConstructionSeo />}
           />
+
           <Route
             path="/market/dental-seo"
             element={<DentalSeo />}
           />
+
           <Route
             path="/market/hvac-seo"
             element={<HvacSeo />}
           />
+
           <Route
             path="/market/healthcare-seo"
             element={<HealthcareSeo />}
           />
+
           <Route
             path="/market/insurance-seo"
             element={<InsuranceSeo />}
           />
+
           <Route
             path="/market/lawyer-seo"
             element={<LawyerSeo />}
           />
+
           <Route
             path="/market/real-estate-seo"
             element={<RealEstateSeo />}
           />
+
           <Route
             path="/market/plumber-seo"
             element={<PlumberSeo />}
           />
+
           <Route
             path="/market/restaurant-seo"
             element={<RestaurantMarketing />}
           />
+
           <Route
             path="/market/agriculture-seo"
             element={<AgricultureSEO />}
           />
+
           <Route
             path="/market/fitness-seo"
             element={<FitnessSEO />}
           />
+
           <Route
             path="/market/kitchen-remodeler-seo"
             element={<KitchenRemodelerSEO />}
           />
+
           <Route
             path="/market/therapist-seo"
             element={<TherapistSEO />}
           />
+
           <Route
             path="/market/catering-seo"
             element={<CateringMarketingSEO />}
@@ -432,54 +481,67 @@ function App() {
             path="/market/aviation-seo"
             element={<AviationSeo />}
           />
+
           <Route
             path="/market/home-remodeling-seo"
             element={<HomeRemodelingSeo />}
           />
+
           <Route
             path="/market/cleaning-seo"
             element={<CleaningSEOMarketing />}
           />
+
           <Route
             path="/market/furniture-seo"
             element={<FurnitureSeoMarketing />}
           />
+
           <Route
             path="/market/entertainment-seo"
             element={<EntertainmentSEO />}
           />
+
           <Route
             path="/market/logistic-seo"
             element={<LogisticsSeo />}
           />
+
           <Route
             path="/market/appliance-repair-seo"
             element={<ApplianceSeo />}
           />
+
           <Route
             path="/market/education-seo"
             element={<EducationSEO />}
           />
+
           <Route
             path="/market/jewelry-seo"
             element={<JewelrySEO />}
           />
+
           <Route
             path="/market/retail-seo"
             element={<RetailSEO />}
           />
+
           <Route
             path="/market/hospitality-seo"
             element={<HospitalitySeo />}
           />
+
           <Route
             path="/market/tree-service-seo"
             element={<TreeServiceSeo />}
           />
+
           <Route
             path="/market/photography-seo"
             element={<PhotographySEO />}
           />
+
           <Route
             path="/market/contractors-seo"
             element={<ContractorSEO />}
@@ -489,22 +551,27 @@ function App() {
             path="/market/fire-protection-seo"
             element={<FireProtectionSEO />}
           />
+
           <Route
             path="/market/financial-seo"
             element={<FinancialSEO />}
           />
+
           <Route
             path="/market/pest-control-seo"
             element={<PestControlMarketing />}
           />
+
           <Route
             path="/market/salons-seo"
             element={<SalonSEO />}
           />
+
           <Route
             path="/market/veterinary-seo"
             element={<VeterinaryMarketing />}
           />
+
           <Route
             path="/market/cannabis-seo"
             element={<CannabisSEO />}
@@ -522,6 +589,7 @@ function App() {
 
           {/* CONTACT */}
           <Route path="/contact" element={<ContactUs />} />
+          <Route path="/portfolio" element={<Portfolio />} />
         </Routes>
 
         <Footer />

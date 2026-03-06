@@ -49,6 +49,41 @@ const heroSlides = [
 export default function Home() {
     const [activeSlide, setActiveSlide] = useState(0);
 
+    const [formData, setFormData] = useState({
+        name: "",
+        email: "",
+        message: ""
+    });
+    const [success, setSuccess] = useState(false);
+
+    const handleChange = (e) => {
+        setFormData({
+            ...formData,
+            [e.target.name]: e.target.value
+        });
+    };
+
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+
+        if (!formData.name || !formData.email || !formData.message) {
+            return;
+        }
+
+        // simulate sending message
+        setSuccess(true);
+
+        setFormData({
+            name: "",
+            email: "",
+            message: ""
+        });
+
+        setTimeout(() => {
+            setSuccess(false);
+        }, 4000);
+    };
 
     useEffect(() => {
         const timer = setInterval(() => {
@@ -378,18 +413,18 @@ export default function Home() {
             <DevelopmentProcess />
 
             <section
-                className="
-    py-16 sm:py-20 lg:py-24
-    bg-gradient-to-br from-[#25baff]/10 via-white/50 to-[#a8d97c]/10
-  "
+                className="py-16 sm:py-20 lg:py-24 bg-gradient-to-br from-[#25baff]/10 via-white/50 to-[#a8d97c]/10"
             >
+
                 <div className="max-w-7xl mx-auto px-4 sm:px-6">
 
                     {/* Header */}
+
                     <div className="text-center max-w-3xl mx-auto mb-4 sm:mb-16">
                         <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white">
                             Let’s Start a Conversation
                         </h2>
+
                         <p className="mt-3 sm:mt-4 text-sm sm:text-base text-white leading-relaxed">
                             Reach out to us for inquiries, collaborations, or project discussions.
                             Our team is always ready to help.
@@ -398,27 +433,23 @@ export default function Home() {
 
                     <div className="grid lg:grid-cols-3 gap-10 lg:gap-12 items-start">
 
-                        {/* CONTACT INFO - GLASS */}
-                        <div
-                            className="
-        space-y-8
-        p-6 sm:p-8 rounded-2xl sm:rounded-3xl
-        bg-white/40 backdrop-blur-xl
-        border border-white/50
-        shadow-lg mt-8
-      "
-                        >
+                        {/* CONTACT INFO */}
+
+                        <div className="space-y-8 p-6 sm:p-8 rounded-2xl sm:rounded-3xl bg-white/40 backdrop-blur-xl border border-white/50 shadow-lg mt-8">
+
                             {/* Address */}
+
                             <div className="flex gap-4 sm:gap-5">
-                                <div className="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center rounded-xl
-            bg-[#25baff]/20 text-[#25baff] shrink-0">
+                                <div className="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center rounded-xl bg-[#25baff]/20 text-[#25baff] shrink-0">
                                     <FiMapPin size={20} />
                                 </div>
+
                                 <div>
                                     <h4 className="font-semibold text-black text-md sm:text-base">
                                         Office Address
                                     </h4>
-                                    <p className="text- text-sm mt-1 leading-relaxed">
+
+                                    <p className="text-black text-sm mt-1 leading-relaxed">
                                         B 108, 1st Floor, Office No. 2nd, Sector 63,<br />
                                         Noida - 201301
                                     </p>
@@ -426,15 +457,17 @@ export default function Home() {
                             </div>
 
                             {/* Phone */}
+
                             <div className="flex gap-4 sm:gap-5">
-                                <div className="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center rounded-xl
-            bg-[#a8d97c]/40 text-black shrink-0">
+                                <div className="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center rounded-xl bg-[#a8d97c]/40 text-black shrink-0">
                                     <FiPhoneCall size={20} />
                                 </div>
+
                                 <div>
                                     <h4 className="font-semibold text-black text-md sm:text-base">
                                         Call Us
                                     </h4>
+
                                     <p className="text-black text-sm mt-1 leading-relaxed">
                                         +91 85058 37801<br />
                                         +91 01204545733<br />
@@ -444,84 +477,80 @@ export default function Home() {
                             </div>
 
                             {/* Email */}
+
                             <div className="flex gap-4 sm:gap-5">
-                                <div className="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center rounded-xl
-            bg-[#25baff]/20 text-black shrink-0">
+                                <div className="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center rounded-xl bg-[#25baff]/20 text-black shrink-0">
                                     <FiMail size={20} />
                                 </div>
+
                                 <div>
                                     <h4 className="font-semibold text-black text-md sm:text-base">
                                         Email & Website
                                     </h4>
+
                                     <p className="text-black text-sm mt-1 leading-relaxed break-words">
                                         info@digitalwebguider.com<br />
                                         www.digitalwebguider.com
                                     </p>
                                 </div>
                             </div>
+
                         </div>
 
-                        {/* CONTACT FORM - GLASS */}
-                        <div
-                            className="
-        lg:col-span-2
-        rounded-2xl sm:rounded-3xl
-        p-6 sm:p-8 lg:p-10
-        bg-white/60 backdrop-blur-xl
-        border border-white/40
-        shadow-lg
-      "
-                        >
+                        {/* CONTACT FORM */}
+
+                        <div className="lg:col-span-2 rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-10 bg-white/60 backdrop-blur-xl border border-white/40 shadow-lg">
+
                             <h3 className="text-xl sm:text-2xl font-semibold text-[#020202] mb-6 sm:mb-8">
                                 Send Us a Message
                             </h3>
-                            <form className="grid gap-5 sm:gap-6 md:grid-cols-2">
+
+                            {/* Success Message */}
+
+                            {success && (
+                                <div className="mb-6 p-4 rounded-xl bg-green-100 text-green-700 font-medium">
+                                    Message sent successfully! We will connect with you soon.
+                                </div>
+                            )}
+
+                            <form
+                                onSubmit={handleSubmit}
+                                className="grid gap-5 sm:gap-6 md:grid-cols-2"
+                            >
 
                                 <input
                                     type="text"
+                                    name="name"
+                                    value={formData.name}
+                                    onChange={handleChange}
+                                    required
                                     placeholder="Your Name"
-                                    className="
-            w-full px-4 sm:px-5 py-3 sm:py-4 rounded-xl
-            border border-white/40
-            bg-white/70 backdrop-blur
-            focus:outline-none focus:ring-2 focus:ring-[#25baff]
-          "
+                                    className="w-full px-4 sm:px-5 py-3 sm:py-4 rounded-xl border border-white/40 bg-white/70 backdrop-blur focus:outline-none focus:ring-2 focus:ring-[#25baff]"
                                 />
 
                                 <input
                                     type="email"
+                                    name="email"
+                                    value={formData.email}
+                                    onChange={handleChange}
+                                    required
                                     placeholder="Your Email"
-                                    className="
-            w-full px-4 sm:px-5 py-3 sm:py-4 rounded-xl
-            border border-white/40
-            bg-white/70 backdrop-blur
-            focus:outline-none focus:ring-2 focus:ring-[#25baff]
-          "
+                                    className="w-full px-4 sm:px-5 py-3 sm:py-4 rounded-xl border border-white/40 bg-white/70 backdrop-blur focus:outline-none focus:ring-2 focus:ring-[#25baff]"
                                 />
 
                                 <textarea
                                     rows="5"
+                                    name="message"
+                                    value={formData.message}
+                                    onChange={handleChange}
+                                    required
                                     placeholder="Write your message..."
-                                    className="
-            md:col-span-2 w-full px-4 sm:px-5 py-3 sm:py-4
-            rounded-xl border border-white/40
-            bg-white/70 backdrop-blur
-            focus:outline-none focus:ring-2 focus:ring-[#a8d97c]
-          "
+                                    className="md:col-span-2 w-full px-4 sm:px-5 py-3 sm:py-4 rounded-xl border border-white/40 bg-white/70 backdrop-blur focus:outline-none focus:ring-2 focus:ring-[#a8d97c]"
                                 />
 
                                 <button
                                     type="submit"
-                                    className="
-            md:col-span-2 w-full
-            mt-2 sm:mt-4
-            px-6 sm:px-8 py-3 sm:py-4
-            rounded-xl
-            bg-[#25baff] text-white font-semibold
-            hover:bg-[#020202]
-            transition
-            hover:cursor-pointer
-          "
+                                    className="md:col-span-2 w-full mt-2 sm:mt-4 px-6 sm:px-8 py-3 sm:py-4 rounded-xl bg-[#25baff] text-white font-semibold hover:bg-[#020202] transition cursor-pointer"
                                 >
                                     Send Message
                                 </button>
@@ -531,6 +560,7 @@ export default function Home() {
 
                     </div>
                 </div>
+
             </section>
 
 
