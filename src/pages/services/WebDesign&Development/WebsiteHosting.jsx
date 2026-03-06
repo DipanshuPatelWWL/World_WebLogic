@@ -194,7 +194,7 @@ const WebsiteHosting = () => {
         className="container mx-auto px-6 py-28 grid md:grid-cols-2 gap-16 items-center"
       >
         {/* LEFT CONTENT */}
-        <div>
+        <div className="ml-15">
           <h2 className="text-3xl md:text-4xl font-extrabold text-[#020202] mb-6">
             How Poor Web Hosting Impacts Your
             <span className="text-[#25baff]"> Growth & Revenue</span>
@@ -686,9 +686,8 @@ radial-gradient(circle_at_80%_80%,rgba(168,217,124,0.2),transparent_45%)]
             return (
               <div
                 key={index}
-                className={`flex flex-col md:flex-row items-center gap-12 ${
-                  !isEven ? "md:flex-row-reverse" : ""
-                }`}
+                className={`flex flex-col md:flex-row items-center gap-12 ${!isEven ? "md:flex-row-reverse" : ""
+                  }`}
               >
                 {/* Icon */}
                 <div className="flex-shrink-0 relative">
@@ -767,6 +766,7 @@ radial-gradient(circle_at_80%_80%,rgba(168,217,124,0.2),transparent_45%)]
               {
                 icon: SiWoocommerce,
                 name: "WooCommerce",
+                iconSize: "text-5xl",
                 text: "eCommerce-ready hosting for WooCommerce stores with database optimization, caching systems, and secure payment environment support.",
               },
               {
@@ -797,7 +797,9 @@ radial-gradient(circle_at_80%_80%,rgba(168,217,124,0.2),transparent_45%)]
                 >
                   {/* Icon */}
                   <div className="w-16 h-16 rounded-2xl bg-gradient-to-r from-[#25baff] to-blue-600 flex items-center justify-center mb-6 shadow-md shadow-[#25baff]/30">
-                    <Icon className="text-white text-2xl" />
+                    <Icon
+                      className={`${item.iconSize || "text-2xl"} text-white`}
+                    />
                   </div>
 
                   {/* Name */}
@@ -875,9 +877,8 @@ radial-gradient(circle_at_80%_80%,rgba(168,217,124,0.2),transparent_45%)]
                   className="w-full flex justify-between items-center px-6 py-5 text-left font-semibold text-[#020202]"
                 >
                   <span
-                    className={`${
-                      activeFaq === index ? "text-[#25baff]" : "text-[#020202]"
-                    } transition-colors duration-300`}
+                    className={`${activeFaq === index ? "text-[#25baff]" : "text-[#020202]"
+                      } transition-colors duration-300`}
                   >
                     {faq.question}
                   </span>

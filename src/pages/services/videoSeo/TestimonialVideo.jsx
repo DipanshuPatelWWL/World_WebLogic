@@ -163,7 +163,7 @@ const TestimonialVideo = () => {
         ref={whoRef}
         className="container mx-auto px-6 py-28 grid md:grid-cols-2 gap-16 items-center"
       >
-        <div>
+        <div className="ml-15">
           <h2 className="text-3xl md:text-4xl font-extrabold text-[#020202] mb-6">
             What Are Testimonial
             <span className="text-[#25baff]"> Videos?</span>
@@ -353,14 +353,14 @@ radial-gradient(circle_at_80%_80%,rgba(168,217,124,0.2),transparent_45%)]
         </div>
         <div className="relative z-10 max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-10">
           <h2 className="gsap-item text-white text-3xl font-extrabold max-w-4xl">
-           Get a free customer testimonial video consultation!
+            Get a free customer testimonial video consultation!
           </h2>
 
-         <NavLink to="/contact">
-           <button className="bg-[#25baff] text-[#020202] cursor-pointer px-6 py-3 rounded-full font-semibold hover:bg-[#a8d97c] transition">
-            Contact Now
-          </button>
-         </NavLink>
+          <NavLink to="/contact">
+            <button className="bg-[#25baff] text-[#020202] cursor-pointer px-6 py-3 rounded-full font-semibold hover:bg-[#a8d97c] transition">
+              Contact Now
+            </button>
+          </NavLink>
         </div>
       </section>
 
@@ -616,9 +616,8 @@ radial-gradient(circle_at_80%_80%,rgba(168,217,124,0.2),transparent_45%)]
                   className="w-full flex justify-between items-center px-6 py-5 text-left font-semibold text-[#020202]"
                 >
                   <span
-                    className={`${
-                      activeFaq === index ? "text-[#25baff]" : "text-[#020202]"
-                    } transition-colors duration-300`}
+                    className={`${activeFaq === index ? "text-[#25baff]" : "text-[#020202]"
+                      } transition-colors duration-300`}
                   >
                     {faq.question}
                   </span>

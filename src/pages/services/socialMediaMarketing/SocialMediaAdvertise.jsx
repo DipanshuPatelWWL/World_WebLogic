@@ -904,7 +904,7 @@ const SocialMediaAdvertise = () => {
 
 
             {/* ================= why choose us ================= */}
-            <section className="relative py-24 px-6 overflow-hidden bg-gradient-to-br from-[#020202] via-[#020202] to-[#25baff]/20">
+            <section className="relative py-24 px-6 overflow-hidden bg-gradient-to-br from-[#020202] via-[#020202] to-[#25baff]/60">
 
                 {/* Soft Glow */}
                 <div className="absolute top-0 right-0 w-96 h-96 bg-[#25baff]/20 blur-3xl rounded-full"></div>

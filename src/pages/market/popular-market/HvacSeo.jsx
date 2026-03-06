@@ -384,7 +384,7 @@ export default function HvacSeo() {
               </div>
 
               {/* Icon */}
-              <div className="text-4xl md:text-5xl text-[#0ea5e9] mt-10 mb-4 transition-all duration-500 group-hover:scale-125 group-hover:drop-shadow-[0_0_15px_rgba(14,165,233,0.9)]">
+              <div className="text-4xl md:text-5xl text-[#0ea5e9] mt-10 mb-4 transition-all duration-500 group-hover:scale-115 group-hover:drop-shadow-[0_0_15px_rgba(14,165,233,0.9)]">
                 {step.icon}
               </div>
 

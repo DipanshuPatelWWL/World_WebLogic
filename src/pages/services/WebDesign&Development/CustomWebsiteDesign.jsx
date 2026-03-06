@@ -589,11 +589,10 @@ radial-gradient(circle_at_80%_80%,rgba(168,217,124,0.2),transparent_45%)]
             {slides.map((slide, index) => (
               <div
                 key={index}
-                className={`transition-all duration-700 ease-in-out ${
-                  index === current
-                    ? "opacity-100 translate-x-0 relative"
-                    : "opacity-0 absolute inset-0 translate-x-10"
-                }`}
+                className={`transition-all duration-700 ease-in-out ${index === current
+                  ? "opacity-100 translate-x-0 relative"
+                  : "opacity-0 absolute inset-0 translate-x-10"
+                  }`}
               >
                 {/* White Premium Card */}
                 <div className="bg-white rounded-3xl shadow-xl p-10 md:p-14">
@@ -648,9 +647,8 @@ radial-gradient(circle_at_80%_80%,rgba(168,217,124,0.2),transparent_45%)]
               <button
                 key={index}
                 onClick={() => setCurrent(index)}
-                className={`h-2 rounded-full transition-all duration-300 ${
-                  current === index ? "bg-[#25baff] w-6" : "bg-gray-300 w-3"
-                }`}
+                className={`h-2 rounded-full transition-all duration-300 ${current === index ? "bg-[#25baff] w-6" : "bg-gray-300 w-3"
+                  }`}
               ></button>
             ))}
           </div>
@@ -745,6 +743,7 @@ radial-gradient(circle_at_80%_80%,rgba(168,217,124,0.2),transparent_45%)]
               {
                 icon: SiWoocommerce,
                 head: "WooCommerce Development",
+                iconSize: "text-9xl",
                 text: "Transform your WordPress website into a powerful online store with our WooCommerce development services. We create seamless shopping experiences with secure checkouts, simple product management, and scalable features—fully tailored to your products, customers, and business goals.",
               },
             ].map((item, index) => {
@@ -753,17 +752,13 @@ radial-gradient(circle_at_80%_80%,rgba(168,217,124,0.2),transparent_45%)]
                 <div
                   key={index}
                   ref={(el) => (cardsRef.current[index] = el)}
-                  className="group bg-white border border-gray-200 rounded-2xl p-10 text-center
-                  shadow-lg shadow-[#25baff]/10
-                  transition-all duration-500
-                  hover:bg-[#25baff]
-                  hover:-translate-y-3
-                  hover:shadow-2xl hover:shadow-[#25baff]/40"
+                  className="group bg-white border border-gray-200 rounded-2xl p-10 text-center shadow-lg shadow-[#25baff]/10 transition-all duration-500 hover:bg-[#25baff] hover:-translate-y-3 hover:shadow-2xl hover:shadow-[#25baff]/40"
                 >
-                  <Icon
-                    className="text-4xl text-[#25baff] mb-6 mx-auto
-  group-hover:text-white transition-colors duration-300"
-                  />
+                  <div className="mb-6 mx-auto flex items-center justify-center h-14">
+                    <Icon
+                      className={`${item.iconSize || "text-4xl"} text-[#25baff] group-hover:text-white transition-colors duration-300`}
+                    />
+                  </div>
 
                   <h3 className="font-extrabold text-xl mb-3 text-[#020202] group-hover:text-white transition-colors duration-300">
                     {item.head}
@@ -895,9 +890,8 @@ radial-gradient(circle_at_80%_80%,rgba(168,217,124,0.2),transparent_45%)]
                   className="w-full flex justify-between items-center px-6 py-5 text-left font-semibold text-[#020202]"
                 >
                   <span
-                    className={`${
-                      activeFaq === index ? "text-[#25baff]" : "text-[#020202]"
-                    } transition-colors duration-300`}
+                    className={`${activeFaq === index ? "text-[#25baff]" : "text-[#020202]"
+                      } transition-colors duration-300`}
                   >
                     {faq.question}
                   </span>
