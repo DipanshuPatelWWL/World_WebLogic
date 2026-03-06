@@ -165,7 +165,7 @@ const TechnicalSeoServices = () => {
         ref={whoRef}
         className="container mx-auto px-6 py-28 grid md:grid-cols-2 gap-16 items-center"
       >
-        <div>
+        <div className="ml-15">
           <h2 className="text-3xl md:text-4xl font-extrabold text-[#020202] mb-6">
             What Are Technical
             <span className="text-[#25baff]"> SEO Services?</span>
@@ -763,9 +763,8 @@ radial-gradient(circle_at_80%_80%,rgba(168,217,124,0.2),transparent_45%)]
                   className="w-full flex justify-between items-center px-6 py-5 text-left font-semibold text-[#020202]"
                 >
                   <span
-                    className={`${
-                      activeFaq === index ? "text-[#25baff]" : "text-[#020202]"
-                    } transition-colors duration-300`}
+                    className={`${activeFaq === index ? "text-[#25baff]" : "text-[#020202]"
+                      } transition-colors duration-300`}
                   >
                     {faq.question}
                   </span>

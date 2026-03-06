@@ -639,9 +639,9 @@ const SocialMediaManagement = () => {
                         Why Partner With Us for
                         <span className="text-[#25baff]"> Social Media Management?</span>
                     </h2>
-                    <p className="font-semibold text-gray-500 mb-3 pt-5 px-12">
+                    <p className="font-semibold text-gray-500 mb-3 pt-5 px-20">
                         Looking for a reliable team to manage and grow your social media presence? Our strategic approach, creative execution, and data-driven decisions help businesses build stronger brands, increase engagement, and drive measurable results.
-                        <br />Here’s what sets us apart:
+                        Here’s what sets us apart:
                     </p>
                 </div>
 

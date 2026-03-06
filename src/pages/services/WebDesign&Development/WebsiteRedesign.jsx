@@ -260,7 +260,7 @@ const WebsiteRedesign = () => {
         ref={whoRef}
         className="container mx-auto px-6 py-28 grid md:grid-cols-2 gap-16 items-center"
       >
-        <div>
+        <div className="ml-15">
           <h2 className="text-3xl md:text-4xl font-extrabold text-[#020202] mb-6">
             What is Website
             <span className="text-[#25baff]"> Redesigning?</span>
@@ -439,11 +439,10 @@ const WebsiteRedesign = () => {
                     </button>
 
                     <div
-                      className={`transition-all duration-300 ease-in-out overflow-hidden ${
-                        openIndex === index
+                      className={`transition-all duration-300 ease-in-out overflow-hidden ${openIndex === index
                           ? "max-h-40 p-5 bg-white"
                           : "max-h-0"
-                      }`}
+                        }`}
                     >
                       <p className="text-gray-600">{item.content}</p>
                     </div>
@@ -644,11 +643,10 @@ radial-gradient(circle_at_80%_80%,rgba(168,217,124,0.2),transparent_45%)]
             {slides.map((slide, index) => (
               <div
                 key={index}
-                className={`transition-all duration-700 ease-in-out ${
-                  index === current
+                className={`transition-all duration-700 ease-in-out ${index === current
                     ? "opacity-100 translate-x-0 relative"
                     : "opacity-0 absolute inset-0 translate-x-10"
-                }`}
+                  }`}
               >
                 {/* White Card Background */}
                 <div className="bg-white rounded-3xl shadow-xl p-10 md:p-14">
@@ -703,9 +701,8 @@ radial-gradient(circle_at_80%_80%,rgba(168,217,124,0.2),transparent_45%)]
               <button
                 key={index}
                 onClick={() => setCurrent(index)}
-                className={`h-2 rounded-full transition-all duration-300 ${
-                  current === index ? "bg-[#25baff] w-4" : "bg-gray-300 w-3"
-                }`}
+                className={`h-2 rounded-full transition-all duration-300 ${current === index ? "bg-[#25baff] w-4" : "bg-gray-300 w-3"
+                  }`}
               ></button>
             ))}
           </div>
@@ -771,9 +768,8 @@ radial-gradient(circle_at_80%_80%,rgba(168,217,124,0.2),transparent_45%)]
                   className="w-full flex justify-between items-center px-6 py-5 text-left font-semibold text-[#020202]"
                 >
                   <span
-                    className={`${
-                      activeFaq === index ? "text-[#25baff]" : "text-[#020202]"
-                    } transition-colors duration-300`}
+                    className={`${activeFaq === index ? "text-[#25baff]" : "text-[#020202]"
+                      } transition-colors duration-300`}
                   >
                     {faq.question}
                   </span>

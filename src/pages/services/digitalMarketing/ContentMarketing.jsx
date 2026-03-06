@@ -44,105 +44,105 @@ const ContentMarketing = () => {
   };
 
   useLayoutEffect(() => {
-  const ctx = gsap.context(() => {
+    const ctx = gsap.context(() => {
 
-    gsap.from(heroRef.current, {
-      opacity: 0,
-      y: 80,
-      duration: 1.2,
-      ease: "power4.out",
-    });
+      gsap.from(heroRef.current, {
+        opacity: 0,
+        y: 80,
+        duration: 1.2,
+        ease: "power4.out",
+      });
 
-    gsap.from(whoRef.current.children, {
-      scrollTrigger: {
-        trigger: whoRef.current,
-        start: "top 80%",
-      },
-      opacity: 0,
-      y: 60,
-      stagger: 0.25,
-      duration: 1,
-      ease: "power3.out",
-    });
-
-    cardsRef.current.forEach((card) => {
-      if (!card) return;
-      gsap.from(card, {
+      gsap.from(whoRef.current.children, {
         scrollTrigger: {
-          trigger: card,
-          start: "top 85%",
+          trigger: whoRef.current,
+          start: "top 80%",
         },
         opacity: 0,
-        scale: 0.92,
-        y: 40,
-        duration: 0.7,
+        y: 60,
+        stagger: 0.25,
+        duration: 1,
         ease: "power3.out",
       });
-    });
 
-    sectionRefs.current.forEach((section) => {
-  const items = section.querySelectorAll(".gsap-item");
+      cardsRef.current.forEach((card) => {
+        if (!card) return;
+        gsap.from(card, {
+          scrollTrigger: {
+            trigger: card,
+            start: "top 85%",
+          },
+          opacity: 0,
+          scale: 0.92,
+          y: 40,
+          duration: 0.7,
+          ease: "power3.out",
+        });
+      });
 
-  items.forEach((item) => {
-    gsap.from(item, {
-      scrollTrigger: {
-        trigger: item,
-        start: "top 85%",
-      },
-      opacity: 0,
-      y: 60,
-      duration: 0.8,
-      ease: "power3.out",
-    });
-  });
-});
+      sectionRefs.current.forEach((section) => {
+        const items = section.querySelectorAll(".gsap-item");
+
+        items.forEach((item) => {
+          gsap.from(item, {
+            scrollTrigger: {
+              trigger: item,
+              start: "top 85%",
+            },
+            opacity: 0,
+            y: 60,
+            duration: 0.8,
+            ease: "power3.out",
+          });
+        });
+      });
 
 
-    ScrollTrigger.refresh();
+      ScrollTrigger.refresh();
 
-  }, rootRef);
+    }, rootRef);
 
-  return () => ctx.revert();
-}, []);
+    return () => ctx.revert();
+  }, []);
 
 
- const faqs = [
-  {
-    question: "What are content marketing services?",
-    answer:
-      "Content marketing services involve planning, creating, and distributing valuable content to attract, engage, and convert a targeted audience.",
-  },
-  {
-    question: "What are the key areas of content marketing?",
-    answer:
-      "Core areas include blog writing, social media content, email campaigns, infographics, videos, eBooks, website copy, and SEO-focused content strategies.",
-  },
-  {
-    question: "How do you define content marketing goals?",
-    answer:
-      "Content marketing goals should align with business objectives such as increasing brand awareness, generating leads, driving website traffic, or boosting sales and customer retention.",
-  },
-  {
-    question: "How much do content marketing services cost?",
-    answer:
-      "Pricing depends on the agency, scope of work, and content type. Costs can range from a few hundred to several thousand dollars per month based on complexity and deliverables.",
-  },
-  {
-    question: "What does a content marketer do?",
-    answer:
-      "A content marketer researches, plans, creates, and promotes content aligned with marketing goals. They optimize content for SEO and ensure it connects effectively with the target audience.",
-  },
-  {
-    question: "Is content marketing profitable?",
-    answer:
-      "When executed strategically, content marketing can deliver strong ROI by attracting qualified leads, nurturing prospects, and converting visitors into loyal customers.",
-  },
-  {
-    question: "Do you offer content marketing services?",
-    answer:
-      "Yes, we provide comprehensive content marketing solutions tailored to your business goals, audience, and industry requirements.",
-  },
-];
+  const faqs = [
+    {
+      question: "What are content marketing services?",
+      answer:
+        "Content marketing services involve planning, creating, and distributing valuable content to attract, engage, and convert a targeted audience.",
+    },
+    {
+      question: "What are the key areas of content marketing?",
+      answer:
+        "Core areas include blog writing, social media content, email campaigns, infographics, videos, eBooks, website copy, and SEO-focused content strategies.",
+    },
+    {
+      question: "How do you define content marketing goals?",
+      answer:
+        "Content marketing goals should align with business objectives such as increasing brand awareness, generating leads, driving website traffic, or boosting sales and customer retention.",
+    },
+    {
+      question: "How much do content marketing services cost?",
+      answer:
+        "Pricing depends on the agency, scope of work, and content type. Costs can range from a few hundred to several thousand dollars per month based on complexity and deliverables.",
+    },
+    {
+      question: "What does a content marketer do?",
+      answer:
+        "A content marketer researches, plans, creates, and promotes content aligned with marketing goals. They optimize content for SEO and ensure it connects effectively with the target audience.",
+    },
+    {
+      question: "Is content marketing profitable?",
+      answer:
+        "When executed strategically, content marketing can deliver strong ROI by attracting qualified leads, nurturing prospects, and converting visitors into loyal customers.",
+    },
+    {
+      question: "Do you offer content marketing services?",
+      answer:
+        "Yes, we provide comprehensive content marketing solutions tailored to your business goals, audience, and industry requirements.",
+    },
+  ];
 
   const accordionData = [
     {
@@ -199,7 +199,7 @@ const ContentMarketing = () => {
         ref={whoRef}
         className="container mx-auto px-6 py-28 grid md:grid-cols-2 gap-16 items-center"
       >
-        <div>
+        <div className="ml-15">
           <h2 className="text-3xl md:text-4xl font-extrabold text-[#020202] mb-6">
             What is Content
             <span className="text-[#25baff]"> Marketing?</span>
@@ -361,10 +361,10 @@ radial-gradient(circle_at_80%_80%,rgba(168,217,124,0.2),transparent_45%)]
           </h2>
 
           <NavLink to="/contact">
-             <button className="bg-[#25baff] cursor-pointer text-[#020202] px-6 py-3 rounded-full font-semibold hover:bg-[#a8d97c] transition">
-            Contact Now
-          </button>
-         </NavLink>
+            <button className="bg-[#25baff] cursor-pointer text-[#020202] px-6 py-3 rounded-full font-semibold hover:bg-[#a8d97c] transition">
+              Contact Now
+            </button>
+          </NavLink>
         </div>
       </section>
 
@@ -416,11 +416,10 @@ radial-gradient(circle_at_80%_80%,rgba(168,217,124,0.2),transparent_45%)]
                     </button>
 
                     <div
-                      className={`transition-all duration-300 ease-in-out overflow-hidden ${
-                        openIndex === index
-                          ? "max-h-40 p-5 bg-white"
-                          : "max-h-0"
-                      }`}
+                      className={`transition-all duration-300 ease-in-out overflow-hidden ${openIndex === index
+                        ? "max-h-40 p-5 bg-white"
+                        : "max-h-0"
+                        }`}
                     >
                       <p className="text-gray-600">{item.content}</p>
                     </div>
@@ -784,9 +783,8 @@ radial-gradient(circle_at_80%_80%,rgba(168,217,124,0.2),transparent_45%)]
                   className="w-full flex justify-between items-center px-6 py-5 text-left font-semibold text-[#020202]"
                 >
                   <span
-                    className={`${
-                      activeFaq === index ? "text-[#25baff]" : "text-[#020202]"
-                    } transition-colors duration-300`}
+                    className={`${activeFaq === index ? "text-[#25baff]" : "text-[#020202]"
+                      } transition-colors duration-300`}
                   >
                     {faq.question}
                   </span>

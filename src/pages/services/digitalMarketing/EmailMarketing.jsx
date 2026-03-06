@@ -100,42 +100,42 @@ const EmailMarketing = () => {
   }, []);
 
   const faqs = [
-  {
-    question: "Is email marketing still effective?",
-    answer:
-      "Absolutely. Email marketing remains one of the highest ROI digital channels, allowing businesses to communicate directly with their audience in a personalized and measurable way.",
-  },
-  {
-    question: "How can I build an email subscriber list?",
-    answer:
-      "You can grow your subscriber list by offering valuable incentives such as eBooks, discounts, webinars, or exclusive content, combined with optimized sign-up forms and landing pages.",
-  },
-  {
-    question: "What types of emails should I send to my subscribers?",
-    answer:
-      "Effective email types include newsletters, promotional campaigns, product updates, event invitations, transactional emails, and personalized recommendations based on user behavior.",
-  },
-  {
-    question: "What's the difference between a newsletter and a promotional email?",
-    answer:
-      "Newsletters focus on delivering informative, value-driven content regularly, while promotional emails are designed to drive sales by highlighting specific offers, products, or services.",
-  },
-  {
-    question: "How frequently should we send marketing emails?",
-    answer:
-      "Email frequency depends on your audience and goals, but maintaining consistency is crucial. Testing different schedules helps determine the ideal timing for engagement.",
-  },
-  {
-    question: "What's better: HTML or plain-text emails?",
-    answer:
-      "HTML emails offer visual appeal and branding opportunities, while plain-text emails feel more personal and can sometimes achieve higher engagement. The best choice depends on your campaign goals.",
-  },
-  {
-    question: "What are the best practices for email subject lines?",
-    answer:
-      "Subject lines should be clear, concise, and compelling. Personalization, urgency, and relevance to the email content can significantly improve open rates.",
-  },
-];
+    {
+      question: "Is email marketing still effective?",
+      answer:
+        "Absolutely. Email marketing remains one of the highest ROI digital channels, allowing businesses to communicate directly with their audience in a personalized and measurable way.",
+    },
+    {
+      question: "How can I build an email subscriber list?",
+      answer:
+        "You can grow your subscriber list by offering valuable incentives such as eBooks, discounts, webinars, or exclusive content, combined with optimized sign-up forms and landing pages.",
+    },
+    {
+      question: "What types of emails should I send to my subscribers?",
+      answer:
+        "Effective email types include newsletters, promotional campaigns, product updates, event invitations, transactional emails, and personalized recommendations based on user behavior.",
+    },
+    {
+      question: "What's the difference between a newsletter and a promotional email?",
+      answer:
+        "Newsletters focus on delivering informative, value-driven content regularly, while promotional emails are designed to drive sales by highlighting specific offers, products, or services.",
+    },
+    {
+      question: "How frequently should we send marketing emails?",
+      answer:
+        "Email frequency depends on your audience and goals, but maintaining consistency is crucial. Testing different schedules helps determine the ideal timing for engagement.",
+    },
+    {
+      question: "What's better: HTML or plain-text emails?",
+      answer:
+        "HTML emails offer visual appeal and branding opportunities, while plain-text emails feel more personal and can sometimes achieve higher engagement. The best choice depends on your campaign goals.",
+    },
+    {
+      question: "What are the best practices for email subject lines?",
+      answer:
+        "Subject lines should be clear, concise, and compelling. Personalization, urgency, and relevance to the email content can significantly improve open rates.",
+    },
+  ];
 
 
   const accordionData = [
@@ -193,7 +193,7 @@ const EmailMarketing = () => {
         ref={whoRef}
         className="container mx-auto px-6 py-28 grid md:grid-cols-2 gap-16 items-center"
       >
-        <div className="gsap-item">
+        <div className="gsap-item ml-15">
           <h2 className="text-3xl md:text-4xl font-extrabold text-[#020202] mb-6">
             What is Email
             <span className="text-[#25baff]"> Marketing?</span>
@@ -537,7 +537,7 @@ const EmailMarketing = () => {
         </div>
       </section>
 
-      
+
       {/* contact us  */}
 
       <section
@@ -570,14 +570,14 @@ radial-gradient(circle_at_80%_80%,rgba(168,217,124,0.2),transparent_45%)]
         </div>
         <div className="relative z-10 max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-10">
           <h2 className="gsap-item text-white text-3xl font-extrabold max-w-4xl">
-           Claim Your Free Email Marketing Strategy Session Today!
+            Claim Your Free Email Marketing Strategy Session Today!
           </h2>
 
-         <NavLink to="/contact">
-             <button className="bg-[#25baff] cursor-pointer text-[#020202] px-6 py-3 rounded-full font-semibold hover:bg-[#a8d97c] transition">
-            Contact Now
-          </button>
-         </NavLink>
+          <NavLink to="/contact">
+            <button className="bg-[#25baff] cursor-pointer text-[#020202] px-6 py-3 rounded-full font-semibold hover:bg-[#a8d97c] transition">
+              Contact Now
+            </button>
+          </NavLink>
         </div>
       </section>
 
@@ -586,11 +586,11 @@ radial-gradient(circle_at_80%_80%,rgba(168,217,124,0.2),transparent_45%)]
       <section className="bg-white py-28">
         <div className="text-center mb-16">
           <p className="uppercase tracking-widest text-sm font-semibold text-gray-500 mb-3">
-           Here’s an overview of how our email marketing agency executes successful campaigns:
+            Here’s an overview of how our email marketing agency executes successful campaigns:
           </p>
 
           <h2 className="text-3xl md:text-4xl font-extrabold text-[#020202]">
-           Our Email Marketing 
+            Our Email Marketing
             <span className="text-[#25baff]"> Process</span>
           </h2>
         </div>
@@ -773,9 +773,8 @@ radial-gradient(circle_at_80%_80%,rgba(168,217,124,0.2),transparent_45%)]
                   className="w-full flex justify-between items-center px-6 py-5 text-left font-semibold text-[#020202]"
                 >
                   <span
-                    className={`${
-                      activeFaq === index ? "text-[#25baff]" : "text-[#020202]"
-                    } transition-colors duration-300`}
+                    className={`${activeFaq === index ? "text-[#25baff]" : "text-[#020202]"
+                      } transition-colors duration-300`}
                   >
                     {faq.question}
                   </span>

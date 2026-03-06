@@ -193,7 +193,7 @@ const GbpOptimization = () => {
         ref={whoRef}
         className="container mx-auto px-6 py-28 grid md:grid-cols-2 gap-16 items-center"
       >
-        <div>
+        <div className="ml-15">
           <h2 className="text-3xl md:text-4xl font-extrabold text-[#020202] mb-6">
             What is Google My Business
             <span className="text-[#25baff]"> Optimization?</span>
@@ -246,7 +246,7 @@ const GbpOptimization = () => {
             <span className="text-[#25baff]"> Increase Your Revenue?</span>
           </h2>
 
-          <p className="uppercase tracking-widest text-sm font-semibold text-gray-500 mb-3">
+          <p className="mr-20 ml-20 mt-5 uppercase tracking-widest text-sm font-semibold text-gray-500 mb-3">
             GMB optimization services enhance your local visibility and attract
             more potential customers through an optimized Google Business
             Profile—ultimately driving higher revenue. Here’s how:
@@ -366,11 +366,10 @@ const GbpOptimization = () => {
                     </button>
 
                     <div
-                      className={`transition-all duration-300 ease-in-out overflow-hidden ${
-                        openIndex === index
-                          ? "max-h-40 p-5 bg-white"
-                          : "max-h-0"
-                      }`}
+                      className={`transition-all duration-300 ease-in-out overflow-hidden ${openIndex === index
+                        ? "max-h-40 p-5 bg-white"
+                        : "max-h-0"
+                        }`}
                     >
                       <p className="text-gray-600">{item.content}</p>
                     </div>
@@ -786,9 +785,8 @@ radial-gradient(circle_at_80%_80%,rgba(168,217,124,0.2),transparent_45%)]
                   className="w-full flex justify-between items-center px-6 py-5 text-left font-semibold text-[#020202]"
                 >
                   <span
-                    className={`${
-                      activeFaq === index ? "text-[#25baff]" : "text-[#020202]"
-                    } transition-colors duration-300`}
+                    className={`${activeFaq === index ? "text-[#25baff]" : "text-[#020202]"
+                      } transition-colors duration-300`}
                   >
                     {faq.question}
                   </span>

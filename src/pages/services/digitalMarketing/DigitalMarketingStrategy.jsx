@@ -366,9 +366,6 @@ const DigitalMarketingStrategy = () => {
                 ))}
               </div>
 
-              <button className="gsap-item bg-[#25baff] hover:bg-[#3db9f3] text-white font-semibold px-6 py-3 rounded-md transition duration-300">
-                View SEO Services
-              </button>
             </div>
           </div>
         </div>
@@ -406,10 +403,6 @@ const DigitalMarketingStrategy = () => {
                   </div>
                 ))}
               </div>
-
-              <button className="gsap-item bg-[#25baff] hover:bg-[#3db9f3] text-white font-semibold px-6 py-3 rounded-md transition duration-300">
-                View Local SEO Services
-              </button>
             </div>
 
             {/* right Image */}
@@ -465,10 +458,6 @@ const DigitalMarketingStrategy = () => {
                   </div>
                 ))}
               </div>
-
-              <button className="gsap-item bg-[#25baff] hover:bg-[#3db9f3] text-white font-semibold px-6 py-3 rounded-md transition duration-300">
-                View Content marketing Services
-              </button>
             </div>
           </div>
         </div>
@@ -506,10 +495,6 @@ const DigitalMarketingStrategy = () => {
                   </div>
                 ))}
               </div>
-
-              <button className="gsap-item bg-[#25baff] hover:bg-[#3db9f3] text-white font-semibold px-6 py-3 rounded-md transition duration-300">
-                View Link Building Services
-              </button>
             </div>
 
             {/* right Image */}
@@ -566,10 +551,6 @@ const DigitalMarketingStrategy = () => {
                   </div>
                 ))}
               </div>
-
-              <button className="gsap-item bg-[#25baff] hover:bg-[#3db9f3] text-white font-semibold px-6 py-3 rounded-md transition duration-300">
-                View SMO Services
-              </button>
             </div>
           </div>
         </div>
@@ -606,10 +587,6 @@ const DigitalMarketingStrategy = () => {
                   </div>
                 ))}
               </div>
-
-              <button className="gsap-item bg-[#25baff] hover:bg-[#3db9f3] text-white font-semibold px-6 py-3 rounded-md transition duration-300">
-                View Social Media Marketing Services
-              </button>
             </div>
 
             {/* right Image */}
@@ -666,10 +643,6 @@ const DigitalMarketingStrategy = () => {
                   </div>
                 ))}
               </div>
-
-              <button className="gsap-item bg-[#25baff] hover:bg-[#3db9f3] text-white font-semibold px-6 py-3 rounded-md transition duration-300">
-                View Facebook Marketing Services
-              </button>
             </div>
           </div>
         </div>
@@ -707,10 +680,6 @@ const DigitalMarketingStrategy = () => {
                   </div>
                 ))}
               </div>
-
-              <button className="gsap-item bg-[#25baff] hover:bg-[#3db9f3] text-white font-semibold px-6 py-3 rounded-md transition duration-300">
-                View Instagram Marketing Services
-              </button>
             </div>
 
             {/* right Image */}
@@ -765,10 +734,6 @@ const DigitalMarketingStrategy = () => {
                   </div>
                 ))}
               </div>
-
-              <button className="gsap-item bg-[#25baff] hover:bg-[#3db9f3] text-white font-semibold px-6 py-3 rounded-md transition duration-300">
-                View X Marketing Services
-              </button>
             </div>
           </div>
         </div>
@@ -806,10 +771,6 @@ const DigitalMarketingStrategy = () => {
                   </div>
                 ))}
               </div>
-
-              <button className="gsap-item bg-[#25baff] hover:bg-[#3db9f3] text-white font-semibold px-6 py-3 rounded-md transition duration-300">
-                View LinkedIn Marketing Services
-              </button>
             </div>
 
             {/* right Image */}
@@ -865,10 +826,6 @@ const DigitalMarketingStrategy = () => {
                   </div>
                 ))}
               </div>
-
-              <button className="gsap-item bg-[#25baff] hover:bg-[#3db9f3] text-white font-semibold px-6 py-3 rounded-md transition duration-300">
-                View YouTube Marketing Services
-              </button>
             </div>
           </div>
         </div>
@@ -906,10 +863,6 @@ const DigitalMarketingStrategy = () => {
                   </div>
                 ))}
               </div>
-
-              <button className="gsap-item bg-[#25baff] hover:bg-[#3db9f3] text-white font-semibold px-6 py-3 rounded-md transition duration-300">
-                View Pinterest Marketing Services
-              </button>
             </div>
 
             {/* right Image */}
@@ -966,10 +919,6 @@ const DigitalMarketingStrategy = () => {
                   </div>
                 ))}
               </div>
-
-              <button className="gsap-item bg-[#25baff] hover:bg-[#3db9f3] text-white font-semibold px-6 py-3 rounded-md transition duration-300">
-                View PPC Services
-              </button>
             </div>
           </div>
         </div>
@@ -1009,10 +958,6 @@ const DigitalMarketingStrategy = () => {
                   </div>
                 ))}
               </div>
-
-              <button className="gsap-item bg-[#25baff] hover:bg-[#3db9f3] text-white font-semibold px-6 py-3 rounded-md transition duration-300">
-                View Web Development Services
-              </button>
             </div>
 
             {/* right Image */}
@@ -1069,10 +1014,6 @@ const DigitalMarketingStrategy = () => {
                   </div>
                 ))}
               </div>
-
-              <button className="gsap-item bg-[#25baff] hover:bg-[#3db9f3] text-white font-semibold px-6 py-3 rounded-md transition duration-300">
-                View Email Marketing Services
-              </button>
             </div>
           </div>
         </div>
@@ -1110,10 +1051,6 @@ const DigitalMarketingStrategy = () => {
                   </div>
                 ))}
               </div>
-
-              <button className="gsap-item bg-[#25baff] hover:bg-[#3db9f3] text-white font-semibold px-6 py-3 rounded-md transition duration-300">
-                View CRO Services
-              </button>
             </div>
 
             {/* right Image */}
@@ -1136,7 +1073,7 @@ const DigitalMarketingStrategy = () => {
               Your Roadmap to Smarter
               <span className="text-[#25baff]"> Digital Growth</span>
             </h2>
-            <p className=" tracking-widest text-sm font-semibold text-gray-500 mb-3">
+            <p className=" tracking-widest text-md font-semibold text-gray-500 mb-3">
               WAt Digital Guider, we follow a streamlined six-step digital
               marketing process designed to deliver measurable results. Our
               data-driven and collaborative approach ensures every strategy we
@@ -1184,13 +1121,13 @@ const DigitalMarketingStrategy = () => {
       {/* =================  CTA ================= */}
 
       <section className="bg-white py-28 px-6">
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-extrabold text-[#020202] mb-4">
               Why Choose Us as Your Digital
               <span className="text-[#25baff]"> Marketing Partner?</span>
             </h2>
-            <p className=" tracking-widest text-sm font-semibold text-gray-500 mb-3">
+            <p className=" tracking-widest text-md font-semibold text-gray-500 mb-3">
               Choosing the right digital marketing agency is key to driving
               business growth. We help you stand out, attract the right
               audience, and turn visitors into loyal customers—making your
@@ -1453,9 +1390,8 @@ radial-gradient(circle_at_80%_80%,rgba(168,217,124,0.2),transparent_45%)]
             px-6 py-5 text-left font-semibold text-[#020202]"
                 >
                   <span
-                    className={`${
-                      activeFaq === index ? "text-[#25baff]" : "text-[#020202]"
-                    } transition-colors duration-300`}
+                    className={`${activeFaq === index ? "text-[#25baff]" : "text-[#020202]"
+                      } transition-colors duration-300`}
                   >
                     {faq.question}
                   </span>

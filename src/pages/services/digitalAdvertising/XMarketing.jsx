@@ -243,7 +243,7 @@ const XMarketing = () => {
                 className="container mx-auto px-6 py-28 grid md:grid-cols-2 gap-16 items-center"
             >
                 {/* LEFT CONTENT */}
-                <div>
+                <div className="ml-15">
                     <h2 className="text-3xl md:text-4xl font-extrabold text-[#020202] mb-6">
                         What is
                         <span className="text-[#25baff]"> X Advertising?</span>
@@ -277,12 +277,14 @@ const XMarketing = () => {
                 </div>
 
                 {/* RIGHT IMAGE */}
-                <div className="rounded-2xl overflow-hidden group">
-                    <img
-                        src={Img1}
-                        alt="X Advertising Services"
-                        className="rounded-2xl shadow-2xl transition-transform duration-500 group-hover:scale-105"
-                    />
+                <div className="rounded-2xl shadow-xl group">
+                    <div className="rounded-2xl overflow-hidden">
+                        <img
+                            src={Img1}
+                            alt="X Advertising Services"
+                            className="w-full h-full transition-transform duration-500 group-hover:scale-105"
+                        />
+                    </div>
                 </div>
             </section>
 
