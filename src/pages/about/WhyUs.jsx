@@ -117,20 +117,31 @@ const WhyUs = () => {
       </section>
 
       {/* ================= WHY TRUST US ================= */}
-      <section className="bg-gray-50 py-28">
-        <div className="container mx-auto px-6">
+      <section className="relative bg-gradient-to-br from-[#0f172a] via-[#020617] to-black py-28 overflow-hidden">
+
+        {/* subtle glow background */}
+        <div className="absolute inset-0 opacity-30 blur-3xl">
+          <div className="absolute top-20 left-20 w-72 h-72 bg-[#25baff] rounded-full"></div>
+          <div className="absolute bottom-20 right-20 w-72 h-72 bg-purple-500 rounded-full"></div>
+        </div>
+
+        <div className="relative container mx-auto px-6">
+
+          {/* heading */}
           <div className="text-center mb-16">
-            <p className="uppercase tracking-widest text-sm font-semibold text-gray-500 mb-3">
+            <p className="uppercase tracking-widest text-sm font-semibold text-gray-400 mb-3">
               Why Work With Us?
             </p>
 
-            <h2 className="text-3xl md:text-4xl font-extrabold text-[#020202]">
+            <h2 className="text-3xl md:text-4xl font-extrabold text-white">
               Why Businesses
               <span className="text-[#25baff]"> Trust Us</span>
             </h2>
           </div>
 
+          {/* cards */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+
             {[
               "We increase brand visibility through strategic execution.",
               "Cost-effective and scalable digital solutions.",
@@ -139,28 +150,28 @@ const WhyUs = () => {
               "Transparent reporting with actionable insights.",
               "Focus on long-term and sustainable digital growth.",
             ].map((text, index) => (
+
               <div
                 key={index}
-                className="group bg-white border border-gray-200 rounded-2xl px-8 py-6 flex items-start gap-4
-                shadow-lg shadow-[#25baff]/10
-                transition-all duration-500
-                hover:bg-[#25baff]
-                hover:border-[#25baff]
-                hover:shadow-2xl hover:shadow-[#25baff]/40
-                hover:-translate-y-2"
+                className="group relative backdrop-blur-xl bg-white/5 border border-white/10 rounded-2xl px-8 py-6 flex items-start gap-4
+          transition-all duration-500
+          hover:bg-white/10
+          hover:border-[#25baff]
+          hover:shadow-[0_0_40px_rgba(37,186,255,0.35)]
+          hover:-translate-y-2"
               >
+
                 <FaCheckCircle
                   className="text-[#25baff] text-2xl mt-1
-                  group-hover:text-white transition-colors duration-300"
+            group-hover:scale-110 transition-transform duration-300"
                 />
 
-                <p
-                  className="text-[#020202] text-lg leading-relaxed
-                group-hover:text-white transition-colors duration-300"
-                >
+                <p className="text-gray-200 text-lg leading-relaxed">
                   {text}
                 </p>
+
               </div>
+
             ))}
           </div>
         </div>
