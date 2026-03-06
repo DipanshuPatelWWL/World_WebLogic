@@ -147,19 +147,24 @@ const WhoWeAre = () => {
       </section>
 
       {/* ================= WHY CHOOSE US ================= */}
-      <section className="bg-gray-50 py-28">
-        <div className="text-center mb-16">
-          <p className="uppercase tracking-widest text-sm font-semibold text-gray-500 mb-3">
+      <section className="bg-[#020617] py-28 relative overflow-hidden">
+
+        {/* subtle glow orbs */}
+        <div className="absolute top-24 left-20 w-72 h-72 bg-[#25baff]/20 blur-3xl rounded-full"></div>
+        <div className="absolute bottom-20 right-24 w-72 h-72 bg-[#25baff]/10 blur-3xl rounded-full"></div>
+
+        <div className="text-center mb-16 relative z-10">
+          <p className="uppercase tracking-widest text-sm font-semibold text-gray-400 mb-3">
             Why Work With Us?
           </p>
 
-          <h2 className="text-3xl md:text-4xl font-extrabold text-[#020202]">
+          <h2 className="text-3xl md:text-4xl font-extrabold text-white">
             Reasons to
             <span className="text-[#25baff]"> Choose Us</span>
           </h2>
         </div>
 
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto px-6 relative z-10">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
 
             {[
@@ -174,24 +179,24 @@ const WhoWeAre = () => {
               { icon: FiSmile, text: "Long-term partnership & support." },
             ].map((item, index) => {
               const Icon = item.icon;
+
               return (
                 <div
                   key={index}
                   ref={(el) => (cardsRef.current[index] = el)}
-                  className="group bg-white rounded-2xl p-10
-                  shadow-lg shadow-[#25baff]/10
-                  border border-gray-200
-                  transition-all duration-500
-                  hover:bg-[#25baff]
-                  hover:-translate-y-4
-                  hover:shadow-2xl hover:shadow-[#25baff]/40"
+                  className="group backdrop-blur-xl bg-white/5 border border-white/10 rounded-2xl p-10
+            transition-all duration-500
+            hover:bg-white/10
+            hover:border-[#25baff]
+            hover:-translate-y-4
+            hover:shadow-[0_0_40px_rgba(37,186,255,0.35)]"
                 >
                   <Icon
                     className="text-4xl text-[#25baff] mb-6
-                    group-hover:text-white transition-colors duration-300"
+              group-hover:scale-110 transition-transform duration-300"
                   />
-                  <p className="text-gray-700 text-sm leading-relaxed
-                  group-hover:text-white transition-colors duration-300">
+
+                  <p className="text-gray-300 text-sm leading-relaxed">
                     {item.text}
                   </p>
                 </div>
@@ -226,7 +231,7 @@ const WhoWeAre = () => {
             <button
               className="px-8 py-4 rounded-full bg-[#25baff] text-white
               font-semibold shadow-lg transition-all duration-300
-              hover:bg-[#a8d97c]  hover:scale-105 hover:shadow-2xl
+              hover:bg-[#a8d97c] hover:cursor-pointer hover:scale-105 hover:shadow-2xl
               active:scale-95"
             >
               Contact Us

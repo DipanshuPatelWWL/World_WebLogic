@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import logo from "../assets/logo2.png";
 import {
@@ -10,6 +10,22 @@ import {
 } from "react-icons/fa";
 
 export default function Footer() {
+
+    const [email, setEmail] = useState("");
+    const [success, setSuccess] = useState(false);
+
+    const handleSubscribe = (e) => {
+        e.preventDefault();
+
+        if (!email) return;
+
+        setSuccess(true);
+        setEmail("");
+
+        setTimeout(() => {
+            setSuccess(false);
+        }, 4000);
+    };
 
     return (
         <footer className="relative text-white overflow-hidden pt-6">
@@ -39,35 +55,53 @@ export default function Footer() {
                             Subscribe Newsletter
                         </h4>
 
-                        <input
-                            type="email"
-                            placeholder="Your Email Address"
-                            className="
-                            w-full
-                            px-4 py-3
-                            mb-2
-                            rounded-lg
-                            bg-white/10
-                            border border-white/20
-                            text-white
-                            placeholder-gray-300
-                            focus:outline-none
-                            focus:border-[#25baff]"
-                        />
+                        <form onSubmit={handleSubscribe}>
 
-                        <button
-                            className="
-                            w-full
-                            bg-[#25baff]
-                            hover:bg-[#a8d97c]
-                            hover:text-black
-                            py-3
-                            rounded-lg
-                            font-semibold
-                            transition"
-                        >
-                            Subscribe
-                        </button>
+                            <input
+                                type="email"
+                                required
+                                value={email}
+                                onChange={(e) => setEmail(e.target.value)}
+                                placeholder="Your Email Address"
+                                className="
+w-full
+px-4 py-3
+mb-2
+rounded-lg
+bg-white/10
+border border-white/20
+text-white
+placeholder-gray-300
+focus:outline-none
+focus:border-[#25baff]"
+                            />
+
+                            <button
+                                type="submit"
+                                className="
+w-full
+bg-[#25baff]
+hover:bg-[#a8d97c]
+hover:text-black
+py-3
+rounded-lg
+font-semibold
+transition
+cursor-pointer"
+                            >
+                                Subscribe
+                            </button>
+
+                        </form>
+
+                        {/* SUCCESS MESSAGE */}
+
+                        {success && (
+                            <div className="mt-3 text-sm bg-green-500/20 border border-green-400 text-green-300 p-2 rounded-lg text-center">
+                                Subscribed successfully! We'll keep you updated.
+                            </div>
+                        )}
+
 
                         {/* SOCIAL */}
                         <div className="flex gap-3 mt-5 mb-4">
