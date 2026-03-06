@@ -276,7 +276,7 @@ const SocialMediaOptimization = () => {
                 ref={whoRef}
                 className="container mx-auto px-6 py-28 grid md:grid-cols-2 gap-16 items-center"
             >
-                <div>
+                <div className="ml-15">
                     <h2 className="text-3xl md:text-4xl font-extrabold text-[#020202] mb-6">
                         What is Social Media
                         <span className="text-[#25baff]"> Optimization?</span>

@@ -6,7 +6,7 @@ import { FiPlus, FiMinus } from "react-icons/fi";
 import { MdOnlinePrediction } from "react-icons/md";
 import { VscWorkspaceTrusted } from "react-icons/vsc";
 import { FaSearchengin } from "react-icons/fa6";
-import { HiLinkSlash } from "react-icons/hi2";
+import { FaLink } from "react-icons/fa";
 import { FaMobileAlt } from "react-icons/fa";
 import { SiSecurityscorecard } from "react-icons/si";
 import { RiSeoFill } from "react-icons/ri";
@@ -175,7 +175,7 @@ const FranchisSeoServices = () => {
         ref={whoRef}
         className="container mx-auto px-6 py-28 grid md:grid-cols-2 gap-16 items-center"
       >
-        <div>
+        <div className="ml-15">
           <h2 className="text-3xl md:text-4xl font-extrabold text-[#020202] mb-6">
             How Franchise
             <span className="text-[#25baff]"> SEO Helps</span>
@@ -579,7 +579,7 @@ radial-gradient(circle_at_80%_80%,rgba(168,217,124,0.2),transparent_45%)]
                 text: "We create unique, location-specific content tailored to local interests and search intent, using relevant keywords and clear CTAs to drive engagement; our social media promotion further amplifies reach, boosting organic traffic and strengthening brand awareness for each franchise location.",
               },
               {
-                icon: HiLinkSlash,
+                icon: FaLink,
                 head: "Location-Based Link Building",
                 text: "We strengthen your franchise’s online authority with strategic, keyword-focused link building and high-quality backlinks, earning placements from local businesses, community websites, and relevant industry directories to improve domain authority and boost search rankings for each location.",
               },
@@ -772,9 +772,8 @@ radial-gradient(circle_at_80%_80%,rgba(168,217,124,0.2),transparent_45%)]
                   className="w-full flex justify-between items-center px-6 py-5 text-left font-semibold text-[#020202]"
                 >
                   <span
-                    className={`${
-                      activeFaq === index ? "text-[#25baff]" : "text-[#020202]"
-                    } transition-colors duration-300`}
+                    className={`${activeFaq === index ? "text-[#25baff]" : "text-[#020202]"
+                      } transition-colors duration-300`}
                   >
                     {faq.question}
                   </span>

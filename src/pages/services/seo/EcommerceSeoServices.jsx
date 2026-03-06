@@ -194,7 +194,7 @@ const EcommerceSeoServices = () => {
         ref={whoRef}
         className="container mx-auto px-6 py-28 grid md:grid-cols-2 gap-16 items-center"
       >
-        <div>
+        <div className="ml-15">
           <h2 className="text-3xl md:text-4xl font-extrabold text-[#020202] mb-6">
             What is Ecommerce
             <span className="text-[#25baff]"> SEO?</span>
@@ -373,11 +373,10 @@ const EcommerceSeoServices = () => {
                     </button>
 
                     <div
-                      className={`transition-all duration-300 ease-in-out overflow-hidden ${
-                        openIndex === index
-                          ? "max-h-40 p-5 bg-white"
-                          : "max-h-0"
-                      }`}
+                      className={`transition-all duration-300 ease-in-out overflow-hidden ${openIndex === index
+                        ? "max-h-40 p-5 bg-white"
+                        : "max-h-0"
+                        }`}
                     >
                       <p className="text-gray-600">{item.content}</p>
                     </div>
@@ -877,7 +876,7 @@ radial-gradient(circle_at_80%_80%,rgba(168,217,124,0.2),transparent_45%)]
       </section>
 
       <section className="py-5 sm:py-10 lg:py-12 px-4 sm:px-6 bg-[#ebf0e8]">
-        <div className="max-w-7xl mx-auto text-center">
+        <div className="max-w-8xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-extrabold text-[#020202] mb-3">
             Affordable Package of Ecommerce
             <span className="text-[#25baff]"> SEO Company</span>
@@ -1165,9 +1164,8 @@ radial-gradient(circle_at_80%_80%,rgba(168,217,124,0.2),transparent_45%)]
                   className="w-full flex justify-between items-center px-6 py-5 text-left font-semibold text-[#020202]"
                 >
                   <span
-                    className={`${
-                      activeFaq === index ? "text-[#25baff]" : "text-[#020202]"
-                    } transition-colors duration-300`}
+                    className={`${activeFaq === index ? "text-[#25baff]" : "text-[#020202]"
+                      } transition-colors duration-300`}
                   >
                     {faq.question}
                   </span>

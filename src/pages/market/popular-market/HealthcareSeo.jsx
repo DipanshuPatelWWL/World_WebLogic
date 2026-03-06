@@ -25,7 +25,7 @@ import DoctorPatient from "../../../assets/market/healthseo/img1.avif";
 import AnalyticsImg from "../../../assets/market/healthseo/img2.avif";
 import GMBImg from "../../../assets/market/healthseo/img3.avif";
 import TeamImg from "../../../assets/market/healthseo/img4.avif";
-  
+
 export default function HealthcareSeo() {
   const [activeFaq, setActiveFaq] = useState(null);
 
@@ -239,12 +239,12 @@ export default function HealthcareSeo() {
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 1 }}
-            className="overflow-hidden rounded-3xl shadow-2xl group"
+            className="h-full w-full overflow-hidden rounded-3xl shadow-2xl group"
           >
             <img
               src={AnalyticsImg}
               alt="Healthcare analytics"
-              className="rounded-3xl transform transition duration-700 ease-out group-hover:scale-110 group-hover:shadow-[0_20px_60px_rgba(37,186,255,0.35)]"
+              className="w-full h-[600px] object-cover transition-transform duration-700 ease-out group-hover:scale-105"
             />
           </motion.div>
           <div className="gsap-item">
@@ -411,11 +411,10 @@ export default function HealthcareSeo() {
                 key={i}
                 ref={(el) => (faqRefs.current[i] = el)}
                 className={`gsap-item rounded-2xl overflow-hidden border transition-all duration-300
-          ${
-            activeFaq === i
-              ? "border-[#25baff] shadow-[0_0_30px_rgba(37,186,255,0.35)]"
-              : "border-gray-200 hover:border-[#25baff]/60 hover:shadow-[0_0_25px_rgba(37,186,255,0.25)]"
-          } bg-white`}
+          ${activeFaq === i
+                    ? "border-[#25baff] shadow-[0_0_30px_rgba(37,186,255,0.35)]"
+                    : "border-gray-200 hover:border-[#25baff]/60 hover:shadow-[0_0_25px_rgba(37,186,255,0.25)]"
+                  } bg-white`}
               >
                 <button
                   onClick={() => {
@@ -454,20 +453,18 @@ export default function HealthcareSeo() {
                   className="w-full flex justify-between items-center px-8 py-6 text-left font-semibold text-lg transition"
                 >
                   <span
-                    className={`transition ${
-                      activeFaq === i ? "text-[#25baff]" : "text-black"
-                    }`}
+                    className={`transition ${activeFaq === i ? "text-[#25baff]" : "text-black"
+                      }`}
                   >
                     {faq.q}
                   </span>
 
                   <div
                     className={`flex items-center justify-center w-9 h-9 rounded-full transition
-              ${
-                activeFaq === i
-                  ? "bg-[#25baff] text-white shadow-lg shadow-[#25baff]/40"
-                  : "bg-gray-100 text-gray-600"
-              }`}
+              ${activeFaq === i
+                        ? "bg-[#25baff] text-white shadow-lg shadow-[#25baff]/40"
+                        : "bg-gray-100 text-gray-600"
+                      }`}
                   >
                     {activeFaq === i ? <FiMinus /> : <FiPlus />}
                   </div>

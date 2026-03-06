@@ -1029,7 +1029,7 @@ const AmazonPPC = () => {
                         {/* SCALE */}
                         <div className="group bg-white/10 backdrop-blur-xl border-2 border-[#25baff] rounded-2xl shadow-2xl shadow-[#25baff]/30 hover:-translate-y-4 transition-all duration-500 flex flex-col justify-between relative">
 
-                            <div className="absolute top-4 right-4 bg-yellow-500 text-black text-xs px-3 py-1 rounded-full font-semibold">
+                            <div className="absolute top-2 right-4 bg-yellow-500 text-black text-xs px-3 py-1 rounded-full font-semibold">
                                 MOST POPULAR
                             </div>
 

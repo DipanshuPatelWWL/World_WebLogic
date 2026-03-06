@@ -292,12 +292,12 @@ export default function LawyerSeo() {
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 1 }}
-            className="overflow-hidden rounded-3xl shadow-2xl group"
+            className="h-full w-full overflow-hidden rounded-3xl shadow-2xl group"
           >
             <img
               src={AnalyticsImg}
               alt="SEO analytics for law firms"
-              className="rounded-3xl transform transition duration-700 ease-out group-hover:scale-110 group-hover:shadow-[0_20px_60px_rgba(37,186,255,0.35)]"
+              className="w-full h-full object-cover rounded-3xl transform transition duration-700 ease-out group-hover:scale-105"
             />
           </motion.div>
           <div className="gsap-item">
@@ -493,11 +493,10 @@ export default function LawyerSeo() {
                 key={i}
                 ref={(el) => (faqRefs.current[i] = el)}
                 className={`gsap-item rounded-2xl overflow-hidden border transition-all duration-300
-          ${
-            activeFaq === i
-              ? "border-[#38bdf8] shadow-[0_0_35px_rgba(56,189,248,0.35)] scale-[1.02]"
-              : "border-gray-200 hover:border-[#38bdf8]/60 hover:shadow-[0_0_25px_rgba(56,189,248,0.25)]"
-          } bg-white`}
+          ${activeFaq === i
+                    ? "border-[#38bdf8] shadow-[0_0_35px_rgba(56,189,248,0.35)] scale-[1.02]"
+                    : "border-gray-200 hover:border-[#38bdf8]/60 hover:shadow-[0_0_25px_rgba(56,189,248,0.25)]"
+                  } bg-white`}
               >
                 <button
                   onClick={() => {
@@ -543,20 +542,18 @@ export default function LawyerSeo() {
                   className="w-full flex justify-between items-center px-8 py-6 text-left font-semibold text-lg transition"
                 >
                   <span
-                    className={`transition duration-300 ${
-                      activeFaq === i ? "text-[#38bdf8]" : "text-gray-900"
-                    }`}
+                    className={`transition duration-300 ${activeFaq === i ? "text-[#38bdf8]" : "text-gray-900"
+                      }`}
                   >
                     {faq.q}
                   </span>
 
                   <div
                     className={`flex items-center justify-center w-9 h-9 rounded-full transition-all duration-300
-              ${
-                activeFaq === i
-                  ? "bg-[#38bdf8] text-white shadow-lg shadow-[#38bdf8]/40 rotate-180"
-                  : "bg-gray-100 text-gray-600"
-              }`}
+              ${activeFaq === i
+                        ? "bg-[#38bdf8] text-white shadow-lg shadow-[#38bdf8]/40 rotate-180"
+                        : "bg-gray-100 text-gray-600"
+                      }`}
                   >
                     {activeFaq === i ? <FiMinus /> : <FiPlus />}
                   </div>
@@ -583,7 +580,7 @@ export default function LawyerSeo() {
           Claim your FREE Law Firm SEO Audit and unlock growth potential.
         </p>
         <NavLink to="/contact">
-          <button className="px-12 py-6 rounded-full cursor-pointer bg-[#38bdf8] text-black font-bold text-xl shadow-xl hover:shadow-[#a8d97c]/70 transition transform hover:-translate-y-2">
+          <button className="px-10 py-4 rounded-full cursor-pointer bg-[#38bdf8] text-black font-bold text-xl shadow-xl hover:shadow-[#a8d97c]/70  hover:-translate-y-2">
             Contact Us
           </button>
         </NavLink>
