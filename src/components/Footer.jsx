@@ -33,13 +33,13 @@ export default function Footer() {
             {/* GLASS BG */}
             <div className="absolute inset-0 bg-white/2 backdrop-blur-xl border-t border-white/10"></div>
 
-            <div className="relative max-w-7xl mx-auto px-4 py-6">
+            <div className="relative max-w-7xl mx-auto px-2 py-6">
 
                 {/* GRID */}
-                <div className="grid lg:grid-cols-[1.6fr_1fr_1fr_1fr_1fr_1fr] md:grid-cols-3 sm:grid-cols-2 gap-12 items-start">
+                <div className="grid lg:grid-cols-[1.2fr_1fr_1fr_1fr] md:grid-cols-3 sm:grid-cols-2 gap-10 items-start">
 
                     {/* COLUMN 1 */}
-                    <div className="min-w-[300px]">
+                    <div className="min-w-[320px] mr-20">
 
                         {/* LOGO */}
                         <Link to="/">
@@ -120,67 +120,63 @@ cursor-pointer"
                     {/* IMPORTANT LINKS */}
                     <FooterColumn
                         title="Important Links"
+                        noWrap
                         links={[
                             { name: "Home", path: "/" },
+                            { name: "Portfolio", path: "/portfolio" },
                             { name: "Who We Are", path: "/about/who-we-are" },
                             { name: "Why Choose Us", path: "/about/why-choose-us" },
                             { name: "Projects", path: "/projects" },
                             { name: "Pricing", path: "/pricing/seo-packages" },
-                            { name: "Contact", path: "/contact" }
+                            { name: "Contact Us", path: "/contact" }
                         ]}
                     />
 
-
-                    {/* WEB DEVELOPMENT */}
+                    {/* SERVICES */}
                     <FooterColumn
-                        title="Web Development"
+                        title="Services"
                         links={[
-                            { name: "Website Redesign", path: "/services/website-redesign" },
-                            { name: "WordPress Development", path: "/services/wordpress-development" },
+                            { name: "Search Engine Optimization (SEO)", path: "/services/seo" },
                             { name: "Small Business SEO", path: "/services/small-business-seo" },
-                            { name: "Technical SEO", path: "/services/seo/technical-seo-services" },
-                            { name: "Link Building", path: "/services/seo/link-building-services" }
+                            { name: "Local SEO Services", path: "/services/local-seo-services" },
+                            { name: "E-commerce SEO", path: "/services/ecommerce-seo" },
+                            { name: "Generative Engine Optimization (GEO) Services", path: "/services/generative-engine-optimization" },
+                            { name: "Answer Engine Optimization (AEO) Services", path: "/services/answer-engine-optimization" },
+                            { name: "Pay Per Click Services", path: "/services/pay-per-click" },
+                            { name: "Voice Search Optimization Services", path: "/services/voice-search-optimization" },
+                            { name: "GBP Optimization", path: "/services/gbp-optimization" }
                         ]}
                     />
 
 
-                    {/* APP DEVELOPMENT */}
+
+                    {/* SERVICE AREAS */}
                     <FooterColumn
-                        title="App Development"
+                        title="Service Areas"
+                        noWrap
                         links={[
-                            { name: "Mobile App Development", path: "/services/mobile-app-development" },
-                            { name: "App Store Optimization", path: "/services/seo/app-store-optimization" },
-                            { name: "Voice Search Optimization", path: "/services/seo/voice-search-optimization" },
-                            { name: "YouTube Optimization", path: "/services/youtube-optimization" }
+                            { name: "Austin", path: "/locations/austin" },
+                            { name: "Boston", path: "/locations/boston" },
+                            { name: "Charlotte", path: "/locations/charlotte" },
+                            { name: "Chicago", path: "/locations/chicago" },
+                            { name: "Columbus", path: "/locations/columbus" },
+                            { name: "Dallas", path: "/locations/dallas" },
+                            { name: "Denver", path: "/locations/denver" },
+                            { name: "Houston", path: "/locations/houston" },
+                            { name: "Indianapolis", path: "/locations/indianapolis" },
+                            { name: "Jacksonville", path: "/locations/jacksonville" },
+                            { name: "Los Angeles", path: "/locations/los-angeles" },
+                            { name: "Miami", path: "/locations/miami" },
+                            { name: "New York", path: "/locations/new-york" },
+                            { name: "Philadelphia", path: "/locations/philadelphia" },
+                            { name: "Phoenix", path: "/locations/phoenix" },
+                            { name: "San Antonio", path: "/locations/san-antonio" },
+                            { name: "San Diego", path: "/locations/san-diego" },
+                            { name: "San Francisco", path: "/locations/san-francisco" },
+                            { name: "Seattle", path: "/locations/seattle" },
+                            { name: "Toronto", path: "/locations/toronto" }
                         ]}
-                    />
-
-
-                    {/* DIGITAL MARKETING */}
-                    <FooterColumn
-                        title="Digital Marketing"
-                        links={[
-                            { name: "Digital Marketing Strategy", path: "/services/digitalMarketing/digital-marketing-strategy" },
-                            { name: "Content Marketing", path: "/services/digitalMarketing/content-marketing" },
-                            { name: "Email Marketing", path: "/services/digitalMarketing/email-marketing" },
-                            { name: "Reputation Management", path: "/services/digitalMarketing/reputation-management" },
-                            { name: "Franchise Marketing", path: "/services/digitalMarketing/franchise-digital-marketing" },
-                            { name: "Conversion Optimization", path: "/services/conversion-rate-optimization" }
-                        ]}
-                    />
-
-
-                    {/* ADVERTISING */}
-                    <FooterColumn
-                        title="Advertising"
-                        links={[
-                            { name: "PPC Services", path: "/services/pay-per-click" },
-                            { name: "Facebook Advertising", path: "/services/facebook-advertising" },
-                            { name: "Instagram Advertising", path: "/services/instagram-advertising" },
-                            { name: "X Marketing", path: "/services/x-marketing" },
-                            { name: "LinkedIn Marketing", path: "/services/linkedin-marketing" },
-                            { name: "Pinterest Marketing", path: "/services/pinterest-marketing" }
-                        ]}
+                        columns={2}
                     />
 
                 </div>
@@ -201,45 +197,42 @@ cursor-pointer"
 
 /* FOOTER COLUMN */
 
-function FooterColumn({ title, links }) {
-
+function FooterColumn({ title, links, columns = 1, noWrap = false }) {
     return (
         <div>
+            {title && (
+                <h4 className="
+          font-semibold
+          mb-4
+          relative
+          inline-block
+          after:block
+          after:w-full
+          after:h-[2px]
+          after:bg-[#25baff]
+          after:mt-2">
+                    {title}
+                </h4>
+            )}
 
-            <h4 className="
-                font-semibold
-                mb-4
-                relative
-                inline-block
-                after:block
-                after:w-full
-                after:h-[2px]
-                after:bg-[#25baff]
-                after:mt-2">
-
-                {title}
-
-            </h4>
-
-            <ul className="space-y-2 text-sm text-gray-200">
-
+            <ul
+                className={`text-sm text-gray-200 ${columns === 2
+                    ? "grid grid-cols-2 gap-x-10 gap-y-2"
+                    : "space-y-2 break-words"
+                    }`}
+            >
                 {links.map((link, index) => (
-
                     <li key={index}>
-
                         <Link
                             to={link.path}
-                            className="hover:text-[#25baff] cursor-pointer transition"
+                            className={`hover:text-[#25baff] transition ${noWrap ? "whitespace-nowrap" : "whitespace-normal"
+                                }`}
                         >
                             {link.name}
                         </Link>
-
                     </li>
-
                 ))}
-
             </ul>
-
         </div>
     );
 }

@@ -115,6 +115,7 @@ import CannabisSEO from "./pages/market/Others/CannabisSEO";
 import TravelMarketing from "./pages/market/Others/TravelMarketing";
 import MoversSEO from "./pages/market/Others/MoversSeo";
 import Portfolio from "./components/Portfolio";
+import Austin from "./pages/services-areas/Austin";
 
 
 function App() {
@@ -585,6 +586,12 @@ function App() {
           <Route
             path="/market/movers-seo"
             element={<MoversSEO />}
+          />
+
+          {/* Location Pages */}
+          <Route
+            path="/locations/austin"
+            element={<Austin />}
           />
 
           {/* CONTACT */}
