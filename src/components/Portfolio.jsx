@@ -75,6 +75,7 @@ export default function Portfolio() {
             </section>
 
             <Projects showHeader={false} />
+
             <TechnologiesSection />
             <TestimonialsSection />
             <CtaSection />
