@@ -34,80 +34,9 @@ import {
     SiMongodb
 } from "react-icons/si";
 import { Link } from 'react-router-dom';
-
-const projects = [
-    {
-        id: '1',
-        title: 'Corporate Website Redesign',
-        category: 'website',
-        image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-        description: 'A clean, conversion-focused website that increased lead generation by 140% for a mid-size B2B client.',
-        technologies: ['React', 'Tailwind', 'Next.js'],
-    },
-    {
-        id: '2',
-        title: 'Fashion E-commerce Platform',
-        category: 'ecommerce',
-        image: 'https://images.unsplash.com/photo-1556740714-a8395b3a74dd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-        description: 'Scalable online store with Stripe payments, inventory sync, and 3× faster load time.',
-        technologies: ['Next.js', 'Node.js', 'MongoDB'],
-    },
-    {
-        id: '3',
-        title: 'SaaS Analytics Dashboard',
-        category: 'webapp',
-        image: 'https://images.unsplash.com/photo-1555066931-bf19c65fd1df?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-        description: 'Real-time data visualization platform with role-based access and custom reporting.',
-        technologies: ['React', 'TypeScript', 'Firebase'],
-    },
-    {
-        id: '4',
-        title: 'SEO & Digital Marketing Agency Site',
-        category: 'seo',
-        image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-        description: 'Modern SEO agency website with keyword-focused pages, case studies, and 180% organic traffic growth.',
-        technologies: ['Next.js', 'Tailwind', 'Framer Motion', 'SEO tools'],
-    },
-    {
-        id: '5',
-        title: 'Luxury Furniture Online Store',
-        category: 'ecommerce',
-        image: 'https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-        description: 'Premium e-commerce experience with 3D previews, fast checkout, and abandoned cart recovery features.',
-        technologies: ['Shopify', 'React', 'Stripe', 'Algolia'],
-    },
-    {
-        id: '6',
-        title: 'Task Management Web Application',
-        category: 'webapp',
-        image: 'https://images.unsplash.com/photo-1551288049-b1f4d9b1d8c9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-        description: 'Collaborative project management tool with Kanban boards, real-time updates, and team analytics.',
-        technologies: ['React', 'Redux', 'Socket.io', 'Firebase'],
-    },
-    {
-        id: '7',
-        title: 'Professional Services Company Website',
-        category: 'website',
-        image: 'https://images.unsplash.com/photo-1497215728101-856f4ea42174?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-        description: 'Responsive corporate site with integrated booking system and 65% increase in consultation requests.',
-        technologies: ['Next.js', 'Tailwind', 'Sanity CMS'],
-    },
-    {
-        id: '8',
-        title: 'Local SEO Optimization Landing Pages',
-        category: 'seo',
-        image: 'https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-        description: 'High-converting local SEO campaign pages that ranked #1 for multiple competitive keywords in 4 months.',
-        technologies: ['React', 'Tailwind', 'Google Maps API', 'Analytics'],
-    },
-];
+import Projects from '../pages/Project';
 
 export default function Portfolio() {
-    const [activeFilter, setActiveFilter] = useState('all');
-
-    const filteredProjects = projects.filter(
-        (project) => activeFilter === 'all' || project.category === activeFilter
-    );
 
     return (
         <div className="min-h-screen font-sans text-gray-700 bg-gray-50/50">
@@ -145,41 +74,7 @@ export default function Portfolio() {
                 </div>
             </section>
 
-            {/* Filter Buttons */}
-            <section className="py-10 bg-white sticky top-0 z-20 shadow-sm">
-                <div className="max-w-7xl mx-auto px-6">
-                    <div className="flex flex-wrap justify-center gap-3 md:gap-5">
-                        {['all', 'website', 'webapp', 'ecommerce', 'seo'].map((cat) => (
-                            <button
-                                key={cat}
-                                onClick={() => setActiveFilter(cat)}
-                                className={`px-6 py-2.5 rounded-full font-medium text-sm md:text-base transition-all duration-300 ${activeFilter === cat
-                                    ? 'bg-[#25baff] text-white shadow-md'
-                                    : 'bg-gray-100 text-gray-700 hover:bg-[#25baff]/10 hover:text-[#25baff]'
-                                    }`}
-                            >
-                                {cat === 'all' ? 'All Projects' : cat.charAt(0).toUpperCase() + cat.slice(1)}
-                            </button>
-                        ))}
-                    </div>
-                </div>
-            </section>
-
-            {/* Portfolio Grid */}
-            <section className="py-16 md:py-20 bg-gradient-to-br from-[#25baff]/5 via-white to-[#a8d97c]/5">
-                <div className="max-w-7xl mx-auto px-6">
-                    {filteredProjects.length === 0 ? (
-                        <p className="text-center text-xl text-gray-500">No projects found in this category.</p>
-                    ) : (
-                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-7 md:gap-9">
-                            {filteredProjects.map((project, index) => (
-                                <PortfolioCard key={project.id} project={project} index={index} />
-                            ))}
-                        </div>
-                    )}
-                </div>
-            </section>
-
+            <Projects showHeader={false} />
             <TechnologiesSection />
             <TestimonialsSection />
             <CtaSection />
