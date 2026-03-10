@@ -116,6 +116,11 @@ import TravelMarketing from "./pages/market/Others/TravelMarketing";
 import MoversSEO from "./pages/market/Others/MoversSeo";
 import Portfolio from "./components/Portfolio";
 import Austin from "./pages/services-areas/Austin";
+import BostonSeo from "./pages/services-areas/BostonSeo";
+import ChicagoSeo from "./pages/services-areas/ChicagoSeo";
+import DallasSeo from "./pages/services-areas/DallasSeo";
+import HoustonSeo from "./pages/services-areas/HoustonSeo";
+import JacksonvilleSeo from "./pages/services-areas/JacksonvilleSeo";
 import CharlotteLocalSEO from "./pages/services-areas/Charlotte";
 import Columbus from "./pages/services-areas/Columbus";
 import Denver from "./pages/services-areas/Denver";
@@ -606,6 +611,26 @@ function App() {
           <Route
             path="/locations/austin"
             element={<Austin />}
+          />
+          <Route
+            path="/locations/boston"
+            element={<BostonSeo />}
+          />
+          <Route
+            path="/locations/chicago"
+            element={<ChicagoSeo />}
+          />
+          <Route
+            path="/locations/dallas"
+            element={<DallasSeo />}
+          />
+          <Route
+            path="/locations/houston"
+            element={<HoustonSeo />}
+          />
+          <Route
+            path="/locations/jacksonville"
+            element={<JacksonvilleSeo />}
           />
 
           <Route
