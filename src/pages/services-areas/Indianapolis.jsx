@@ -14,10 +14,10 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-// Replace with your actual Indianapolis-themed image paths
-import Banner from "../../assets/denver/banner.avif"; // ← ideal: Indy skyline, Monument Circle, or downtown
-import Img1 from "../../assets/denver/img1.avif";    // ← e.g. local business scene or team
-import Img2 from "../../assets/denver/img2.avif";    // ← e.g. strategy session or analytics
+
+import Banner from "../../assets/denver/IndianapolisBanner.avif";
+import Img1 from "../../assets/denver/SEOPartner.avif";
+import Img2 from "../../assets/denver/indianapolisSEO.avif";
 
 gsap.registerPlugin(ScrollTrigger);
 

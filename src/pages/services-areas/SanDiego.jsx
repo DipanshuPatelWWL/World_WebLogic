@@ -14,10 +14,10 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-// Replace with your actual San Diego-themed image paths
-import Banner from "../../assets/denver/banner.avif"; // ← ideal: San Diego skyline, La Jolla Cove, Balboa Park, or Coronado Bridge
-import Img1 from "../../assets/denver/img1.avif";     // ← e.g. coastal vibe, tech/healthcare scene, or lead-gen funnel visual
-import Img2 from "../../assets/denver/img2.avif";     // ← e.g. strategy dashboard, mobile site mockup, or team
+
+import Banner from "../../assets/denver/SanDiegoBanner.avif";
+import Img1 from "../../assets/denver/SanDiegoSeo.avif";
+import Img2 from "../../assets/denver/SanDiegoAgency.avif";
 
 gsap.registerPlugin(ScrollTrigger);
 

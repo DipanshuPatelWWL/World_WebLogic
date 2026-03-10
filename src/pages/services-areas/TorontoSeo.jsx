@@ -12,9 +12,9 @@ import { FaMapMarkedAlt, FaUsers, FaHandshake, FaChartLine, FaCalendarAlt } from
 import { FaCity, FaBullseye, FaUserTie, FaTools, FaChartPie, FaCheckCircle, FaUserCheck } from "react-icons/fa";
 import { FaSearch, FaLink, FaPenNib, FaCogs, FaServer, FaShoppingCart, FaMicrophone } from "react-icons/fa";
 
-// Replace with your actual Toronto images (e.g. CN Tower, Toronto skyline, Distillery District)
-import Banner from "../../assets/denver/banner.avif";
-import TorontoImage from "../../assets/denver/img1.avif";
+
+import Banner from "../../assets/denver/TorontoBanner.avif";
+import TorontoImage from "../../assets/denver/TorontoSeo.avif";
 
 gsap.registerPlugin(ScrollTrigger);
 

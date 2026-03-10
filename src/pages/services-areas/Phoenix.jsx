@@ -14,10 +14,10 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-// Replace with your actual Phoenix-themed image paths
-import Banner from "../../assets/denver/banner.avif"; // ← ideal: Phoenix skyline, desert sunset, or downtown with mountains
-import Img1 from "../../assets/denver/img1.avif";    // ← e.g. growth-oriented visual, team, or modern website mockup
-import Img2 from "../../assets/denver/img2.avif";    // ← e.g. analytics dashboard, mobile device, or strategy session
+
+import Banner from "../../assets/denver/PhoenixBanner.avif";
+import Img1 from "../../assets/denver/PhoenixSeo.avif";
+import Img2 from "../../assets/denver/PhoenixAgency.avif";
 
 gsap.registerPlugin(ScrollTrigger);
 

@@ -12,9 +12,9 @@ import { FaMapMarkedAlt, FaUsers, FaHandshake, FaChartLine, FaCalendarAlt } from
 import { FaCity, FaBullseye, FaUserTie, FaTools, FaChartPie, FaCheckCircle, FaUserCheck } from "react-icons/fa";
 import { FaSearch, FaLink, FaPenNib, FaCogs, FaServer, FaShoppingCart, FaMicrophone } from "react-icons/fa";
 
-// Replace with your actual San Antonio images
-import Banner from "../../assets/denver/banner.avif";
-import SanAntonioImage from "../../assets/denver/img1.avif";
+
+import Banner from "../../assets/denver/SanAntonioBanner.avif";
+import SanAntonioImage from "../../assets/denver/SanAntonioSEO.avif";
 
 gsap.registerPlugin(ScrollTrigger);
 

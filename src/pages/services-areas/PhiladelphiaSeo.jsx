@@ -12,9 +12,9 @@ import { FaMapMarkedAlt, FaUsers, FaHandshake, FaChartLine, FaCalendarAlt } from
 import { FaCity, FaBullseye, FaUserTie, FaTools, FaChartPie, FaCheckCircle, FaUserCheck } from "react-icons/fa";
 import { FaSearch, FaLink, FaPenNib, FaCogs, FaServer, FaShoppingCart, FaMicrophone } from "react-icons/fa";
 
-// Replace these paths with your actual Philadelphia images
-import Banner from "../../assets/denver/banner.avif";
-import PhillyImage from "../../assets/denver/img1.avif";
+
+import Banner from "../../assets/denver/philadelphiaBanner.avif";
+import PhillyImage from "../../assets/denver/philadelphiaseo.avif";
 
 gsap.registerPlugin(ScrollTrigger);
 
