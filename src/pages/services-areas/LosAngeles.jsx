@@ -14,10 +14,10 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-// Replace with your actual Los Angeles-themed image paths
-import Banner from "../../assets/denver/banner.avif"; // ← ideal: LA skyline, Hollywood sign, or downtown at sunset
-import Img1 from "../../assets/denver/img1.avif";    // ← e.g. city vibe, team, or digital growth visual
-import Img2 from "../../assets/denver/img2.avif";    // ← e.g. strategy meeting, analytics dashboard, or LA street scene
+
+import Banner from "../../assets/denver/LosAngelesBanner.avif";
+import Img1 from "../../assets/denver/LosAngelesSeo.avif";
+import Img2 from "../../assets/denver/SEOAgency.avif";
 
 gsap.registerPlugin(ScrollTrigger);
 

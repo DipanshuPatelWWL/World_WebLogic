@@ -13,8 +13,8 @@ import { FaCity, FaBullseye, FaUserTie, FaTools, FaChartPie, FaCheckCircle, FaUs
 import { FaSearch, FaLink, FaPenNib, FaCogs, FaServer, FaShoppingCart, FaMicrophone } from "react-icons/fa";
 
 // Replace these paths with your actual Miami images
-import Banner from "../../assets/denver/banner.avif";
-import MiamiImage from "../../assets/denver/img1.avif";
+import Banner from "../../assets/denver/MiamiBanner.avif";
+import MiamiImage from "../../assets/denver/MiamiSeo.avif";
 
 gsap.registerPlugin(ScrollTrigger);
 

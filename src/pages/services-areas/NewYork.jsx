@@ -14,10 +14,10 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-// Replace with your actual NYC-themed image paths
-import Banner from "../../assets/denver/banner.avif"; // ← ideal: Manhattan skyline, Brooklyn Bridge, Times Square at night
-import Img1 from "../../assets/denver/img1.avif";    // ← e.g. NYC street energy, team, or digital growth visual
-import Img2 from "../../assets/denver/img2.avif";    // ← e.g. strategy session, analytics dashboard, or city view
+
+import Banner from "../../assets/denver/NYCBanner.avif";
+import Img1 from "../../assets/denver/NYCSeo.avif";
+import Img2 from "../../assets/denver/NewYorkCitySEO.avif";
 
 gsap.registerPlugin(ScrollTrigger);
 

@@ -14,10 +14,10 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-// Replace with your actual Seattle-themed image paths
-import Banner from "../../assets/denver/banner.avif"; // ← ideal: Seattle skyline with Space Needle, Puget Sound, or downtown at dusk
-import Img1 from "../../assets/denver/img1.avif";    // ← e.g. tech/B2B vibe, coffee shop meeting, or growth chart
-import Img2 from "../../assets/denver/img2.avif";    // ← e.g. content strategy whiteboard, analytics screen, or team discussion
+
+import Banner from "../../assets/denver/SeattleBanner.avif";
+import Img1 from "../../assets/denver/SeattleSeo.avif";
+import Img2 from "../../assets/denver/SeattleAgency.avif";
 
 gsap.registerPlugin(ScrollTrigger);
 

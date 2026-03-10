@@ -12,9 +12,9 @@ import { FaMapMarkedAlt, FaUsers, FaHandshake, FaChartLine, FaCalendarAlt } from
 import { FaCity, FaBullseye, FaUserTie, FaTools, FaChartPie, FaCheckCircle, FaUserCheck } from "react-icons/fa";
 import { FaSearch, FaLink, FaPenNib, FaCogs, FaServer, FaShoppingCart, FaMicrophone } from "react-icons/fa";
 
-// Replace with your actual San Francisco images (e.g. Golden Gate, Bay Area skyline, tech vibe)
-import Banner from "../../assets/denver/banner.avif";
-import SfImage from "../../assets/denver/img1.avif";
+
+import Banner from "../../assets/denver/SanFranciscoBanner.avif";
+import SfImage from "../../assets/denver/SanFranciscoSeo.avif";
 
 gsap.registerPlugin(ScrollTrigger);
 
