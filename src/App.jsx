@@ -121,6 +121,20 @@ import ChicagoSeo from "./pages/services-areas/ChicagoSeo";
 import DallasSeo from "./pages/services-areas/DallasSeo";
 import HoustonSeo from "./pages/services-areas/HoustonSeo";
 import JacksonvilleSeo from "./pages/services-areas/JacksonvilleSeo";
+import CharlotteLocalSEO from "./pages/services-areas/Charlotte";
+import Columbus from "./pages/services-areas/Columbus";
+import Denver from "./pages/services-areas/Denver";
+import IndianapolisSEO from "./pages/services-areas/Indianapolis";
+import LosAngelesSEO from "./pages/services-areas/LosAngeles";
+import NewYorkCitySEO from "./pages/services-areas/NewYork";
+import PhoenixSEO from "./pages/services-areas/Phoenix";
+import SanDiegoSEO from "./pages/services-areas/SanDiego";
+import SeattleSEO from "./pages/services-areas/SeattleSEO";
+import MiamiSeo from "./pages/services-areas/MiamiSeo";
+import PhiladelphiaSeo from "./pages/services-areas/PhiladelphiaSeo";
+import SanAntonioSeo from "./pages/services-areas/SanAntonioSeo";
+import SanFranciscoSeo from "./pages/services-areas/SanFrancisco";
+import TorontoSeo from "./pages/services-areas/TorontoSeo";
 
 
 function App() {
@@ -617,6 +631,67 @@ function App() {
           <Route
             path="/locations/jacksonville"
             element={<JacksonvilleSeo />}
+          />
+
+          <Route
+            path="/locations/charlotte"
+            element={<CharlotteLocalSEO />}
+          />
+
+          <Route
+            path="/locations/columbus"
+            element={<Columbus />}
+          />
+
+          <Route
+            path="/locations/denver"
+            element={<Denver />}
+          />
+          <Route
+            path="/locations/indianapolis"
+            element={<IndianapolisSEO />}
+          />
+          <Route
+            path="/locations/los-angeles"
+            element={<LosAngelesSEO />}
+          />
+          <Route
+            path="/locations/new-york"
+            element={<NewYorkCitySEO />}
+          />
+          <Route
+            path="/locations/phoenix"
+            element={<PhoenixSEO />}
+          />
+          <Route
+            path="/locations/san-diego"
+            element={<SanDiegoSEO />}
+          />
+
+
+          <Route
+            path="/locations/miami"
+            element={<MiamiSeo />}
+          />
+          <Route
+            path="/locations/philadelphia"
+            element={<PhiladelphiaSeo />}
+          />
+          <Route
+            path="/locations/san-antonio"
+            element={<SanAntonioSeo />}
+          />
+          <Route
+            path="/locations/san-francisco"
+            element={<SanFranciscoSeo />}
+          />
+          <Route
+            path="/locations/seattle"
+            element={<SeattleSEO />}
+          />
+          <Route
+            path="/locations/toronto"
+            element={<TorontoSeo />}
           />
 
           {/* CONTACT */}
