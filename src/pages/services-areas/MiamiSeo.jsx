@@ -27,11 +27,7 @@ const MiamiSeo = () => {
     const [activeFaq, setActiveFaq] = useState(0);
     const faqRefs = useRef([]);
 
-    const addSectionRef = (el) => {
-        if (el && !sectionRefs.current.includes(el)) {
-            sectionRefs.current.push(el);
-        }
-    };
+
 
     useLayoutEffect(() => {
         const ctx = gsap.context(() => {
@@ -206,38 +202,43 @@ const MiamiSeo = () => {
     const services = [
         {
             icon: <FaSearch size={28} />,
-            title: "Keyword Research",
-            desc: "Miami-specific keyword strategy — high-volume local terms, seasonal trends, tourist intent, competitor gaps, long-tail phrases.",
+            title: "Keyword Strategy",
+            desc: "In-depth keyword research and search intent analysis to identify high-performing keywords, uncover ranking opportunities, and target the most valuable search terms for sustainable SEO growth.",
         },
         {
             icon: <FaPenNib size={28} />,
-            title: "Content Marketing",
-            desc: "High-quality, SEO-optimized content — blog posts, service pages, guides, Miami lifestyle articles that rank and convert.",
+            title: "SEO Content Creation",
+            desc: "High-quality, SEO-driven content including blogs, landing pages, and service pages designed to improve search visibility, engage users, and drive consistent organic traffic.",
         },
         {
             icon: <FaCogs size={28} />,
-            title: "On-Page Optimization",
-            desc: "Meta titles & descriptions, heading structure, internal linking, image optimization, schema markup, fast page speed, mobile-first design.",
+            title: "On-Page SEO",
+            desc: "Complete on-page optimization including keyword placement, meta tags, heading structure, internal linking, image optimization, and user-friendly content formatting.",
         },
         {
             icon: <FaServer size={28} />,
-            title: "Link Building",
-            desc: "White-hat outreach — guest posts on Miami blogs, tourism sites, local directories, sponsorship links, editorial mentions.",
+            title: "Authority Link Building",
+            desc: "White-hat backlink strategies focused on acquiring links from authoritative websites, niche directories, guest posting platforms, and relevant industry publications.",
         },
         {
             icon: <FaMapMarkerAlt size={28} />,
             title: "Technical SEO",
-            desc: "Core Web Vitals optimization, mobile usability, HTTPS, crawl error fixes, structured data, international SEO readiness, site speed.",
+            desc: "Technical improvements to ensure search engines can crawl and index your site efficiently including page speed optimization, schema markup, XML sitemaps, and mobile responsiveness.",
         },
         {
             icon: <FaShoppingCart size={28} />,
-            title: "Local SEO",
-            desc: "Google Business Profile optimization, citation consistency, review generation, location pages for Miami neighborhoods.",
+            title: "Local SEO Growth",
+            desc: "Local search optimization strategies including citation building, local keyword targeting, location-based pages, and review management to increase visibility in local search results.",
         },
         {
             icon: <FaMicrophone size={28} />,
-            title: "Google Business Profile (GBP) Optimization",
-            desc: "Profile verification, accurate NAP, professional photos, regular posts, review management, Q&A responses, attributes enhancement.",
+            title: "Google Business Profile Management",
+            desc: "Optimization and management of your Google Business Profile including accurate business information, regular updates, image uploads, review responses, and local engagement strategies.",
+        },
+        {
+            icon: <FaChartLine size={28} />,
+            title: "SEO Analytics & Reporting",
+            desc: "Detailed SEO performance tracking including keyword rankings, traffic insights, user behavior analysis, competitor tracking, and monthly reports to measure campaign success.",
         },
     ];
 
@@ -310,11 +311,12 @@ const MiamiSeo = () => {
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                         {[
-                            "On-page SEO optimization",
-                            "High-quality link building",
-                            "Strategic content marketing",
-                            "Local search domination",
-                            "Technical SEO improvements",
+                            "Advanced on-page SEO optimization",
+                            "Authority-driven link building strategies",
+                            "Data-focused content marketing campaigns",
+                            "Local search visibility and domination",
+                            "Comprehensive technical SEO improvements",
+                            "Keyword research and search intent targeting",
                         ].map((text, index) => (
                             <div
                                 key={index}

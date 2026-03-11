@@ -349,7 +349,6 @@ const HoustonSeo = () => {
                             "Authority backlink building",
                             "Content marketing",
                             "Online reputation management",
-                            "Conversion-focused optimization",
                         ].map((text, index) => (
                             <div
                                 key={index}
