@@ -8,7 +8,7 @@ import { FiPlus, FiMinus, FiPenTool } from "react-icons/fi";
 import { FaSearchengin, FaRocket } from "react-icons/fa6";
 import { IoSettingsSharp } from "react-icons/io5";
 import { FaLightbulb, FaMapMarkerAlt } from "react-icons/fa";
-import { FaMapMarkedAlt, FaUsers, FaHandshake, FaChartLine, FaCalendarAlt } from "react-icons/fa";
+import { FaMapMarkedAlt, FaUsers, FaHandshake, FaChartLine, FaCalendarAlt, FaStar } from "react-icons/fa";
 import { FaCity, FaBullseye, FaUserTie, FaTools, FaChartPie, FaCheckCircle, FaUserCheck } from "react-icons/fa";
 import { FaSearch, FaLink, FaPenNib, FaCogs, FaServer, FaShoppingCart, FaMicrophone } from "react-icons/fa";
 
@@ -27,11 +27,7 @@ const PhiladelphiaSeo = () => {
     const [activeFaq, setActiveFaq] = useState(0);
     const faqRefs = useRef([]);
 
-    const addSectionRef = (el) => {
-        if (el && !sectionRefs.current.includes(el)) {
-            sectionRefs.current.push(el);
-        }
-    };
+
 
     useLayoutEffect(() => {
         const ctx = gsap.context(() => {
@@ -239,6 +235,11 @@ const PhiladelphiaSeo = () => {
             title: "Google Business Profile (GBP) Optimization",
             desc: "Verification, accurate NAP, high-quality photos, regular posts, review management, Q&A responses, attributes enhancement.",
         },
+        {
+            icon: <FaStar size={28} />,
+            title: "Online Reputation Management",
+            desc: "Customer review monitoring, response strategies, reputation building campaigns, rating improvements, brand trust enhancement across search and local platforms.",
+        },
     ];
 
     const features = [
@@ -310,11 +311,12 @@ const PhiladelphiaSeo = () => {
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                         {[
-                            "On-page SEO optimization",
-                            "High-quality local link building",
-                            "Strategic neighborhood content",
-                            "Local map pack domination",
-                            "Technical SEO improvements",
+                            "Advanced on-page SEO optimization",
+                            "Authority-focused local link building",
+                            "Location-driven content strategy",
+                            "Google Map Pack ranking optimization",
+                            "Comprehensive technical SEO improvements",
+                            "Local keyword research and targeting"
                         ].map((text, index) => (
                             <div
                                 key={index}

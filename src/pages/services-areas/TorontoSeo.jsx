@@ -8,7 +8,7 @@ import { FiPlus, FiMinus, FiPenTool } from "react-icons/fi";
 import { FaSearchengin, FaRocket } from "react-icons/fa6";
 import { IoSettingsSharp } from "react-icons/io5";
 import { FaLightbulb, FaMapMarkerAlt } from "react-icons/fa";
-import { FaMapMarkedAlt, FaUsers, FaHandshake, FaChartLine, FaCalendarAlt } from "react-icons/fa";
+import { FaMapMarkedAlt, FaUsers, FaHandshake, FaChartLine, FaCalendarAlt, FaMapSigns } from "react-icons/fa";
 import { FaCity, FaBullseye, FaUserTie, FaTools, FaChartPie, FaCheckCircle, FaUserCheck } from "react-icons/fa";
 import { FaSearch, FaLink, FaPenNib, FaCogs, FaServer, FaShoppingCart, FaMicrophone } from "react-icons/fa";
 
@@ -239,6 +239,11 @@ const TorontoSeo = () => {
             title: "Google Business Profile (GBP) Optimization",
             desc: "Verification, accurate NAP, professional photos, regular posts, review management, Q&A responses.",
         },
+        {
+            icon: <FaMapSigns size={28} />,
+            title: "Citation & Listings Management",
+            desc: "Consistent business listings across directories, NAP accuracy, citation cleanup, niche directory submissions, and local trust building.",
+        },
     ];
 
     const features = [
@@ -315,6 +320,7 @@ const TorontoSeo = () => {
                             "Google Business & map pack domination",
                             "High-quality local link building",
                             "Technical & mobile-first optimization",
+                            "Local citation building & consistency"
                         ].map((text, index) => (
                             <div
                                 key={index}

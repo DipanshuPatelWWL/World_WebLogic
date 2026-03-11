@@ -239,6 +239,11 @@ const SanFranciscoSeo = () => {
             title: "Google Business Profile Optimization",
             desc: "Photos, posts, Q&A, attributes, review management — enhanced for local + intent signals.",
         },
+        {
+            icon: <FaChartLine size={28} />,
+            title: "Search Performance Intelligence",
+            desc: "Advanced analytics, keyword performance tracking, AI-driven insights, and continuous optimization for sustained visibility.",
+        },
     ];
 
     const features = [
@@ -315,6 +320,7 @@ const SanFranciscoSeo = () => {
                             "Intelligent content architecture",
                             "Technical excellence & Core Web Vitals",
                             "Generative & traditional visibility",
+                            "Predictive SEO analytics & insights"
                         ].map((text, index) => (
                             <div
                                 key={index}

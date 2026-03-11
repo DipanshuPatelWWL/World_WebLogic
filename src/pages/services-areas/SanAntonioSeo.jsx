@@ -8,7 +8,7 @@ import { FiPlus, FiMinus, FiPenTool } from "react-icons/fi";
 import { FaSearchengin, FaRocket } from "react-icons/fa6";
 import { IoSettingsSharp } from "react-icons/io5";
 import { FaLightbulb, FaMapMarkerAlt } from "react-icons/fa";
-import { FaMapMarkedAlt, FaUsers, FaHandshake, FaChartLine, FaCalendarAlt } from "react-icons/fa";
+import { FaMapMarkedAlt, FaUsers, FaHandshake, FaChartLine, FaCalendarAlt, FaMapSigns } from "react-icons/fa";
 import { FaCity, FaBullseye, FaUserTie, FaTools, FaChartPie, FaCheckCircle, FaUserCheck } from "react-icons/fa";
 import { FaSearch, FaLink, FaPenNib, FaCogs, FaServer, FaShoppingCart, FaMicrophone } from "react-icons/fa";
 
@@ -27,11 +27,7 @@ const SanAntonioSeo = () => {
     const [activeFaq, setActiveFaq] = useState(0);
     const faqRefs = useRef([]);
 
-    const addSectionRef = (el) => {
-        if (el && !sectionRefs.current.includes(el)) {
-            sectionRefs.current.push(el);
-        }
-    };
+
 
     useLayoutEffect(() => {
         const ctx = gsap.context(() => {
@@ -239,6 +235,11 @@ const SanAntonioSeo = () => {
             title: "Google Business Profile Optimization",
             desc: "Professional photos, service categories, regular posts, review responses, Q&A management — maximum visibility.",
         },
+        {
+            icon: <FaMapSigns size={28} />,
+            title: "Local Citation Management",
+            desc: "Accurate business listings across directories, NAP consistency, citation cleanup, niche directory submissions, and improved local trust signals.",
+        },
     ];
 
     const features = [
@@ -315,6 +316,7 @@ const SanAntonioSeo = () => {
                             "Conversion-focused content",
                             "Local + service-area domination",
                             "Technical & Core Web Vitals optimization",
+                            "Advanced competitor SEO analysis"
                         ].map((text, index) => (
                             <div
                                 key={index}

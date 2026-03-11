@@ -240,6 +240,11 @@ const JacksonvilleSeo = () => {
             title: "Google Business Profile (GBP) Optimization",
             desc: "Business profile verification, accurate NAP updates, high-quality photos and business information, review management and responses, regular updates and promotions.",
         },
+        {
+            icon: <FaChartLine size={28} />,
+            title: "SEO Analytics & Reporting",
+            desc: "Detailed SEO performance tracking, keyword ranking reports, traffic and user behavior analysis, conversion tracking, competitor insights, and data-driven strategy improvements.",
+        },
     ];
 
     const features = [
@@ -319,6 +324,7 @@ const JacksonvilleSeo = () => {
                             "Strategic content marketing",
                             "Local search optimization",
                             "Technical SEO improvements",
+                            "Comprehensive keyword research and targeting"
                         ].map((text, index) => (
                             <div
                                 key={index}
