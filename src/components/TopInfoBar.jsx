@@ -13,7 +13,7 @@ const TopInfoBar = () => {
 
           {/* EMAIL */}
           <a
-            href="mailto:#"
+            href="mailto:info@digitalwebguider.com"
             className="group flex items-center justify-center sm:justify-start gap-2 opacity-90 hover:opacity-100 transition"
           >
             <HiOutlineMail className="text-[#25baff] text-base transition group-hover:text-[#a8d97c]" />
@@ -37,7 +37,7 @@ const TopInfoBar = () => {
 
 
         {/* RIGHT CTA */}
-        <Link to="/contact">
+        <Link to="/free-consultation">
           <button
             className="
             flex items-center justify-center gap-2

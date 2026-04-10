@@ -499,7 +499,8 @@ const SocialMediaManagement = () => {
                         Get a free Social Media Management Consultation!
                     </h2>
 
-                    <Link to="#" className="bg-[#25baff] text-[#020202] px-6 py-3 rounded-full font-semibold hover:bg-[#a8d97c] transition">
+                    <Link to="/contact"
+                        className="bg-[#25baff] text-[#020202] px-6 py-3 rounded-full font-semibold hover:bg-[#a8d97c] transition">
                         Click Here
                     </Link>
                 </div>
@@ -709,7 +710,7 @@ const SocialMediaManagement = () => {
                     <div className="mb-16">
 
                         <h2 className="text-4xl md:text-5xl font-extrabold text-white">
-                            Affordable SMO
+                            Affordable SMM
                             <span className="text-[#25baff]"> Plans</span>
                         </h2>
 

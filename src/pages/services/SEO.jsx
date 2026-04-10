@@ -11,6 +11,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 import Banner from "../../assets/seo/banner.jpg";
 import Seo1 from "../../assets/seo/SEO.webp";
+import { Link } from "react-router-dom";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -177,7 +178,7 @@ const Seo = () => {
             growth-focused strategy you need, we are here to support you. We
             recognize how essential elements like a well-structured website,
             targeted keywords, and strong SEO practices are for business
-            expansion. 
+            expansion.
           </p>
           <h3 className="text-2xl font-bold mb-5 text-[#a8d97c] ">
             Still have questions? Let’s answer them. Here’s what you should
@@ -236,24 +237,7 @@ radial-gradient(circle_at_80%_80%,rgba(168,217,124,0.2),transparent_45%)]
           </h2>
 
           {/* BUTTON */}
-          <button
-            className="
-    bg-[#25baff] text-[#020202]
-hover:bg-[#a8d97c]
-
-    px-6 py-3
-    text-sm md:text-base
-    font-semibold
-    rounded-full
-    shadow-md
-   
-    hover: cursor-pointer
-    hover:shadow-lg
-    transition-all duration-300
-    whitespace-nowrap"
-          >
-            Contact Now
-          </button>
+          <Link to="/contact" className="bg-[#25baff] text-[#020202] hover:bg-[#a8d97c] px-6 py-3 text-sm md:text-base font-semibold rounded-full shadow-md hover: cursor-pointer hover:shadow-lg transition-all duration-300 whitespace-nowrap" >Contact Now</Link>
         </div>
       </section>
 
