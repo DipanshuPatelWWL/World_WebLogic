@@ -135,6 +135,11 @@ import PhiladelphiaSeo from "./pages/services-areas/PhiladelphiaSeo";
 import SanAntonioSeo from "./pages/services-areas/SanAntonioSeo";
 import SanFranciscoSeo from "./pages/services-areas/SanFrancisco";
 import TorontoSeo from "./pages/services-areas/TorontoSeo";
+import Footer1 from "./components/Footer1";
+import FreeConsultation from "./pages/FreeConsultation";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import TermsConditions from "./pages/TermsConditions";
+import CookiePolicy from "./pages/CookiePolicy";
 
 
 function App() {
@@ -693,13 +698,27 @@ function App() {
             path="/locations/toronto"
             element={<TorontoSeo />}
           />
+          <Route
+            path="/privacy-policy"
+            element={<PrivacyPolicy />}
+          />
+          <Route
+            path="/terms-conditions"
+            element={<TermsConditions />}
+          />
+          <Route
+            path="/cookie-policy"
+            element={<CookiePolicy />}
+          />
 
           {/* CONTACT */}
           <Route path="/contact" element={<ContactUs />} />
+          <Route path="/free-consultation" element={<FreeConsultation />} />
           <Route path="/portfolio" element={<Portfolio />} />
         </Routes>
 
-        <Footer />
+        {/* <Footer /> */}
+        <Footer1 />
       </div>
     </Router>
   );

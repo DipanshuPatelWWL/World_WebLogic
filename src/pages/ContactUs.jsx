@@ -8,18 +8,19 @@ import {
   FaLinkedinIn,
 } from "react-icons/fa";
 import image from "../assets/building.jpg";
+import API from "../api/API";
+import Swal from "sweetalert2";
 
 export default function ContactUs() {
 
   const [formData, setFormData] = useState({
-    name: "",
+    fullName: "",
     email: "",
     phone: "",
     website: "",
     message: "",
   });
 
-  const [success, setSuccess] = useState(false);
 
   const handleChange = (e) => {
     setFormData({
@@ -28,26 +29,50 @@ export default function ContactUs() {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if (!formData.name || !formData.email || !formData.phone || !formData.message) {
+    if (!formData.fullName || !formData.email || !formData.phone || !formData.message) {
       return;
     }
 
-    setSuccess(true);
+    try {
+      const res = await API.post("/contact-us", {
+        fullName: formData.fullName,
+        email: formData.email,
+        phone: formData.phone,
+        website: formData.website,
+        message: formData.message
+      });
 
-    setFormData({
-      name: "",
-      email: "",
-      phone: "",
-      website: "",
-      message: "",
-    });
+      if (res.status !== 201) {
+        throw new Error(res.data?.message || "Something went wrong");
+      }
 
-    setTimeout(() => {
-      setSuccess(false);
-    }, 4000);
+      setFormData({
+        fullName: "",
+        email: "",
+        phone: "",
+        website: "",
+        message: "",
+      });
+
+      await Swal.fire({
+        icon: "success",
+        title: "Contact us successfully 🎉",
+        text: "We'll contact you shortly!",
+        confirmButtonColor: "#25baff",
+      });
+
+    } catch (error) {
+      console.error(error);
+
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: error.message,
+      });
+    }
   };
 
   return (
@@ -70,44 +95,24 @@ export default function ContactUs() {
 
         <form
           onSubmit={handleSubmit}
-          className="grid md:grid-cols-2 gap-6 
-bg-white p-10 rounded-3xl 
-border border-[#25baff]/20
-shadow-[0_10px_40px_rgba(37,186,255,0.4)]
-hover:shadow-[0_15px_50px_rgba(37,186,255,0.5)]
-transition-all duration-300"
+          className="grid md:grid-cols-2 gap-6 bg-white p-10 rounded-3xl border border-[#25baff]/20shadow-[0_10px_40px_rgba(37,186,255,0.4)] hover:shadow-[0_15px_50px_rgba(37,186,255,0.5)] transition-all duration-300"
         >
-
-          {/* Success Message */}
-
-          {success && (
-            <div className="md:col-span-2 bg-green-100 text-green-700 p-3 rounded-lg text-center font-medium">
-              Message sent successfully! We will contact you soon.
-            </div>
-          )}
 
           {/* Name */}
 
           <div className="relative">
             <input
               type="text"
-              name="name"
-              value={formData.name}
+              name="fullName"
+              value={formData.fullName}
               onChange={handleChange}
               required
               placeholder=" "
-              className="peer w-full border border-gray-300 rounded-xl p-4 bg-white/90
-focus:outline-none focus:ring-2 focus:ring-[#25baff] transition"
+              className="peer w-full border border-gray-300 rounded-xl p-4 bg-white/90 focus:outline-none focus:ring-2 focus:ring-[#25baff] transition"
             />
 
             <label
-              className="absolute left-4 -top-2 text-xs text-gray-500
-peer-placeholder-shown:top-4
-peer-placeholder-shown:text-base
-peer-focus:-top-2
-peer-focus:text-xs
-peer-focus:text-[#25baff]
-bg-white px-1 transition-all"
+              className="absolute left-4 -top-2 text-xs text-gray-500 peer-placeholder-shown:top-4 peer-placeholder-shown:text-base peer-focus:-top-2 peer-focus:text-xs peer-focus:text-[#25baff] bg-white px-1 transition-all"
             >
               Full Name*
             </label>
@@ -123,18 +128,11 @@ bg-white px-1 transition-all"
               onChange={handleChange}
               required
               placeholder=" "
-              className="peer w-full border border-gray-300 rounded-xl p-4 bg-white/90
-focus:outline-none focus:ring-2 focus:ring-[#25baff] transition"
+              className="peer w-full border border-gray-300 rounded-xl p-4 bg-white/90 focus:outline-none focus:ring-2 focus:ring-[#25baff] transition"
             />
 
             <label
-              className="absolute left-4 -top-2 text-xs text-gray-500
-peer-placeholder-shown:top-4
-peer-placeholder-shown:text-base
-peer-focus:-top-2
-peer-focus:text-xs
-peer-focus:text-[#25baff]
-bg-white px-1 transition-all"
+              className="absolute left-4 -top-2 text-xs text-gray-500 peer-placeholder-shown:top-4 peer-placeholder-shown:text-base peer-focus:-top-2 peer-focus:text-xs peer-focus:text-[#25baff] bg-white px-1 transition-all"
             >
               Email Address*
             </label>
@@ -147,21 +145,19 @@ bg-white px-1 transition-all"
               type="tel"
               name="phone"
               value={formData.phone}
-              onChange={handleChange}
+              onChange={(e) => {
+                const value = e.target.value.replace(/\D/g, "");
+                if (value.length <= 10) {
+                  setFormData({ ...formData, phone: value });
+                }
+              }}
               required
               placeholder=" "
-              className="peer w-full border border-gray-300 rounded-xl p-4 bg-white/90
-focus:outline-none focus:ring-2 focus:ring-[#25baff] transition"
+              className="peer w-full border border-gray-300 rounded-xl p-4 bg-white/90 focus:outline-none focus:ring-2 focus:ring-[#25baff] transition"
             />
 
             <label
-              className="absolute left-4 -top-2 text-xs text-gray-500
-peer-placeholder-shown:top-4
-peer-placeholder-shown:text-base
-peer-focus:-top-2
-peer-focus:text-xs
-peer-focus:text-[#25baff]
-bg-white px-1 transition-all"
+              className="absolute left-4 -top-2 text-xs text-gray-500 peer-placeholder-shown:top-4 peer-placeholder-shown:text-base peer-focus:-top-2 peer-focus:text-xs peer-focus:text-[#25baff] bg-white px-1 transition-all"
             >
               Phone Number*
             </label>
@@ -176,18 +172,11 @@ bg-white px-1 transition-all"
               value={formData.website}
               onChange={handleChange}
               placeholder=" "
-              className="peer w-full border border-gray-300 rounded-xl p-4 bg-white/90
-focus:outline-none focus:ring-2 focus:ring-[#25baff] transition"
+              className="peer w-full border border-gray-300 rounded-xl p-4 bg-white/90 focus:outline-none focus:ring-2 focus:ring-[#25baff] transition"
             />
 
             <label
-              className="absolute left-4 -top-2 text-xs text-gray-500
-peer-placeholder-shown:top-4
-peer-placeholder-shown:text-base
-peer-focus:-top-2
-peer-focus:text-xs
-peer-focus:text-[#25baff]
-bg-white px-1 transition-all"
+              className="absolute left-4 -top-2 text-xs text-gray-500 peer-placeholder-shown:top-4 peer-placeholder-shown:text-base peer-focus:-top-2 peer-focus:text-xs peer-focus:text-[#25baff] bg-white px-1 transition-all"
             >
               Website
             </label>
@@ -203,18 +192,11 @@ bg-white px-1 transition-all"
               onChange={handleChange}
               required
               placeholder=" "
-              className="peer w-full border border-gray-300 rounded-xl p-4 bg-white/90
-focus:outline-none focus:ring-2 focus:ring-[#25baff] transition"
+              className="peer w-full border border-gray-300 rounded-xl p-4 bg-white/90 focus:outline-none focus:ring-2 focus:ring-[#25baff] transition"
             />
 
             <label
-              className="absolute left-4 -top-2 text-xs text-gray-500
-peer-placeholder-shown:top-4
-peer-placeholder-shown:text-base
-peer-focus:-top-2
-peer-focus:text-xs
-peer-focus:text-[#25baff]
-bg-white px-1 transition-all"
+              className="absolute left-4 -top-2 text-xs text-gray-500 peer-placeholder-shown:top-4 peer-placeholder-shown:text-base peer-focus:-top-2 peer-focus:text-xs peer-focus:text-[#25baff] bg-white px-1 transition-all"
             >
               Write Message*
             </label>
@@ -272,7 +254,7 @@ bg-white px-1 transition-all"
             <div className="flex items-start gap-3">
               <FaLocationDot className="text-[#25baff] text-lg mt-1" />
               <a
-                href="https://www.google.com/maps?q=B+108+Sector+63+Noida+201301"
+                href="https://www.google.com/maps?q=World+WebLogic,+1st+Floor,+Office+2,+B-108,+B+Block,+Sector+63,+Noida,+Uttar+Pradesh+201309"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-[#25baff] transition leading-relaxed"

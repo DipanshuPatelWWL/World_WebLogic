@@ -1,60 +1,58 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import CountUp from "react-countup";
 import { projects } from "../data/project";
-import {
-    FaUsers,
-    FaAward,
-    FaHandshake,
-    FaSmile,
-} from "react-icons/fa";
+import { FaUsers, FaAward, FaHandshake, FaSmile } from "react-icons/fa";
 import { FiMapPin, FiPhoneCall, FiMail } from "react-icons/fi";
 import DevelopmentProcess from "./DevelopmentProcess";
 import OurPartners from "../components/OurPartners";
 import FAQ from "./Faq";
 import WebAppDevelopment from "./WebAppDevelopment";
 import OurServices from "./OurServices";
-import Banner1 from "../assets/banner1.jfif"
-import Banner2 from "../assets/banner2.jfif"
-import Banner3 from "../assets/banner3.jfif"
 import About from "../assets/about1.jfif"
 import Testimonials from "./Testimonials";
 import CTA from "../assets/video/video.mp4"
+import HeroSlider from "../components/HeroSlider";
+import HeroSlider2 from "../components/HeroSlider2";
+import HeroSlider3 from "../components/HeroSlider3";
+import API from "../api/API";
+import Swal from "sweetalert2";
+import projectImage from "../assets/about/projectImage.jpg"
 
 
-const heroSlides = [
-    {
-        title: "Web Design & Development Services",
-        description:
-            "We design and develop beautiful, conversion-focused websites and applications that scale with your business.",
-        image:
-            Banner3,
-    },
-    {
-        title: "Scalable MERN Stack Solutions",
-        description:
-            "High-performance applications built using React, Node.js, and MongoDB.",
-        image:
-            Banner1,
-    },
-    {
-        title: "Grow Your Business Digitally",
-        description:
-            "From idea to launch, we help brands build digital products that convert.",
-        image:
-            Banner2,
-    },
-];
+// const heroSlides = [
+//     {
+//         title: "Web Design & Development Services",
+//         description:
+//             "We design and develop beautiful, conversion-focused websites and applications that scale with your business.",
+//         image:
+//             Banner3,
+//     },
+//     {
+//         title: "Scalable MERN Stack Solutions",
+//         description:
+//             "High-performance applications built using React, Node.js, and MongoDB.",
+//         image:
+//             Banner1,
+//     },
+//     {
+//         title: "Grow Your Business Digitally",
+//         description:
+//             "From idea to launch, we help brands build digital products that convert.",
+//         image:
+//             Banner2,
+//     },
+// ];
 
 export default function Home() {
-    const [activeSlide, setActiveSlide] = useState(0);
 
     const [formData, setFormData] = useState({
-        name: "",
+        fullName: "",
         email: "",
+        phone: "",
+        website: "",
         message: ""
     });
-    const [success, setSuccess] = useState(false);
 
     const handleChange = (e) => {
         setFormData({
@@ -64,39 +62,65 @@ export default function Home() {
     };
 
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
 
-        if (!formData.name || !formData.email || !formData.message) {
+        if (!formData.fullName || !formData.email || !formData.phone || !formData.message) {
             return;
         }
 
-        // simulate sending message
-        setSuccess(true);
+        try {
+            const res = await API.post("/contact-us", {
+                fullName: formData.fullName,
+                email: formData.email,
+                phone: formData.phone,
+                website: formData.website,
+                message: formData.message
+            });
 
-        setFormData({
-            name: "",
-            email: "",
-            message: ""
-        });
+            if (res.status !== 201) {
+                throw new Error(res.data?.message || "Something went wrong");
+            }
 
-        setTimeout(() => {
-            setSuccess(false);
-        }, 4000);
+            setFormData({
+                fullName: "",
+                email: "",
+                phone: "",
+                website: "",
+                message: "",
+            });
+
+            await Swal.fire({
+                icon: "success",
+                title: "Contact us successfully 🎉",
+                text: "We'll contact you shortly!",
+                confirmButtonColor: "#25baff",
+            });
+
+        } catch (error) {
+            console.error(error);
+
+            Swal.fire({
+                icon: "error",
+                title: "Oops...",
+                text: error.message,
+            });
+        }
     };
 
-    useEffect(() => {
-        const timer = setInterval(() => {
-            setActiveSlide((prev) => (prev + 1) % heroSlides.length);
-        }, 4500);
+    // useEffect(() => {
+    //     const timer = setInterval(() => {
+    //         setActiveSlide((prev) => (prev + 1) % heroSlides.length);
+    //     }, 4500);
 
-        return () => clearInterval(timer);
-    }, []);
+    //     return () => clearInterval(timer);
+    // }, []);
+
     return (
         <div className="font-sans text-gray-800">
 
             {/* ================= HERO SLIDER ================= */}
-            <header className="bg-gradient-to-r from-[#020202] via-[#020202] to-[#25baff] text-white overflow-hidden">
+            {/* <header className="bg-gradient-to-r from-[#020202] via-[#020202] to-[#25baff] text-white overflow-hidden">
                 <div className="max-w-7xl mx-auto px-6 py-20 relative min-h-[520px]">
                     {heroSlides.map((slide, index) => (
                         <div
@@ -146,7 +170,11 @@ export default function Home() {
                         </div>
                     ))}
                 </div>
-            </header>
+            </header> */}
+
+            {/* <HeroSlider /> */}
+            <HeroSlider2 />
+            {/* <HeroSlider3 /> */}
 
 
             {/* SERVICES */}
@@ -160,10 +188,7 @@ export default function Home() {
 
             {/* ABOUT */}
             <section
-                className="
-    py-24 relative overflow-hidden
-    bg-gradient-to-br from-[#a8d97c]/20 via-[#25baff]/10 to-[#a8d97c]/10
-  "
+                className="py-24 relative overflow-hidden bg-gradient-to-br from-[#a8d97c]/20 via-[#25baff]/10 to-[#a8d97c]/10"
             >
                 {/* DARK OVERLAY FOR VISIBILITY */}
                 <div className="absolute inset-0 bg-black/50"></div>
@@ -253,9 +278,7 @@ export default function Home() {
             {/* STATS (UPDATED WITH ICONS + COUNT UP) */}
 
             <section
-                className="
-    py-16 text-white bg-black
-  "
+                className="py-16 text-white bg-black"
             >
                 <div className="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-12 text-center">
 
@@ -324,13 +347,7 @@ export default function Home() {
 
                         <Link
                             to="/projects"
-                            className="
-        px-6 py-3 rounded-xl
-        bg-[#25baff]/10 border border-[#25baff]/30
-        text-[#25baff] font-semibold
-        hover:bg-[#25baff] hover:text-black
-        transition-all duration-300
-      "
+                            className="px-6 py-3 rounded-xl bg-[#25baff]/10 border border-[#25baff]/30 text-[#25baff] font-semibold hover:bg-[#25baff] hover:text-black transition-all duration-300"
                         >
                             View All →
                         </Link>
@@ -348,24 +365,14 @@ export default function Home() {
                                 <Link
                                     key={project.id}
                                     to={`/projects/${project.slug}`}
-                                    className="
-            group relative rounded-3xl overflow-hidden
-            bg-white/5 backdrop-blur-md
-            border border-white/10
-            shadow-xl transition-all duration-500
-            hover:-translate-y-4 hover:shadow-[0_20px_60px_rgba(37,186,255,0.25)]
-          "
+                                    className="group relative rounded-3xl overflow-hidden bg-white/5 backdrop-blur-md border border-white/10 shadow-xl transition-all duration-500 hover:-translate-y-4 hover:shadow-[0_20px_60px_rgba(37,186,255,0.25)]"
                                 >
 
                                     {/* IMAGE */}
                                     <img
-                                        src="https://plus.unsplash.com/premium_photo-1678565879444-f87c8bd9f241?w=800"
+                                        src={projectImage}
                                         alt={project.title}
-                                        className="
-                h-64 w-full object-cover
-                transition-transform duration-[1200ms]
-                group-hover:scale-110
-              "
+                                        className="h-64 w-full object-cover transition-transform duration-[1200ms] group-hover:scale-110"
                                     />
 
                                     {/* OVERLAY */}
@@ -384,16 +391,7 @@ export default function Home() {
 
                                         {/* BUTTON */}
                                         <div
-                                            className="
-                mt-5 inline-block
-                px-5 py-2 rounded-lg text-sm font-semibold
-                bg-[#25baff] text-black
-
-                opacity-0 translate-y-4
-                group-hover:opacity-100 group-hover:translate-y-0
-
-                transition-all duration-500
-              "
+                                            className="mt-5 inline-block px-5 py-2 rounded-lg text-sm font-semibold bg-[#25baff] text-black opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500"
                                         >
                                             View Project →
                                         </div>
@@ -435,7 +433,7 @@ export default function Home() {
 
                         {/* CONTACT INFO */}
 
-                        <div className="space-y-8 p-6 sm:p-8 rounded-2xl sm:rounded-3xl bg-white/40 backdrop-blur-xl border border-white/50 shadow-lg mt-8">
+                        <div className="space-y-8 p-6 sm:p-8 rounded-2xl sm:rounded-3xl bg-white/40 backdrop-blur-xl border border-white/50 shadow-lg mt-20">
 
                             {/* Address */}
 
@@ -450,8 +448,7 @@ export default function Home() {
                                     </h4>
 
                                     <p className="text-black text-sm mt-1 leading-relaxed">
-                                        B 108, 1st Floor, Office No. 2nd, Sector 63,<br />
-                                        Noida - 201301
+                                        B 108, 1st Floor, Office No. 2nd, Sector 63, Noida - 201301
                                     </p>
                                 </div>
                             </div>
@@ -469,9 +466,23 @@ export default function Home() {
                                     </h4>
 
                                     <p className="text-black text-sm mt-1 leading-relaxed">
-                                        +91 85058 37801<br />
-                                        +91 01204545733<br />
-                                        +1 (310) 807-2867
+
+                                        <a href="tel:+918505837801">
+                                            +91 85058 37801
+                                        </a>
+
+                                        <a href="tel:+9101204545733"
+                                            className="block transition"
+                                        >
+                                            +91 01204545733
+                                        </a>
+
+                                        <a href="tel:+13108072867"
+                                            className="block transition"
+                                        >
+                                            +1 (310) 807-2867
+                                        </a>
+
                                     </p>
                                 </div>
                             </div>
@@ -489,8 +500,15 @@ export default function Home() {
                                     </h4>
 
                                     <p className="text-black text-sm mt-1 leading-relaxed break-words">
-                                        info@digitalwebguider.com<br />
-                                        www.digitalwebguider.com
+                                        <a href="mailto:info@digitalwebguider.com" className="hover:underline">
+                                            info@digitalwebguider.com
+                                        </a>
+                                        <br />
+                                        <a
+                                            className="hover:underline"
+                                        >
+                                            www.digitalwebguider.com
+                                        </a>
                                     </p>
                                 </div>
                             </div>
@@ -505,14 +523,6 @@ export default function Home() {
                                 Send Us a Message
                             </h3>
 
-                            {/* Success Message */}
-
-                            {success && (
-                                <div className="mb-6 p-4 rounded-xl bg-green-100 text-green-700 font-medium">
-                                    Message sent successfully! We will connect with you soon.
-                                </div>
-                            )}
-
                             <form
                                 onSubmit={handleSubmit}
                                 className="grid gap-5 sm:gap-6 md:grid-cols-2"
@@ -520,11 +530,11 @@ export default function Home() {
 
                                 <input
                                     type="text"
-                                    name="name"
-                                    value={formData.name}
+                                    name="fullName"
+                                    value={formData.fullName}
                                     onChange={handleChange}
                                     required
-                                    placeholder="Your Name"
+                                    placeholder="Your fullName"
                                     className="w-full px-4 sm:px-5 py-3 sm:py-4 rounded-xl border border-white/40 bg-white/70 backdrop-blur focus:outline-none focus:ring-2 focus:ring-[#25baff]"
                                 />
 
@@ -535,6 +545,28 @@ export default function Home() {
                                     onChange={handleChange}
                                     required
                                     placeholder="Your Email"
+                                    className="w-full px-4 sm:px-5 py-3 sm:py-4 rounded-xl border border-white/40 bg-white/70 backdrop-blur focus:outline-none focus:ring-2 focus:ring-[#25baff]"
+                                />
+                                <input
+                                    type="tel"
+                                    name="phone"
+                                    value={formData.phone}
+                                    onChange={(e) => {
+                                        const value = e.target.value.replace(/\D/g, ""); // remove non-digits
+                                        if (value.length <= 10) {
+                                            setFormData({ ...formData, phone: value });
+                                        }
+                                    }}
+                                    required
+                                    placeholder="Your phone"
+                                    className="w-full px-4 sm:px-5 py-3 sm:py-4 rounded-xl border border-white/40 bg-white/70 backdrop-blur focus:outline-none focus:ring-2 focus:ring-[#25baff]"
+                                />
+                                <input
+                                    type="text"
+                                    name="website"
+                                    value={formData.website}
+                                    onChange={handleChange}
+                                    placeholder="Your website"
                                     className="w-full px-4 sm:px-5 py-3 sm:py-4 rounded-xl border border-white/40 bg-white/70 backdrop-blur focus:outline-none focus:ring-2 focus:ring-[#25baff]"
                                 />
 
@@ -602,29 +634,13 @@ export default function Home() {
                     {/* BUTTON */}
                     <Link
                         to="/contact"
-                        className="
-            group
-            w-full sm:w-auto
-            bg-[#a8d97c] text-[#020202]
-            px-8 py-3 rounded-xl font-semibold
-            flex items-center justify-center gap-2
-
-            transition-all duration-300
-            hover:bg-[#25baff] hover:text-white
-            hover:-translate-y-1
-            hover:shadow-[0_12px_30px_rgba(37,186,255,0.4)]
-            active:scale-95
-        "
+                        className="group w-full sm:w-auto bg-[#a8d97c] text-[#020202] px-8 py-3 rounded-xl font-semibold flex items-center justify-center gap-2 transition-all duration-300 hover:bg-[#25baff] hover:text-white hover:-translate-y-1 hover:shadow-[0_12px_30px_rgba(37,186,255,0.4)] active:scale-95"
                     >
                         Contact Us
                     </Link>
 
                 </div>
             </section>
-
-
-
-
 
         </div>
     );
