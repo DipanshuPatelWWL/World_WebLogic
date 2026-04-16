@@ -62,9 +62,12 @@ const PpcPackages = () => {
               </div>
 
               <div className="px-8 pb-10">
-                <button className="w-full py-4 px-8 rounded-xl font-semibold text-lg border-2 border-[#25baff] text-[#25baff] hover:cursor-pointer hover:bg-[#25baff] hover:text-white transition-all duration-300">
-                  Start Today
-                </button>
+                <Link
+                  to="/payment"
+                  className="block text-center text-lg border border-[#25baff] mt-8 mb-8 py-2 px-8 rounded-2xl w-[80%] mx-auto hover:bg-[#25baff] hover:text-white transition duration-300 font-medium"
+                >
+                  START TODAY
+                </Link>
               </div>
             </div>
 
@@ -92,9 +95,12 @@ const PpcPackages = () => {
               </div>
 
               <div className="px-8 pb-10">
-                <button className="w-full py-4 px-8 rounded-xl font-semibold text-lg border-2 border-[#25baff] text-[#25baff] hover:cursor-pointer hover:bg-[#25baff] hover:text-white transition-all duration-300">
-                  Start Today
-                </button>
+                <Link
+                  to="/payment"
+                  className="block text-center text-lg border border-[#25baff] mt-8 mb-8 py-2 px-8 rounded-2xl w-[80%] mx-auto hover:bg-[#25baff] hover:text-white transition duration-300 font-medium"
+                >
+                  START TODAY
+                </Link>
               </div>
             </div>
 
@@ -127,9 +133,9 @@ const PpcPackages = () => {
               </div>
 
               <div className="px-8 pb-10">
-                <button className="w-full py-4 px-8 rounded-xl font-semibold text-lg bg-[#25baff] text-white hover:bg-[#1a9fe0] hover:cursor-pointer shadow-lg shadow-[#25baff]/30 transition-all duration-300">
-                  Start Today
-                </button>
+                <Link to="/payment" className="block text-center text-lg mt-8 mb-8 p-2 rounded-2xl w-[80%] mx-auto px-8 bg-[#25baff] text-white hover:bg-white hover:text-black border border-[#25baff] transition">
+                  START TODAY
+                </Link>
               </div>
             </div>
 
@@ -157,9 +163,12 @@ const PpcPackages = () => {
               </div>
 
               <div className="px-8 pb-10">
-                <button className="w-full py-4 px-8 rounded-xl font-semibold text-lg border-2 border-[#25baff] text-[#25baff] hover:cursor-pointer hover:bg-[#25baff] hover:text-white transition-all duration-300">
-                  Start Today
-                </button>
+                <Link
+                  to="/payment"
+                  className="block text-center text-lg border border-[#25baff] mt-13 mb-8 py-2 px-8 rounded-2xl w-[80%] mx-auto hover:bg-[#25baff] hover:text-white transition duration-300 font-medium"
+                >
+                  START TODAY
+                </Link>
               </div>
             </div>
           </div>
@@ -296,14 +305,15 @@ const PpcPackages = () => {
                     ))}
                   </div>
 
-                  <button
-                    className={`mt-10 w-full py-4 rounded-xl font-semibold transition-all duration-300 ${plan.title === "GOLD"
-                      ? "bg-[#25baff] hover:cursor-pointer text-white hover:bg-[#1a9fe0] shadow-lg shadow-[#25baff]/30"
+                  <Link
+                    to="/payment"
+                    className={`mt-10 w-full py-4 rounded-xl font-semibold transition-all duration-300 flex items-center justify-center text-center ${plan.title === "GOLD"
+                      ? "bg-[#25baff] text-white hover:bg-[#1a9fe0] shadow-lg shadow-[#25baff]/30"
                       : "border-2 border-[#25baff] text-[#25baff] hover:bg-[#25baff] hover:text-white"
                       }`}
                   >
                     Start Today
-                  </button>
+                  </Link>
                 </div>
               ))}
             </div>
@@ -315,7 +325,7 @@ const PpcPackages = () => {
               Not sure which PPC package is right for your business goals?
             </p>
             <Link
-              to="/contact"
+              to="/free-consultation"
             >
               <button className="bg-[#0b3253] hover:cursor-pointer hover:bg-[#08213a] text-white px-12 py-5 rounded-xl text-lg font-semibold transition shadow-lg">
                 Book Free PPC Strategy Call

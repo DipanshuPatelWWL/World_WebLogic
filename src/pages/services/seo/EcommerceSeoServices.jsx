@@ -21,7 +21,7 @@ import Img7 from "../../../assets/services/ecommarceSeo/img7.avif";
 import Img8 from "../../../assets/services/ecommarceSeo/img8.avif";
 import Img9 from "../../../assets/services/ecommarceSeo/img9.avif";
 import Img10 from "../../../assets/services/ecommarceSeo/img10.avif";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -296,16 +296,10 @@ const EcommerceSeoServices = () => {
                 <div
                   key={index}
                   ref={(el) => (cardsRef.current[index] = el)}
-                  className="group bg-white border border-gray-200 rounded-2xl p-10 text-center
-                  shadow-lg shadow-[#25baff]/10
-                  transition-all duration-500
-                  hover:bg-[#25baff]
-                  hover:-translate-y-3
-                  hover:shadow-2xl hover:shadow-[#25baff]/40"
+                  className="group bg-white border border-gray-200 rounded-2xl p-10 text-center shadow-lg shadow-[#25baff]/10 transition-all duration-500 hover:bg-[#25baff] hover:-translate-y-3 hover:shadow-2xl hover:shadow-[#25baff]/40"
                 >
                   <Icon
-                    className="text-4xl text-[#25baff] mb-6 mx-auto
-  group-hover:text-white transition-colors duration-300"
+                    className="text-4xl text-[#25baff] mb-6 mx-auto group-hover:text-white transition-colors duration-300"
                   />
 
                   <h3 className="font-extrabold text-xl mb-3 text-[#020202] group-hover:text-white transition-colors duration-300">
@@ -396,11 +390,7 @@ const EcommerceSeoServices = () => {
         style={{ backgroundColor: "#020202" }}
       >
         <div
-          className="absolute inset-0 
-   bg-[radial-gradient(circle_at_20%_20%,rgba(37,186,255,0.25),transparent_45%),
-radial-gradient(circle_at_80%_80%,rgba(168,217,124,0.2),transparent_45%)]
-
-    animate-pulseSlow"
+          className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(37,186,255,0.25),transparent_45%), radial-gradient(circle_at_80%_80%,rgba(168,217,124,0.2),transparent_45%)] animate-pulseSlow"
         />
 
         {/* Floating Particles */}
@@ -408,8 +398,7 @@ radial-gradient(circle_at_80%_80%,rgba(168,217,124,0.2),transparent_45%)]
           {[...Array(18)].map((_, i) => (
             <span
               key={i}
-              className="absolute w-1.5 h-1.5 bg-[#25baff]
- rounded-full opacity-40 animate-float"
+              className="absolute w-1.5 h-1.5 bg-[#25baff] rounded-full opacity-40 animate-float"
               style={{
                 top: `${Math.random() * 100}%`,
                 left: `${Math.random() * 100}%`,
@@ -477,12 +466,7 @@ radial-gradient(circle_at_80%_80%,rgba(168,217,124,0.2),transparent_45%)]
                 <div
                   key={index}
                   ref={(el) => (cardsRef.current[index] = el)}
-                  className="group bg-white border border-gray-200 rounded-2xl p-10 text-center
-                  shadow-lg shadow-[#25baff]/10
-                  transition-all duration-500
-                  hover:bg-[#25baff]
-                  hover:-translate-y-3
-                  hover:shadow-2xl hover:shadow-[#25baff]/40"
+                  className="group bg-white border border-gray-200 rounded-2xl p-10 text-center shadow-lg shadow-[#25baff]/10 transition-all duration-500 hover:bg-[#25baff] hover:-translate-y-3 hover:shadow-2xl hover:shadow-[#25baff]/40"
                 >
                   <h3 className="font-extrabold text-xl mb-3 text-[#020202] group-hover:text-white transition-colors duration-300">
                     {item.head}
@@ -532,10 +516,8 @@ radial-gradient(circle_at_80%_80%,rgba(168,217,124,0.2),transparent_45%)]
             ].map((item, index) => (
               <div
                 key={index}
-                className="group bg-white border border-gray-200 rounded-2xl p-10 text-center
-                shadow-lg shadow-[#25baff]/10
-                transition-all duration-500
-                hover:-translate-y-3 hover:shadow-2xl hover:shadow-[#25baff]/40 hover:border-[#25baff]"
+                className="group bg-white border border-gray-200 rounded-2xl p-10 text-center shadow-lg shadow-[#25baff]/10
+                transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl hover:shadow-[#25baff]/40 hover:border-[#25baff]"
               >
                 <div className="flex justify-center text-5xl mb-6 text-gray-500 group-hover:text-[#25baff] transition-colors duration-300">
                   <RiDoubleQuotesL />
@@ -927,9 +909,11 @@ radial-gradient(circle_at_80%_80%,rgba(168,217,124,0.2),transparent_45%)]
               </div>
 
               <div className="bg-gray-50 mt-5 rounded-b-xl">
-                <button className="start-btn text-lg border border-[#25baff] mt-8 mb-8 p-2 rounded-2xl pr-8 pl-8 hover:bg-[#25baff] hover:text-white cursor-pointer">
-                  Start Today
-                </button>
+                <Link to="/payment">
+                  <button className="start-btn text-lg border border-[#25baff] mt-8 mb-8 p-2 rounded-2xl pr-8 pl-8 hover:bg-[#25baff] hover:text-white cursor-pointer">
+                    Start Today
+                  </button>
+                </Link>
               </div>
             </div>
 
@@ -977,9 +961,11 @@ radial-gradient(circle_at_80%_80%,rgba(168,217,124,0.2),transparent_45%)]
               </div>
 
               <div className="bg-gray-50 mt-5 rounded-b-xl">
-                <button className="start-btn text-lg border border-[#25baff] mt-8 mb-8 p-2 rounded-2xl pr-8 pl-8 hover:bg-[#25baff] hover:text-white cursor-pointer">
-                  Start Today
-                </button>
+                <Link to="/payment">
+                  <button className="start-btn text-lg border border-[#25baff] mt-8 mb-8 p-2 rounded-2xl pr-8 pl-8 hover:bg-[#25baff] hover:text-white cursor-pointer">
+                    Start Today
+                  </button>
+                </Link>
               </div>
             </div>
 
@@ -1042,9 +1028,11 @@ radial-gradient(circle_at_80%_80%,rgba(168,217,124,0.2),transparent_45%)]
               </div>
 
               <div className="bg-gray-50 mt-6 rounded-b-xl">
-                <button className="start-btn text-lg border border-[#25baff] mt-8 mb-8 p-2 rounded-2xl pr-8 pl-8 bg-[#25baff] text-white hover:bg-white hover:text-black cursor-pointer">
-                  Start Today
-                </button>
+                <Link to="/payment">
+                  <button className="start-btn text-lg border border-[#25baff] mt-8 mb-8 p-2 rounded-2xl pr-8 pl-8 bg-[#25baff] text-white hover:bg-white hover:text-black cursor-pointer">
+                    Start Today
+                  </button>
+                </Link>
               </div>
             </div>
 
@@ -1096,9 +1084,11 @@ radial-gradient(circle_at_80%_80%,rgba(168,217,124,0.2),transparent_45%)]
               </div>
 
               <div className="bg-gray-50 mt-5 rounded-b-xl">
-                <button className="start-btn text-lg border border-[#25baff] mt-8 mb-8 p-2 rounded-2xl pr-8 pl-8 hover:bg-[#25baff] hover:text-white cursor-pointer">
-                  Start Today
-                </button>
+                <Link to="/payment">
+                  <button className="start-btn text-lg border border-[#25baff] mt-8 mb-8 p-2 rounded-2xl pr-8 pl-8 hover:bg-[#25baff] hover:text-white cursor-pointer">
+                    Start Today
+                  </button>
+                </Link>
               </div>
             </div>
           </div>

@@ -78,9 +78,12 @@ const SEO_Packages = () => {
               </div>
 
               <div className="px-8 pb-10">
-                <button className="w-full py-4 px-8 rounded-xl font-semibold text-lg border-2 border-[#25baff] text-[#25baff] hover:bg-[#25baff] hover:text-white transition-all duration-300 hover:cursor-pointer">
-                  Start Today
-                </button>
+                <Link
+                  to="/payment"
+                  className="block text-center text-lg border border-[#25baff] mt-8 mb-8 py-4 px-8 rounded-2xl w-[90%] mx-auto hover:bg-[#25baff] hover:text-white transition duration-300 font-medium"
+                >
+                  START TODAY
+                </Link>
               </div>
             </div>
 
@@ -124,10 +127,12 @@ const SEO_Packages = () => {
               </div>
 
               <div className="px-8 pb-10">
-                <button className="w-full py-4 px-8 rounded-xl font-semibold text-lg border-2 border-[#25baff] text-[#25baff] hover:bg-[#25baff] hover:text-white transition-all duration-300
-                hover:cursor-pointer">
-                  Start Today
-                </button>
+                <Link
+                  to="/payment"
+                  className="block text-center text-lg border border-[#25baff] mt-8 mb-8 py-4 px-8 rounded-2xl w-[90%] mx-auto hover:bg-[#25baff] hover:text-white transition duration-300 font-medium"
+                >
+                  START TODAY
+                </Link>
               </div>
             </div>
 
@@ -176,11 +181,12 @@ const SEO_Packages = () => {
               </div>
 
               <div className="px-8 pb-10">
-                <button className="w-full py-4 px-8 rounded-xl font-semibold text-lg bg-[#25baff] text-white hover:bg-[#1a9fe0] shadow-lg shadow-[#25baff]/30 transition-all duration-300
-                hover:cursor-pointer
-                ">
-                  Start Today
-                </button>
+                <Link
+                  to="/payment"
+                  className="block text-center text-lg border border-[#25baff] mt-8 mb-8 py-4 px-8 rounded-2xl w-[90%] mx-auto bg-[#25baff] text-white hover:bg-white hover:text-black transition duration-300 font-medium"
+                >
+                  START TODAY
+                </Link>
               </div>
             </div>
 
@@ -224,9 +230,12 @@ const SEO_Packages = () => {
               </div>
 
               <div className="px-8 pb-10">
-                <button className="w-full py-4 px-8 rounded-xl font-semibold text-lg border-2 border-[#25baff] text-[#25baff] hover:bg-[#25baff] hover:cursor-pointer hover:text-white transition-all duration-300">
-                  Start Today
-                </button>
+                <Link
+                  to="/payment"
+                  className="block text-center text-lg border border-[#25baff] mt-8 mb-8 py-4 px-8 rounded-2xl w-[90%] mx-auto hover:bg-[#25baff] hover:text-white transition duration-300 font-medium"
+                >
+                  START TODAY
+                </Link>
               </div>
             </div>
           </div>
@@ -375,9 +384,12 @@ const SEO_Packages = () => {
                       <div className="flex items-start gap-2"><FaCheck className="text-green-500 mt-0.5 flex-shrink-0" /> Chat</div>
                     </div>
 
-                    <button className="w-full mt-10 py-4 bg-[#25baff] text-white rounded-xl font-semibold hover:bg-[#1a9fe0] transition hover:cursor-pointer">
-                      Start Today
-                    </button>
+                    <Link
+                      to="/payment"
+                      className="block text-center text-lg border border-[#25baff] mt-15 mb-5 py-3 px-8 rounded-2xl w-full mx-auto bg-[#25baff] text-white rounded-xl font-semibold hover:bg-[#1a9fe0] transition duration-300 font-medium"
+                    >
+                      START TODAY
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -521,9 +533,12 @@ const SEO_Packages = () => {
                       <div className="flex items-start gap-2"><FaCheck className="text-green-500 mt-0.5 flex-shrink-0" /> Chat</div>
                     </div>
 
-                    <button className="w-full mt-10 py-4 bg-[#25baff] text-white rounded-xl font-semibold hover:bg-[#1a9fe0] transition hover:cursor-pointer">
-                      Start Today
-                    </button>
+                    <Link
+                      to="/payment"
+                      className="block text-center text-lg border border-[#25baff] mt-8 mb-5 py-3 px-8 rounded-2xl w-full mx-auto bg-[#25baff] text-white rounded-xl font-semibold hover:bg-[#1a9fe0] transition duration-300 font-medium"
+                    >
+                      START TODAY
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -667,9 +682,12 @@ const SEO_Packages = () => {
                       <div className="flex items-start gap-2"><FaCheck className="text-green-500 mt-0.5 flex-shrink-0" /> Chat</div>
                     </div>
 
-                    <button className="w-full mt-10 py-4 bg-[#25baff] text-white rounded-xl font-semibold hover:bg-[#1a9fe0] transition hover:cursor-pointer">
-                      Start Today
-                    </button>
+                    <Link
+                      to="/payment"
+                      className="block text-center text-lg border border-[#25baff] mt-8 mb-5 py-3 px-8 rounded-2xl w-full mx-auto bg-[#25baff] text-white rounded-xl font-semibold hover:bg-[#1a9fe0] transition duration-300 font-medium"
+                    >
+                      START TODAY
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -813,9 +831,12 @@ const SEO_Packages = () => {
                       <div className="flex items-start gap-2"><FaCheck className="text-green-500 mt-0.5 flex-shrink-0" /> Chat</div>
                     </div>
 
-                    <button className="w-full mt-10 py-4 bg-[#25baff] text-white rounded-xl font-semibold hover:bg-[#1a9fe0] transition hover:cursor-pointer">
-                      Start Today
-                    </button>
+                    <Link
+                      to="/payment"
+                      className="block text-center text-lg border border-[#25baff] mt-8 mb-5 py-3 px-8 rounded-2xl w-full mx-auto bg-[#25baff] text-white rounded-xl font-semibold hover:bg-[#1a9fe0] transition duration-300 font-medium"
+                    >
+                      START TODAY
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -827,7 +848,7 @@ const SEO_Packages = () => {
               Still not sure which plan is best for your business?
             </p>
             <Link
-              to="/contact"
+              to="/free-consultation"
             >
               <button className="bg-[#0b3253] hover:bg-[#08213a] text-white px-12 py-5 rounded-xl text-lg font-semibold transition shadow-lg hover:cursor-pointer">
                 Book Free SEO Strategy Call

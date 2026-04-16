@@ -22,7 +22,7 @@ import LocalSeo from "../../../assets/services/LocalSeoServices/LocalSeo.avif";
 import QualityBacklinks from "../../../assets/services/LocalSeoServices/QualityBacklinks.avif";
 import Tracking from "../../../assets/services/LocalSeoServices/PerformanceTracking.avif";
 import WebsiteAudit from "../../../assets/services/LocalSeoServices/WebsiteAudit.avif";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -229,22 +229,13 @@ const SmallBusinessSeo = () => {
               ].map((text, index) => (
                 <div
                   key={index}
-                  className="group bg-white border border-gray-200 rounded-2xl px-8 py-6 flex items-start gap-4
-                                shadow-lg shadow-[#25baff]/10
-                                transition-all duration-500
-                                hover:bg-[#25baff]
-                                hover:border-[#25baff]
-                                hover:shadow-2xl hover:shadow-[#25baff]/40
-                                hover:-translate-y-2"
+                  className="group bg-white border border-gray-200 rounded-2xl px-8 py-6 flex items-start gap-4 shadow-lg shadow-[#25baff]/10 transition-all duration-500 hover:bg-[#25baff] hover:border-[#25baff] hover:shadow-2xl hover:shadow-[#25baff]/40 hover:-translate-y-2"
                 >
                   <FaCheckCircle
-                    className="text-[#25baff] text-2xl mt-1
-                                  group-hover:text-white transition-colors duration-300"
+                    className="text-[#25baff] text-2xl mt-1 group-hover:text-white transition-colors duration-300"
                   />
 
-                  <p
-                    className="text-[#020202] text-lg leading-relaxed
-                                group-hover:text-white transition-colors duration-300"
+                  <p className="text-[#020202] text-lg leading-relaxed group-hover:text-white transition-colors duration-300"
                   >
                     {text}
                   </p>
@@ -451,8 +442,8 @@ const SmallBusinessSeo = () => {
 
                       <div
                         className={`transition-all duration-300 ease-in-out overflow-hidden ${openIndex === index
-                            ? "max-h-40 p-5 bg-white"
-                            : "max-h-0"
+                          ? "max-h-40 p-5 bg-white"
+                          : "max-h-0"
                           }`}
                       >
                         <p className="text-gray-600">{item.content}</p>
@@ -1027,9 +1018,11 @@ const SmallBusinessSeo = () => {
 
                 {/* Button */}
                 <div className="bg-gray-50 mt-5 rounded-b-xl">
-                  <button className="start-btn text-lg border border-[#25baff] mt-8 mb-8 p-2 rounded-2xl pr-8 pl-8 hover:bg-[#25baff] hover:text-white cursor-pointer">
-                    Start Today
-                  </button>
+                  <Link to="/payment">
+                    <button className="start-btn text-lg border border-[#25baff] mt-8 mb-8 p-2 rounded-2xl pr-8 pl-8 hover:bg-[#25baff] hover:text-white cursor-pointer">
+                      Start Today
+                    </button>
+                  </Link>
                 </div>
               </div>
 
@@ -1094,9 +1087,11 @@ const SmallBusinessSeo = () => {
 
                 {/* Button */}
                 <div className="bg-gray-50 mt-5 rounded-b-xl">
-                  <button className="start-btn text-lg border border-[#25baff] mt-8 mb-8 p-2 rounded-2xl pr-8 pl-8 hover:bg-[#25baff] hover:text-white cursor-pointer">
-                    Start Today
-                  </button>
+                  <Link to="/payment">
+                    <button className="start-btn text-lg border border-[#25baff] mt-8 mb-8 p-2 rounded-2xl pr-8 pl-8 hover:bg-[#25baff] hover:text-white cursor-pointer">
+                      Start Today
+                    </button>
+                  </Link>
                 </div>
               </div>
 
@@ -1111,8 +1106,7 @@ const SmallBusinessSeo = () => {
                     {/* Perfect Corner Ribbon */}
                     <div className="absolute top-0 right-0 w-28 h-28 overflow-hidden">
                       <div
-                        className="absolute top-5 right-[-35px] rotate-45 bg-[#a8d97c]
- text-white text-xs font-bold py-1 w-40 text-center shadow-md"
+                        className="absolute top-5 right-[-35px] rotate-45 bg-[#a8d97c] text-white text-xs font-bold py-1 w-40 text-center shadow-md"
                       >
                         POPULAR
                       </div>
@@ -1176,9 +1170,11 @@ const SmallBusinessSeo = () => {
 
                 {/* Button */}
                 <div className="bg-gray-50 mt-6 rounded-b-xl">
-                  <button className="start-btn text-lg border border-[#25baff] mt-8 mb-8 p-2 rounded-2xl pr-8 pl-8 bg-[#25baff] text-white hover:bg-white hover:text-black cursor-pointer">
-                    Start Today
-                  </button>
+                  <Link to="/payment">
+                    <button className="start-btn text-lg border border-[#25baff] mt-8 mb-8 p-2 rounded-2xl pr-8 pl-8 bg-[#25baff] text-white hover:bg-white hover:text-black cursor-pointer">
+                      Start Today
+                    </button>
+                  </Link>
                 </div>
               </div>
 
@@ -1243,9 +1239,11 @@ const SmallBusinessSeo = () => {
 
                 {/* Button */}
                 <div className="bg-gray-50 mt-5 rounded-b-xl">
-                  <button className="start-btn text-lg border border-[#25baff] mt-8 mb-8 p-2 rounded-2xl pr-8 pl-8 hover:bg-[#25baff] hover:text-white cursor-pointer">
-                    Start Today
-                  </button>
+                  <Link to="/payment">
+                    <button className="start-btn text-lg border border-[#25baff] mt-8 mb-8 p-2 rounded-2xl pr-8 pl-8 hover:bg-[#25baff] hover:text-white cursor-pointer">
+                      Start Today
+                    </button>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -1266,8 +1264,7 @@ const SmallBusinessSeo = () => {
             {[...Array(18)].map((_, i) => (
               <span
                 key={i}
-                className="absolute w-1.5 h-1.5 bg-[#25baff]
- rounded-full opacity-40 animate-float"
+                className="absolute w-1.5 h-1.5 bg-[#25baff] rounded-full opacity-40 animate-float"
                 style={{
                   top: `${Math.random() * 100}%`,
                   left: `${Math.random() * 100}%`,
@@ -1346,13 +1343,12 @@ const SmallBusinessSeo = () => {
                         setActiveFaq(index);
                       }
                     }}
-                    className="w-full flex items-center justify-between
-            px-6 py-5 text-left font-semibold text-[#020202]"
+                    className="w-full flex items-center justify-between px-6 py-5 text-left font-semibold text-[#020202]"
                   >
                     <span
                       className={`${activeFaq === index
-                          ? "text-[#25baff]"
-                          : "text-[#020202]"
+                        ? "text-[#25baff]"
+                        : "text-[#020202]"
                         } transition-colors duration-300`}
                     >
                       {faq.question}

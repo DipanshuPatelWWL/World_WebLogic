@@ -20,6 +20,7 @@ import Card3 from "../../../assets/services/magentowebsite/card3.avif";
 import Card4 from "../../../assets/services/magentowebsite/card4.avif";
 import Card5 from "../../../assets/services/magentowebsite/card5.avif";
 import Card6 from "../../../assets/services/magentowebsite/card6.jpg";
+import { Link } from "react-router-dom";
 
 import { NavLink } from "react-router-dom";
 
@@ -374,8 +375,7 @@ const MagentoDevelopment = () => {
                   hover:shadow-2xl hover:shadow-[#25baff]/40"
                 >
                   <Icon
-                    className="text-4xl text-[#25baff] mb-6 mx-auto
-  group-hover:text-white transition-colors duration-300"
+                    className="text-4xl text-[#25baff] mb-6 mx-auto group-hover:text-white transition-colors duration-300"
                   />
 
                   <h3 className="font-extrabold text-xl mb-3 text-[#020202] group-hover:text-white transition-colors duration-300">
@@ -440,8 +440,8 @@ const MagentoDevelopment = () => {
 
                     <div
                       className={`transition-all duration-300 ease-in-out overflow-hidden ${openIndex === index
-                          ? "max-h-40 p-5 bg-white"
-                          : "max-h-0"
+                        ? "max-h-40 p-5 bg-white"
+                        : "max-h-0"
                         }`}
                     >
                       <p className="text-gray-600">{item.content}</p>
@@ -462,11 +462,7 @@ const MagentoDevelopment = () => {
         style={{ backgroundColor: "#020202" }}
       >
         <div
-          className="absolute inset-0 
-   bg-[radial-gradient(circle_at_20%_20%,rgba(37,186,255,0.25),transparent_45%),
-radial-gradient(circle_at_80%_80%,rgba(168,217,124,0.2),transparent_45%)]
-
-    animate-pulseSlow"
+          className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(37,186,255,0.25),transparent_45%), radial-gradient(circle_at_80%_80%,rgba(168,217,124,0.2),transparent_45%)] animate-pulseSlow"
         />
 
         {/* Floating Particles */}
@@ -474,8 +470,7 @@ radial-gradient(circle_at_80%_80%,rgba(168,217,124,0.2),transparent_45%)]
           {[...Array(18)].map((_, i) => (
             <span
               key={i}
-              className="absolute w-1.5 h-1.5 bg-[#25baff]
- rounded-full opacity-40 animate-float"
+              className="absolute w-1.5 h-1.5 bg-[#25baff] rounded-full opacity-40 animate-float"
               style={{
                 top: `${Math.random() * 100}%`,
                 left: `${Math.random() * 100}%`,
@@ -542,12 +537,7 @@ radial-gradient(circle_at_80%_80%,rgba(168,217,124,0.2),transparent_45%)]
                 <div
                   key={index}
                   ref={(el) => (cardsRef.current[index] = el)}
-                  className="group bg-white border border-gray-200 rounded-2xl p-10 text-center
-                  shadow-lg shadow-[#25baff]/10
-                  transition-all duration-500
-                  hover:bg-[#25baff]
-                  hover:-translate-y-3
-                  hover:shadow-2xl hover:shadow-[#25baff]/40"
+                  className="group bg-white border border-gray-200 rounded-2xl p-10 text-center shadow-lg shadow-[#25baff]/10 transition-all duration-500 hover:bg-[#25baff] hover:-translate-y-3 hover:shadow-2xl hover:shadow-[#25baff]/40"
                 >
                   <h3 className="font-extrabold text-xl mb-3 text-[#020202] group-hover:text-white transition-colors duration-300">
                     {item.head}
@@ -588,8 +578,8 @@ radial-gradient(circle_at_80%_80%,rgba(168,217,124,0.2),transparent_45%)]
               <div
                 key={index}
                 className={`transition-all duration-700 ease-in-out ${index === current
-                    ? "opacity-100 translate-x-0 relative"
-                    : "opacity-0 absolute inset-0 translate-x-10"
+                  ? "opacity-100 translate-x-0 relative"
+                  : "opacity-0 absolute inset-0 translate-x-10"
                   }`}
               >
                 {/* White Card Background */}
@@ -753,9 +743,11 @@ radial-gradient(circle_at_80%_80%,rgba(168,217,124,0.2),transparent_45%)]
               </div>
 
               <div className="bg-gray-50 mt-6 rounded-b-xl">
-                <button className="text-lg border border-[#25baff] mt-8 mb-8 px-8 py-2 rounded-2xl hover:bg-[#25baff] hover:text-white">
-                  START TODAY
-                </button>
+                <Link to="/payment">
+                  <button className="text-lg border border-[#25baff] mt-8 mb-8 px-8 py-2 rounded-2xl hover:bg-[#25baff] hover:text-white">
+                    START TODAY
+                  </button>
+                </Link>
               </div>
             </div>
 
@@ -801,9 +793,11 @@ radial-gradient(circle_at_80%_80%,rgba(168,217,124,0.2),transparent_45%)]
               </div>
 
               <div className="bg-gray-50 mt-6 rounded-b-xl">
-                <button className="text-lg mt-8 mb-8 px-8 py-2 rounded-2xl bg-[#25baff] text-white hover:bg-white hover:text-black border border-[#25baff]">
-                  START TODAY
-                </button>
+                <Link to="/payment">
+                  <button className="text-lg mt-8 mb-8 px-8 py-2 rounded-2xl bg-[#25baff] text-white hover:bg-white hover:text-black border border-[#25baff]">
+                    START TODAY
+                  </button>
+                </Link>
               </div>
             </div>
 
@@ -842,9 +836,11 @@ radial-gradient(circle_at_80%_80%,rgba(168,217,124,0.2),transparent_45%)]
               </div>
 
               <div className="bg-gray-50 mt-6 rounded-b-xl">
-                <button className="text-lg border border-[#25baff] mt-8 mb-8 px-8 py-2 rounded-2xl hover:bg-[#25baff] hover:text-white">
-                  START TODAY
-                </button>
+                <Link to="/payment">
+                  <button className="text-lg border border-[#25baff] mt-8 mb-8 px-8 py-2 rounded-2xl hover:bg-[#25baff] hover:text-white">
+                    START TODAY
+                  </button>
+                </Link>
               </div>
             </div>
           </div>
@@ -864,11 +860,7 @@ radial-gradient(circle_at_80%_80%,rgba(168,217,124,0.2),transparent_45%)]
               <div
                 key={index}
                 ref={(el) => (faqRefs.current[index] = el)}
-                className="gsap-item bg-white border border-gray-200 rounded-2xl
-                shadow-lg shadow-[#25baff]/20
-                hover:shadow-2xl hover:shadow-[#25baff]/40
-                hover:border-[#25baff]
-                transition-all duration-300"
+                className="gsap-item bg-white border border-gray-200 rounded-2xl shadow-lg shadow-[#25baff]/20 hover:shadow-2xl hover:shadow-[#25baff]/40 hover:border-[#25baff] transition-all duration-300"
               >
                 <button
                   onClick={() => {

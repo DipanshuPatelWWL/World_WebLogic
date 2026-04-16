@@ -827,9 +827,11 @@ const SanFranciscoSeo = () => {
                                 </div>
                             </div>
                             <div className="pb-8">
-                                <button className="border border-[#25baff] text-[#25baff] px-8 py-3 rounded-full hover:bg-[#25baff] hover:text-white transition-all duration-300 hover:cursor-pointer">
-                                    START TODAY
-                                </button>
+                                <Link to="/payment">
+                                    <button className="border border-[#25baff] text-[#25baff] px-8 py-3 rounded-full hover:bg-[#25baff] hover:text-white transition-all duration-300 hover:cursor-pointer">
+                                        START TODAY
+                                    </button>
+                                </Link>
                             </div>
                         </div>
 
@@ -857,9 +859,11 @@ const SanFranciscoSeo = () => {
                                 </div>
                             </div>
                             <div className="pb-8">
-                                <button className="bg-[#25baff] text-white px-8 py-3 rounded-full hover:bg-white hover:text-[#25baff] border border-[#25baff] transition-all duration-300 hover:cursor-pointer">
-                                    START TODAY
-                                </button>
+                                <Link to="/payment">
+                                    <button className="bg-[#25baff] text-white px-8 py-3 rounded-full hover:bg-white hover:text-[#25baff] border border-[#25baff] transition-all duration-300 hover:cursor-pointer">
+                                        START TODAY
+                                    </button>
+                                </Link>
                             </div>
                         </div>
 
@@ -885,9 +889,11 @@ const SanFranciscoSeo = () => {
                                 </div>
                             </div>
                             <div className="pb-8">
-                                <button className="border border-[#25baff] text-[#25baff] px-8 py-3 rounded-full hover:bg-[#25baff] hover:text-white transition-all duration-300 hover:cursor-pointer">
-                                    START TODAY
-                                </button>
+                                <Link to="/payment">
+                                    <button className="border border-[#25baff] text-[#25baff] px-8 py-3 rounded-full hover:bg-[#25baff] hover:text-white transition-all duration-300 hover:cursor-pointer">
+                                        START TODAY
+                                    </button>
+                                </Link>
                             </div>
                         </div>
                     </div>

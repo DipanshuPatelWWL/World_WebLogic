@@ -15,7 +15,7 @@ import ProjectDetails from "./pages/ProjectDetails";
 import Projects from "./pages/Project";
 import TopInfoBar from "./components/TopInfoBar";
 
-import Seo from "./pages/services/Seo";
+import Seo from "./pages/services/SEO";
 import WebDesign from "./pages/services/WebDesign";
 import WebDevelopment from "./pages/services/WebDevelopment";
 import AppDevelopment from "./pages/services/AppDevelopment";
@@ -140,6 +140,7 @@ import FreeConsultation from "./pages/FreeConsultation";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsConditions from "./pages/TermsConditions";
 import CookiePolicy from "./pages/CookiePolicy";
+import Payment from "./pages/Payment";
 
 
 function App() {
@@ -715,6 +716,7 @@ function App() {
           <Route path="/contact" element={<ContactUs />} />
           <Route path="/free-consultation" element={<FreeConsultation />} />
           <Route path="/portfolio" element={<Portfolio />} />
+          <Route path="/payment" element={<Payment />} />
         </Routes>
 
         {/* <Footer /> */}

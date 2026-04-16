@@ -18,6 +18,7 @@ import "swiper/css/pagination";
 import Banner from "../../assets/charlotte/banner.avif";
 import Img1 from "../../assets/charlotte/img1.avif";
 import Img2 from "../../assets/charlotte/img3.avif";
+import { Link } from "react-router-dom";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -495,9 +496,11 @@ const CharlotteLocalSEO = () => {
                                 </div>
                             </div>
                             <div className="pb-8">
-                                <button className="border border-[#25baff] text-[#25baff] px-8 py-3 rounded-full hover:bg-[#25baff] hover:text-white transition-all duration-300 hover:cursor-pointer">
-                                    GET STARTED
-                                </button>
+                                <Link to="/payment">
+                                    <button className="border border-[#25baff] text-[#25baff] px-8 py-3 rounded-full hover:bg-[#25baff] hover:text-white transition-all duration-300 hover:cursor-pointer">
+                                        GET STARTED
+                                    </button>
+                                </Link>
                             </div>
                         </div>
 
@@ -520,9 +523,11 @@ const CharlotteLocalSEO = () => {
                                 </div>
                             </div>
                             <div className="pb-8">
-                                <button className="border border-[#25baff] text-[#25baff] px-8 py-3 rounded-full hover:bg-[#25baff] hover:text-white transition-all duration-300 hover:cursor-pointer">
-                                    GET STARTED
-                                </button>
+                                <Link to="/payment">
+                                    <button className="border border-[#25baff] text-[#25baff] px-8 py-3 rounded-full hover:bg-[#25baff] hover:text-white transition-all duration-300 hover:cursor-pointer">
+                                        GET STARTED
+                                    </button>
+                                </Link>
                             </div>
                         </div>
 
@@ -548,9 +553,11 @@ const CharlotteLocalSEO = () => {
                                 </div>
                             </div>
                             <div className="pb-8">
-                                <button className="bg-[#25baff] text-white px-8 py-3 rounded-full hover:bg-white hover:text-[#25baff] border border-[#25baff] transition-all duration-300 hover:cursor-pointer">
-                                    GET STARTED
-                                </button>
+                                <Link to="/payment">
+                                    <button className="bg-[#25baff] text-white px-8 py-3 rounded-full hover:bg-white hover:text-[#25baff] border border-[#25baff] transition-all duration-300 hover:cursor-pointer">
+                                        GET STARTED
+                                    </button>
+                                </Link>
                             </div>
                         </div>
 
@@ -573,9 +580,11 @@ const CharlotteLocalSEO = () => {
                                 </div>
                             </div>
                             <div className="pb-8">
-                                <button className="border border-[#25baff] text-[#25baff] px-8 py-3 rounded-full hover:bg-[#25baff] hover:text-white transition-all duration-300 hover:cursor-pointer">
-                                    GET STARTED
-                                </button>
+                                <Link to="/payment">
+                                    <button className="border border-[#25baff] text-[#25baff] px-8 py-3 rounded-full hover:bg-[#25baff] hover:text-white transition-all duration-300 hover:cursor-pointer">
+                                        GET STARTED
+                                    </button>
+                                </Link>
                             </div>
                         </div>
                     </div>

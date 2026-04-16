@@ -65,9 +65,11 @@ const WebDesigningPackages = () => {
               </div>
 
               <div className="px-8 pb-10">
-                <button className="w-full py-4 px-8 rounded-xl font-semibold text-lg border-2 border-[#25baff] text-[#25baff] hover:bg-[#25baff] hover:text-white transition-all duration-300 hover:cursor-pointer">
-                  Start Today
-                </button>
+                <Link to="/payment">
+                  <button className="w-full py-4 px-8 rounded-xl font-semibold text-lg border-2 border-[#25baff] text-[#25baff] hover:bg-[#25baff] hover:text-white transition-all duration-300 hover:cursor-pointer">
+                    Start Today
+                  </button>
+                </Link>
               </div>
             </div>
 
@@ -103,9 +105,11 @@ const WebDesigningPackages = () => {
               </div>
 
               <div className="px-8 pb-10">
-                <button className="w-full py-4 px-8 rounded-xl font-semibold text-lg bg-[#25baff] text-white hover:bg-[#1a9fe0] shadow-lg shadow-[#25baff]/30 transition-all duration-300 hover:cursor-pointer">
-                  Start Today
-                </button>
+                <Link to="/payment">
+                  <button className="w-full py-4 px-8 rounded-xl font-semibold text-lg bg-[#25baff] text-white hover:bg-[#1a9fe0] shadow-lg shadow-[#25baff]/30 transition-all duration-300 hover:cursor-pointer">
+                    Start Today
+                  </button>
+                </Link>
               </div>
             </div>
 
@@ -136,9 +140,11 @@ const WebDesigningPackages = () => {
               </div>
 
               <div className="px-8 pb-10">
-                <button className="w-full py-4 px-8 rounded-xl font-semibold text-lg border-2 border-[#25baff] text-[#25baff] hover:bg-[#25baff] hover:text-white transition-all duration-300 hover:cursor-pointer">
-                  Start Today
-                </button>
+                <Link to="/payment">
+                  <button className="w-full py-4 px-8 rounded-xl font-semibold text-lg border-2 border-[#25baff] text-[#25baff] hover:bg-[#25baff] hover:text-white transition-all duration-300 hover:cursor-pointer">
+                    Start Today
+                  </button>
+                </Link>
               </div>
             </div>
           </div>
@@ -203,10 +209,11 @@ const WebDesigningPackages = () => {
                 <p className="flex items-center gap-3"><span className="w-5" />25 Hosted Email Accounts</p>
                 <p className="flex items-center gap-3"><span className="w-5" />5 Hours / month – Maintenance</p>
               </div>
-
-              <button className="mt-10 w-full py-4 bg-[#25baff] text-white rounded-xl font-semibold hover:bg-[#1a9fe0] transition hover:cursor-pointer">
-                Start Today
-              </button>
+              <Link to="/payment">
+                <button className="mt-10 w-full py-4 bg-[#25baff] text-white rounded-xl font-semibold hover:bg-[#1a9fe0] transition hover:cursor-pointer">
+                  Start Today
+                </button>
+              </Link>
             </div>
 
             {/* GOLD Detailed */}
@@ -236,10 +243,11 @@ const WebDesigningPackages = () => {
                 <p className="flex items-center gap-3"><span className="w-5" />50 Hosted Email Accounts</p>
                 <p className="flex items-center gap-3"><span className="w-5" />10 Hours / month – Maintenance</p>
               </div>
-
-              <button className="mt-10 w-full py-4 bg-[#25baff] text-white rounded-xl font-semibold hover:bg-[#1a9fe0] transition hover:cursor-pointer">
-                Start Today
-              </button>
+              <Link to="/payment">
+                <button className="mt-10 w-full py-4 bg-[#25baff] text-white rounded-xl font-semibold hover:bg-[#1a9fe0] transition hover:cursor-pointer">
+                  Start Today
+                </button>
+              </Link>
             </div>
 
             {/* PREMIUM Detailed */}
@@ -269,10 +277,11 @@ const WebDesigningPackages = () => {
                 <p className="flex items-center gap-3"><span className="w-5" />200 Hosted Email Accounts</p>
                 <p className="flex items-center gap-3"><span className="w-5" />25 Hours / month – Maintenance</p>
               </div>
-
-              <button className="mt-10 w-full py-4 bg-[#25baff] text-white rounded-xl font-semibold hover:bg-[#1a9fe0] transition hover:cursor-pointer">
-                Start Today
-              </button>
+              <Link to="/payment">
+                <button className="mt-10 w-full py-4 bg-[#25baff] text-white rounded-xl font-semibold hover:bg-[#1a9fe0] transition hover:cursor-pointer">
+                  Start Today
+                </button>
+              </Link>
             </div>
           </div>
 
@@ -282,7 +291,7 @@ const WebDesigningPackages = () => {
               Need a custom quote or have special requirements?
             </p>
             <Link
-              to="/contact"
+              to="/free-consultation"
             >
               <button className="bg-[#0b3253] hover:bg-[#08213a] text-white px-12 py-5 rounded-xl text-lg font-semibold transition shadow-lg hover:cursor-pointer">
                 Get Free Consultation

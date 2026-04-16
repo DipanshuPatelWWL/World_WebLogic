@@ -28,6 +28,7 @@ import Img8 from "../../../assets/services/appStoreOptimization/img8.avif";
 import Img9 from "../../../assets/services/ppc/img9.avif";
 import Img11 from "../../../assets/services/ppc/img11.avif";
 import Img10 from "../../../assets/services/appStoreOptimization/img10.avif";
+import { Link } from "react-router-dom";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -381,47 +382,18 @@ const AppStoreOptimization = () => {
                                     <div
                                         key={index}
                                         ref={(el) => (cardsRef.current[index] = el)}
-                                        className="
-                group
-                bg-white/5
-                backdrop-blur-xl
-                border border-white/10
-                rounded-2xl
-                p-10
-                text-center
-                shadow-lg shadow-black/30
-                hover:border-[#25baff]/60
-                hover:shadow-[#25baff]/20
-                hover:-translate-y-3
-                transition-all duration-500
-              "
+                                        className="group bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-10 text-center shadow-lg shadow-black/30 hover:border-[#25baff]/60 hover:shadow-[#25baff]/20 hover:-translate-y-3 transition-all duration-500"
                                     >
 
                                         <Icon
-                                            className="
-                  text-4xl
-                  text-[#25baff]
-                  mb-6
-                  mx-auto
-                  transition-all duration-300
-                  group-hover:scale-110
-                "
+                                            className="text-4xl text-[#25baff] mb-6 mx-auto transition-all duration-300 group-hover:scale-110"
                                         />
 
-                                        <h3 className="
-                font-bold
-                text-xl
-                mb-3
-                text-white
-              ">
+                                        <h3 className="font-bold text-xl mb-3 text-white">
                                             {item.head}
                                         </h3>
 
-                                        <p className="
-                text-gray-400
-                text-sm
-                leading-relaxed
-              ">
+                                        <p className="text-gray-400 text-sm leading-relaxed">
                                             {item.text}
                                         </p>
 
@@ -546,20 +518,7 @@ const AppStoreOptimization = () => {
                             <div
                                 key={index}
                                 ref={(el) => (cardsRef.current[index] = el)}
-                                className="
-                        group
-                        bg-white/10
-                        backdrop-blur-md
-                        border border-white/20
-                        rounded-2xl
-                        p-10
-                        text-center
-                        shadow-lg shadow-[#25baff]/20
-                        transition-all duration-500
-                        hover:bg-[#25baff]/40
-                        hover:-translate-y-3
-                        hover:shadow-2xl hover:shadow-[#25baff]/30
-                    "
+                                className="group bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-10 text-center shadow-lg shadow-[#25baff]/20 transition-all duration-500 hover:bg-[#25baff]/40 hover:-translate-y-3 hover:shadow-2xl hover:shadow-[#25baff]/30"
                             >
 
                                 <h3 className="font-extrabold text-xl mb-3 text-white transition-colors duration-300">
@@ -613,10 +572,7 @@ const AppStoreOptimization = () => {
                         ].map((item, index) => (
                             <div
                                 key={index}
-                                className="group bg-white border border-gray-200 rounded-2xl p-10 text-center
-                shadow-lg shadow-[#25baff]/10
-                transition-all duration-500
-                hover:-translate-y-3 hover:shadow-2xl hover:shadow-[#25baff]/40 hover:border-[#25baff]"
+                                className="group bg-white border border-gray-200 rounded-2xl p-10 text-center shadow-lg shadow-[#25baff]/10 transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl hover:shadow-[#25baff]/40 hover:border-[#25baff]"
                             >
                                 <div className="flex justify-center text-5xl mb-6 text-gray-500 group-hover:text-[#25baff] transition-colors duration-300">
                                     <RiDoubleQuotesL />
@@ -662,39 +618,13 @@ const AppStoreOptimization = () => {
                 <div className="max-w-7xl mx-auto relative z-10">
 
                     {/* LEFT ARROW */}
-                    <button className="
-      custom-prev
-      absolute left-100 top-1/1 -translate-y-1/2
-      z-20
-      w-12 h-12
-      rounded-full
-      bg-white
-      border border-gray-200
-      shadow-lg
-      hover:bg-[#25baff]
-      hover:text-white
-      transition-all duration-300
-      flex items-center justify-center
-    ">
+                    <button className="custom-prev absolute left-100 top-1/1 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-white border border-gray-200 shadow-lg hover:bg-[#25baff] hover:text-white transition-all duration-300 flex items-center justify-center">
                         ←
                     </button>
 
 
                     {/* RIGHT ARROW */}
-                    <button className="
-      custom-next
-      absolute right-100 top-1/1 -translate-y-1/2
-      z-20
-      w-12 h-12
-      rounded-full
-      bg-white
-      border border-gray-200
-      shadow-lg
-      hover:bg-[#25baff]
-      hover:text-white
-      transition-all duration-300
-      flex items-center justify-center
-    ">
+                    <button className="custom-next absolute right-100 top-1/1 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-white border border-gray-200 shadow-lg hover:bg-[#25baff] hover:text-white transition-all duration-300 flex items-center justify-center">
                         →
                     </button>
 
@@ -725,16 +655,7 @@ const AppStoreOptimization = () => {
 
                             <SwiperSlide key={index}>
 
-                                <div className="
-            group
-            grid md:grid-cols-2 gap-12 items-center
-            bg-white/80 backdrop-blur-xl
-            border border-gray-200
-            rounded-3xl
-            p-8 md:p-12
-            shadow-xl shadow-[#25baff]/10
-            transition-all duration-700
-          ">
+                                <div className="group grid md:grid-cols-2 gap-12 items-center bg-white/80 backdrop-blur-xl border border-gray-200 rounded-3xl p-8 md:p-12 shadow-xl shadow-[#25baff]/10 transition-all duration-700">
 
                                     {/* Image */}
                                     <div className="relative overflow-hidden rounded-2xl">
@@ -746,15 +667,7 @@ const AppStoreOptimization = () => {
                                         />
 
                                         {/* Step */}
-                                        <div className="
-                absolute top-4 left-4
-                bg-[#25baff]
-                text-white
-                text-sm font-bold
-                px-4 py-1
-                rounded-full
-                shadow-md
-              ">
+                                        <div className="absolute top-4 left-4 bg-[#25baff] text-white text-sm font-bold px-4 py-1 rounded-full shadow-md">
                                             Step {index + 1}
                                         </div>
 
@@ -764,17 +677,10 @@ const AppStoreOptimization = () => {
                                     {/* Content */}
                                     <div>
 
-                                        <h3 className="
-                text-2xl md:text-3xl font-extrabold text-[#020202]
-                mb-4 relative inline-block
-              ">
+                                        <h3 className="text-2xl md:text-3xl font-extrabold text-[#020202] mb-4 relative inline-block">
                                             {item.title}
-
-                                            <span className="
-                  absolute left-0 -bottom-2
-                  w-16 h-1 bg-[#25baff]
-                  rounded-full
-                "></span>
+                                            <span className="absolute left-0 -bottom-2 w-16 h-1 bg-[#25baff] rounded-full">
+                                            </span>
 
                                         </h3>
 
@@ -794,12 +700,7 @@ const AppStoreOptimization = () => {
 
 
                     {/* PAGINATION DOTS CENTERED BELOW */}
-                    <div className="
-      custom-pagination
-      flex justify-center
-      items-center
-      gap-4
-    "></div>
+                    <div className="custom-pagination flex justify-center items-center gap-4"></div>
                 </div>
             </section>
 
@@ -837,19 +738,7 @@ const AppStoreOptimization = () => {
 
 
                         {/* BASIC */}
-                        <div className="
-                group
-                bg-white/5
-                backdrop-blur-xl
-                border border-white/10
-                rounded-2xl
-                shadow-xl shadow-black/40
-                hover:border-[#25baff]/60
-                hover:-translate-y-3
-                hover:shadow-[#25baff]/30
-                transition-all duration-500
-                flex flex-col justify-between
-            ">
+                        <div className="group bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl shadow-xl shadow-black/40 hover:border-[#25baff]/60 hover:-translate-y-3 hover:shadow-[#25baff]/30 transition-all duration-500 flex flex-col justify-between">
 
                             <div>
 
@@ -883,20 +772,11 @@ const AppStoreOptimization = () => {
 
 
                             <div className="pb-8">
-
-                                <button className="
-                        border border-[#25baff]
-                        text-[#25baff]
-                        px-8 py-3
-                        rounded-full
-                        hover:bg-[#25baff]
-                        hover:text-white
-                        transition-all duration-300
-                        hover:cursor-pointer
-                    ">
-                                    START TODAY
-                                </button>
-
+                                <Link to="/payment">
+                                    <button className="border border-[#25baff] text-[#25baff] px-8 py-3 rounded-full hover:bg-[#25baff] hover:text-white transition-all duration-300 hover:cursor-pointer">
+                                        START TODAY
+                                    </button>
+                                </Link>
                             </div>
 
                         </div>
@@ -938,13 +818,11 @@ const AppStoreOptimization = () => {
 
 
                             <div className="pb-8">
-
-                                <button className="border border-[#25baff] text-[#25baff] px-8 py-3 rounded-full hover:bg-[#25baff] hover:text-white transition-all duration-300
-                                hover:cursor-pointer
-                                ">
-                                    START TODAY
-                                </button>
-
+                                <Link to="/payment">
+                                    <button className="border border-[#25baff] text-[#25baff] px-8 py-3 rounded-full hover:bg-[#25baff] hover:text-white transition-all duration-300 hover:cursor-pointer">
+                                        START TODAY
+                                    </button>
+                                </Link>
                             </div>
 
                         </div>
@@ -991,13 +869,11 @@ const AppStoreOptimization = () => {
 
 
                             <div className="pb-8">
-
-                                <button className="bg-[#25baff] text-white px-8 py-3 rounded-full hover:bg-white hover:text-[#25baff] border border-[#25baff] transition-all duration-300
-                                hover:cursor-pointer
-                                ">
-                                    START TODAY
-                                </button>
-
+                                <Link to="/payment">
+                                    <button className="bg-[#25baff] text-white px-8 py-3 rounded-full hover:bg-white hover:text-[#25baff] border border-[#25baff] transition-all duration-300 hover:cursor-pointer">
+                                        START TODAY
+                                    </button>
+                                </Link>
                             </div>
 
                         </div>
@@ -1039,13 +915,11 @@ const AppStoreOptimization = () => {
 
 
                             <div className="pb-8">
-
-                                <button className="border border-[#25baff] text-[#25baff] px-8 py-3 rounded-full hover:bg-[#25baff] hover:text-white transition-all duration-300
-                                hover:cursor-pointer
-                                ">
-                                    START TODAY
-                                </button>
-
+                                <Link to="/payment">
+                                    <button className="border border-[#25baff] text-[#25baff] px-8 py-3 rounded-full hover:bg-[#25baff] hover:text-white transition-all duration-300 hover:cursor-pointer">
+                                        START TODAY
+                                    </button>
+                                </Link>
                             </div>
 
                         </div>
@@ -1070,11 +944,7 @@ const AppStoreOptimization = () => {
                             <div
                                 key={index}
                                 ref={(el) => (faqRefs.current[index] = el)}
-                                className="gsap-item bg-white border border-gray-200 rounded-2xl
-                shadow-lg shadow-[#25baff]/20
-                hover:shadow-2xl hover:shadow-[#25baff]/40
-                hover:border-[#25baff]
-                transition-all duration-300"
+                                className="gsap-item bg-white border border-gray-200 rounded-2xl shadow-lg shadow-[#25baff]/20 hover:shadow-2xl hover:shadow-[#25baff]/40 hover:border-[#25baff] transition-all duration-300"
                             >
                                 <button
                                     onClick={() => {

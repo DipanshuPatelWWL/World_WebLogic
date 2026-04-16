@@ -18,6 +18,7 @@ import "swiper/css/pagination";
 import Banner from "../../assets/austin/banner.avif";
 import Img1 from "../../assets/austin/img1.avif";
 import Img2 from "../../assets/services/appStoreOptimization/img2.avif";
+import { Link } from "react-router-dom";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -425,9 +426,11 @@ const Austin = () => {
                                 </div>
                             </div>
                             <div className="pb-8">
-                                <button className="border border-[#25baff] text-[#25baff] px-8 py-3 rounded-full hover:bg-[#25baff] hover:text-white transition-all duration-300 hover:cursor-pointer">
-                                    START NOW
-                                </button>
+                                <Link to="/payment">
+                                    <button className="border border-[#25baff] text-[#25baff] px-8 py-3 rounded-full hover:bg-[#25baff] hover:text-white transition-all duration-300 hover:cursor-pointer">
+                                        START NOW
+                                    </button>
+                                </Link>
                             </div>
                         </div>
 
@@ -450,9 +453,11 @@ const Austin = () => {
                                 </div>
                             </div>
                             <div className="pb-8">
-                                <button className="border border-[#25baff] text-[#25baff] px-8 py-3 rounded-full hover:bg-[#25baff] hover:text-white transition-all duration-300 hover:cursor-pointer">
-                                    START NOW
-                                </button>
+                                <Link to="/payment">
+                                    <button className="border border-[#25baff] text-[#25baff] px-8 py-3 rounded-full hover:bg-[#25baff] hover:text-white transition-all duration-300 hover:cursor-pointer">
+                                        START NOW
+                                    </button>
+                                </Link>
                             </div>
                         </div>
 
@@ -476,9 +481,11 @@ const Austin = () => {
                                 </div>
                             </div>
                             <div className="pb-8">
-                                <button className="bg-[#25baff] text-white px-8 py-3 rounded-full hover:bg-white hover:text-[#25baff] border border-[#25baff] transition-all duration-300 hover:cursor-pointer">
-                                    START NOW
-                                </button>
+                                <Link to="/payment">
+                                    <button className="bg-[#25baff] text-white px-8 py-3 rounded-full hover:bg-white hover:text-[#25baff] border border-[#25baff] transition-all duration-300 hover:cursor-pointer">
+                                        START NOW
+                                    </button>
+                                </Link>
                             </div>
                         </div>
 
@@ -501,9 +508,11 @@ const Austin = () => {
                                 </div>
                             </div>
                             <div className="pb-8">
-                                <button className="border border-[#25baff] text-[#25baff] px-8 py-3 rounded-full hover:bg-[#25baff] hover:text-white transition-all duration-300 hover:cursor-pointer">
-                                    START NOW
-                                </button>
+                                <Link to="/payment">
+                                    <button className="border border-[#25baff] text-[#25baff] px-8 py-3 rounded-full hover:bg-[#25baff] hover:text-white transition-all duration-300 hover:cursor-pointer">
+                                        START NOW
+                                    </button>
+                                </Link>
                             </div>
                         </div>
                     </div>
