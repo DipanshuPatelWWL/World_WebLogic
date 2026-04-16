@@ -1,6 +1,7 @@
 import { FaCheck } from "react-icons/fa6";
 import { HiMiniXMark } from "react-icons/hi2";
 import Banner from "../../assets/seo_packages/seo_starter_pack.jpg";
+import { Link } from "react-router-dom";
 
 const SmoPackages = () => {
   return (
@@ -214,9 +215,12 @@ const PlanDetails = ({ creative, postings, paid, remarketing }) => {
         items={["Email", "Phone", "Chat"]}
       />
 
-      <button className="w-full mt-6 py-4 bg-[#25baff] text-white rounded-xl font-semibold hover:bg-[#1a9fe0] transition shadow-md hover:cursor-pointer">
+      <Link
+        to="/payment"
+        className="w-full mt-6 py-4 bg-[#25baff] text-white rounded-xl font-semibold hover:bg-[#1a9fe0] transition shadow-md flex items-center justify-center text-center"
+      >
         Start Today
-      </button>
+      </Link>
     </div>
   );
 };

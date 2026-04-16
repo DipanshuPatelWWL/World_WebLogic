@@ -663,7 +663,7 @@ export default function HeroSlider2() {
                         animation: "fadeUp 0.5s 0.55s both",
                     }}
                 >
-                    <Link to="/contact" className="hwbtn hwbtn-outline">GET A QUOTE</Link>
+                    <Link to="/free-consultation" className="hwbtn hwbtn-outline">GET A QUOTE</Link>
                     <Link
                         to="/contact"
                         className="hwbtn"

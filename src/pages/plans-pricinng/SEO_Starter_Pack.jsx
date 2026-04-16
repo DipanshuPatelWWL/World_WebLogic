@@ -1,5 +1,6 @@
 import { FaCheck, FaTimes } from "react-icons/fa"; // Using FaTimes instead of HiMiniXMark for consistency
 import Banner from "../../assets/seo_packages/seo_starter_pack.jpg";
+import { Link } from "react-router-dom";
 
 const SEO_Starter_Pack = () => {
   const checkIcon = <FaCheck className="text-[#52CC55] text-xl flex-shrink-0" />;
@@ -55,9 +56,12 @@ const SEO_Starter_Pack = () => {
 
               {/* CTA */}
               <div className="p-8 text-center border-b border-gray-200">
-                <button className="inline-flex items-center px-10 py-4 text-lg font-semibold text-white bg-[#25baff] rounded-full shadow-lg hover:bg-[#1a9fe0] hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                <Link
+                  to="/payment"
+                  className="inline-flex items-center justify-center gap-2 px-10 py-4 text-lg font-semibold text-white bg-[#25baff] rounded-full shadow-lg hover:bg-[#1a9fe0] hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
+                >
                   Start Today →
-                </button>
+                </Link>
               </div>
 
               {/* Core Features Highlight */}
@@ -294,9 +298,12 @@ const SEO_Starter_Pack = () => {
                   ))}
                 </div>
 
-                <button className="mt-10 w-full py-4 text-lg font-semibold text-white bg-[#25baff] rounded-full shadow-lg hover:bg-[#1a9fe0] transition-all duration-300">
+                <Link
+                  to="/payment"
+                  className="mt-10 w-full py-4 text-lg font-semibold text-white bg-[#25baff] rounded-full shadow-lg hover:bg-[#1a9fe0] transition-all duration-300 flex items-center justify-center text-center"
+                >
                   Start Today →
-                </button>
+                </Link>
               </div>
             </div>
           </div>

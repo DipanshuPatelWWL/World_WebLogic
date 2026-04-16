@@ -87,14 +87,24 @@ const Header = () => {
               <div className="absolute left-0 top-full border-t-4 border-t-[#25baff] mt-3 w-52 rounded-xl bg-white border border-gray-200 shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
                 <NavLink
                   to="/about/who-we-are"
-                  className="block px-5 py-3 text-[#020202] hover:text-[#25baff] hover:bg-[#25baff]/10 transition hover:rounded-xl"
+                  className={({ isActive }) =>
+                    `font-medium transition block px-5 py-3 ${isActive
+                      ? "text-[#25baff]"
+                      : "text-[#020202] hover:text-[#25baff]"
+                    }`
+                  }
                 >
                   Who We Are
                 </NavLink>
 
                 <NavLink
                   to="/about/why-choose-us"
-                  className="block px-5 py-3 text-[#020202] hover:text-[#25baff] hover:bg-[#25baff]/10 transition hover:rounded-xl"
+                  className={({ isActive }) =>
+                    `font-medium transition block px-5 py-3 ${isActive
+                      ? "text-[#25baff]"
+                      : "text-[#020202] hover:text-[#25baff]"
+                    }`
+                  }
                 >
                   Why Choose Us
                 </NavLink>
@@ -118,14 +128,8 @@ const Header = () => {
               </button>
 
               <div
-                className={`absolute left-15 -translate-x-1/2 top-full mt-3
-      w-[1100px] bg-white
-      border border-gray-200 border-t-4 border-t-[#25baff]
-      shadow-xl rounded-lg
-      transition-all duration-300
-      p-8 z-50
-      ${isMenuOpen ? "opacity-100 visible" : "opacity-0 invisible"}
-    `}
+                className={`absolute left-15 -translate-x-1/2 top-full mt-3 w-[1100px] bg-white border border-gray-200 border-t-4 border-t-[#25baff] shadow-xl rounded-lg transition-all duration-300 p-8 z-50
+                 ${isMenuOpen ? "opacity-100 visible" : "opacity-0 invisible"} `}
               >
                 <div className="grid grid-cols-4 gap-8 text-sm">
                   {/* ================= DIGITAL MARKETING ================= */}
@@ -509,14 +513,8 @@ const Header = () => {
               </button>
 
               <div
-                className={`absolute -left-4 -translate-x-1/2 top-full mt-3
-      w-[1100px] bg-white
-      border border-gray-200 border-t-4 border-t-[#25baff]
-      shadow-xl rounded-lg
-      transition-all duration-300
-      p-8 z-50
-      ${isMarketOpen ? "opacity-100 visible" : "opacity-0 invisible"}
-    `}
+                className={`absolute -left-4 -translate-x-1/2 top-full mt-3 w-[1100px] bg-white border border-gray-200 border-t-4 border-t-[#25baff] shadow-xl rounded-lg transition-all duration-300 p-8 z-50
+                 ${isMarketOpen ? "opacity-100 visible" : "opacity-0 invisible"}`}
               >
                 <div className="grid grid-cols-5 gap-8 text-sm">
 
@@ -713,6 +711,7 @@ const Header = () => {
                 </div>
               </div>
             </div>
+
             {/* PLANS & PRICING */}
             <div className="relative group">
               <button
@@ -729,7 +728,12 @@ const Header = () => {
                 <div className="relative group/sub">
                   <NavLink
                     to="/pricing/seo-packages"
-                    className="block px-5 py-3 text-[#020202] hover:text-[#25baff] hover:bg-[#25baff]/10 transition hover:rounded-xl"
+                    className={({ isActive }) =>
+                      `font-medium transition block px-5 py-3 ${isActive
+                        ? "text-[#25baff]"
+                        : "text-[#020202] hover:text-[#25baff]"
+                      }`
+                    }
                   >
                     SEO Services Packages ▸
                   </NavLink>
@@ -737,7 +741,12 @@ const Header = () => {
                   <div className="absolute left-full top-0 ml-1 w-56 rounded-xl bg-white border border-gray-200 shadow-lg opacity-0 invisible group-hover/sub:opacity-100 group-hover/sub:visible transition-all duration-300">
                     <NavLink
                       to="/pricing/seo-starter-pack"
-                      className="block px-5 py-3 hover:bg-[#25baff]/10 hover:text-[#25baff] hover:rounded-xl"
+                      className={({ isActive }) =>
+                        `font-medium transition block px-5 py-3 ${isActive
+                          ? "text-[#25baff]"
+                          : "text-[#020202] hover:text-[#25baff]"
+                        }`
+                      }
                     >
                       Starter Pack
                     </NavLink>
@@ -746,21 +755,36 @@ const Header = () => {
 
                 <NavLink
                   to="/pricing/smo-packages"
-                  className="block px-5 py-3 text-[#020202] hover:text-[#25baff] hover:bg-[#25baff]/10 transition hover:rounded-xl"
+                  className={({ isActive }) =>
+                    `font-medium transition block px-5 py-3 ${isActive
+                      ? "text-[#25baff]"
+                      : "text-[#020202] hover:text-[#25baff]"
+                    }`
+                  }
                 >
                   SMO Services Packages
                 </NavLink>
 
                 <NavLink
                   to="/pricing/ppc-packages"
-                  className="block px-5 py-3 text-[#020202] hover:text-[#25baff] hover:bg-[#25baff]/10 transition hover:rounded-xl"
+                  className={({ isActive }) =>
+                    `font-medium transition block px-5 py-3 ${isActive
+                      ? "text-[#25baff]"
+                      : "text-[#020202] hover:text-[#25baff]"
+                    }`
+                  }
                 >
                   PPC Services Packages
                 </NavLink>
 
                 <NavLink
                   to="/pricing/web-design-packages"
-                  className="block px-5 py-3 text-[#020202] hover:text-[#25baff] hover:bg-[#25baff]/10 transition hover:rounded-xl"
+                  className={({ isActive }) =>
+                    `font-medium transition block px-5 py-3 ${isActive
+                      ? "text-[#25baff]"
+                      : "text-[#020202] hover:text-[#25baff]"
+                    }`
+                  }
                 >
                   Web Designing Packages
                 </NavLink>

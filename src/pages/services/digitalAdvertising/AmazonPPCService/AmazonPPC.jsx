@@ -14,6 +14,7 @@ import img10 from "../../../../assets/services/amazonPPC/img10.avif";
 import img11 from "../../../../assets/services/amazonPPC/img11.avif";
 import img12 from "../../../../assets/services/amazonPPC/img12.avif";
 import img13 from "../../../../assets/services/amazonPPC/img13.jpg";
+import { Link } from "react-router-dom";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -173,30 +174,13 @@ const AmazonPPC = () => {
 
             <div
                 key={index}
-                className="
-                w-[320px]
-                flex-shrink-0
-                bg-white/5
-                border border-white/10
-                rounded-xl
-                p-7
-                hover:bg-[#25baff]/10
-                hover:scale-105
-                transition duration-300
-            "
+                className="w-[320px] flex-shrink-0 bg-white/5 border border-white/10 rounded-xl p-7 hover:bg-[#25baff]/10 hover:scale-105 transition duration-300"
             >
 
                 <div className="flex items-start gap-4 mb-4">
 
-                    <div className="
-                    w-14 h-14
-                    flex items-center justify-center
-                    bg-[#25baff]/20
-                    rounded-xl
-                    text-[#25baff]
-                    text-xl
-                    flex-shrink-0
-                ">
+                    <div
+                        className="w-14 h-14 flex items-center justify-center bg-[#25baff]/20 rounded-xl text-[#25baff] text-xl flex-shrink-0">
                         <i className={`fas ${item.icon}`} />
                     </div>
 
@@ -271,16 +255,7 @@ const AmazonPPC = () => {
                             <img
                                 src={img2}
                                 alt="Amazon PPC Campaign Audit"
-                                className="
-                        w-full
-                        h-[280px]
-                        md:h-[380px]
-                        object-cover
-                        rounded-2xl
-                        shadow-xl
-                        transition duration-500
-                        group-hover:scale-105
-                    "
+                                className="w-full h-[280px] md:h-[380px] object-cover rounded-2xl shadow-xl transition duration-500 group-hover:scale-105"
                             />
                         </div>
 
@@ -367,16 +342,7 @@ const AmazonPPC = () => {
                             <img
                                 src={img1}
                                 alt="Amazon PPC Optimization Strategy"
-                                className="
-                        w-full
-                        h-[280px]
-                        md:h-[380px]
-                        object-cover
-                        rounded-2xl
-                        shadow-xl
-                        transition duration-500
-                        group-hover:scale-105
-                    "
+                                className="w-full h-[280px] md:h-[380px] object-cover rounded-2xl shadow-xl transition duration-500 group-hover:scale-105"
                             />
 
                         </div>
@@ -417,29 +383,11 @@ const AmazonPPC = () => {
                             <div
                                 key={index}
                                 ref={addCardRef}
-                                className="
-                                group
-                                bg-white/5
-                                border border-white/10
-                                backdrop-blur-xl
-                                rounded-2xl
-                                p-8
-                                transition duration-500
-                                hover:bg-white/10
-                                hover:border-[#25baff]/40
-                                hover:-translate-y-2
-                                hover:shadow-[0_10px_40px_rgba(37,186,255,0.15)]
-                            "
+                                className="group bg-white/5 border border-white/10 backdrop-blur-xl rounded-2xl p-8 transition duration-500 hover:bg-white/10 hover:border-[#25baff]/40 hover:-translate-y-2 hover:shadow-[0_10px_40px_rgba(37,186,255,0.15)]"
                             >
 
                                 {/* Icon */}
-                                <div className="
-                                text-[#25baff]
-                                text-3xl
-                                mb-4
-                                transition duration-300
-                                group-hover:scale-110
-                            ">
+                                <div className="text-[#25baff] text-3xl mb-4 transition duration-300 group-hover:scale-110">
                                     {item.icon}
                                 </div>
 
@@ -578,38 +526,15 @@ const AmazonPPC = () => {
                             <div
                                 key={index}
                                 ref={addItemRef}
-                                className="
-                        group
-                        relative
-                        p-[1px]
-                        rounded-xl
-                        bg-gradient-to-br from-[#25baff]/40 via-transparent to-[#00ffaa]/40
-                        hover:from-[#25baff] hover:to-[#00ffaa]
-                        transition duration-500
-                    "
+                                className="group relative p-[1px] rounded-xl bg-gradient-to-br from-[#25baff]/40 via-transparent to-[#00ffaa]/40 hover:from-[#25baff] hover:to-[#00ffaa] transition duration-500"
                             >
 
-                                <div className="
-                        h-full
-                        bg-white
-                        rounded-xl
-                        p-7
-                        transition duration-500
-                        group-hover:shadow-xl
-                        group-hover:-translate-y-2
-                    ">
+                                <div className="h-full bg-white rounded-xl p-7 transition duration-500 group-hover:shadow-xl group-hover:-translate-y-2">
 
                                     <div className="flex items-start gap-5">
 
                                         {/* ICON */}
-                                        <div className="
-                                text-[#25baff]
-                                text-3xl
-                                mt-1
-                                transition duration-500
-                                group-hover:scale-125
-                                group-hover:rotate-6
-                            ">
+                                        <div className="text-[#25baff] text-3xl mt-1 transition duration-500 group-hover:scale-125 group-hover:rotate-6">
                                             {item.icon}
                                         </div>
 
@@ -617,13 +542,7 @@ const AmazonPPC = () => {
                                         {/* CONTENT */}
                                         <div>
 
-                                            <h3 className="
-                                    font-semibold
-                                    text-lg
-                                    mb-2
-                                    transition duration-300
-                                    group-hover:text-[#1294d8]
-                                ">
+                                            <h3 className="font-semibold text-lg mb-2 transition duration-300 group-hover:text-[#1294d8]">
                                                 {item.title}
                                             </h3>
 
@@ -970,11 +889,11 @@ const AmazonPPC = () => {
                             </div>
 
                             <div className="pb-8">
-
-                                <button className="border border-[#25baff] text-[#25baff] px-8 py-3 rounded-full hover:bg-[#25baff] hover:text-white transition-all duration-300">
-                                    GET STARTED
-                                </button>
-
+                                <Link to="/payment">
+                                    <button className="border border-[#25baff] text-[#25baff] px-8 py-3 rounded-full hover:bg-[#25baff] hover:text-white transition-all duration-300">
+                                        GET STARTED
+                                    </button>
+                                </Link>
                             </div>
 
                         </div>
@@ -1015,11 +934,11 @@ const AmazonPPC = () => {
                             </div>
 
                             <div className="pb-8">
-
-                                <button className="border border-[#25baff] text-[#25baff] px-8 py-3 rounded-full hover:bg-[#25baff] hover:text-white transition-all duration-300">
-                                    GET STARTED
-                                </button>
-
+                                <Link to="/payment">
+                                    <button className="border border-[#25baff] text-[#25baff] px-8 py-3 rounded-full hover:bg-[#25baff] hover:text-white transition-all duration-300">
+                                        GET STARTED
+                                    </button>
+                                </Link>
                             </div>
 
                         </div>
@@ -1064,11 +983,11 @@ const AmazonPPC = () => {
                             </div>
 
                             <div className="pb-8">
-
-                                <button className="bg-[#25baff] text-white px-8 py-3 rounded-full hover:bg-white hover:text-[#25baff] border border-[#25baff] transition-all duration-300">
-                                    GET STARTED
-                                </button>
-
+                                <Link to="/payment">
+                                    <button className="bg-[#25baff] text-white px-8 py-3 rounded-full hover:bg-white hover:text-[#25baff] border border-[#25baff] transition-all duration-300">
+                                        GET STARTED
+                                    </button>
+                                </Link>
                             </div>
 
                         </div>
@@ -1109,11 +1028,11 @@ const AmazonPPC = () => {
                             </div>
 
                             <div className="pb-8">
-
-                                <button className="border border-[#25baff] text-[#25baff] px-8 py-3 rounded-full hover:bg-[#25baff] hover:text-white transition-all duration-300">
-                                    CONTACT SALES
-                                </button>
-
+                                <Link to="/payment">
+                                    <button className="border border-[#25baff] text-[#25baff] px-8 py-3 rounded-full hover:bg-[#25baff] hover:text-white transition-all duration-300">
+                                        CONTACT SALES
+                                    </button>
+                                </Link>
                             </div>
 
                         </div>

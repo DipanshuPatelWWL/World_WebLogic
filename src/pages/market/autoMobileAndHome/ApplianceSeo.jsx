@@ -9,7 +9,6 @@ import { FiPenTool } from "react-icons/fi";
 import { IoSettingsSharp, IoShieldCheckmark } from "react-icons/io5";
 import { MdOutlineEmergencyShare, MdOutlineReviews, MdQuestionAnswer } from "react-icons/md";
 
-// Replace with your actual appliance repair images
 
 import HeroBg from "../../../assets/market/automobileHome/appliance.avif";
 import IntroImg from "../../../assets/market/automobileHome/technician-working.avif";
